@@ -1,0 +1,32 @@
+{
+  "name": "nws-weather",
+  "version": "1.0.0",
+  "description": "US Weather Widget using RSS",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/main.css -w",
+    "compile:sass": "node-sass scss/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duracell80/NWS-Weather"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duracell80/NWS-Weather/issues"
+  },
+  "homepage": "https://github.com/duracell80/NWS-Weather",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "material-icons": "^0.6.1",
+    "weather-icons": "erikflowers/weather-icons#2.0.12"
+  }
+}

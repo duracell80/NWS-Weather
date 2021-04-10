@@ -1,0 +1,163 @@
+.container-shadow {
+  background-color: #ffffff;
+  box-shadow: rgba(31, 37, 50, 0.2) 0px 2px 4px 0px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-color: rgba(0, 0, 0, 0.125);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 0.25rem; }
+
+.wx-feeds {
+  width: 350px;
+  margin: 0 auto; }
+  .wx-feeds .container-theme {
+    background-color: #ffffff;
+    color: #000000; }
+    .wx-feeds .container-theme a,
+    .wx-feeds .container-theme a:hover,
+    .wx-feeds .container-theme a:focus {
+      color: #ffffff; }
+    .wx-feeds .container-theme p {
+      color: #ffffff; }
+    .wx-feeds .container-theme .wx-now:hover {
+      cursor: default; }
+    .wx-feeds .container-theme .wx-temp {
+      font-weight: 100;
+      font-family: 'Spartan', sans-serif;
+      font-size: 3rem;
+      color: #ffffff; }
+      .wx-feeds .container-theme .wx-temp:hover {
+        cursor: default; }
+    .wx-feeds .container-theme .wx-icon-now {
+      display: inline-block;
+      margin-right: 15px;
+      float: left;
+      width: 72px;
+      height: 72px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: invert(1); }
+    .wx-feeds .container-theme .wx-icon-now.wi-cloud {
+      background-image: url("../images/svg/wi-cloud.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-cloudy {
+      background-image: url("../images/svg/wi-cloudy.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-cloudy {
+      background-image: url("../images/svg/wi-day-cloudy.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-sunny {
+      background-image: url("../images/svg/wi-day-sunny.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-sunny,
+    .wx-feeds .container-theme .wx-icon-now.wi-night-cloudy {
+      background-image: url("../images/svg/wi-night-cloudy.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-windy {
+      background-image: url("../images/svg/wi-day-windy.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-rain {
+      background-image: url("../images/svg/wi-rain.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-rain {
+      background-image: url("../images/svg/wi-day-rain.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-sprinkle {
+      background-image: url("../images/svg/wi-day-sprinkle.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-sprinkle {
+      background-image: url("../images/svg/wi-sprinkle.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-showers {
+      background-image: url("../images/svg/wi-day-showers.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-storm-showers {
+      background-image: url("../images/svg/wi-day-storm-showers.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-thunderstorm {
+      background-image: url("../images/svg/wi-thunderstorm.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-lightning {
+      background-image: url("../images/svg/wi-lightning.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-hail {
+      background-image: url("../images/svg/wi-hail.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-smoke {
+      background-image: url("../images/svg/wi-smoke.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-smog {
+      background-image: url("../images/svg/wi-smog.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-snow {
+      background-image: url("../images/svg/wi-day-snow.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-snow {
+      background-image: url("../images/svg/wi-snow.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-sleet {
+      background-image: url("../images/svg/wi-day-sleet.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-sleet {
+      background-image: url("../images/svg/wi-sleet.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-fog {
+      background-image: url("../images/svg/wi-fog.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-stars {
+      background-image: url("../images/svg/wi-stars.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-thermometer {
+      background-image: url("../images/svg/wi-thermometer.svg"); }
+  .wx-feeds p small {
+    font-size: 85%; }
+  .wx-feeds .wx-icon {
+    display: inline-block;
+    margin-right: 15px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .wx-feeds .wx-tornado {
+    background-image: url("../images/svg/wi-tornado.svg"); }
+  .wx-feeds .wx-storm {
+    background-image: url("../images/svg/wi-storm-showers.svg"); }
+  .wx-feeds .wx-wind {
+    background-image: url("../images/svg/wi-cloudy-gusts.svg"); }
+  .wx-feeds .wx-flood {
+    background-image: url("../images/svg/wi-raindrops.svg"); }
+  .wx-feeds .wx-fire {
+    background-image: url("../images/svg/wi-fire.svg"); }
+  .wx-feeds .wx-hurricane {
+    background-image: url("../images/svg/wi-hurricane.svg"); }
+  .wx-feeds .wx-winter {
+    background-image: url("../images/svg/wi-snow.svg"); }
+  .wx-feeds .wx-freeze {
+    background-image: url("../images/svg/wi-stars.svg"); }
+  .wx-feeds .wx-other {
+    background-image: url("../images/svg/wi-day-cloudy.svg"); }
+  .wx-feeds .container-theme.wx-neutral {
+    background-color: #58595B;
+    color: #ffffff; }
+  .wx-feeds .container-theme.wx-dark {
+    background-color: #03173E;
+    color: #ffffff; }
+  .wx-feeds .container-theme.wx-light {
+    background-color: #00558C;
+    color: #ffffff; }
+  .wx-feeds .container-theme.wx-bright {
+    background-color: #EEF2F9;
+    color: #000000; }
+    .wx-feeds .container-theme.wx-bright .wx-icon-now {
+      filter: invert(0); }
+    .wx-feeds .container-theme.wx-bright a,
+    .wx-feeds .container-theme.wx-bright a:hover,
+    .wx-feeds .container-theme.wx-bright a:focus {
+      color: #000000; }
+    .wx-feeds .container-theme.wx-bright p {
+      color: #000000; }
+    .wx-feeds .container-theme.wx-bright .wx-temp {
+      color: #000000; }
+  .wx-feeds .container-theme.wx-brightest {
+    background-color: #FFC845;
+    color: #000000; }
+    .wx-feeds .container-theme.wx-brightest .wx-icon-now {
+      filter: invert(0); }
+    .wx-feeds .container-theme.wx-brightest a,
+    .wx-feeds .container-theme.wx-brightest a:hover,
+    .wx-feeds .container-theme.wx-brightest a:focus {
+      color: #000000; }
+    .wx-feeds .container-theme.wx-brightest p {
+      color: #000000; }
+    .wx-feeds .container-theme.wx-brightest .wx-temp {
+      color: #000000; }
+  .wx-feeds .container-theme.wx-darkest {
+    background-color: #1F2532;
+    color: #ffffff; }
+    .wx-feeds .container-theme.wx-darkest .wx-icon-now {
+      filter: invert(1); }
+    .wx-feeds .container-theme.wx-darkest a,
+    .wx-feeds .container-theme.wx-darkest a:hover,
+    .wx-feeds .container-theme.wx-darkest a:focus,
+    .wx-feeds .container-theme.wx-darkest p,
+    .wx-feeds .container-theme.wx-darkest .wx-temp {
+      color: #ffffff; }

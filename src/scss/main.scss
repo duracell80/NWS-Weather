@@ -1,0 +1,267 @@
+.container-shadow {
+	background-color        : #ffffff;
+	box-shadow              : rgba(31, 37, 50, 0.2) 0px 2px 4px 0px;
+	margin-top              : 1.5rem;
+	margin-bottom           : 1.5rem;
+	border-color            : rgba(0, 0, 0, 0.125);
+	border-style            : solid;
+	border-width            : 0px;
+	border-radius           : 0.25rem;
+}
+
+
+.wx-feeds {
+  	
+	width 	: 350px;
+	margin	: 0 auto;
+	
+	.container-theme {
+		background-color    : #ffffff;
+		color               : #000000;
+
+		a,
+		a:hover,
+		a:focus {
+			color : #ffffff;
+		}
+
+		p {
+			color : #ffffff;
+		}
+		.wx-now:hover {
+			cursor: default;
+		}
+
+		.wx-temp {
+			font-weight : 100;
+			font-family : 'Spartan', sans-serif;
+			font-size   : 3rem;
+			color       : #ffffff;
+
+			&:hover {
+				cursor: default;
+			}
+		}
+
+		.wx-icon-now {
+			display             : inline-block;
+			margin-right        : 15px;
+			float               : left;
+			width               : 72px;
+			height              : 72px;
+			background-repeat   : no-repeat;
+			background-size     : contain;
+
+			filter              : invert(1);
+		}
+
+		.wx-icon-now.wi-cloud {
+			background-image : url('../images/svg/wi-cloud.svg');
+		}
+
+		.wx-icon-now.wi-cloudy {
+			background-image : url('../images/svg/wi-cloudy.svg');
+		}
+
+		.wx-icon-now.wi-day-cloudy {
+			background-image : url('../images/svg/wi-day-cloudy.svg');
+		}
+
+		.wx-icon-now.wi-day-sunny {
+			background-image : url('../images/svg/wi-day-sunny.svg');
+		}
+
+		.wx-icon-now.wi-night-sunny,
+		.wx-icon-now.wi-night-cloudy {
+			background-image : url('../images/svg/wi-night-cloudy.svg');
+		}
+
+		.wx-icon-now.wi-day-windy {
+			background-image : url('../images/svg/wi-day-windy.svg');
+		}
+
+		.wx-icon-now.wi-rain {
+			background-image : url('../images/svg/wi-rain.svg');
+		}
+
+		.wx-icon-now.wi-day-rain {
+			background-image : url('../images/svg/wi-day-rain.svg');
+		}
+		.wx-icon-now.wi-day-sprinkle {
+			background-image : url('../images/svg/wi-day-sprinkle.svg');
+		}
+
+		.wx-icon-now.wi-sprinkle {
+			background-image : url('../images/svg/wi-sprinkle.svg');
+		}
+
+		.wx-icon-now.wi-day-showers {
+			background-image : url('../images/svg/wi-day-showers.svg');
+		}
+
+		.wx-icon-now.wi-day-storm-showers {
+			background-image : url('../images/svg/wi-day-storm-showers.svg');
+		}
+
+		.wx-icon-now.wi-thunderstorm {
+			background-image : url('../images/svg/wi-thunderstorm.svg');
+		}
+		.wx-icon-now.wi-lightning {
+			background-image : url('../images/svg/wi-lightning.svg');
+		}
+		.wx-icon-now.wi-hail {
+			background-image : url('../images/svg/wi-hail.svg');
+		}
+		.wx-icon-now.wi-smoke {
+			background-image : url('../images/svg/wi-smoke.svg');
+		}
+		.wx-icon-now.wi-smog {
+			background-image : url('../images/svg/wi-smog.svg');
+		}
+
+
+		.wx-icon-now.wi-day-snow {
+			background-image : url('../images/svg/wi-day-snow.svg');
+		}
+
+		.wx-icon-now.wi-snow {
+			background-image : url('../images/svg/wi-snow.svg');
+		}
+
+		.wx-icon-now.wi-day-sleet {
+			background-image : url('../images/svg/wi-day-sleet.svg');
+		}
+
+		.wx-icon-now.wi-sleet {
+			background-image : url('../images/svg/wi-sleet.svg');
+		}
+
+		.wx-icon-now.wi-fog {
+			background-image : url('../images/svg/wi-fog.svg');
+		}
+
+		.wx-icon-now.wi-stars {
+			background-image : url('../images/svg/wi-stars.svg');
+		}
+
+
+
+
+		.wx-icon-now.wi-thermometer {
+			background-image : url('../images/svg/wi-thermometer.svg');
+		}
+
+	}
+
+
+
+
+
+	p small {
+		font-size   : 85%;
+	}
+
+	.wx-icon {
+		display             : inline-block;
+		margin-right        : 15px;
+		float               : left;
+		width               : 50px;
+		height              : 50px;
+		background-repeat   : no-repeat;
+		background-size     : contain;
+	}
+
+	// https://erikflowers.github.io/weather-icons
+	.wx-tornado     { background-image : url('../images/svg/wi-tornado.svg');}
+	.wx-storm       { background-image : url('../images/svg/wi-storm-showers.svg');}
+	.wx-wind        { background-image : url('../images/svg/wi-cloudy-gusts.svg');}
+	.wx-flood       { background-image : url('../images/svg/wi-raindrops.svg');}
+	.wx-fire        { background-image : url('../images/svg/wi-fire.svg');}
+	.wx-hurricane   { background-image : url('../images/svg/wi-hurricane.svg');}
+	.wx-winter      { background-image : url('../images/svg/wi-snow.svg');}
+	.wx-freeze      { background-image : url('../images/svg/wi-stars.svg');}
+	.wx-other       { background-image : url('../images/svg/wi-day-cloudy.svg');}
+
+
+	.container-theme.wx-neutral { 
+		background-color    : #58595B;
+		color               : #ffffff;
+	}
+
+
+
+	.container-theme.wx-dark { 
+		background-color    : #03173E;
+		color               : #ffffff;
+	}
+
+	.container-theme.wx-light { 
+		background-color    : #00558C;
+		color               : #ffffff;
+	}
+
+	.container-theme.wx-bright { 
+		background-color    : #EEF2F9;
+		color               : #000000;
+
+		.wx-icon-now {
+			filter              : invert(0);
+		}
+
+		a,
+		a:hover,
+		a:focus {
+			color : #000000;
+		}
+
+		p {
+			color : #000000;
+		}
+
+		.wx-temp {
+			color       : #000000;
+		}
+	}
+
+	.container-theme.wx-brightest { 
+		background-color    : #FFC845;
+		color               : #000000;
+
+		.wx-icon-now {
+			filter              : invert(0);
+		}
+
+		a,
+		a:hover,
+		a:focus {
+			color : #000000;
+		}
+
+		p {
+			color : #000000;
+		}
+
+		.wx-temp {
+			color       : #000000;
+		}
+	}
+
+	.container-theme.wx-darkest { 
+		background-color    : #1F2532;
+		color               : #ffffff;
+
+		.wx-icon-now {
+			filter              : invert(1);
+		}
+
+		a,
+		a:hover,
+		a:focus,
+		p,
+		.wx-temp {
+			color : #ffffff;
+		}
+
+	}
+
+}
