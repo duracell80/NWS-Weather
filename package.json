@@ -19,14 +19,15 @@
   "homepage": "https://github.com/duracell80/NWS-Weather",
   "devDependencies": {
     "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "gulp": "^4.0.2",
     "jquery": "^3.6.0",
     "material-icons": "^0.6.1",
+    "popper.js": "^1.16.1",
     "weather-icons": "erikflowers/weather-icons#2.0.12"
   }
 }
