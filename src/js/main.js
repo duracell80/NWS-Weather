@@ -1,5 +1,32 @@
-$(document).ready(function() {
-	var feedin                 = "https://alerts.weather.gov/cap/tn.php?x=0";
+function set_state(wx_state) {
+    localStorage.setItem("ps_wx_state", wx_state);
+}
+
+function get_state() {
+    
+    var rx_state = localStorage.getItem("ps_wx_state");
+    $('#ps-config #ps_wx_state option').each(function() {
+        if($(this).val() == rx_state) {
+            $(this).prop('selected', true);
+        }
+    });
+    
+    return rx_state;
+}
+
+
+
+function init_config() {
+    
+    get_state();
+    
+}
+
+
+function init_alerts() {
+    
+    var feedstate              = get_state().toLowerCase();
+    var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
 	var feedout_flood          = "";
     var feedout_wind           = "";
     var feedout_storm          = "";
@@ -18,6 +45,7 @@ $(document).ready(function() {
     var items_winter           = 0;
     var items_hurricane        = 0;
     var items_other            = 0;
+    
     
 	$.ajax(feedin, {
 		accepts:{
@@ -144,10 +172,16 @@ $(document).ready(function() {
 
 		}	
 	});
+}
+
+function init_current() {
     
+    var wx_state         = get_state();
     var wxin            = "https://w1.weather.gov/xml/current_obs/KJWN.rss";
     var wxthis          = "";
     var wxtheme         = "";
+    
+    $('.wx-state').text(wx_state);
     
     const hours         = new Date().getHours();
     const isDayTime     = hours > 6 && hours < 20;
@@ -285,7 +319,5 @@ $(document).ready(function() {
         
         }	
     });
-                
     
-	
-});
+}
