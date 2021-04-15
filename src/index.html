@@ -15,13 +15,12 @@
 <script src="js/main.js"></script>
     
 <script>
+
 $(document).ready(function() {
-	
-	init_storage();
-	
-	
-	// https://w1.weather.gov/xml/current_obs/
-    init_alerts();
+    
+    init_config();
+    
+	init_alerts();
     init_current();
     
 });
@@ -30,7 +29,7 @@ $(document).ready(function() {
 
 <div class="wx-feeds container-shadow">
 	<div class="container container-theme pt-5 pl-4 pr-4 pb-5">
-		<h4>Weather for <span class="wx-state">TN</span></h4>
+		<h4>Weather for <span class="wx-state">NOW</span></h4>
 		<div class="wxout_now"></div>
 	</div>
 	<div class="container pt-3 pl-4 pr-4">

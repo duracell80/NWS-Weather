@@ -1,30 +1,36 @@
-function set_state(wx_state) {
-    localStorage.setItem("ps_wx_state", wx_state);
-}
-
 function get_state() {
     
-    var rx_state = localStorage.getItem("ps_wx_state");
-    $('#ps-config #ps_wx_state option').each(function() {
-        if($(this).val() == rx_state) {
-            $(this).prop('selected', true);
-        }
-    });
+    if(localStorage.getItem("wx_state") == null){
+        $.getJSON("config.json", function(data){
+            var wx_state = data.wx_state;
+            localStorage.setItem("wx_state", wx_state);
+        });
+    } else {
+        var wx_state = localStorage.getItem("wx_state");
+        $('#ps-config #wx_state option').each(function() {
+            if($(this).val() == wx_state) {
+                $(this).prop('selected', true);
+            }
+        }); 
+    }
     
-    return rx_state;
+    return wx_state;
 }
 
-
-function set_obs(wx_obs) {
-    localStorage.setItem("ps_wx_obs", wx_obs);
-}
 
 function get_obs() {
     
-    var rx_obs = localStorage.getItem("ps_wx_obs");
-	$('#ps-config #ps_wx_obs').val(rx_obs);
-	
-    return rx_obs;
+    if(localStorage.getItem("wx_obs") == null){
+        $.getJSON("config.json", function(data){
+            var wx_obs = data.wx_obs;
+            localStorage.setItem("wx_obs", wx_obs);
+        });
+    } else {
+        var wx_obs = localStorage.getItem("wx_obs");
+        $('#ps-config #wx_obs').val(wx_obs); 
+    }
+    
+    return wx_obs;
 }
 
 
@@ -35,12 +41,12 @@ function clear_storage(item) {
 function init_storage() {
 	
 	$.getJSON("config.json", function(data){
-		if(localStorage.getItem("ps_wx_state") == null){
-			localStorage.setItem("ps_wx_state", data.ps_wx_state);
+		if(localStorage.getItem("wx_state") == null){
+			localStorage.setItem("wx_state", data.wx_state);
 		}
 		
-		if(localStorage.getItem("ps_wx_obs") == null){
-			localStorage.setItem("ps_wx_obs", data.ps_wx_obs);
+		if(localStorage.getItem("wx_obs") == null){
+			localStorage.setItem("wx_obs", data.wx_obs);
 		}
 	
 	
@@ -206,7 +212,11 @@ function init_alerts() {
             if(items_hurricane < 1) {   $(".panel-hurricane").hide();}
             
 
-		}	
+		},
+        complete: function() {
+            log_time("WX - Alerts last checked: ");
+            setInterval(init_alerts, 3600000);
+        }
 	});
 }
 
@@ -354,7 +364,21 @@ function init_current() {
         $(".wxout_now").append(wxthis);
         $(".wx-feeds .container-theme").addClass(wxtheme);
         
+        },
+        complete: function() {
+            var wxdescription       = $(".wx-icon-now").attr("title");
+            
+            log_time("WX - Conditions last checked: ");
+            console.log(wxdescription);
+            setInterval(init_alerts, 1800000);
         }	
     });
     
+}
+
+
+function log_time(logmsg) {
+    let currentDate = new Date();
+    let time        = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+    console.log(logmsg + time);
 }

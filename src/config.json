@@ -1,5 +1,5 @@
 {
   	"version"				: "1.0.0",
-	"ps_wx_state"			: "al",
-	"ps_wx_obs"				: "kbhm"
+	"wx_state"			    : "al",
+	"wx_obs"				: "kbhm"
 }

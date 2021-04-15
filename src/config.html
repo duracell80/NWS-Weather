@@ -17,20 +17,19 @@
 <script>
 $(document).ready(function() {
 	
-	init_storage();
-    init_config();
+	init_config();
     
     $( "#ps-config .set-location" ).click(function() {
-        var wx_state = $("#ps-config #ps_wx_state").val();
+        var wx_state = $("#ps-config #wx_state").val();
         set_state(wx_state);
 		
-		var wx_obs = $("#ps-config #ps_wx_obs").val();
+		var wx_obs = $("#ps-config #wx_obs").val();
         set_obs(wx_obs);
     });
 	
 	$( "#ps-config .set-defaults" ).click(function() {
-        clear_storage("ps_wx_state");
-		clear_storage("ps_wx_obs");
+        clear_storage("wx_state");
+		clear_storage("wx_obs");
 		init_storage();
     });
 	
@@ -45,13 +44,13 @@ $(document).ready(function() {
     
     <form class="wx-location">
 	<div class="form-group"> <!-- Full Name -->
-		<label for="ps_wx_obs" class="control-label">NWS Weather Station Code</label>
-		<input type="text" class="form-control" id="ps_wx_obs" name="ps_wx_obs_name">
+		<label for="wx_obs" class="control-label">NWS Weather Station Code</label>
+		<input type="text" class="form-control" id="wx_obs" name="wx_obs_name">
 	</div>
 							
 	<div class="form-group"> <!-- State Button -->
-		<label for="ps_wx_state" class="control-label">State</label>
-		<select class="form-control" id="ps_wx_state">
+		<label for="wx_state" class="control-label">State</label>
+		<select class="form-control" id="wx_state">
 			<option value="al">Alabama</option>
 			<option value="ak">Alaska</option>
 			<option value="az">Arizona</option>
