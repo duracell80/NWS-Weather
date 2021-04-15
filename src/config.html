@@ -17,12 +17,25 @@
 <script>
 $(document).ready(function() {
 	
+	init_storage();
     init_config();
     
     $( "#ps-config .set-location" ).click(function() {
         var wx_state = $("#ps-config #ps_wx_state").val();
         set_state(wx_state);
+		
+		var wx_obs = $("#ps-config #ps_wx_obs").val();
+        set_obs(wx_obs);
     });
+	
+	$( "#ps-config .set-defaults" ).click(function() {
+        clear_storage("ps_wx_state");
+		clear_storage("ps_wx_obs");
+		init_storage();
+    });
+	
+	
+	
     
 });
 </script>
@@ -32,69 +45,70 @@ $(document).ready(function() {
     
     <form class="wx-location">
 	<div class="form-group"> <!-- Full Name -->
-		<label for="ps_obs_id" class="control-label">NWS Weather Station Code</label>
-		<input type="text" class="form-control" id="ps_obs_id" name="ps_obs_id" placeholder="KJWN">
+		<label for="ps_wx_obs" class="control-label">NWS Weather Station Code</label>
+		<input type="text" class="form-control" id="ps_wx_obs" name="ps_wx_obs_name">
 	</div>
 							
 	<div class="form-group"> <!-- State Button -->
 		<label for="ps_wx_state" class="control-label">State</label>
 		<select class="form-control" id="ps_wx_state">
-			<option value="AL">Alabama</option>
-			<option value="AK">Alaska</option>
-			<option value="AZ">Arizona</option>
-			<option value="AR">Arkansas</option>
-			<option value="CA">California</option>
-			<option value="CO">Colorado</option>
-			<option value="CT">Connecticut</option>
-			<option value="DE">Delaware</option>
-			<option value="DC">District Of Columbia</option>
-			<option value="FL">Florida</option>
-			<option value="GA">Georgia</option>
-			<option value="HI">Hawaii</option>
-			<option value="ID">Idaho</option>
-			<option value="IL">Illinois</option>
-			<option value="IN">Indiana</option>
-			<option value="IA">Iowa</option>
-			<option value="KS">Kansas</option>
-			<option value="KY">Kentucky</option>
-			<option value="LA">Louisiana</option>
-			<option value="ME">Maine</option>
-			<option value="MD">Maryland</option>
-			<option value="MA">Massachusetts</option>
-			<option value="MI">Michigan</option>
-			<option value="MN">Minnesota</option>
-			<option value="MS">Mississippi</option>
-			<option value="MO">Missouri</option>
-			<option value="MT">Montana</option>
-			<option value="NE">Nebraska</option>
-			<option value="NV">Nevada</option>
-			<option value="NH">New Hampshire</option>
-			<option value="NJ">New Jersey</option>
-			<option value="NM">New Mexico</option>
-			<option value="NY">New York</option>
-			<option value="NC">North Carolina</option>
-			<option value="ND">North Dakota</option>
-			<option value="OH">Ohio</option>
-			<option value="OK">Oklahoma</option>
-			<option value="OR">Oregon</option>
-			<option value="PA">Pennsylvania</option>
-			<option value="RI">Rhode Island</option>
-			<option value="SC">South Carolina</option>
-			<option value="SD">South Dakota</option>
-			<option value="TN" selected>Tennessee</option>
-			<option value="TX">Texas</option>
-			<option value="UT">Utah</option>
-			<option value="VT">Vermont</option>
-			<option value="VA">Virginia</option>
-			<option value="WA">Washington</option>
-			<option value="WV">West Virginia</option>
-			<option value="WI">Wisconsin</option>
-			<option value="WY">Wyoming</option>
+			<option value="al">Alabama</option>
+			<option value="ak">Alaska</option>
+			<option value="az">Arizona</option>
+			<option value="ar">Arkansas</option>
+			<option value="ca">California</option>
+			<option value="co">Colorado</option>
+			<option value="ct">Connecticut</option>
+			<option value="de">Delaware</option>
+			<option value="dc">District Of Columbia</option>
+			<option value="fl">Florida</option>
+			<option value="ga">Georgia</option>
+			<option value="hi">Hawaii</option>
+			<option value="id">Idaho</option>
+			<option value="il">Illinois</option>
+			<option value="in">Indiana</option>
+			<option value="ia">Iowa</option>
+			<option value="ks">Kansas</option>
+			<option value="ky">Kentucky</option>
+			<option value="la">Louisiana</option>
+			<option value="me">Maine</option>
+			<option value="md">Maryland</option>
+			<option value="ma">Massachusetts</option>
+			<option value="mi">Michigan</option>
+			<option value="mn">Minnesota</option>
+			<option value="ms">Mississippi</option>
+			<option value="mo">Missouri</option>
+			<option value="mt">Montana</option>
+			<option value="ne">Nebraska</option>
+			<option value="nv">Nevada</option>
+			<option value="nh">New Hampshire</option>
+			<option value="nj">New Jersey</option>
+			<option value="nm">New Mexico</option>
+			<option value="ny">New York</option>
+			<option value="nc">North Carolina</option>
+			<option value="nd">North Dakota</option>
+			<option value="oh">Ohio</option>
+			<option value="ok">Oklahoma</option>
+			<option value="or">Oregon</option>
+			<option value="pa">Pennsylvania</option>
+			<option value="ri">Rhode Island</option>
+			<option value="sc">South Carolina</option>
+			<option value="sd">South Dakota</option>
+			<option value="tn" selected>Tennessee</option>
+			<option value="tx">Texas</option>
+			<option value="ut">Utah</option>
+			<option value="vt">Vermont</option>
+			<option value="va">Virginia</option>
+			<option value="wa">Washington</option>
+			<option value="wv">West Virginia</option>
+			<option value="wi">Wisconsin</option>
+			<option value="wy">Wyoming</option>
 		</select>					
 	</div>
 	
 	<div class="form-group"> <!-- Submit Button -->
-		<span class="btn btn-primary set-location">Set Location</span>
+		<button class="btn btn-primary set-location">Save</button>
+		<button class="btn btn-primary set-defaults">Load Default</button>
 	</div>     
 	
 </form>			

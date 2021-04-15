@@ -15,10 +15,46 @@ function get_state() {
 }
 
 
+function set_obs(wx_obs) {
+    localStorage.setItem("ps_wx_obs", wx_obs);
+}
+
+function get_obs() {
+    
+    var rx_obs = localStorage.getItem("ps_wx_obs");
+	$('#ps-config #ps_wx_obs').val(rx_obs);
+	
+    return rx_obs;
+}
+
+
+function clear_storage(item) {
+	localStorage.removeItem(item);
+}
+
+function init_storage() {
+	
+	$.getJSON("config.json", function(data){
+		if(localStorage.getItem("ps_wx_state") == null){
+			localStorage.setItem("ps_wx_state", data.ps_wx_state);
+		}
+		
+		if(localStorage.getItem("ps_wx_obs") == null){
+			localStorage.setItem("ps_wx_obs", data.ps_wx_obs);
+		}
+	
+	
+	}).fail(function(){
+		console.log("Cannot read config.json");
+	});
+	
+}
+
 
 function init_config() {
     
-    get_state();
+	get_state();
+	get_obs();
     
 }
 
@@ -176,8 +212,9 @@ function init_alerts() {
 
 function init_current() {
     
-    var wx_state         = get_state();
-    var wxin            = "https://w1.weather.gov/xml/current_obs/KJWN.rss";
+    var wx_state        = get_state().toUpperCase();
+	var wx_obs          = get_obs().toUpperCase();
+    var wxin            = "https://w1.weather.gov/xml/current_obs/"+wx_obs+".rss";
     var wxthis          = "";
     var wxtheme         = "";
     
