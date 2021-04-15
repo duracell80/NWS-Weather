@@ -17,6 +17,10 @@ function get_state() {
     return wx_state;
 }
 
+function set_state(wx_state) {
+    localStorage.setItem("wx_state", wx_state);
+}
+
 
 function get_obs() {
     
@@ -31,6 +35,10 @@ function get_obs() {
     }
     
     return wx_obs;
+}
+
+function set_obs(wx_obs) {
+    localStorage.setItem("wx_obs", wx_obs);
 }
 
 
