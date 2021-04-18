@@ -77,6 +77,7 @@ function init_alerts() {
     
     var feedstate              = get_state().toLowerCase();
     var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
+	//var feedin                 = "http://localhost:3000/alerts.xml";
 	var feedout_flood          = "";
     var feedout_wind           = "";
     var feedout_storm          = "";
@@ -223,7 +224,6 @@ function init_alerts() {
 		},
         complete: function() {
             log_time("WX - Alerts last checked: ");
-            setInterval(init_alerts, 3600000);
         }
 	});
 }
@@ -233,7 +233,8 @@ function init_current() {
     var wx_state        = get_state().toUpperCase();
 	var wx_obs          = get_obs().toUpperCase();
     var wxin            = "https://w1.weather.gov/xml/current_obs/"+wx_obs+".rss";
-    var wxthis          = "";
+    //var wxin            = "http://localhost:3000/current.xml";
+	var wxthis          = "";
     var wxtheme         = "";
     
     $('.wx-state').text(wx_state);
@@ -367,18 +368,44 @@ function init_current() {
                 wxtheme = "wx-" + wxtheme;
                 
                 wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + '</p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +'"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
+				
+				wxtemps_time = log_time();
+				wxtemps = '<div class="carousel-item">' + wxtemp_f + ' ('+ wxtemp_c +') - <small>updated: '+ wxtemps_time +'</small></div>';
             });
         
-        $(".wxout_now").append(wxthis);
+		// UPDATE CURRENT WX DISPLAY
         $(".wx-feeds .container-theme").addClass(wxtheme);
+			
+		$(".wxout_now").empty();
+		$(".wxout_now").append(wxthis);
+		
+		var wxout_temps_count = $(".wxout_temps").children().length;	
+		
+		if (wxout_temps_count > 4) {
+			$('.wxout_temps div').each(function() {
+				if(!$(this).hasClass("active")) {
+					$(this).remove();
+				}
+			});
+		}	
+			
+		$(".wxout_temps").prepend(wxtemps);
+			
+		$('.wxout_temps div').each(function() {
+            if($(this).hasClass("active")) {
+                $(this).removeClass("active");
+            }
+        });
+			
+		$('.wxout_temps div:first').addClass('active');
+			
+        
         
         },
         complete: function() {
             var wxdescription       = $(".wx-icon-now").attr("title");
-            
             log_time("WX - Conditions last checked: ");
             console.log(wxdescription);
-            setInterval(init_alerts, 1800000);
         }	
     });
     
@@ -387,6 +414,11 @@ function init_current() {
 
 function log_time(logmsg) {
     let currentDate = new Date();
-    let time        = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-    console.log(logmsg + time);
+	var	cmin		= String(currentDate.getMinutes()).padStart(2, "0");
+	var	chrs		= String(currentDate.getHours()).padStart(2, "0");
+    let time        = chrs + ":" + cmin;
+    if(logmsg){
+		console.log(logmsg + time);
+	}
+	return time;
 }

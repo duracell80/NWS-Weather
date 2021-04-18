@@ -21,7 +21,11 @@ $(document).ready(function() {
     init_config();
     
 	init_alerts();
-    init_current();
+	init_current();
+
+	
+	//setInterval(init_alerts, 1800000);
+	setInterval(init_current, 900000);
     
 });
 </script>
@@ -31,6 +35,23 @@ $(document).ready(function() {
 	<div class="container container-theme pt-5 pl-4 pr-4 pb-5">
 		<h4>Weather for <span class="wx-state">NOW</span></h4>
 		<div class="wxout_now"></div>
+		
+		<div id="carouselTempHistory" class="carousel slide slider_temps" data-ride="carousel">
+			
+		
+		<div class="carousel-inner wxout_temps">
+			
+		</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		
 	</div>
 	<div class="container pt-3 pl-4 pr-4">
 	<p><small>Warnings display below when issued and are checked every 30 minutes, hit refresh to check for new updates now, always have two ways to get warnings. <br><br>Source: U.S. National Weather Service</small></p>

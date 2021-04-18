@@ -87,6 +87,14 @@
       background-image: url("../images/svg/wi-stars.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-thermometer {
       background-image: url("../images/svg/wi-thermometer.svg"); }
+  .wx-feeds .wxout_temps {
+    text-align: center;
+    /*small {
+			font-size 	: 85%;
+			display		: block;
+		}*/ }
+  .wx-feeds .slider_temps {
+    margin-top: 1rem; }
   .wx-feeds p small {
     font-size: 85%; }
   .wx-feeds .wx-icon {
