@@ -19,6 +19,10 @@ $(document).ready(function() {
 	
 	init_config();
     
+	var obs_state 		= $("#ps-config #wx_state").val(); lookup_obs(obs_state);
+		
+	
+	// BUTTON ACTIONS
     $( "#ps-config .set-location" ).click(function() {
         var wx_state = $("#ps-config #wx_state").val();
         set_state(wx_state);
@@ -35,18 +39,28 @@ $(document).ready(function() {
 	
 	
 	
-    
+	// ON CHANGE OF STATE GET LIST FROM NOAA OF OBSERVATION STATIONS
+	$( "#wx_state" ).change(function() {	
+		var obs_state = $(this).val()
+		lookup_obs(obs_state);
+	});
+	
+	
+	
+	
+	
+
 });
 </script>
 
 <div class="ps-config" id="ps-config">
-    <h1>Configuration</h1>
+    
+	
+	
+	<h1>Configuration</h1>
     
     <form class="wx-location">
-	<div class="form-group"> <!-- Full Name -->
-		<label for="wx_obs" class="control-label">NWS Weather Station Code</label>
-		<input type="text" class="form-control" id="wx_obs" name="wx_obs_name">
-	</div>
+			
 							
 	<div class="form-group"> <!-- State Button -->
 		<label for="wx_state" class="control-label">State</label>
@@ -102,9 +116,18 @@ $(document).ready(function() {
 			<option value="wv">West Virginia</option>
 			<option value="wi">Wisconsin</option>
 			<option value="wy">Wyoming</option>
-		</select>					
+		</select>						
 	</div>
 	
+	<div class="form-group"> <!-- Full Name -->
+		<label for="obs_stations" class="control-label">Load Current Conditions From</label>
+			
+		<select class="form-control" id="wx_obs"></select>
+		<div id="obs_collect" class="hide"></div>
+	
+	</div>
+		
+		
 	<div class="form-group"> <!-- Submit Button -->
 		<button class="btn btn-primary set-location">Save</button>
 		<button class="btn btn-primary set-defaults">Load Default</button>

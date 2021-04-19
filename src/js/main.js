@@ -22,6 +22,62 @@ function set_state(wx_state) {
 }
 
 
+
+function lookup_obs(obs_state) {
+	$("#obs_collect").load('https://w1.weather.gov/xml/current_obs/seek.php?state='+ obs_state +'&Find=Find table[cellpadding="3"]', function(responseTxt, statusTxt, jqXHR){
+		if(statusTxt == "success"){
+			$('#wx_obs')
+					.find('option')
+					.remove()
+					.end()
+			;
+
+			$('#obs_collect table tbody tr td[headers="Station Name"]').each(function(index) {
+				var station_acc 	= $(this).find("a").attr("href").split("=");
+				var station_nme 	= $(this).find("a").text();
+				var station_select	= '<option value="'+ station_acc[1].toLowerCase() +'">'+ station_nme +'</option';
+
+				$('#wx_obs').append(station_select);
+			});
+			
+			var obs_selected 	= get_obs();
+			$('#ps-config #wx_obs option').each(function() {
+				if($(this).val() == obs_selected) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		}
+		if(statusTxt == "error"){
+			alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
+		}
+	});
+}
+
+
+
+function get_obs_select() {
+    
+    if(localStorage.getItem("wx_obs") == null){
+        $.getJSON("config.json", function(data){
+            var wx_obs = data.wx_obs;
+            localStorage.setItem("wx_obs", wx_obs);
+        });
+    } else {
+        var wx_obs = localStorage.getItem("wx_obs");
+        var station_select	= '<option value="'+ wx_obs +'">'+ wx_obs +'</option';
+					
+		$('#wx_obs').append(station_select);
+		$('#ps-config #wx_obs option').each(function() {
+            if($(this).val() == wx_obs) {
+                $(this).prop('selected', true);
+            }
+        }); 
+    }
+    
+    return wx_obs;
+}
+
+
 function get_obs() {
     
     if(localStorage.getItem("wx_obs") == null){
@@ -40,6 +96,9 @@ function get_obs() {
 function set_obs(wx_obs) {
     localStorage.setItem("wx_obs", wx_obs);
 }
+
+
+
 
 
 function clear_storage(item) {
@@ -68,7 +127,7 @@ function init_storage() {
 function init_config() {
     
 	get_state();
-	get_obs();
+	get_obs_select();
     
 }
 
@@ -231,7 +290,7 @@ function init_alerts() {
 function init_current() {
     
     var wx_state        = get_state().toUpperCase();
-	var wx_obs          = get_obs().toUpperCase();
+	var wx_obs          = get_obs_select().toUpperCase();
     var wxin            = "https://w1.weather.gov/xml/current_obs/"+wx_obs+".rss";
     //var wxin            = "http://localhost:3000/current.xml";
 	var wxthis          = "";
