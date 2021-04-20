@@ -24,8 +24,14 @@ function set_state(wx_state) {
 
 
 function lookup_obs(obs_state) {
+	
+	
 	$("#obs_collect").load('https://w1.weather.gov/xml/current_obs/seek.php?state='+ obs_state +'&Find=Find table[cellpadding="3"]', function(responseTxt, statusTxt, jqXHR){
 		if(statusTxt == "success"){
+			
+			let store_obs_name = [];
+			let store_obs_wxid = [];
+			
 			$('#wx_obs')
 					.find('option')
 					.remove()
@@ -33,11 +39,14 @@ function lookup_obs(obs_state) {
 			;
 
 			$('#obs_collect table tbody tr td[headers="Station Name"]').each(function(index) {
-				var station_acc 	= $(this).find("a").attr("href").split("=");
-				var station_nme 	= $(this).find("a").text();
-				var station_select	= '<option value="'+ station_acc[1].toLowerCase() +'">'+ station_nme +'</option';
-
+				var station_wxid 	= $(this).find("a").attr("href").split("=");
+				var station_name 	= $(this).find("a").text();
+				var station_select	= '<option value="'+ station_wxid[1].toLowerCase() +'">'+ station_name +'</option';
+				
+				store_obs_name.push(station_name);
+				store_obs_wxid.push(station_wxid[1]);
 				$('#wx_obs').append(station_select);
+				
 			});
 			
 			var obs_selected 	= get_obs();
@@ -46,6 +55,18 @@ function lookup_obs(obs_state) {
 					$(this).attr('selected', 'selected');
 				}
 			});
+			
+			// BUILD AN OBJECT OF FOUND OBS STATIONS TO STORE IN LOCAL STORAGE
+			var store_obs_json = "{";
+			$.each(store_obs_wxid, function(index, value){
+				store_obs_json += '"'+value+'" : { "name" : "'+store_obs_name[index]+'"},';
+			});
+			
+			store_obs_json += "}";
+			//console.log(store_obs_json);
+			
+			localStorage.setItem('wx_obs_'+ obs_state, store_obs_json);
+			
 		}
 		if(statusTxt == "error"){
 			alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
