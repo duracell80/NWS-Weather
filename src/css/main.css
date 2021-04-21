@@ -14,15 +14,28 @@
 .wx-feeds {
   width: 350px;
   margin: 0 auto; }
+  .wx-feeds button:focus:not(:focus-visible) {
+    box-shadow: none; }
+  .wx-feeds a,
+  .wx-feeds a:hover,
+  .wx-feeds a:focus {
+    color: #58595B;
+    text-decoration: underline; }
+  .wx-feeds .panel-group .card {
+    border-width: 0px; }
   .wx-feeds .container-theme {
     background-color: #ffffff;
     color: #000000; }
     .wx-feeds .container-theme a,
     .wx-feeds .container-theme a:hover,
     .wx-feeds .container-theme a:focus {
-      color: #ffffff; }
+      color: #ffffff;
+      text-decoration: none; }
     .wx-feeds .container-theme p {
       color: #ffffff; }
+    .wx-feeds .container-theme .carousel .carousel-control-prev,
+    .wx-feeds .container-theme .carousel .carousel-control-next {
+      opacity: 1; }
     .wx-feeds .container-theme .wx-now:hover {
       cursor: default; }
     .wx-feeds .container-theme .wx-temp {
@@ -148,6 +161,11 @@
       color: #000000; }
     .wx-feeds .container-theme.wx-bright .wx-temp {
       color: #000000; }
+  .wx-feeds .container-theme.wx-brightest .carousel .carousel-control-prev-icon,
+  .wx-feeds .container-theme.wx-brightest .carousel .carousel-control-next-icon,
+  .wx-feeds .container-theme.wx-bright .carousel .carousel-control-prev-icon,
+  .wx-feeds .container-theme.wx-bright .carousel .carousel-control-next-icon {
+    filter: invert(1); }
   .wx-feeds .container-theme.wx-brightest {
     background-color: #FFC845;
     color: #000000; }

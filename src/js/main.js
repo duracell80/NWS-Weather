@@ -26,52 +26,89 @@ function set_state(wx_state) {
 function lookup_obs(obs_state) {
 	
 	
-	$("#obs_collect").load('https://w1.weather.gov/xml/current_obs/seek.php?state='+ obs_state +'&Find=Find table[cellpadding="3"]', function(responseTxt, statusTxt, jqXHR){
-		if(statusTxt == "success"){
-			
-			let store_obs_name = [];
-			let store_obs_wxid = [];
-			
-			$('#wx_obs')
-					.find('option')
-					.remove()
-					.end()
-			;
+	
+	
+	if (localStorage.getItem('wx_obs_'+ obs_state) === null) {
+	// LOAD NWS SEARCH FROM TABLE CONTAINING STATIONS (SCREEN SCRAPE)
+		$("#obs_collect").load('https://w1.weather.gov/xml/current_obs/seek.php?state='+ obs_state +'&Find=Find table[cellpadding="3"]', function(responseTxt, statusTxt, jqXHR){
+			if(statusTxt == "success"){
 
-			$('#obs_collect table tbody tr td[headers="Station Name"]').each(function(index) {
-				var station_wxid 	= $(this).find("a").attr("href").split("=");
-				var station_name 	= $(this).find("a").text();
-				var station_select	= '<option value="'+ station_wxid[1].toLowerCase() +'">'+ station_name +'</option';
-				
-				store_obs_name.push(station_name);
-				store_obs_wxid.push(station_wxid[1]);
-				$('#wx_obs').append(station_select);
-				
-			});
-			
-			var obs_selected 	= get_obs();
-			$('#ps-config #wx_obs option').each(function() {
-				if($(this).val() == obs_selected) {
-					$(this).attr('selected', 'selected');
-				}
-			});
-			
-			// BUILD AN OBJECT OF FOUND OBS STATIONS TO STORE IN LOCAL STORAGE
-			var store_obs_json = "{";
-			$.each(store_obs_wxid, function(index, value){
-				store_obs_json += '"'+value+'" : { "name" : "'+store_obs_name[index]+'"},';
-			});
-			
-			store_obs_json += "}";
-			//console.log(store_obs_json);
-			
-			localStorage.setItem('wx_obs_'+ obs_state, store_obs_json);
-			
-		}
-		if(statusTxt == "error"){
-			alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
-		}
-	});
+				console.log("NWS Scrape OK: " + jqXHR.status + " " + jqXHR.statusText);
+
+				let store_obs_name = [];
+				let store_obs_wxid = [];
+
+				$('#wx_obs')
+						.find('option')
+						.remove()
+						.end()
+				;
+
+				// SNIFF DOM FOR TABLE OF SEARCH RESULTS
+				$('#obs_collect table tbody tr td[headers="Station Name"]').each(function(index) {
+					var station_wxid 	= $(this).find("a").attr("href").split("=");
+					var station_name 	= $(this).find("a").text();
+					var station_select	= '<option value="'+ station_wxid[1].toLowerCase() +'">'+ station_name +'</option>';
+
+					// BUILD ARRAYS
+					store_obs_name.push(station_name);
+					store_obs_wxid.push(station_wxid[1]);
+
+					// BUILD DROP DOWN
+					$('#wx_obs').append(station_select);
+
+				});
+
+				// SELECT THE CURRENT SELECTED STATION IF ANY
+				var obs_selected 	= get_obs();
+				$('#ps-config #wx_obs option').each(function() {
+					if($(this).val() == obs_selected) {
+						$(this).attr('selected', 'selected');
+					}
+				});
+
+				// BUILD AN OBJECT OF FOUND OBS STATIONS TO STORE IN LOCAL STORAGE
+				var store_obs_json = "{";
+				$.each(store_obs_wxid, function(index, value){
+					store_obs_json += '"'+value.toLowerCase()+'" : { "name" : "'+store_obs_name[index]+'"},';
+				}); store_obs_json = store_obs_json.slice(0, -1) + "}";
+
+				// STORE STATION DATA IN BROWSER, NEXT TIME LOAD FROM LOCAL STORAGE WITHOUT SCRAPE
+				localStorage.setItem('wx_obs_'+ obs_state, store_obs_json);
+
+			}
+			if(statusTxt == "error"){
+				alert("NWS Scrape Error (check for changed HTML): " + jqXHR.status + " " + jqXHR.statusText);
+			}
+		});
+	} else {
+		// IF STATE OBSERVATION STATIONS ALREADY IN LOCAL STORAGE ...
+		var obs_fetch 		= JSON.parse(localStorage.getItem('wx_obs_'+ obs_state));
+		var obs_selected 	= get_obs();
+		
+		console.log("Cached Stations For "+obs_state.toUpperCase()+":\n\n");
+		console.log(obs_fetch);
+		
+		// CLEAR DROP DOWN
+		$('#wx_obs')
+				.find('option')
+				.remove()
+				.end()
+		;
+		
+		// BUILD DROP DOWN
+		$.each(obs_fetch, function(index, value){
+			var station_wxid 	= index;
+			var station_name 	= value["name"];
+			if(station_wxid == obs_selected){
+				var station_select	= '<option value="'+ station_wxid.toLowerCase() +'" selected>'+ station_name +'</option>';
+			} else {
+				var station_select	= '<option value="'+ station_wxid.toLowerCase() +'">'+ station_name +'</option>';
+			}
+			$('#wx_obs').append(station_select);
+		});
+		
+	}
 }
 
 
@@ -463,9 +500,9 @@ function init_current() {
 		
 		if (wxout_temps_count > 4) {
 			$('.wxout_temps div').each(function() {
-				if(!$(this).hasClass("active")) {
+				//if(!$(this).hasClass("active")) {
 					$(this).remove();
-				}
+				//}
 			});
 		}	
 			

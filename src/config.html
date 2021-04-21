@@ -34,6 +34,10 @@ $(document).ready(function() {
 	$( "#ps-config .set-defaults" ).click(function() {
         clear_storage("wx_state");
 		clear_storage("wx_obs");
+		
+		// CLEAR FOR ALL STATES AND TRIGGER SCREEN SCRAPE FROM NWS TO OBTAINS STATION ID's
+		clear_storage("wx_obs_tn");
+		
 		init_storage();
     });
 	

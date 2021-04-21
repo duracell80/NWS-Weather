@@ -19,6 +19,25 @@
 	width 	: 350px;
 	margin	: 0 auto;
 	
+	
+	button:focus:not(:focus-visible) {
+		box-shadow: none;
+	}
+	
+	a,
+	a:hover,
+	a:focus {
+		color : #58595B;
+		text-decoration : underline;
+	}
+	
+	.panel-group {
+		.card {
+			border-width: 0px;
+		}
+	}
+	
+	
 	.container-theme {
 		background-color    : #ffffff;
 		color               : #000000;
@@ -26,12 +45,21 @@
 		a,
 		a:hover,
 		a:focus {
-			color : #ffffff;
+			color 			: #ffffff;
+			text-decoration : none;
 		}
 
 		p {
 			color : #ffffff;
 		}
+		
+		.carousel {
+			.carousel-control-prev, 
+			.carousel-control-next {
+				opacity : 1;
+			}
+		}
+		
 		.wx-now:hover {
 			cursor: default;
 		}
@@ -238,10 +266,21 @@
 		}
 	}
 
+	.container-theme.wx-brightest,
+	.container-theme.wx-bright { 
+		.carousel {
+			.carousel-control-prev-icon,
+			.carousel-control-next-icon {
+				filter              : invert(1);
+			}
+		}
+	}
+	
 	.container-theme.wx-brightest { 
 		background-color    : #FFC845;
 		color               : #000000;
-
+		
+		
 		.wx-icon-now {
 			filter              : invert(0);
 		}
