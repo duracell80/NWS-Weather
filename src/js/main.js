@@ -53,9 +53,10 @@ function init_alerts() {
                 var alertend        = el.find("cap\\:expires").text();
                 var alerturgency    = el.find("cap\\:urgency").text();
                 var alertarea       = el.find("cap\\:areaDesc").text();
+				var alertarea_lower = alertarea.toLowerCase();
                 
                 
-                if(alertevent.indexOf("Warning") !== -1) {
+                if(alertevent.indexOf("Warning") !== -1 && alertarea_lower.indexOf(get_county()) !== -1) {
                     if(alerturgency.indexOf("Immediate") !== -1) {
                         alertlevel = "alert-now";
                     } else {
