@@ -1,5 +1,6 @@
 {
   	"version"				: "1.0.0",
 	"wx_state"			    : "al",
+	"wx_county"			    : "jefferson",
 	"wx_obs"				: "kbhm"
 }

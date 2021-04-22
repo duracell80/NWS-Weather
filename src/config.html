@@ -19,13 +19,19 @@ $(document).ready(function() {
 	
 	init_config();
     
-	var obs_state 		= $("#ps-config #wx_state").val(); lookup_obs(obs_state);
-		
+	var obs_state 		= $("#ps-config #wx_state").val(); 
+	
+	lookup_obs(obs_state);
+	lookup_counties(obs_state);	
 	
 	// BUTTON ACTIONS
     $( "#ps-config .set-location" ).click(function() {
         var wx_state = $("#ps-config #wx_state").val();
         set_state(wx_state);
+		
+		var wx_county = $("#ps-config #wx_county").val();
+        set_county(wx_county);
+		get_county();
 		
 		var wx_obs = $("#ps-config #wx_obs").val();
         set_obs(wx_obs);
@@ -33,6 +39,7 @@ $(document).ready(function() {
 	
 	$( "#ps-config .set-defaults" ).click(function() {
         clear_storage("wx_state");
+		clear_storage("wx_county");
 		clear_storage("wx_obs");
 		
 		// CLEAR FOR ALL STATES AND TRIGGER SCREEN SCRAPE FROM NWS TO OBTAINS STATION ID's
@@ -47,6 +54,7 @@ $(document).ready(function() {
 	$( "#wx_state" ).change(function() {	
 		var obs_state = $(this).val()
 		lookup_obs(obs_state);
+		lookup_counties(obs_state);
 	});
 	
 	
@@ -66,7 +74,7 @@ $(document).ready(function() {
     <form class="wx-location">
 			
 							
-	<div class="form-group"> <!-- State Button -->
+	<div class="form-group"> <!-- State -->
 		<label for="wx_state" class="control-label">State</label>
 		<select class="form-control" id="wx_state">
 			<option value="al">Alabama</option>
@@ -111,7 +119,7 @@ $(document).ready(function() {
 			<option value="ri">Rhode Island</option>
 			<option value="sc">South Carolina</option>
 			<option value="sd">South Dakota</option>
-			<option value="tn" selected>Tennessee</option>
+			<option value="tn">Tennessee</option>
 			<option value="tx">Texas</option>
 			<option value="ut">Utah</option>
 			<option value="vt">Vermont</option>
@@ -123,18 +131,25 @@ $(document).ready(function() {
 		</select>						
 	</div>
 	
-	<div class="form-group"> <!-- Full Name -->
+	<div class="form-group"> <!-- County -->
+		<label for="wx_county" class="control-label">County</label>
+		<select class="form-control" id="wx_county"></select>						
+	</div>
+		
+	
+	<div class="form-group"> <!-- Stations -->
 		<label for="obs_stations" class="control-label">Load Current Conditions From</label>
 			
 		<select class="form-control" id="wx_obs"></select>
 		<div id="obs_collect" class="hide"></div>
+		<div id="obs_counties" class="hide"></div>
 	
 	</div>
 		
 		
-	<div class="form-group"> <!-- Submit Button -->
-		<button class="btn btn-primary set-location">Save</button>
-		<button class="btn btn-primary set-defaults">Load Default</button>
+	<div class="form-group"> <!-- Buttons -->
+		<span class="btn btn-primary set-location">Save</span>
+		<span class="btn btn-primary set-defaults">Load Default</span>
 	</div>     
 	
 </form>			

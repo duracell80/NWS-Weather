@@ -1,190 +1,11 @@
-function get_state() {
-    
-    if(localStorage.getItem("wx_state") == null){
-        $.getJSON("config.json", function(data){
-            var wx_state = data.wx_state;
-            localStorage.setItem("wx_state", wx_state);
-        });
-    } else {
-        var wx_state = localStorage.getItem("wx_state");
-        $('#ps-config #wx_state option').each(function() {
-            if($(this).val() == wx_state) {
-                $(this).prop('selected', true);
-            }
-        }); 
-    }
-    
-    return wx_state;
-}
-
-function set_state(wx_state) {
-    localStorage.setItem("wx_state", wx_state);
-}
-
-
-
-function lookup_obs(obs_state) {
-	
-	
-	
-	
-	if (localStorage.getItem('wx_obs_'+ obs_state) === null) {
-	// LOAD NWS SEARCH FROM TABLE CONTAINING STATIONS (SCREEN SCRAPE)
-		$("#obs_collect").load('https://w1.weather.gov/xml/current_obs/seek.php?state='+ obs_state +'&Find=Find table[cellpadding="3"]', function(responseTxt, statusTxt, jqXHR){
-			if(statusTxt == "success"){
-
-				console.log("NWS Scrape OK: " + jqXHR.status + " " + jqXHR.statusText);
-
-				let store_obs_name = [];
-				let store_obs_wxid = [];
-
-				$('#wx_obs')
-						.find('option')
-						.remove()
-						.end()
-				;
-
-				// SNIFF DOM FOR TABLE OF SEARCH RESULTS
-				$('#obs_collect table tbody tr td[headers="Station Name"]').each(function(index) {
-					var station_wxid 	= $(this).find("a").attr("href").split("=");
-					var station_name 	= $(this).find("a").text();
-					var station_select	= '<option value="'+ station_wxid[1].toLowerCase() +'">'+ station_name +'</option>';
-
-					// BUILD ARRAYS
-					store_obs_name.push(station_name);
-					store_obs_wxid.push(station_wxid[1]);
-
-					// BUILD DROP DOWN
-					$('#wx_obs').append(station_select);
-
-				});
-
-				// SELECT THE CURRENT SELECTED STATION IF ANY
-				var obs_selected 	= get_obs();
-				$('#ps-config #wx_obs option').each(function() {
-					if($(this).val() == obs_selected) {
-						$(this).attr('selected', 'selected');
-					}
-				});
-
-				// BUILD AN OBJECT OF FOUND OBS STATIONS TO STORE IN LOCAL STORAGE
-				var store_obs_json = "{";
-				$.each(store_obs_wxid, function(index, value){
-					store_obs_json += '"'+value.toLowerCase()+'" : { "name" : "'+store_obs_name[index]+'"},';
-				}); store_obs_json = store_obs_json.slice(0, -1) + "}";
-
-				// STORE STATION DATA IN BROWSER, NEXT TIME LOAD FROM LOCAL STORAGE WITHOUT SCRAPE
-				localStorage.setItem('wx_obs_'+ obs_state, store_obs_json);
-
-			}
-			if(statusTxt == "error"){
-				alert("NWS Scrape Error (check for changed HTML): " + jqXHR.status + " " + jqXHR.statusText);
-			}
-		});
-	} else {
-		// IF STATE OBSERVATION STATIONS ALREADY IN LOCAL STORAGE ...
-		var obs_fetch 		= JSON.parse(localStorage.getItem('wx_obs_'+ obs_state));
-		var obs_selected 	= get_obs();
-		
-		console.log("Cached Stations For "+obs_state.toUpperCase()+":\n\n");
-		console.log(obs_fetch);
-		
-		// CLEAR DROP DOWN
-		$('#wx_obs')
-				.find('option')
-				.remove()
-				.end()
-		;
-		
-		// BUILD DROP DOWN
-		$.each(obs_fetch, function(index, value){
-			var station_wxid 	= index;
-			var station_name 	= value["name"];
-			if(station_wxid == obs_selected){
-				var station_select	= '<option value="'+ station_wxid.toLowerCase() +'" selected>'+ station_name +'</option>';
-			} else {
-				var station_select	= '<option value="'+ station_wxid.toLowerCase() +'">'+ station_name +'</option>';
-			}
-			$('#wx_obs').append(station_select);
-		});
-		
-	}
-}
-
-
-
-function get_obs_select() {
-    
-    if(localStorage.getItem("wx_obs") == null){
-        $.getJSON("config.json", function(data){
-            var wx_obs = data.wx_obs;
-            localStorage.setItem("wx_obs", wx_obs);
-        });
-    } else {
-        var wx_obs = localStorage.getItem("wx_obs");
-        var station_select	= '<option value="'+ wx_obs +'">'+ wx_obs +'</option';
-					
-		$('#wx_obs').append(station_select);
-		$('#ps-config #wx_obs option').each(function() {
-            if($(this).val() == wx_obs) {
-                $(this).prop('selected', true);
-            }
-        }); 
-    }
-    
-    return wx_obs;
-}
-
-
-function get_obs() {
-    
-    if(localStorage.getItem("wx_obs") == null){
-        $.getJSON("config.json", function(data){
-            var wx_obs = data.wx_obs;
-            localStorage.setItem("wx_obs", wx_obs);
-        });
-    } else {
-        var wx_obs = localStorage.getItem("wx_obs");
-        $('#ps-config #wx_obs').val(wx_obs); 
-    }
-    
-    return wx_obs;
-}
-
-function set_obs(wx_obs) {
-    localStorage.setItem("wx_obs", wx_obs);
-}
-
-
-
-
-
-function clear_storage(item) {
-	localStorage.removeItem(item);
-}
-
-function init_storage() {
-	
-	$.getJSON("config.json", function(data){
-		if(localStorage.getItem("wx_state") == null){
-			localStorage.setItem("wx_state", data.wx_state);
-		}
-		
-		if(localStorage.getItem("wx_obs") == null){
-			localStorage.setItem("wx_obs", data.wx_obs);
-		}
-	
-	
-	}).fail(function(){
-		console.log("Cannot read config.json");
-	});
-	
-}
+const TO_NAME = 1;
+const TO_ABBREVIATED = 2;
 
 
 function init_config() {
     
 	get_state();
+	get_county();
 	get_obs_select();
     
 }
@@ -538,4 +359,365 @@ function log_time(logmsg) {
 		console.log(logmsg + time);
 	}
 	return time;
+}
+
+
+
+
+// DEAL WITH DATA GETTING AND STORAGE
+
+function convertRegion(input, to) {
+    var states = [
+        ['Alabama', 'AL'],
+        ['Alaska', 'AK'],
+        ['American Samoa', 'AS'],
+        ['Arizona', 'AZ'],
+        ['Arkansas', 'AR'],
+        ['Armed Forces Americas', 'AA'],
+        ['Armed Forces Europe', 'AE'],
+        ['Armed Forces Pacific', 'AP'],
+        ['California', 'CA'],
+        ['Colorado', 'CO'],
+        ['Connecticut', 'CT'],
+        ['Delaware', 'DE'],
+        ['District Of Columbia', 'DC'],
+        ['Florida', 'FL'],
+        ['Georgia', 'GA'],
+        ['Guam', 'GU'],
+        ['Hawaii', 'HI'],
+        ['Idaho', 'ID'],
+        ['Illinois', 'IL'],
+        ['Indiana', 'IN'],
+        ['Iowa', 'IA'],
+        ['Kansas', 'KS'],
+        ['Kentucky', 'KY'],
+        ['Louisiana', 'LA'],
+        ['Maine', 'ME'],
+        ['Marshall Islands', 'MH'],
+        ['Maryland', 'MD'],
+        ['Massachusetts', 'MA'],
+        ['Michigan', 'MI'],
+        ['Minnesota', 'MN'],
+        ['Mississippi', 'MS'],
+        ['Missouri', 'MO'],
+        ['Montana', 'MT'],
+        ['Nebraska', 'NE'],
+        ['Nevada', 'NV'],
+        ['New Hampshire', 'NH'],
+        ['New Jersey', 'NJ'],
+        ['New Mexico', 'NM'],
+        ['New York', 'NY'],
+        ['North Carolina', 'NC'],
+        ['North Dakota', 'ND'],
+        ['Northern Mariana Islands', 'NP'],
+        ['Ohio', 'OH'],
+        ['Oklahoma', 'OK'],
+        ['Oregon', 'OR'],
+        ['Pennsylvania', 'PA'],
+        ['Puerto Rico', 'PR'],
+        ['Rhode Island', 'RI'],
+        ['South Carolina', 'SC'],
+        ['South Dakota', 'SD'],
+        ['Tennessee', 'TN'],
+        ['Texas', 'TX'],
+        ['US Virgin Islands', 'VI'],
+        ['Utah', 'UT'],
+        ['Vermont', 'VT'],
+        ['Virginia', 'VA'],
+        ['Washington', 'WA'],
+        ['West Virginia', 'WV'],
+        ['Wisconsin', 'WI'],
+        ['Wyoming', 'WY'],
+    ];
+	
+	var provinces = [
+        ['Alberta', 'AB'],
+        ['British Columbia', 'BC'],
+        ['Manitoba', 'MB'],
+        ['New Brunswick', 'NB'],
+        ['Newfoundland', 'NF'],
+        ['Northwest Territory', 'NT'],
+        ['Nova Scotia', 'NS'],
+        ['Nunavut', 'NU'],
+        ['Ontario', 'ON'],
+        ['Prince Edward Island', 'PE'],
+        ['Quebec', 'QC'],
+        ['Saskatchewan', 'SK'],
+        ['Yukon', 'YT'],
+    ];
+	
+    var regions = states.concat(provinces);
+	
+	
+    var i;
+    if (to == TO_ABBREVIATED) {
+        input = input.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+        for (i = 0; i < regions.length; i++) {
+            if (regions[i][0] == input) {
+                return (regions[i][1]);
+            }
+        }
+    } else if (to == TO_NAME) {
+        input = input.toUpperCase();
+        for (i = 0; i < regions.length; i++) {
+            if (regions[i][1] == input) {
+                return (regions[i][0]);
+            }
+        }
+    }
+}
+
+
+function get_state() {
+    
+    if(localStorage.getItem("wx_state") == null){
+        $.getJSON("config.json", function(data){
+            var wx_state = data.wx_state;
+            localStorage.setItem("wx_state", wx_state);
+        });
+    } else {
+        var wx_state = localStorage.getItem("wx_state");
+        $('#ps-config #wx_state option').each(function() {
+            if($(this).val() == wx_state) {
+                $(this).prop('selected', true);
+            }
+        }); 
+    }
+    
+    return wx_state;
+}
+
+function set_state(wx_state) {
+    localStorage.setItem("wx_state", wx_state);
+}
+
+
+
+function lookup_counties(obs_state) {
+	
+	$("#obs_counties").load('counties.html .jquery-tablesorter', function(responseTxt, statusTxt, jqXHR){
+			if(statusTxt == "success"){
+				
+				$('#wx_county')
+						.find('option')
+						.remove()
+						.end()
+				;
+				
+				var obs_state_upper = obs_state.toUpperCase();
+				var obs_state_name  = convertRegion(obs_state_upper, TO_NAME);
+				
+				$('tr').each(function() {
+					var t_row = $(this).find("a").attr("title");
+					
+					
+					if(t_row.indexOf(obs_state_name) !== -1){
+						var t_split 		= t_row.split(",");
+						var county_name 	= t_split[0].replace("County", "").trim();
+						var state_name 		= t_split[1];
+
+						console.log(county_name);
+						
+						if(county_name.toLowerCase().trim() == localStorage.getItem("wx_county").toLowerCase().trim()){
+							var county_select	= '<option value="'+ county_name.toLowerCase() +'" selected>'+ county_name +'</option>';
+						} else {
+							var county_select	= '<option value="'+ county_name.toLowerCase() +'">'+ county_name +'</option>';
+						}
+						// BUILD DROP DOWN
+						$('#wx_county').append(county_select);
+					}
+				});
+
+			}
+			if(statusTxt == "error"){
+				alert("Wikipedia Scrape Error (check for changed HTML): " + jqXHR.status + " " + jqXHR.statusText);
+			}
+		});
+	
+	
+	
+}
+
+
+
+function lookup_obs(obs_state) {
+	
+	
+	
+	
+	if (localStorage.getItem('wx_obs_'+ obs_state) === null) {
+	// LOAD NWS SEARCH FROM TABLE CONTAINING STATIONS (SCREEN SCRAPE)
+		$("#obs_collect").load('https://w1.weather.gov/xml/current_obs/seek.php?state='+ obs_state +'&Find=Find table[cellpadding="3"]', function(responseTxt, statusTxt, jqXHR){
+			if(statusTxt == "success"){
+
+				console.log("NWS Scrape OK: " + jqXHR.status + " " + jqXHR.statusText);
+
+				let store_obs_name = [];
+				let store_obs_wxid = [];
+
+				$('#wx_obs')
+						.find('option')
+						.remove()
+						.end()
+				;
+
+				// SNIFF DOM FOR TABLE OF SEARCH RESULTS
+				$('#obs_collect table tbody tr td[headers="Station Name"]').each(function(index) {
+					var station_wxid 	= $(this).find("a").attr("href").split("=");
+					var station_name 	= $(this).find("a").text();
+					var station_select	= '<option value="'+ station_wxid[1].toLowerCase() +'">'+ station_name +'</option>';
+
+					// BUILD ARRAYS
+					store_obs_name.push(station_name);
+					store_obs_wxid.push(station_wxid[1]);
+
+					// BUILD DROP DOWN
+					$('#wx_obs').append(station_select);
+
+				});
+
+				// SELECT THE CURRENT SELECTED STATION IF ANY
+				var obs_selected 	= get_obs();
+				$('#ps-config #wx_obs option').each(function() {
+					if($(this).val() == obs_selected) {
+						$(this).attr('selected', 'selected');
+					}
+				});
+
+				// BUILD AN OBJECT OF FOUND OBS STATIONS TO STORE IN LOCAL STORAGE
+				var store_obs_json = "{";
+				$.each(store_obs_wxid, function(index, value){
+					store_obs_json += '"'+value.toLowerCase()+'" : { "name" : "'+store_obs_name[index]+'"},';
+				}); store_obs_json = store_obs_json.slice(0, -1) + "}";
+
+				// STORE STATION DATA IN BROWSER, NEXT TIME LOAD FROM LOCAL STORAGE WITHOUT SCRAPE
+				localStorage.setItem('wx_obs_'+ obs_state, store_obs_json);
+
+			}
+			if(statusTxt == "error"){
+				alert("NWS Scrape Error (check for changed HTML): " + jqXHR.status + " " + jqXHR.statusText);
+			}
+		});
+	} else {
+		// IF STATE OBSERVATION STATIONS ALREADY IN LOCAL STORAGE ...
+		var obs_fetch 		= JSON.parse(localStorage.getItem('wx_obs_'+ obs_state));
+		var obs_selected 	= get_obs();
+		
+		console.log("Cached Stations For "+obs_state.toUpperCase()+":\n\n");
+		console.log(obs_fetch);
+		
+		// CLEAR DROP DOWN
+		$('#wx_obs')
+				.find('option')
+				.remove()
+				.end()
+		;
+		
+		// BUILD DROP DOWN
+		$.each(obs_fetch, function(index, value){
+			var station_wxid 	= index;
+			var station_name 	= value["name"];
+			if(station_wxid == obs_selected){
+				var station_select	= '<option value="'+ station_wxid.toLowerCase() +'" selected>'+ station_name +'</option>';
+			} else {
+				var station_select	= '<option value="'+ station_wxid.toLowerCase() +'">'+ station_name +'</option>';
+			}
+			$('#wx_obs').append(station_select);
+		});
+		
+	}
+}
+
+
+
+function get_obs_select() {
+    
+    if(localStorage.getItem("wx_obs") == null){
+        $.getJSON("config.json", function(data){
+            var wx_obs = data.wx_obs;
+            localStorage.setItem("wx_obs", wx_obs);
+        });
+    } else {
+        var wx_obs = localStorage.getItem("wx_obs");
+        var station_select	= '<option value="'+ wx_obs +'">'+ wx_obs +'</option';
+					
+		$('#wx_obs').append(station_select);
+		$('#ps-config #wx_obs option').each(function() {
+            if($(this).val() == wx_obs) {
+                $(this).prop('selected', true);
+            }
+        }); 
+    }
+    
+    return wx_obs;
+}
+
+
+function get_obs() {
+    
+    if(localStorage.getItem("wx_obs") == null){
+        $.getJSON("config.json", function(data){
+            var wx_obs = data.wx_obs;
+            localStorage.setItem("wx_obs", wx_obs);
+        });
+    } else {
+        var wx_obs = localStorage.getItem("wx_obs");
+        $('#ps-config #wx_obs').val(wx_obs); 
+    }
+    
+    return wx_obs;
+}
+
+function set_obs(wx_obs) {
+    localStorage.setItem("wx_obs", wx_obs);
+}
+
+function set_county(wx_county) {
+    localStorage.setItem("wx_county", wx_county);
+}
+
+function get_county() {
+    
+    if(localStorage.getItem("wx_county") == null){
+		$.getJSON("config.json", function(data){
+            var wx_county = data.wx_county;
+            localStorage.setItem("wx_county", wx_county);
+        });
+    } else {
+        var wx_county = localStorage.getItem("wx_county");
+        $('#ps-config #wx_county option').each(function() {
+            
+			if($(this).val().toLowerCase() == wx_county.toLowerCase()) {
+                $(this).prop('selected');
+            }
+        }); 
+    }
+    
+    return wx_county;
+}
+
+
+
+
+
+function clear_storage(item) {
+	localStorage.removeItem(item);
+}
+
+function init_storage() {
+	
+	$.getJSON("config.json", function(data){
+		if(localStorage.getItem("wx_state") == null){
+			localStorage.setItem("wx_state", data.wx_state);
+		}
+		
+		if(localStorage.getItem("wx_obs") == null){
+			localStorage.setItem("wx_obs", data.wx_obs);
+		}
+	
+	
+	}).fail(function(){
+		console.log("Cannot read config.json");
+	});
+	
 }
