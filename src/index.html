@@ -57,173 +57,8 @@ $(document).ready(function() {
 	<p><small>Warnings display below when issued and are checked every 30 minutes, hit refresh to check for new updates now, always have two ways to get warnings. <br><br>Source: U.S. National Weather Service</small></p>
 	</div>
 	<hr>
-	<div aria-orientation="vertical" class="panel-group" role="tablist">
-
-
-		<div class="panel panel-tornado" role="tablist">
-			<button
-				aria-controls="collapsePanelTornado"
-				aria-expanded="true"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle"
-				data-target="#collapsePanelTornado"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Tornado Warnings ( <span class="items_tornado"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse show"
-				id="collapsePanelTornado"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_tornado"></div>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div class="panel panel-storm" role="tablist">
-			<button
-				aria-controls="collapsePanelStorm"
-				aria-expanded="true"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle"
-				data-target="#collapsePanelStorm"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Storm Warnings ( <span class="items_storm"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse show"
-				id="collapsePanelStorm"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_storm"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-hurricane" role="tablist">
-			<button
-				aria-controls="collapsePanelHurricane"
-				aria-expanded="false"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
-				data-target="#collapsePanelHurricane"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Hurricane Warnings ( <span class="items_hurricane"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse"
-				id="collapsePanelHurricane"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_hurricane"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-wind" role="tablist">
-			<button
-				aria-controls="collapsePanelWind"
-				aria-expanded="false"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
-				data-target="#collapsePanelWind"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Wind Warnings ( <span class="items_wind"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse"
-				id="collapsePanelWind"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_wind"></div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="panel panel-flood" role="tablist">
-			<button
-				aria-controls="collapsePanelFlood"
-				aria-expanded="false"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
-				data-target="#collapsePanelFlood"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Flood Warnings ( <span class="items_flood"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse"
-				id="collapsePanelFlood"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_flood"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-fire" role="tablist">
-			<button
-				aria-controls="collapsePanelFire"
-				aria-expanded="false"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
-				data-target="#collapsePanelFire"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Fire Warnings ( <span class="items_fire"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse"
-				id="collapsePanelFire"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_fire"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-winter" role="tablist">
-			<button
-				aria-controls="collapsePanelWinter"
-				aria-expanded="false"
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
-				data-target="#collapsePanelWinter"
-				data-toggle="collapse"
-				role="tab"
-			>
-				<span class="panel-title">Winter Warnings ( <span class="items_winter"></span> )</span>
-				
-			</button>
-			<div
-				class="panel-collapse collapse"
-				id="collapsePanelWinter"
-				role="tabpanel"
-			>
-				<div class="panel-body">
-					<div class="feedout_winter"></div>
-				</div>
-			</div>
-		</div>
-
+	
+	<div id="wx_alerts" aria-orientation="vertical" class="panel-group" role="tablist">
 
 		<div class="panel panel-other" role="tablist">
 			<button
@@ -234,7 +69,7 @@ $(document).ready(function() {
 				data-toggle="collapse"
 				role="tab"
 			>
-				<span class="panel-title">Other Warnings ( <span class="items_other"></span> )</span>
+				<span class="panel-title">Other Alerts and Advisories ( <span class="items_other"></span> )</span>
 				
 			</button>
 			<div
@@ -248,8 +83,8 @@ $(document).ready(function() {
 			</div>
 		</div>
 
-
 	</div>
+	
 
 </div>
   

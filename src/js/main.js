@@ -11,6 +11,37 @@ function init_config() {
 }
 
 
+function set_warnings() {
+    
+    if(localStorage.getItem("wx_warnings") == null){
+        $.getJSON("config.json", function(data){
+            var wx_warnings = data.wx_warnings;
+            localStorage.setItem("wx_warnings", wx_warnings);
+        });
+    } else {
+        var wx_warnings = localStorage.getItem("wx_warnings"); 
+    }
+    
+    return wx_warnings;
+}
+
+
+function set_watches() {
+    
+    if(localStorage.getItem("wx_watches") == null){
+        $.getJSON("config.json", function(data){
+            var wx_watches = data.wx_watches;
+            localStorage.setItem("wx_watches", wx_watches);
+        });
+    } else {
+        var wx_watches = localStorage.getItem("wx_watches"); 
+    }
+    
+    return wx_watches;
+}
+
+
+
 function init_alerts() {
     
     var feedstate              = get_state().toLowerCase();
@@ -25,7 +56,7 @@ function init_alerts() {
     var feedout_hurricane      = "";
     var feedout_other          = "";
     var feedthis               = "";
-    var feedout_blank          = "<small>No warnings posted, refresh page to reload.</small>";
+    var feedout_blank          = '<div class="card"><div class="card-body"><small>No alerts or advisories posted at the moment ...</div></div></small>';
     var items_flood            = 0;
     var items_wind             = 0;
     var items_storm            = 0;
@@ -36,6 +67,41 @@ function init_alerts() {
     var items_other            = 0;
     
     
+	var wx_warnings = set_warnings().split(",");
+	
+	// WRITE THE HTML CONTAINERS FOR THE CONFIGURED WARNING ACCORDIONS
+	$.each( wx_warnings, function( key, value ) {
+	  	
+		var wx_warn_upper = value.toUpperCase().trim();
+		var wx_warn_lower = value.toLowerCase().trim();
+		console.log( "Warning Set : " + wx_warn_upper);
+		
+		var wx_warn_html = `<div class="panel panel-`+wx_warn_lower+`" role="tablist"> 
+			<button 
+				aria-controls="collapsePanel`+wx_warn_lower+`" 
+				aria-expanded="false" 
+				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" 
+				data-target="#collapsePanel`+wx_warn_lower+`" 
+				data-toggle="collapse" 
+				role="tab" 
+			> 
+				<span class="panel-title">`+toTitleCase(wx_warn_lower)+` Warnings ( <span class="items_`+wx_warn_lower+`"></span> )</span> 
+				
+			</button> 
+			<div 
+				class="panel-collapse collapse" 
+				id="collapsePanel`+wx_warn_lower+`" 
+				role="tabpanel" 
+			> 
+				<div class="panel-body"> 
+					<div class="feedout_`+wx_warn_lower+`"></div> 
+				</div> 
+			</div> 
+		</div>`;
+		
+		$("#wx_alerts").prepend(wx_warn_html);
+	});	
+	
 	$.ajax(feedin, {
 		accepts:{
 			xml:"application/rss+xml"
@@ -55,8 +121,10 @@ function init_alerts() {
                 var alertarea       = el.find("cap\\:areaDesc").text();
 				var alertarea_lower = alertarea.toLowerCase();
                 
+				// https://www.weather.gov/lwx/WarningsDefined
                 
-                if(alertevent.indexOf("Warning") !== -1 && alertarea_lower.indexOf(get_county()) !== -1) {
+                //if(alertevent.indexOf("Warning") !== -1 && alertarea_lower.indexOf(get_county()) !== -1) {
+				if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Advisory") !== -1) {
                     if(alerturgency.indexOf("Immediate") !== -1) {
                         alertlevel = "alert-now";
                     } else {
@@ -79,6 +147,12 @@ function init_alerts() {
                         feedout_icon = "fire";
                         items_fire = items_fire + 1;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
+                        feedout_icon = "freeze";
+                        items_winter = items_winter + 1;
+					} else if(alertevent.indexOf("Ice") !== -1) {
+                        feedout_icon = "freeze";
+                        items_winter = items_winter + 1;
+					} else if(alertevent.indexOf("Frost") !== -1) {
                         feedout_icon = "freeze";
                         items_winter = items_winter + 1;
                     } else if(alertevent.indexOf("Winter") !== -1) {
@@ -107,6 +181,10 @@ function init_alerts() {
                         feedout_fire = feedout_fire + feedthis;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
                         feedout_winter = feedout_winter + feedthis;
+					} else if(alertevent.indexOf("Ice") !== -1) {
+                        feedout_winter = feedout_winter + feedthis;
+					} else if(alertevent.indexOf("Frost") !== -1) {
+                        feedout_winter = feedout_winter + feedthis;
                     } else if(alertevent.indexOf("Winter") !== -1) {
                         feedout_winter = feedout_winter + feedthis;
                     } else if(alertevent.indexOf("Hurricane") !== -1) {
@@ -115,51 +193,48 @@ function init_alerts() {
                         feedout_other = feedout_other + feedthis;
                     }
                     
-                    
-                }
-                
-                
-                
-                
-			});
-            
-            
-            //if(feedout_tornado.length < 1) {        feedout_tornado     = feedout_blank;}
-            //if(feedout_storm.length < 1) {          feedout_storm       = feedout_blank;}
-            if(feedout_wind.length < 1) {           feedout_wind        = feedout_blank;}
-            if(feedout_flood.length < 1) {          feedout_flood       = feedout_blank;}
-            if(feedout_fire.length < 1) {           feedout_fire        = feedout_blank;}
-            if(feedout_winter.length < 1) {         feedout_winter      = feedout_blank;}
-            if(feedout_hurricane.length < 1) {      feedout_hurricane   = feedout_blank;}
-            if(feedout_other.length < 1) {          feedout_other       = feedout_blank;}
+                }    
+            });    
+			
+			
+			//if(feedout_tornado.length < 1) {        feedout_tornado     = feedout_blank;}
+			//if(feedout_storm.length < 1) {          feedout_storm       = feedout_blank;}
+			if(feedout_wind.length < 1) {           feedout_wind        = feedout_blank;}
+			if(feedout_flood.length < 1) {          feedout_flood       = feedout_blank;}
+			if(feedout_fire.length < 1) {           feedout_fire        = feedout_blank;}
+			if(feedout_winter.length < 1) {         feedout_winter      = feedout_blank;}
+			if(feedout_hurricane.length < 1) {      feedout_hurricane   = feedout_blank;}
+			if(feedout_other.length < 1) {          feedout_other       = feedout_blank;}
 
-            $(".feedout_tornado").append(feedout_tornado);
-            $(".feedout_storm").append(feedout_storm);
-            $(".feedout_wind").append(feedout_wind);
-            $(".feedout_flood").append(feedout_flood);
-            $(".feedout_fire").append(feedout_fire);
-            $(".feedout_winter").append(feedout_winter);
-            $(".feedout_hurricane").append(feedout_hurricane);
-            $(".feedout_other").append(feedout_other);
-            
-            $(".items_tornado").text(items_tornado);
-            $(".items_storm").text(items_storm);
-            $(".items_wind").text(items_wind);
-            $(".items_flood").text(items_flood);
-            $(".items_fire").text(items_fire);
-            $(".items_winter").text(items_winter);
-            $(".items_hurricane").text(items_hurricane);
-            $(".items_other").text(items_other);
-            
-            if(items_tornado < 1) {     $(".panel-tornado").hide();}
-            if(items_storm < 1) {       $(".panel-storm").hide();}
-            if(items_wind < 1) {        $(".panel-wind").hide();}
-            if(items_flood < 1) {       $(".panel-flood").hide();}
-            if(items_fire < 1) {        $(".panel-fire").hide();}
-            if(items_winter < 1) {      $(".panel-winter").hide();}
-            if(items_hurricane < 1) {   $(".panel-hurricane").hide();}
-            
+			$(".feedout_tornado").append(feedout_tornado);
+			$(".feedout_storm").append(feedout_storm);
+			$(".feedout_wind").append(feedout_wind);
+			$(".feedout_flood").append(feedout_flood);
+			$(".feedout_fire").append(feedout_fire);
+			$(".feedout_winter").append(feedout_winter);
+			$(".feedout_hurricane").append(feedout_hurricane);
+			$(".feedout_other").append(feedout_other);
 
+			$(".items_tornado").text(items_tornado);
+			$(".items_storm").text(items_storm);
+			$(".items_wind").text(items_wind);
+			$(".items_flood").text(items_flood);
+			$(".items_fire").text(items_fire);
+			$(".items_winter").text(items_winter);
+			$(".items_hurricane").text(items_hurricane);
+			$(".items_other").text(items_other);
+
+			if(items_tornado < 1) {     $(".panel-tornado").hide();}
+			if(items_storm < 1) {       $(".panel-storm").hide();}
+			if(items_wind < 1) {        $(".panel-wind").hide();}
+			if(items_flood < 1) {       $(".panel-flood").hide();}
+			if(items_fire < 1) {        $(".panel-fire").hide();}
+			if(items_winter < 1) {      $(".panel-winter").hide();}
+			if(items_hurricane < 1) {   $(".panel-hurricane").hide();}
+
+
+			
+			
 		},
         complete: function() {
             log_time("WX - Alerts last checked: ");
@@ -366,6 +441,8 @@ function log_time(logmsg) {
 
 
 // DEAL WITH DATA GETTING AND STORAGE
+
+
 
 function convertRegion(input, to) {
     var states = [
@@ -721,4 +798,13 @@ function init_storage() {
 		console.log("Cannot read config.json");
 	});
 	
+}
+
+
+
+function toTitleCase(str) {
+	var lcStr = str.toLowerCase();
+	return lcStr.replace(/(?:^|\s)\w/g, function(match) {
+		return match.toUpperCase();
+	});
 }
