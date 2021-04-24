@@ -24,8 +24,8 @@ $(document).ready(function() {
 	init_current();
 
 	
-	setInterval(init_alerts, 1800000); // 	1800000 = 30 Minutes
-	setInterval(init_current, 3600000); // 	3600000 = 60 Minutes
+	setInterval(init_alerts, 900000); // 	900000 		= 15 Minutes
+	setInterval(init_current, 600000); // 	600000 		= 10 Minutes ... with TTL BACKOFF (TTL + 10 mins)
     
 });
 </script>
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		<h4>Weather for <span class="wx-state">NOW</span></h4>
 		<div class="wxout_now"></div>
 		
-		<div id="carouselTempHistory" class="carousel slide slider_temps" data-ride="carousel">
+		<!--<div id="carouselTempHistory" class="carousel slide slider_temps" data-ride="carousel">
 			
 		
 		<div class="carousel-inner wxout_temps">
@@ -50,7 +50,7 @@ $(document).ready(function() {
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
-		</div>
+		</div> -->
 		
 	</div>
 	<div class="container pt-3 pl-4 pr-4">
