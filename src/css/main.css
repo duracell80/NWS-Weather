@@ -121,6 +121,8 @@
     height: 50px;
     background-repeat: no-repeat;
     background-size: contain; }
+  .wx-feeds #wx_alerts .panel {
+    display: none; }
   .wx-feeds .wx-tornado {
     background-image: url("../images/svg/wi-tornado.svg"); }
   .wx-feeds .wx-storm {

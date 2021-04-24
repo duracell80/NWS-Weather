@@ -4,5 +4,5 @@
 	"wx_county"			    : "jefferson",
 	"wx_obs"				: "kbhm",
 	"wx_watches"			: "wind, flood, fire, winter",
-	"wx_warnings"			: "tornado, storm, hurricane, wind, flood, fire, winter"
+	"wx_warnings"			: "tornado, storm, hurricane, wind, flood, fire, winter, other"
 }

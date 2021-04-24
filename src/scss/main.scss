@@ -213,7 +213,13 @@
 		background-repeat   : no-repeat;
 		background-size     : contain;
 	}
-
+	
+	#wx_alerts {
+		.panel {
+			display : none;
+		}
+	}
+	
 	// https://erikflowers.github.io/weather-icons
 	.wx-tornado     { background-image : url('../images/svg/wi-tornado.svg');}
 	.wx-storm       { background-image : url('../images/svg/wi-storm-showers.svg');}

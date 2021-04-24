@@ -40,34 +40,23 @@ function set_watches() {
     return wx_watches;
 }
 
-
-
 function init_alerts() {
     
     var feedstate              = get_state().toLowerCase();
     var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
 	//var feedin                 = "http://localhost:3000/alerts.xml";
-	var feedout_flood          = "";
-    var feedout_wind           = "";
-    var feedout_storm          = "";
-    var feedout_tornado        = "";
-    var feedout_fire           = "";
-    var feedout_winter         = "";
-    var feedout_hurricane      = "";
-    var feedout_other          = "";
+	var feedout          	   = [];
+	var items            	   = [];
     var feedthis               = "";
     var feedout_blank          = '<div class="card"><div class="card-body"><small>No alerts or advisories posted at the moment ...</div></div></small>';
-    var items_flood            = 0;
-    var items_wind             = 0;
-    var items_storm            = 0;
-    var items_tornado          = 0;
-    var items_fire             = 0;
-    var items_winter           = 0;
-    var items_hurricane        = 0;
-    var items_other            = 0;
-    
     
 	var wx_warnings = set_warnings().split(",");
+	
+	$.each( wx_warnings, function( key, value ) {
+		var wx_type = value.toLowerCase().trim();
+		items[wx_type] 		= 0;
+		feedout[wx_type] 	= "";
+	});
 	
 	// WRITE THE HTML CONTAINERS FOR THE CONFIGURED WARNING ACCORDIONS
 	$.each( wx_warnings, function( key, value ) {
@@ -99,7 +88,7 @@ function init_alerts() {
 			</div> 
 		</div>`;
 		
-		$("#wx_alerts").prepend(wx_warn_html);
+		$("#wx_alerts").append(wx_warn_html);
 	});	
 	
 	$.ajax(feedin, {
@@ -133,105 +122,90 @@ function init_alerts() {
                 
                     if(alertevent.indexOf("Flood") !== -1) {
                         feedout_icon = "flood";
-                        items_flood = items_flood + 1;
+                        items["flood"]++;
                     } else if(alertevent.indexOf("Wind") !== -1) {
                         feedout_icon = "wind";
-                        items_wind = items_wind + 1;
+                        items["wind"]++;
                     } else if(alertevent.indexOf("Thunderstorm") !== -1) {
                         feedout_icon = "storm";
-                        items_storm = items_storm + 1;
+                        items["storm"]++;
                     } else if(alertevent.indexOf("Tornado") !== -1) {
                         feedout_icon = "tornado";
-                        items_tornado = items_tornado + 1;
+                        items["tornado"]++;
                     } else if(alertevent.indexOf("Red Flag") !== -1) {
                         feedout_icon = "fire";
-                        items_fire = items_fire + 1;
+                        items["fire"]++;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
                         feedout_icon = "freeze";
-                        items_winter = items_winter + 1;
+                        items["winter"]++;
 					} else if(alertevent.indexOf("Ice") !== -1) {
                         feedout_icon = "freeze";
-                        items_winter = items_winter + 1;
+                        items["winter"]++;
 					} else if(alertevent.indexOf("Frost") !== -1) {
                         feedout_icon = "freeze";
-                        items_winter = items_winter + 1;
+                        items["winter"]++;
                     } else if(alertevent.indexOf("Winter") !== -1) {
                         feedout_icon = "winter";
-                        items_winter = items_winter + 1;
+                        items["winter"]++;
                     } else if(alertevent.indexOf("Hurricane") !== -1) {
                         feedout_icon = "hurricane";
-                        items_hurricane = items_hurricane + 1;
+                        items["hurricane"]++;
                     } else {
                         feedout_icon = "other";
-                        items_other = items_other + 1;
+                        items["other"]++;
                     }
                     
                     
                     feedthis = '<div class="card '+ alertlevel +'"><div class="card-body"><span class="wx-icon wx-'+ feedout_icon +'"></span><h5 class="card-title">' + alertevent + '<br><small>' + alerturgency + '</small></h5><hr><p><strong>' + alerttitle + '</strong></p><p class="card-text">'+ alertarea +'<br><br><small>'+ alertsummary + '</small></p><p><a href="'+ alertlink +'" target="_blank">Read On Weather.gov</a></p></div></div>';
                     
+					
+
+					
                     if(alertevent.indexOf("Flood") !== -1) {
-                        feedout_flood = feedout_flood + feedthis;
+                        feedout["flood"] += feedthis;
                     } else if(alertevent.indexOf("Wind") !== -1) {
-                        feedout_wind = feedout_wind + feedthis;
+                        feedout["wind"] += feedthis;
                     } else if(alertevent.indexOf("Thunderstorm") !== -1) {
-                        feedout_storm = feedout_storm + feedthis;
+                        feedout["storm"] += feedthis;
                     } else if(alertevent.indexOf("Tornado") !== -1) {
-                        feedout_tornado = feedout_tornado + feedthis;
+                        feedout["tornado"] += feedthis;
                     } else if(alertevent.indexOf("Red Flag") !== -1) {
-                        feedout_fire = feedout_fire + feedthis;
+                        feedout["fire"] += feedthis;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
-                        feedout_winter = feedout_winter + feedthis;
+                        feedout["winter"] += feedthis;
 					} else if(alertevent.indexOf("Ice") !== -1) {
-                        feedout_winter = feedout_winter + feedthis;
+                        feedout["winter"] += feedthis;
 					} else if(alertevent.indexOf("Frost") !== -1) {
-                        feedout_winter = feedout_winter + feedthis;
+                        feedout["winter"] += feedthis;
                     } else if(alertevent.indexOf("Winter") !== -1) {
-                        feedout_winter = feedout_winter + feedthis;
+                        feedout["winter"] += feedthis;
                     } else if(alertevent.indexOf("Hurricane") !== -1) {
-                        feedout_hurricane = feedout_hurricane + feedthis;
+                        feedout["hurricane"] += feedthis;
                     } else {
-                        feedout_other = feedout_other + feedthis;
+                        feedout["other"] += feedthis;
                     }
                     
                 }    
-            });    
+            });
 			
 			
-			//if(feedout_tornado.length < 1) {        feedout_tornado     = feedout_blank;}
-			//if(feedout_storm.length < 1) {          feedout_storm       = feedout_blank;}
-			if(feedout_wind.length < 1) {           feedout_wind        = feedout_blank;}
-			if(feedout_flood.length < 1) {          feedout_flood       = feedout_blank;}
-			if(feedout_fire.length < 1) {           feedout_fire        = feedout_blank;}
-			if(feedout_winter.length < 1) {         feedout_winter      = feedout_blank;}
-			if(feedout_hurricane.length < 1) {      feedout_hurricane   = feedout_blank;}
-			if(feedout_other.length < 1) {          feedout_other       = feedout_blank;}
+			
+			$.each( set_warnings().split(","), function( index, value ) {
+				var wx_type = value.toLowerCase().trim();
+				if(items[wx_type] > 0) {
+					
+					$(".feedout_"+wx_type).append(feedout[wx_type]);
+					$(".items_"+wx_type).text(items[wx_type]);
+					$(".panel-"+wx_type).show();
+				}
+			});
+			
+			
+			
+			
+			
 
-			$(".feedout_tornado").append(feedout_tornado);
-			$(".feedout_storm").append(feedout_storm);
-			$(".feedout_wind").append(feedout_wind);
-			$(".feedout_flood").append(feedout_flood);
-			$(".feedout_fire").append(feedout_fire);
-			$(".feedout_winter").append(feedout_winter);
-			$(".feedout_hurricane").append(feedout_hurricane);
-			$(".feedout_other").append(feedout_other);
-
-			$(".items_tornado").text(items_tornado);
-			$(".items_storm").text(items_storm);
-			$(".items_wind").text(items_wind);
-			$(".items_flood").text(items_flood);
-			$(".items_fire").text(items_fire);
-			$(".items_winter").text(items_winter);
-			$(".items_hurricane").text(items_hurricane);
-			$(".items_other").text(items_other);
-
-			if(items_tornado < 1) {     $(".panel-tornado").hide();}
-			if(items_storm < 1) {       $(".panel-storm").hide();}
-			if(items_wind < 1) {        $(".panel-wind").hide();}
-			if(items_flood < 1) {       $(".panel-flood").hide();}
-			if(items_fire < 1) {        $(".panel-fire").hide();}
-			if(items_winter < 1) {      $(".panel-winter").hide();}
-			if(items_hurricane < 1) {   $(".panel-hurricane").hide();}
-
+			
 
 			
 			
