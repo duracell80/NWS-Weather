@@ -138,6 +138,11 @@
 		.wx-icon-now.wi-thunderstorm {
 			background-image : url('../images/svg/wi-thunderstorm.svg');
 		}
+		
+		.wx-icon-now.wi-tornado { 
+			background-image : url('../images/svg/wi-tornado.svg');
+		}
+		
 		.wx-icon-now.wi-lightning {
 			background-image : url('../images/svg/wi-lightning.svg');
 		}
@@ -308,6 +313,24 @@
 
 	.container-theme.wx-darkest { 
 		background-color    : #1F2532;
+		color               : #ffffff;
+
+		.wx-icon-now {
+			filter              : invert(1);
+		}
+
+		a,
+		a:hover,
+		a:focus,
+		p,
+		.wx-temp {
+			color : #ffffff;
+		}
+
+	}
+	
+	.container-theme.wx-danger { 
+		background-color    : #EA0707;
 		color               : #ffffff;
 
 		.wx-icon-now {

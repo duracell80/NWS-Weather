@@ -111,11 +111,10 @@ function init_alerts() {
 				var alertarea_lower = alertarea.toLowerCase();
                 
 				
-				
 				// https://www.weather.gov/lwx/WarningsDefined
                 
                 //if(alertevent.indexOf("Warning") !== -1 && alertarea_lower.indexOf(get_county()) !== -1) {
-				if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Advisory") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 ) {
+				if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1 ) {
                     if(alerturgency.indexOf("Immediate") !== -1) {
                         alertlevel = "alert-now";
                     } else {
@@ -152,20 +151,22 @@ function init_alerts() {
                     } else if(alertevent.indexOf("Hurricane") !== -1) {
                         feedout_icon = "hurricane";
                         items["hurricane"]++;
-					} else if(alertsummary.indexOf("thunderstorm")) {
-						feedout_icon = "storm";
-                        items["storm"]++;
 
                     } else {
-                        feedout_icon = "other";
-                        items["other"]++;
+                        if(alertsummary.indexOf("thunderstorm") !== -1) {
+							feedout_icon = "storm";
+							items["storm"]++;
+						} else {
+							feedout_icon = "other";
+							items["other"]++;
+						}
                     }
                     
                     
                     feedthis = '<div class="card '+ alertlevel +'"><div class="card-body"><span class="wx-icon wx-'+ feedout_icon +'"></span><h5 class="card-title">' + alertevent + '<br><small>' + alerturgency + '</small></h5><hr><p><strong>' + alerttitle + '</strong></p><p class="card-text">'+ alertarea +'<br><br><small>'+ alertsummary + '</small></p><p><a href="'+ alertlink +'" target="_blank">Read On Weather.gov</a></p></div></div>';
                     
 					
-
+					console.log(alertsummary);
 					
                     if(alertevent.indexOf("Flood") !== -1) {
                         feedout["flood"] += feedthis;
@@ -173,8 +174,20 @@ function init_alerts() {
                         feedout["wind"] += feedthis;
                     } else if(alertevent.indexOf("Thunderstorm") !== -1) {
                         feedout["storm"] += feedthis;
+						
+						
+						
                     } else if(alertevent.indexOf("Tornado") !== -1) {
                         feedout["tornado"] += feedthis;
+						
+						if(!$(".container-theme").hasClass("wx-danger")) {
+						   $(".container-theme").addClass("wx-danger");
+						   $(".wx-danger h4").html("TORNADO WARNING");
+						   $(".wx-danger p").text(alertarea);
+
+						   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
+						}
+						
                     } else if(alertevent.indexOf("Red Flag") !== -1) {
                         feedout["fire"] += feedthis;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
@@ -187,17 +200,21 @@ function init_alerts() {
                         feedout["winter"] += feedthis;
                     } else if(alertevent.indexOf("Hurricane") !== -1) {
                         feedout["hurricane"] += feedthis;
-					} else if(alertsummary.indexOf("thunderstorm") !== -1) {
-                        feedout["storm"] += feedthis;
                     
 					} else {
-                        feedout["other"] += feedthis;
+						if(alertsummary.indexOf("thunderstorm") !== -1) {
+                        	feedout["storm"] += feedthis;
+							
+						} else {
+							feedout["other"] += feedthis;
+							
+						}
                     }
                     
                 }    
             });
 			
-			
+		
 			
 			$.each( set_warnings().split(","), function( index, value ) {
 				var wx_type = value.toLowerCase().trim();
@@ -206,6 +223,9 @@ function init_alerts() {
 					$(".feedout_"+wx_type).append(feedout[wx_type]);
 					$(".items_"+wx_type).text(items[wx_type]);
 					$(".panel-"+wx_type).show();
+					
+					$("#wx_alerts .panel-tornado .panel-header").attr("aria-expanded", true).removeClass("collapsed");
+					$("#wx_alerts .panel-tornado .panel-collapse").removeClass("collapse");
 				}
 			});
 			
@@ -240,14 +260,21 @@ function init_current() {
     const hours         = new Date().getHours();
     const isDayTime     = hours > 6 && hours < 20;
     
-	var obs_updated 	= localStorage.getItem("obs_updated");
+	if (localStorage.getItem("obs_updated") === null) {
+		// WHEN LAST OBS DATE NOT IN STORAGE DEFAULT TO OVER AN HOUR AGO
+		var obs_updated 	= parseInt(Date.now()-4500000 );
+	} else {
+		var obs_updated 	= localStorage.getItem("obs_updated");
+	}
 	var obs_ttl 		= localStorage.getItem("obs_ttl");
 	var sys_time		= Math.round(new Date().getTime());
 	var obs_difference	= Math.round(((sys_time - obs_updated) / 1000) / 60);
 	
-	// BACK OFF FROM CALLING ON OBS SERVER UNTIL TTL HAS ELAPSED USUALLY 60min + 10
+	console.log("Observation taken " + obs_difference + " minutes ago");
+	
+	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
 	if(obs_difference > obs_ttl) {
-		console.log("Dialing Up NWS Observation Server ...");
+		console.log("Dialing Up NWS Observation Server " + wx_obs + "  ...");
 		
 		$.ajax(wxin, {
 			accepts:{
@@ -377,7 +404,7 @@ function init_current() {
 
 					wxtheme = "wx-" + wxtheme;
 
-					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' - Observed ' + obs_difference + ' minutes ago</p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +' - Observed ' + obs_difference + ' minutes ago"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
+					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' Observed: <span class="obs-diff">' + obs_difference + '</span> minutes ago</p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +' - Station: ' + wx_obs + '"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
 
 					/*wxtemps_time = log_time();
 					wxtemps = '<div class="carousel-item">' + wxtemp_f + ' ('+ wxtemp_c +') - <small>updated: '+ wxtemps_time +'</small></div>';*/
@@ -389,8 +416,10 @@ function init_current() {
 				
 			$(".wxout_now").empty();
 			$(".wxout_now").append(wxthis);
+			$(".wxout_now .obs-diff").text(obs_difference);
+				
 			localStorage.setItem("wx_now", wxthis);
-
+			
 			/*var wxout_temps_count = $(".wxout_temps").children().length;	
 
 			if (wxout_temps_count > 4) {
@@ -429,6 +458,7 @@ function init_current() {
 
 		$(".wxout_now").empty();
 		$(".wxout_now").append(localStorage.getItem("wx_now"));
+		$(".wxout_now .obs-diff").text(obs_difference);
 		
 	}
 }

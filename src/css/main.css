@@ -81,6 +81,8 @@
       background-image: url("../images/svg/wi-day-storm-showers.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-thunderstorm {
       background-image: url("../images/svg/wi-thunderstorm.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-tornado {
+      background-image: url("../images/svg/wi-tornado.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-lightning {
       background-image: url("../images/svg/wi-lightning.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-hail {
@@ -191,4 +193,15 @@
     .wx-feeds .container-theme.wx-darkest a:focus,
     .wx-feeds .container-theme.wx-darkest p,
     .wx-feeds .container-theme.wx-darkest .wx-temp {
+      color: #ffffff; }
+  .wx-feeds .container-theme.wx-danger {
+    background-color: #EA0707;
+    color: #ffffff; }
+    .wx-feeds .container-theme.wx-danger .wx-icon-now {
+      filter: invert(1); }
+    .wx-feeds .container-theme.wx-danger a,
+    .wx-feeds .container-theme.wx-danger a:hover,
+    .wx-feeds .container-theme.wx-danger a:focus,
+    .wx-feeds .container-theme.wx-danger p,
+    .wx-feeds .container-theme.wx-danger .wx-temp {
       color: #ffffff; }
