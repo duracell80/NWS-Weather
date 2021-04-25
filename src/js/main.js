@@ -6,6 +6,7 @@ function init_config() {
     
 	get_state();
 	get_county();
+	get_scope();
 	get_obs_select();
     
 }
@@ -40,11 +41,31 @@ function set_watches() {
     return wx_watches;
 }
 
-function init_alerts() {
+
+function get_scope() {
     
+    if(localStorage.getItem("wx_scope") == null){
+        $.getJSON("config.json", function(data){
+            var wx_scope = data.wx_scope;
+            localStorage.setItem("wx_scope", wx_scope);
+        });
+    } else {
+		var wx_scope = localStorage.getItem(wx_scope);
+    }
+    
+    return wx_scope;
+}
+
+function init_alerts() {
+    var wx_scope 			   = get_scope();
     var feedstate              = get_state().toLowerCase();
-    var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
-	var feedin                 = "http://localhost:3000/alerts.xml";
+    if (wx_scope == "county" || wx_scope == "state") {
+		var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
+	} else if (wx_scope == "nation") {
+		var feedin                 = "https://alerts.weather.gov/cap/us.php?x=0";
+	} else {
+		var feedin                 = "http://localhost:3000/alerts.xml";
+	}
 	var feedout          	   = [];
 	var items            	   = [];
     var feedthis               = "";
@@ -110,12 +131,12 @@ function init_alerts() {
                 var alertarea       = el.find("cap\\:areaDesc").text();
 				var alertarea_lower = alertarea.toLowerCase();
                 
-				
-				// https://www.weather.gov/lwx/WarningsDefined
-                
-                //if(alertevent.indexOf("Warning") !== -1 && alertarea_lower.indexOf(get_county()) !== -1) {
-				if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1 ) {
-                    if(alerturgency.indexOf("Immediate") !== -1) {
+				function alertwrite() {
+					// https://www.weather.gov/lwx/WarningsDefined
+					
+					var wx_scope = get_scope();
+					
+					if(alerturgency.indexOf("Immediate") !== -1) {
                         alertlevel = "alert-now";
                     } else {
                         alertlevel = "alert-plan";
@@ -162,7 +183,10 @@ function init_alerts() {
 						}
                     }
                     
-                    
+                    if(wx_scope == "nation") {
+						alerturgency = "Scope: National";
+					}
+					
                     feedthis = '<div class="card '+ alertlevel +'"><div class="card-body"><span class="wx-icon wx-'+ feedout_icon +'"></span><h5 class="card-title">' + alertevent + '<br><small>' + alerturgency + '</small></h5><hr><p><strong>' + alerttitle + '</strong></p><p class="card-text">'+ alertarea +'<br><br><small>'+ alertsummary + '</small></p><p><a href="'+ alertlink +'" target="_blank">Read On Weather.gov</a></p></div></div>';
                     
 					
@@ -210,8 +234,46 @@ function init_alerts() {
 							
 						}
                     }
-                    
-                }    
+				}
+				
+				if (wx_scope == "nation") {
+					var alerttype = "broadest";
+					
+					if(alertevent.indexOf("Watch") !== -1 || alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1 ) {
+						alertwrite();
+					}
+				
+				} else if (wx_scope == "state") {
+					var alerttype = "broad";
+					
+					if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1) {
+						alertwrite();
+					}	
+					
+				} else if (wx_scope == "county") {
+					var alerttype = "narrow";
+					
+					if((alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1) && alertarea_lower.indexOf(get_county()) !== -1 ) {
+						alertwrite();
+					}
+					
+				} else {
+					var alerttype = "cached";
+					
+					if((alertevent.indexOf("Watch") !== -1 || alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1)) {
+						alertwrite();
+					}
+					
+				}
+				
+				
+                
+				
+				
+				
+                
+				    
+                     
             });
 			
 		
@@ -607,7 +669,28 @@ function set_state(wx_state) {
     localStorage.setItem("wx_state", wx_state);
 }
 
+function set_scope(wx_scope) {
+    localStorage.setItem("wx_scope", wx_scope);
+}
 
+function get_scope() {
+	
+	if(localStorage.getItem("wx_scope") == null){
+        $.getJSON("config.json", function(data){
+            var wx_state = data.wx_scope;
+            localStorage.setItem("wx_scope", wx_scope);
+        });
+    } else {
+        var wx_scope = localStorage.getItem("wx_scope");
+        $('#ps-config #wx_scope option').each(function() {
+            if($(this).val() == wx_scope) {
+                $(this).prop('selected', true);
+            }
+        }); 
+    }
+	
+	return wx_scope;
+}
 
 function lookup_counties(obs_state) {
 	
