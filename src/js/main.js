@@ -163,6 +163,9 @@ function init_alerts() {
                     } else if(alertevent.indexOf("Red Flag") !== -1) {
                         feedout_icon = "fire";
                         items["fire"]++;
+					} else if(alertevent.indexOf("Fire Weather") !== -1) {
+                        feedout_icon = "fire";
+                        items["fire"]++;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
                         feedout_icon = "freeze";
                         items["winter"]++;
@@ -219,6 +222,8 @@ function init_alerts() {
 						}
 						
                     } else if(alertevent.indexOf("Red Flag") !== -1) {
+                        feedout["fire"] += feedthis;
+					} else if(alertevent.indexOf("Fire Weather") !== -1) {
                         feedout["fire"] += feedthis;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
                         feedout["winter"] += feedthis;
