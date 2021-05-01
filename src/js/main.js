@@ -66,6 +66,8 @@ function init_alerts() {
 	} else {
 		var feedin                 = "http://localhost:3000/alerts.xml";
 	}
+	// DEBUG ALERTS WITH LOCAL
+	//var feedin                 = "http://localhost:3000/alerts.xml";
 	var feedout          	   = [];
 	var items            	   = [];
     var feedthis               = "";
@@ -80,6 +82,9 @@ function init_alerts() {
 	});
 	
 	// WRITE THE HTML CONTAINERS FOR THE CONFIGURED WARNING ACCORDIONS
+	// EMPTY THE HTML FIRST
+	$("#wx_alerts").empty();
+		
 	$.each( wx_warnings, function( key, value ) {
 	  	
 		var wx_warn_upper = value.toUpperCase().trim();
@@ -109,6 +114,7 @@ function init_alerts() {
 			</div> 
 		</div>`;
 		
+		// REBULD WARNINGS WITH NEW DATA
 		$("#wx_alerts").append(wx_warn_html);
 	});	
 	
