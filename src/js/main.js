@@ -7,54 +7,12 @@ function init_config() {
 	get_state();
 	get_county();
 	get_scope();
-	get_obs_select();
+	get_warnings();
+    get_obs_select();
     
 }
 
 
-function set_warnings() {
-    
-    if(localStorage.getItem("wx_warnings") == null){
-        $.getJSON("config.json", function(data){
-            var wx_warnings = data.wx_warnings;
-            localStorage.setItem("wx_warnings", wx_warnings);
-        });
-    } else {
-        var wx_warnings = localStorage.getItem("wx_warnings"); 
-    }
-    
-    return wx_warnings;
-}
-
-
-function set_watches() {
-    
-    if(localStorage.getItem("wx_watches") == null){
-        $.getJSON("config.json", function(data){
-            var wx_watches = data.wx_watches;
-            localStorage.setItem("wx_watches", wx_watches);
-        });
-    } else {
-        var wx_watches = localStorage.getItem("wx_watches"); 
-    }
-    
-    return wx_watches;
-}
-
-
-function get_scope() {
-    
-    if(localStorage.getItem("wx_scope") == null){
-        $.getJSON("config.json", function(data){
-            var wx_scope = data.wx_scope;
-            localStorage.setItem("wx_scope", wx_scope);
-        });
-    } else {
-		var wx_scope = localStorage.getItem(wx_scope);
-    }
-    
-    return wx_scope;
-}
 
 function init_alerts() {
     var wx_scope 			   = get_scope();
@@ -73,7 +31,7 @@ function init_alerts() {
     var feedthis               = "";
     var feedout_blank          = '<div class="card"><div class="card-body"><small>No alerts or advisories posted at the moment ...</div></div></small>';
     
-	var wx_warnings = set_warnings().split(",");
+	var wx_warnings = get_warnings().split(",");
 	
 	$.each( wx_warnings, function( key, value ) {
 		var wx_type = value.toLowerCase().trim();
@@ -289,7 +247,7 @@ function init_alerts() {
 			
 		
 			
-			$.each( set_warnings().split(","), function( index, value ) {
+			$.each( get_warnings().split(","), function( index, value ) {
 				var wx_type = value.toLowerCase().trim();
 				if(items[wx_type] > 0) {
 					
@@ -699,7 +657,7 @@ function get_scope() {
             }
         }); 
     }
-	
+    
 	return wx_scope;
 }
 
@@ -905,6 +863,49 @@ function get_county() {
     
     return wx_county;
 }
+
+function get_warnings() {
+    
+    if(localStorage.getItem("wx_warnings") == null){
+        $.getJSON("config.json", function(data){
+            var wx_warnings = data.wx_warnings;
+            localStorage.setItem("wx_warnings", wx_warnings);
+            get_warnings();
+        });
+    } else {
+        var wx_warnings = localStorage.getItem("wx_warnings");
+        var wx_warning  = wx_warnings.split(",");
+        
+        $.each( wx_warning, function( key, value ) {
+            
+            var wx_type = value.toLowerCase().trim();
+            $('#ps-config #wx_warnings input[type="checkbox"]').each(function() {
+                if($(this).val() == wx_type) {
+                    $(this).prop('checked', true);
+                }
+            });
+        });
+    }
+    
+    return wx_warnings;
+}
+
+function set_warnings() {
+    
+    var wx_warnings = "";
+    $('#ps-config #wx_warnings input[type="checkbox"]').each(function() {
+        if($(this).prop('checked')) {
+            wx_warnings += $(this).val() + ",";
+        }
+    });
+    
+    wx_warnings = wx_warnings.slice(0,-1);
+    localStorage.setItem("wx_warnings", wx_warnings);
+    
+    return wx_warnings;
+}
+
+
 
 
 
