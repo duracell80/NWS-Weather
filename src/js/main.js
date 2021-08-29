@@ -25,7 +25,7 @@ function init_alerts() {
 		var feedin                 = "http://localhost:3000/alerts.xml";
 	}
 	// DEBUG ALERTS WITH LOCAL
-	// var feedin                 = "http://localhost:3000/alerts.xml";
+	var feedin                 = "http://localhost:3000/alerts.xml";
 	var feedout          	   = [];
 	var items            	   = [];
     var feedthis               = "";
@@ -184,7 +184,118 @@ function init_alerts() {
                     }
                     
                     if(wx_scope == "nation") {
-						alerturgency = "Scope: National";
+						
+						
+						if(1 == 1){
+							if(alertsummary.indexOf('Alabama') !== -1) {
+								alerturgency = "State: Alabama";
+							} else if(alertsummary.indexOf('Alaska') !== -1) {
+								alerturgency = "State: Alaska";
+							} else if(alertsummary.indexOf('Arizona') !== -1) {
+								alerturgency = "State: Arizona";
+							} else if(alertsummary.indexOf('Arkansas') !== -1) {
+								alerturgency = "State: Arkansas";
+							} else if(alertsummary.indexOf('California') !== -1) {
+								alerturgency = "State: California";
+							} else if(alertsummary.indexOf('Colorado') !== -1) {
+								alerturgency = "State: Colorado";
+							} else if(alertsummary.indexOf('Connecticut') !== -1) {
+								alerturgency = "State: Connecticut";
+							} else if(alertsummary.indexOf('Delaware') !== -1) {
+								alerturgency = "State: Delaware";
+							} else if(alertsummary.indexOf('District Of Columbia') !== -1) {
+								alerturgency = "State: District Of Columbia";
+							} else if(alertsummary.indexOf('Florida') !== -1) {
+								alerturgency = "State: Florida";
+							} else if(alertsummary.indexOf('Georgia') !== -1) {
+								alerturgency = "State: Georgia";
+							} else if(alertsummary.indexOf('Hawaii') !== -1) {
+								alerturgency = "State: Hawaii";
+							} else if(alertsummary.indexOf('Idaho') !== -1) {
+								alerturgency = "State: Idaho";
+							} else if(alertsummary.indexOf('Illinois') !== -1) {
+								alerturgency = "State: Illinois";
+							} else if(alertsummary.indexOf('Indiana') !== -1) {
+								alerturgency = "State: Indiana";
+							} else if(alertsummary.indexOf('Iowa') !== -1) {
+								alerturgency = "State: Iowa";
+							} else if(alertsummary.indexOf('Kansas') !== -1) {
+								alerturgency = "State: Kansas";
+							} else if(alertsummary.indexOf('Kentucky') !== -1) {
+								alerturgency = "State: Kentucky";
+							} else if(alertsummary.indexOf('Louisiana') !== -1) {
+								alerturgency = "State: Louisiana";
+							} else if(alertsummary.indexOf('Maine') !== -1) {
+								alerturgency = "State: Maine";
+							} else if(alertsummary.indexOf('Maryland') !== -1) {
+								alerturgency = "State: Maryland";
+							} else if(alertsummary.indexOf('Massachusetts') !== -1) {
+								alerturgency = "State: Massachusetts";
+							} else if(alertsummary.indexOf('Michigan') !== -1) {
+								alerturgency = "State: Michigan";
+							} else if(alertsummary.indexOf('Minnesota') !== -1) {
+								alerturgency = "State: Minnesota";
+							} else if(alertsummary.indexOf('Mississippi') !== -1) {
+								alerturgency = "State: Mississippi";
+							} else if(alertsummary.indexOf('Missouri') !== -1) {
+								alerturgency = "State: Missouri";
+							} else if(alertsummary.indexOf('Montana') !== -1) {
+								alerturgency = "State: Montana";
+							} else if(alertsummary.indexOf('Nebraska') !== -1) {
+								alerturgency = "State: Nebraska";
+							} else if(alertsummary.indexOf('Nevada') !== -1) {
+								alerturgency = "State: Nevada";
+							} else if(alertsummary.indexOf('New Hampshire') !== -1) {
+								alerturgency = "State: New Hampshire";
+							} else if(alertsummary.indexOf('New Jersey') !== -1) {
+								alerturgency = "State: New Jersey";
+							} else if(alertsummary.indexOf('New Mexico') !== -1) {
+								alerturgency = "State: New Mexico";
+							} else if(alertsummary.indexOf('New York') !== -1) {
+								alerturgency = "State: New York";
+							} else if(alertsummary.indexOf('North Carolina') !== -1) {
+								alerturgency = "State: North Carolina";
+							} else if(alertsummary.indexOf('North Dakota') !== -1) {
+								alerturgency = "State: North Dakota";
+							} else if(alertsummary.indexOf('Ohio') !== -1) {
+								alerturgency = "State: Ohio";
+							} else if(alertsummary.indexOf('Oklahoma') !== -1) {
+								alerturgency = "State: Oklahoma";
+							} else if(alertsummary.indexOf('Oregon') !== -1) {
+								alerturgency = "State: Oregon";
+							} else if(alertsummary.indexOf('Pennsylvania') !== -1) {
+								alerturgency = "State: Pennsylvania";
+							} else if(alertsummary.indexOf('Rhode Island') !== -1) {
+								alerturgency = "State: Rhode Island";
+							} else if(alertsummary.indexOf('South Carolina') !== -1) {
+								alerturgency = "State: South Carolina";
+							} else if(alertsummary.indexOf('South Dakota') !== -1) {
+								alerturgency = "State: South Dakota";
+							} else if(alertsummary.indexOf('Tennessee') !== -1) {
+								alerturgency = "State: Tennessee";
+							} else if(alertsummary.indexOf('Texas') !== -1) {
+								alerturgency = "State: Texas";
+							} else if(alertsummary.indexOf('Utah') !== -1) {
+								alerturgency = "State: Utah";
+							} else if(alertsummary.indexOf('Vermont') !== -1) {
+								alerturgency = "State: Vermont";
+							} else if(alertsummary.indexOf('Virginia') !== -1) {
+								alerturgency = "State: Virginia";
+							} else if(alertsummary.indexOf('Washington') !== -1) {
+								alerturgency = "State: Washington";
+							} else if(alertsummary.indexOf('West Virginia') !== -1) {
+								alerturgency = "State: West Virginia";
+							} else if(alertsummary.indexOf('Wisconsin') !== -1) {
+								alerturgency = "State: Wisconsin";
+							} else if(alertsummary.indexOf('Wyoming') !== -1) {
+								alerturgency = "State: Wyoming";
+							} else {
+								alerturgency = "Scope: All State";
+							}
+						   
+						} else {
+							alerturgency = "Scope: National";
+						}
 					}
 					
                     feedthis = '<div class="card '+ alertlevel +'"><div class="card-body"><span class="wx-icon wx-'+ feedout_icon +'"></span><h5 class="card-title">' + alertevent + '<br><small>' + alerturgency + '</small></h5><hr><p><strong>' + alerttitle + '</strong></p><p class="card-text">'+ alertarea +'<br><br><small>'+ alertsummary + '</small></p><p><a href="'+ alertlink +'" target="_blank">Read On Weather.gov</a></p></div></div>';
