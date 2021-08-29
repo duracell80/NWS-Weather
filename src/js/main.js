@@ -25,7 +25,7 @@ function init_alerts() {
 		var feedin                 = "http://localhost:3000/alerts.xml";
 	}
 	// DEBUG ALERTS WITH LOCAL
-	//var feedin                 = "http://localhost:3000/alerts.xml";
+	var feedin                 = "http://localhost:3000/alerts.xml";
 	var feedout          	   = [];
 	var items            	   = [];
     var feedthis               = "";
@@ -207,16 +207,27 @@ function init_alerts() {
 						
 						
 						
-                    } else if(alertevent.indexOf("Tornado") !== -1) {
+                    } else if(alertevent.indexOf("Tornado Warning") !== -1) {
                         feedout["tornado"] += feedthis;
 						
 						if(!$(".container-theme").hasClass("wx-danger")) {
+						   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
+						   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
 						   $(".container-theme").addClass("wx-danger");
 						   $(".wx-danger h4").html("TORNADO WARNING");
-						   $(".wx-danger p").text(alertarea);
+						   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
+						   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
 
 						   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
+						   $(".wxout_now a").attr('href', alertlink);
+						   
+						   $(".wxout_now .wx-icon-now").attr('title', alertsummary);
+						   //$(".wxout_now .wx-temp").attr('title', 'Seek Shelter');	
 						}
+						
+					} else if(alertevent.indexOf("Tornado Watch") !== -1) {
+                        feedout["tornado"] += feedthis;
+						
 						
                     } else if(alertevent.indexOf("Heat") !== -1) {
                         feedout["heat"] += feedthis;

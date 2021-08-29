@@ -16,29 +16,225 @@ xmlns = 'http://www.w3.org/2005/Atom'
 xmlns:cap = 'urn:oasis:names:tc:emergency:cap:1.1'
 xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 >
-<!-- http-date = Sun, 29 Aug 2021 15:37:00 GMT -->
+<!-- http-date = Sun, 29 Aug 2021 17:39:00 GMT -->
 <id>https://alerts.weather.gov/cap/us.php?x=0</id>
 <logo>http://alerts.weather.gov/images/xml_logo.gif</logo>
 <generator>NWS CAP Server</generator>
-<updated>2021-08-29T10:37:00-05:00</updated>
+<updated>2021-08-29T13:39:00-04:00</updated>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
 <title>Current Watches, Warnings and Advisories for the United States Issued by the National Weather Service</title>
 <link href="https://alerts.weather.gov/cap/us.php?x=0"/>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AD4DC.FloodAdvisory.1261B34B2108AL.MOBFLSMOB.edc073c55aa94ced8465ae447e38f75c</id>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B216C.FlashFloodWatch.1261B368D680AL.MOBFFAMOB.5207c697e8d5d3d17df787e9dc1f83d5</id>
+<updated>2021-08-29T12:31:00-05:00</updated>
+<published>2021-08-29T12:31:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 12:31PM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B216C.FlashFloodWatch.1261B368D680AL.MOBFFAMOB.5207c697e8d5d3d17df787e9dc1f83d5"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of Alabama, including the following areas, Baldwin Central, Baldwin Coastal, Baldwin Inland, Choctaw, Clarke, Escambia, Mobile Central, Mobile Coastal, Mobile Inland and Washington. Portions of northwest Florida, including the following</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T12:31:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Baldwin Central; Baldwin Coastal; Baldwin Inland; Choctaw; Clarke; Escambia; Mobile Central; Mobile Coastal; Mobile Inland; Washington</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>001003 001023 001025 001053 001097 001129</value>
+<valueName>UGC</valueName>
+<value>ALZ051 ALZ052 ALZ053 ALZ059 ALZ261 ALZ262 ALZ263 ALZ264 ALZ265 ALZ266</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KMOB.FF.A.0014.000000T0000Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B216C.FlashFloodWatch.1261B368D680AL.MOBFFAMOB.16d2621f709927285a0559d86c7822eb</id>
+<updated>2021-08-29T12:31:00-05:00</updated>
+<published>2021-08-29T12:31:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 12:31PM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B216C.FlashFloodWatch.1261B368D680AL.MOBFFAMOB.16d2621f709927285a0559d86c7822eb"/>
+<summary>...FLASH FLOOD WATCH IN EFFECT THROUGH TUESDAY MORNING... The National Weather Service in Mobile has expanded the * Flash Flood Watch to include A portion of south central Alabama, including the following areas, Conecuh, Monroe and Wilcox. * Through Tuesday morning. * Heavy rainfall associated with rain bands from Hurricane Ida will</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T12:31:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Conecuh; Monroe; Wilcox</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>001035 001099 001131</value>
+<valueName>UGC</valueName>
+<value>ALZ054 ALZ055 ALZ056</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXA.KMOB.FF.A.0014.000000T0000Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B2108.TornadoWarning.1261B34B423CAL.MOBTORMOB.9b8899685e91ba09ccb67858f96ba1c2</id>
+<updated>2021-08-29T12:30:00-05:00</updated>
+<published>2021-08-29T12:30:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tornado Warning issued August 29 at 12:30PM CDT until August 29 at 1:15PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B2108.TornadoWarning.1261B34B423CAL.MOBTORMOB.9b8899685e91ba09ccb67858f96ba1c2"/>
+<summary>The National Weather Service in Mobile has issued a * Tornado Warning for... Southern Baldwin County in southwestern Alabama... * Until 115 PM CDT. * At 1230 PM CDT, a severe thunderstorm capable of producing a tornado was located 4 miles south of Elberta, or 5 miles north of</summary>
+<cap:event>Tornado Warning</cap:event>
+<cap:effective>2021-08-29T12:30:00-05:00</cap:effective>
+<cap:expires>2021-08-29T13:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Extreme</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Baldwin</cap:areaDesc>
+<cap:polygon>30.37,-87.47 30.25,-87.6 30.48,-88 30.71,-87.85 30.37,-87.47</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>001003</value>
+<valueName>UGC</valueName>
+<value>ALC003</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KMOB.TO.W.0050.210829T1730Z-210829T1815Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B054C.FloodAdvisory.1261B3583A8CAL.MOBFLSMOB.729192e0aeae9f6bafdb468538ad206d</id>
+<updated>2021-08-29T11:59:00-05:00</updated>
+<published>2021-08-29T11:59:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Advisory issued August 29 at 11:59AM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34B054C.FloodAdvisory.1261B3583A8CAL.MOBFLSMOB.729192e0aeae9f6bafdb468538ad206d"/>
+<summary>The National Weather Service in Mobile has issued a * Flood Advisory for... Central Mobile County in southwestern Alabama... * Until 300 PM CDT. * At 1159 AM CDT, Doppler radar indicated heavy rain due to thunderstorms. Minor flooding is ongoing or expected to begin</summary>
+<cap:event>Flood Advisory</cap:event>
+<cap:effective>2021-08-29T11:59:00-05:00</cap:effective>
+<cap:expires>2021-08-29T22:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Mobile</cap:areaDesc>
+<cap:polygon>30.42,-88.15 30.65,-88.35 30.76,-88.23 30.75,-88.04 30.74,-88.01 30.42,-88.15</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>001097</value>
+<valueName>UGC</valueName>
+<value>ALC097</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KMOB.FA.Y.0196.210829T1659Z-210829T2000Z/
+/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AF28C.FlashFloodWarning.1261B34BDE7CAL.MOBFFWMOB.3720800354c2ac4c7509ccb79954a4f1</id>
+<updated>2021-08-29T11:11:00-05:00</updated>
+<published>2021-08-29T11:11:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Warning issued August 29 at 11:11AM CDT until August 29 at 5:15PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AF28C.FlashFloodWarning.1261B34BDE7CAL.MOBFFWMOB.3720800354c2ac4c7509ccb79954a4f1"/>
+<summary>The National Weather Service in Mobile has issued a * Flash Flood Warning for... East Central Baldwin County in southwestern Alabama... Northwestern Escambia County in northwestern Florida... * Until 515 PM CDT Sunday. * At 1111 AM CDT, Doppler radar indicated thunderstorms producing</summary>
+<cap:event>Flash Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:11:00-05:00</cap:effective>
+<cap:expires>2021-08-29T17:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Baldwin</cap:areaDesc>
+<cap:polygon>30.56,-87.43 30.87,-87.66 30.99,-87.45 30.77,-87.3 30.75,-87.31 30.74,-87.31 30.73,-87.31 30.72,-87.3 30.72,-87.28 30.72,-87.27 30.71,-87.27 30.7,-87.27 30.69,-87.27 30.69,-87.26 30.68,-87.27 30.65,-87.26 30.56,-87.43</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>001003</value>
+<valueName>UGC</valueName>
+<value>ALC003</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KMOB.FF.W.0053.210829T1611Z-210829T2215Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34ADAB8.HurricaneLocalStatement.1261B357BF80AL.MOBHLSMOB.80a46219818e4e2230ca965feff09cf6</id>
+<updated>2021-08-29T10:50:00-05:00</updated>
+<published>2021-08-29T10:50:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued August 29 at 10:50AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34ADAB8.HurricaneLocalStatement.1261B357BF80AL.MOBHLSMOB.80a46219818e4e2230ca965feff09cf6"/>
+<summary>This product covers portions of southwest Alabama...northwest Florida...south central Alabama...and inland southeast Mississippi. **EYE OF EXTREMELY DANGEROUS CATEGORY 4 HURRICANE IDA NEARING THE SOUTHEASTERN COAST OF LOUISIANA** NEW INFORMATION ---------------</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-08-29T10:50:00-05:00</cap:effective>
+<cap:expires>2021-08-29T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Baldwin Central; Baldwin Coastal; Baldwin Inland; Butler; Choctaw; Clarke; Conecuh; Covington; Crenshaw; Escambia; Mobile Central; Mobile Coastal; Mobile Inland; Monroe; Washington; Wilcox</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>001003 001013 001023 001025 001035 001039 001041 001053 001097 001099 001129 001131</value>
+<valueName>UGC</valueName>
+<value>ALZ051 ALZ052 ALZ053 ALZ054 ALZ055 ALZ056 ALZ057 ALZ058 ALZ059 ALZ060 ALZ261 ALZ262 ALZ263 ALZ264 ALZ265 ALZ266</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AD4DC.FloodAdvisory.1261B34BDE7CAL.MOBFLSMOB.edc073c55aa94ced8465ae447e38f75c</id>
 <updated>2021-08-29T10:35:00-05:00</updated>
 <published>2021-08-29T10:35:00-05:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Advisory issued August 29 at 10:35AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AD4DC.FloodAdvisory.1261B34B2108AL.MOBFLSMOB.edc073c55aa94ced8465ae447e38f75c"/>
+<title>Flood Advisory issued August 29 at 10:35AM CDT until August 29 at 5:15PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AD4DC.FloodAdvisory.1261B34BDE7CAL.MOBFLSMOB.edc073c55aa94ced8465ae447e38f75c"/>
 <summary>The National Weather Service in Mobile has issued a * Flood Advisory for... East Central Baldwin County in southwestern Alabama... Northwestern Escambia County in northwestern Florida... * Until 145 PM CDT. * At 1035 AM CDT, Doppler radar indicated heavy rain due to</summary>
 <cap:event>Flood Advisory</cap:event>
 <cap:effective>2021-08-29T10:35:00-05:00</cap:effective>
-<cap:expires>2021-08-29T12:30:00-05:00</cap:expires>
+<cap:expires>2021-08-29T17:15:00-05:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
@@ -57,38 +253,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <valueName>VTEC</valueName>
 <value>/O.NEW.KMOB.FA.Y.0195.210829T1535Z-210829T1845Z/
 /00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34ACFC8.SpecialWeatherStatement.1261B34AEE40AL.TAESPSTAE.cb407fc86ae41383e71afa110f8341a9</id>
-<updated>2021-08-29T10:22:00-05:00</updated>
-<published>2021-08-29T10:22:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 10:22AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34ACFC8.SpecialWeatherStatement.1261B34AEE40AL.TAESPSTAE.cb407fc86ae41383e71afa110f8341a9"/>
-<summary>...Strong thunderstorms will impact portions of southwestern Coffee and western Geneva Counties in southeastern Alabama, southwestern Jackson, northeastern Bay, western Calhoun, northeastern Walton, Holmes and Washington Counties in the Panhandle of Florida through 1100 AM CDT... At 1022 AM CDT, Doppler radar was tracking strong thunderstorms along</summary>
-<cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T10:22:00-05:00</cap:effective>
-<cap:expires>2021-08-29T11:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Coffee; Geneva</cap:areaDesc>
-<cap:polygon>31,-86.19 31.37,-86.2 30.92,-85.52 30.64,-85.3 30.24,-85.32 30.49,-85.7 30.7,-85.86 30.7,-85.87 30.78,-85.93 30.92,-86.34 30.99,-86.39 31,-86.19</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>001031 001061</value>
-<valueName>UGC</valueName>
-<value>ALZ065 ALZ068</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
 </cap:parameter>
 </entry>
 <entry>
@@ -646,38 +810,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AC85C.SpecialWeatherStatement.1261B34AF9F8AL.MOBSPSMOB.ecfb3f0978ece7dcf68235d1ed3ba7ec</id>
-<updated>2021-08-29T10:03:00-05:00</updated>
-<published>2021-08-29T10:03:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 10:03AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AC85C.SpecialWeatherStatement.1261B34AF9F8AL.MOBSPSMOB.ecfb3f0978ece7dcf68235d1ed3ba7ec"/>
-<summary>...Strong thunderstorms will impact portions of southern Escambia, southern Covington, Okaloosa, Santa Rosa and Escambia Counties through 1130 AM CDT... At 1001 AM CDT, Doppler radar was tracking strong thunderstorms along a band from Hurricane Ida. These bands will continue to move northwest through the morning and produce gusty winds of 30 to 40</summary>
-<cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T10:03:00-05:00</cap:effective>
-<cap:expires>2021-08-29T11:30:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Covington; Escambia</cap:areaDesc>
-<cap:polygon>30.33,-87.36 30.67,-87.41 30.87,-87.64 31.17,-87.62 31.1,-86.29 30.38,-86.4 30.32,-87.21 30.41,-86.66 30.37,-87.18 30.44,-86.88 30.6,-87.02 30.45,-87.07 30.44,-87.09 30.52,-87.1 30.55,-87.13 30.55,-87.12 30.58,-87.15 30.33,-87.21 30.33,-87.36</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>001039 001053</value>
-<valueName>UGC</valueName>
-<value>ALZ059 ALZ060</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AC7F8.FloodWarning.1261B7957740AL.MOBFLSMOB.939ea4df074f67cab68ff506e791ab47</id>
 <updated>2021-08-29T10:02:00-05:00</updated>
 <published>2021-08-29T10:02:00-05:00</published>
@@ -708,72 +840,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <valueName>VTEC</valueName>
 <value>/O.EXT.KMOB.FL.W.0072.210830T2145Z-210901T1536Z/
 /STXA1.2.ER.210830T2145Z.210831T1200Z.210901T0936Z.NO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AA8B8.FloodAdvisory.1261B34B2108AL.MOBFLSMOB.e1e560309199db915749272dad3b8e1a</id>
-<updated>2021-08-29T09:22:00-05:00</updated>
-<published>2021-08-29T09:22:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flood Advisory issued August 29 at 9:22AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AA8B8.FloodAdvisory.1261B34B2108AL.MOBFLSMOB.e1e560309199db915749272dad3b8e1a"/>
-<summary>The National Weather Service in Mobile has issued a * Flood Advisory for... Southwestern Baldwin County in southwestern Alabama... * Until 1230 PM CDT. * At 922 AM CDT, Doppler radar indicated heavy rain due to thunderstorms. Minor flooding is ongoing or expected to begin</summary>
-<cap:event>Flood Advisory</cap:event>
-<cap:effective>2021-08-29T09:22:00-05:00</cap:effective>
-<cap:expires>2021-08-29T12:30:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Baldwin</cap:areaDesc>
-<cap:polygon>30.26,-88.01 30.3,-87.77 30.21,-87.74 30.2,-87.98 30.23,-87.99 30.26,-88.01</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>001003</value>
-<valueName>UGC</valueName>
-<value>ALC003</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KMOB.FA.Y.0194.210829T1422Z-210829T1730Z/
-/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AA728.FloodAdvisory.1261B34B2108AL.MOBFLSMOB.cb74ef5ca1065f7b9d7f88a4f62ac6e7</id>
-<updated>2021-08-29T09:18:00-05:00</updated>
-<published>2021-08-29T09:18:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flood Advisory issued August 29 at 9:18AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34AA728.FloodAdvisory.1261B34B2108AL.MOBFLSMOB.cb74ef5ca1065f7b9d7f88a4f62ac6e7"/>
-<summary>The National Weather Service in Mobile has issued a * Flood Advisory for... East Central Baldwin County in southwestern Alabama... South Central Escambia County in northwestern Florida... * Until 1230 PM CDT. * At 918 AM CDT, Doppler radar indicated heavy rain due to</summary>
-<cap:event>Flood Advisory</cap:event>
-<cap:effective>2021-08-29T09:18:00-05:00</cap:effective>
-<cap:expires>2021-08-29T12:30:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Baldwin</cap:areaDesc>
-<cap:polygon>30.63,-87.55 30.71,-87.37 30.44,-87.13 30.37,-87.29 30.63,-87.55</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>001003</value>
-<valueName>UGC</valueName>
-<value>ALC003</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KMOB.FA.Y.0193.210829T1418Z-210829T1730Z/
-/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -907,38 +973,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34A04A8.HurricaneLocalStatement.1261B34B423CAL.MOBHLSMOB.80a46219818e4e2230ca965feff09cf6</id>
-<updated>2021-08-29T05:02:00-05:00</updated>
-<published>2021-08-29T05:02:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Hurricane Local Statement issued August 29 at 5:02AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B34A04A8.HurricaneLocalStatement.1261B34B423CAL.MOBHLSMOB.80a46219818e4e2230ca965feff09cf6"/>
-<summary>This product covers portions of southwest Alabama...northwest Florida...south central Alabama...and inland southeast Mississippi. **DANGEROUS CATEGORY 4 HURRICANE IDA STRENGTHENS SOME MORE** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
-<cap:event>Hurricane Local Statement</cap:event>
-<cap:effective>2021-08-29T05:02:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:15:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Baldwin Central; Baldwin Coastal; Baldwin Inland; Butler; Choctaw; Clarke; Conecuh; Covington; Crenshaw; Escambia; Mobile Central; Mobile Coastal; Mobile Inland; Monroe; Washington; Wilcox</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>001003 001013 001023 001025 001035 001039 001041 001053 001097 001099 001129 001131</value>
-<valueName>UGC</valueName>
-<value>ALZ051 ALZ052 ALZ053 ALZ054 ALZ055 ALZ056 ALZ057 ALZ058 ALZ059 ALZ060 ALZ261 ALZ262 ALZ263 ALZ264 ALZ265 ALZ266</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B349EFF4.FlashFloodWatch.1261B79409A0AL.HUNFFAHUN.0284cdb9f053588b838ad6346730b98c</id>
 <updated>2021-08-29T04:49:00-05:00</updated>
 <published>2021-08-29T04:49:00-05:00</published>
@@ -968,39 +1002,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value>/O.NEW.KHUN.FF.A.0009.210830T1800Z-210901T0600Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B349EE00.FlashFloodWatch.1261B368D680AL.MOBFFAMOB.5207c697e8d5d3d17df787e9dc1f83d5</id>
-<updated>2021-08-29T04:44:00-05:00</updated>
-<published>2021-08-29T04:44:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 4:44AM CDT until August 31 at 7:00AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AL1261B349EE00.FlashFloodWatch.1261B368D680AL.MOBFFAMOB.5207c697e8d5d3d17df787e9dc1f83d5"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of Alabama, including the following areas, Baldwin Central, Baldwin Coastal, Baldwin Inland, Choctaw, Clarke, Escambia, Mobile Central, Mobile Coastal, Mobile Inland and Washington. Portions of northwest Florida, including the following</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T04:44:00-05:00</cap:effective>
-<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Baldwin Central; Baldwin Coastal; Baldwin Inland; Choctaw; Clarke; Escambia; Mobile Central; Mobile Coastal; Mobile Inland; Washington</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>001003 001023 001025 001053 001097 001129</value>
-<valueName>UGC</valueName>
-<value>ALZ051 ALZ052 ALZ053 ALZ059 ALZ261 ALZ262 ALZ263 ALZ264 ALZ265 ALZ266</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KMOB.FF.A.0014.210829T1200Z-210831T1200Z/
 /00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
@@ -1038,6 +1039,39 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AR1261B34AFEA8.FlashFloodWatch.1261B368D680AR.JANFFAJAN.69748440ad37eff695821c74ec9f873f</id>
+<updated>2021-08-29T11:42:00-05:00</updated>
+<published>2021-08-29T11:42:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 11:42AM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AR1261B34AFEA8.FlashFloodWatch.1261B368D680AR.JANFFAJAN.69748440ad37eff695821c74ec9f873f"/>
+<summary>.Hurricane Ida is nearing landfall over southeast Louisiana by midday Sunday, and then eventually move north to northeastward across the ArkLaMiss region through Monday and Monday night. A heavy rain and flash flood threat is expected to accompany Ida during that time over the watch area. ...FLASH FLOOD WATCH REMAINS IN EFFECT FROM MONDAY MORNING THROUGH</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T11:42:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Ashley; Chicot</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>005003 005017</value>
+<valueName>UGC</valueName>
+<value>ARZ074 ARZ075</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KJAN.FF.A.0014.210830T1200Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=AR1261B34AD478.HurricaneLocalStatement.1261B34C1144AR.JANHLSJAN.f647b86b0f9bda1c2b55f9ecdca155d5</id>
 <updated>2021-08-29T10:34:00-05:00</updated>
 <published>2021-08-29T10:34:00-05:00</published>
@@ -1067,39 +1101,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value></value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AR1261B349E504.FlashFloodWatch.1261B368D680AR.JANFFAJAN.69748440ad37eff695821c74ec9f873f</id>
-<updated>2021-08-29T04:21:00-05:00</updated>
-<published>2021-08-29T04:21:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 4:21AM CDT until August 31 at 7:00AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AR1261B349E504.FlashFloodWatch.1261B368D680AR.JANFFAJAN.69748440ad37eff695821c74ec9f873f"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT FROM MONDAY MORNING THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of southeast Arkansas, northeast Louisiana and Mississippi, including the following areas and parishes, in southeast Arkansas, Ashley and Chicot. In northeast Louisiana,</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T04:21:00-05:00</cap:effective>
-<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Ashley; Chicot</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>005003 005017</value>
-<valueName>UGC</valueName>
-<value>ARZ074 ARZ075</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KJAN.FF.A.0014.210830T1200Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -1200,38 +1201,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=AZ1261B34ACE38.SpecialWeatherStatement.1261B34AEE40AZ.PSRSPSPSR.e7ce8e399f32d3adbd8ae166ef6a977d</id>
-<updated>2021-08-29T08:18:00-07:00</updated>
-<published>2021-08-29T08:18:00-07:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 8:18AM MST by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AZ1261B34ACE38.SpecialWeatherStatement.1261B34AEE40AZ.PSRSPSPSR.e7ce8e399f32d3adbd8ae166ef6a977d"/>
-<summary>...A strong thunderstorm will impact portions of central Yuma and southeastern Imperial Counties through 900 AM MST... At 817 AM MST, Doppler radar was tracking strong thunderstorms from Yuma to Tacna, moving west at 25 mph. HAZARD...Winds in excess of 40 mph. SOURCE...Radar indicated.</summary>
-<cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T08:18:00-07:00</cap:effective>
-<cap:expires>2021-08-29T09:00:00-07:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Gila River Valley; Southeast Yuma County; Yuma</cap:areaDesc>
-<cap:polygon>32.45,-114.61 32.59,-114.6 32.75,-114.55 32.76,-114.52 32.78,-114.53 32.78,-113.93 32.74,-113.78 32.49,-113.74 32.4,-114.17 32.45,-114.61</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>004027</value>
-<valueName>UGC</valueName>
-<value>AZZ532 AZZ535 AZZ536</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=AZ1261B349F378.ExcessiveHeatWarning.1261B35834B0AZ.VEFNPWVEF.a06476e375325f9e09b22c1e72a8216e</id>
 <updated>2021-08-29T02:58:00-07:00</updated>
 <published>2021-08-29T02:58:00-07:00</published>
@@ -1325,6 +1294,135 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value>/O.CON.KPSR.EH.W.0006.000000T0000Z-210830T0300Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34B03BC.HeatAdvisory.1261B3585BC0CA.HNXNPWHNX.9db82690e2cb808a33f31ad52f2bcc9f</id>
+<updated>2021-08-29T09:55:00-07:00</updated>
+<published>2021-08-29T09:55:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Heat Advisory issued August 29 at 9:55AM PDT until August 29 at 9:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34B03BC.HeatAdvisory.1261B3585BC0CA.HNXNPWHNX.9db82690e2cb808a33f31ad52f2bcc9f"/>
+<summary>...HEAT ADVISORY REMAINS IN EFFECT UNTIL 9 PM PDT THIS EVENING... * WHAT...High temperatures of 102 to 107 degrees. * WHERE...San Joaquin Valley and surrounding foothills. * WHEN...Through 9 PM PDT Sunday. * IMPACTS...Heat will significantly increase the potential for heat related illnesses, particularly for those working or</summary>
+<cap:event>Heat Advisory</cap:event>
+<cap:effective>2021-08-29T09:55:00-07:00</cap:effective>
+<cap:expires>2021-08-29T21:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Bakersfield; Central Sierra Foothills; Eastern San Joaquin Valley in Kern County; Foggy Bottom; Fresno; Merced and Madera; San Joaquin Confluence; Southern Kings County; Southern Sierra Foothills; Tulare County; West Side Hills; Western San Joaquin Valley; Western San Joaquin Valley in Kern County</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006019 006029 006031 006039 006043 006047 006107</value>
+<valueName>UGC</valueName>
+<value>CAZ179 CAZ180 CAZ181 CAZ182 CAZ183 CAZ184 CAZ185 CAZ186 CAZ187 CAZ188 CAZ189 CAZ190 CAZ191</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHNX.HT.Y.0005.000000T0000Z-210830T0400Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34B03BC.ExcessiveHeatWarning.1261B36776F0CA.HNXNPWHNX.384998268c53484b8f2caf84d395da71</id>
+<updated>2021-08-29T09:55:00-07:00</updated>
+<published>2021-08-29T09:55:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Excessive Heat Warning issued August 29 at 9:55AM PDT until August 30 at 8:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34B03BC.ExcessiveHeatWarning.1261B36776F0CA.HNXNPWHNX.384998268c53484b8f2caf84d395da71"/>
+<summary>...EXCESSIVE HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM PDT MONDAY... * WHAT...Dangerously hot conditions with high temperatures of 105 to 110 degrees. * WHERE...Kern County Desert. * WHEN...Through 8 PM PDT Monday.</summary>
+<cap:event>Excessive Heat Warning</cap:event>
+<cap:effective>2021-08-29T09:55:00-07:00</cap:effective>
+<cap:expires>2021-08-30T20:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Indian Wells Valley; Kern County Desert</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006029</value>
+<valueName>UGC</valueName>
+<value>CAZ198 CAZ199</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHNX.EH.W.0010.000000T0000Z-210831T0300Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34AF9F8.RedFlagWarning.1261B79409A0CA.STORFWSTO.ecc091fb76073baae56c3b80e8d265fd</id>
+<updated>2021-08-29T09:30:00-07:00</updated>
+<published>2021-08-29T09:30:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Red Flag Warning issued August 29 at 9:30AM PDT until August 31 at 11:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34AF9F8.RedFlagWarning.1261B79409A0CA.STORFWSTO.ecc091fb76073baae56c3b80e8d265fd"/>
+<summary>...Red Flag Warning Monday through Tuesday Evening for the Sierra Nevada and Southern Cascades... .Gusty west to southwest winds are forecast to develop over the Northern Sierra Nevada and Southern Cascades this afternoon and lasting through Wednesday. The strongest winds are expected late Monday morning through Tuesday evening, which combined with low</summary>
+<cap:event>Red Flag Warning</cap:event>
+<cap:effective>2021-08-29T09:30:00-07:00</cap:effective>
+<cap:expires>2021-08-31T23:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Eastern Portion of Shasta, Trinity NF; Northern Motherlode From 1000 to 3000 Ft. From Yuba To Amador Counties; Northern Sierra Foothills from 1000 to 3000 Ft. Includes Nevada-Yuba-Placer RU and Anador-Eldorado RU; Southern Motherlode From 1000 to 3000 Ft, Calaveras and Toulumne Counties</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006005 006007 006009 006017 006057 006089 006103 006109 006115</value>
+<valueName>UGC</valueName>
+<value>CAZ213 CAZ220 CAZ266 CAZ267</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KSTO.FW.W.0009.210830T1800Z-210901T0600Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34AF9F8.RedFlagWarning.1261B79409A0CA.STORFWSTO.a1f28d4a7377919ef0c015b22141bf6f</id>
+<updated>2021-08-29T09:30:00-07:00</updated>
+<published>2021-08-29T09:30:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Red Flag Warning issued August 29 at 9:30AM PDT until August 31 at 11:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34AF9F8.RedFlagWarning.1261B79409A0CA.STORFWSTO.a1f28d4a7377919ef0c015b22141bf6f"/>
+<summary>...Red Flag Warning Monday through Tuesday Evening for the Sierra Nevada and Southern Cascades... .Gusty west to southwest winds are forecast to develop over the Northern Sierra Nevada and Southern Cascades this afternoon and lasting through Wednesday. The strongest winds are expected late Monday morning through Tuesday evening, which combined with low</summary>
+<cap:event>Red Flag Warning</cap:event>
+<cap:effective>2021-08-29T09:30:00-07:00</cap:effective>
+<cap:expires>2021-08-31T23:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Burney Basin and Northeast Plateau in Shasta County Including Northwest Lassen NF north of Lassen NP; Northern Sierra Including Lassen NP and Plumas and Lassen NF, S West of the Sierra Crest - West of Evans Peak, Grizzly Peak, Beckworth Peak; Stanislaus National Forest; Tahoe - Eldorado National Forest</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006003 006005 006009 006017 006035 006057 006061 006063 006089 006091 006109</value>
+<valueName>UGC</valueName>
+<value>CAZ214 CAZ221 CAZ268 CAZ269</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.UPG.KSTO.FW.A.0006.210830T1800Z-210901T0600Z/
+/O.NEW.KSTO.FW.W.0009.210830T1800Z-210901T0600Z/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -1553,102 +1651,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>/O.UPG.KMFR.FW.A.0032.210830T2100Z-210831T0300Z/
 /O.NEW.KMFR.FW.W.0045.210830T2100Z-210831T0300Z/
 /O.CON.KMFR.FW.W.0044.210829T2100Z-210830T0300Z/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34A0F98.FireWeatherWatch.1261B79409A0CA.STORFWSTO.f0db078e7f039052477451154d63dd3e</id>
-<updated>2021-08-29T03:30:00-07:00</updated>
-<published>2021-08-29T03:30:00-07:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Fire Weather Watch issued August 29 at 3:30AM PDT until August 31 at 11:00PM PDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34A0F98.FireWeatherWatch.1261B79409A0CA.STORFWSTO.f0db078e7f039052477451154d63dd3e"/>
-<summary>...Fire Weather Watch Monday through Tuesday Evening for the Sierra Nevada and Southern Cascades... .Gusty west to southwest winds are forecast to develop over the Northern Sierra Nevada and Southern Cascades late Monday morning through Tuesday evening. These winds combined with low humidity and extremely dry fuels may lead to critical fire weather</summary>
-<cap:event>Fire Weather Watch</cap:event>
-<cap:effective>2021-08-29T03:30:00-07:00</cap:effective>
-<cap:expires>2021-08-31T23:00:00-07:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Future</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Burney Basin and Northeast Plateau in Shasta County Including Northwest Lassen NF north of Lassen NP; Northern Sierra Including Lassen NP and Plumas and Lassen NF, S West of the Sierra Crest - West of Evans Peak, Grizzly Peak, Beckworth Peak; Stanislaus National Forest; Tahoe - Eldorado National Forest</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>006003 006005 006009 006017 006035 006057 006061 006063 006089 006091 006109</value>
-<valueName>UGC</valueName>
-<value>CAZ214 CAZ221 CAZ268 CAZ269</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KSTO.FW.A.0006.210830T1800Z-210901T0600Z/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34A09BC.HeatAdvisory.1261B3585BC0CA.HNXNPWHNX.9db82690e2cb808a33f31ad52f2bcc9f</id>
-<updated>2021-08-29T03:15:00-07:00</updated>
-<published>2021-08-29T03:15:00-07:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Heat Advisory issued August 29 at 3:15AM PDT until August 29 at 9:00PM PDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34A09BC.HeatAdvisory.1261B3585BC0CA.HNXNPWHNX.9db82690e2cb808a33f31ad52f2bcc9f"/>
-<summary>...HEAT ADVISORY REMAINS IN EFFECT UNTIL 9 PM PDT THIS EVENING... * WHAT...High temperatures of 102 to 107 degrees. * WHERE...San Joaquin Valley and surrounding foothills. * WHEN...Through 9 PM PDT Sunday. * IMPACTS...Heat will significantly increase the potential for heat related illnesses, particularly for those working or</summary>
-<cap:event>Heat Advisory</cap:event>
-<cap:effective>2021-08-29T03:15:00-07:00</cap:effective>
-<cap:expires>2021-08-29T21:00:00-07:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Bakersfield; Central Sierra Foothills; Eastern San Joaquin Valley in Kern County; Foggy Bottom; Fresno; Merced and Madera; San Joaquin Confluence; Southern Kings County; Southern Sierra Foothills; Tulare County; West Side Hills; Western San Joaquin Valley; Western San Joaquin Valley in Kern County</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>006019 006029 006031 006039 006043 006047 006107</value>
-<valueName>UGC</valueName>
-<value>CAZ179 CAZ180 CAZ181 CAZ182 CAZ183 CAZ184 CAZ185 CAZ186 CAZ187 CAZ188 CAZ189 CAZ190 CAZ191</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KHNX.HT.Y.0005.000000T0000Z-210830T0400Z/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34A09BC.ExcessiveHeatWarning.1261B36776F0CA.HNXNPWHNX.384998268c53484b8f2caf84d395da71</id>
-<updated>2021-08-29T03:15:00-07:00</updated>
-<published>2021-08-29T03:15:00-07:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Excessive Heat Warning issued August 29 at 3:15AM PDT until August 30 at 8:00PM PDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B34A09BC.ExcessiveHeatWarning.1261B36776F0CA.HNXNPWHNX.384998268c53484b8f2caf84d395da71"/>
-<summary>...EXCESSIVE HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM PDT MONDAY... * WHAT...Dangerously hot conditions with high temperatures of 105 to 110 degrees. * WHERE...Kern County Desert. * WHEN...Through 8 PM PDT Monday.</summary>
-<cap:event>Excessive Heat Warning</cap:event>
-<cap:effective>2021-08-29T03:15:00-07:00</cap:effective>
-<cap:expires>2021-08-30T20:00:00-07:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Indian Wells Valley; Kern County Desert</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>006029</value>
-<valueName>UGC</valueName>
-<value>CAZ198 CAZ199</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KHNX.EH.W.0010.000000T0000Z-210831T0300Z/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -2102,18 +2104,116 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AD4DC.FloodAdvisory.1261B7A309DCFL.MOBFLSMOB.ddc07f57f5d5a710f7470fc5e787a329</id>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34B216C.FlashFloodWatch.1261B368D680FL.MOBFFAMOB.60d7f2772bf1d02763a8b04628357437</id>
+<updated>2021-08-29T13:31:00-04:00</updated>
+<published>2021-08-29T13:31:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 1:31PM EDT until August 31 at 8:00AM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34B216C.FlashFloodWatch.1261B368D680FL.MOBFFAMOB.60d7f2772bf1d02763a8b04628357437"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of Alabama, including the following areas, Baldwin Central, Baldwin Coastal, Baldwin Inland, Choctaw, Clarke, Escambia, Mobile Central, Mobile Coastal, Mobile Inland and Washington. Portions of northwest Florida, including the following</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T13:31:00-04:00</cap:effective>
+<cap:expires>2021-08-31T08:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Escambia Coastal; Escambia Inland; Okaloosa Coastal; Okaloosa Inland; Santa Rosa Coastal; Santa Rosa Inland</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>012033 012091 012113</value>
+<valueName>UGC</valueName>
+<value>FLZ201 FLZ202 FLZ203 FLZ204 FLZ205 FLZ206</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KMOB.FF.A.0014.000000T0000Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AF28C.FlashFloodWarning.1261B34BDE7CFL.MOBFFWMOB.ba40b4cdcee0ea482fddc467a5cae030</id>
+<updated>2021-08-29T12:11:00-04:00</updated>
+<published>2021-08-29T12:11:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Warning issued August 29 at 12:11PM EDT until August 29 at 6:15PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AF28C.FlashFloodWarning.1261B34BDE7CFL.MOBFFWMOB.ba40b4cdcee0ea482fddc467a5cae030"/>
+<summary>The National Weather Service in Mobile has issued a * Flash Flood Warning for... East Central Baldwin County in southwestern Alabama... Northwestern Escambia County in northwestern Florida... * Until 515 PM CDT Sunday. * At 1111 AM CDT, Doppler radar indicated thunderstorms producing</summary>
+<cap:event>Flash Flood Warning</cap:event>
+<cap:effective>2021-08-29T12:11:00-04:00</cap:effective>
+<cap:expires>2021-08-29T18:15:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Escambia</cap:areaDesc>
+<cap:polygon>30.56,-87.43 30.87,-87.66 30.99,-87.45 30.77,-87.3 30.75,-87.31 30.74,-87.31 30.73,-87.31 30.72,-87.3 30.72,-87.28 30.72,-87.27 30.71,-87.27 30.7,-87.27 30.69,-87.27 30.69,-87.26 30.68,-87.27 30.65,-87.26 30.56,-87.43</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>012033</value>
+<valueName>UGC</valueName>
+<value>FLC033</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KMOB.FF.W.0053.210829T1611Z-210829T2215Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34ADAB8.HurricaneLocalStatement.1261B357BF80FL.MOBHLSMOB.51411d545780c678dffd14086543b965</id>
+<updated>2021-08-29T11:50:00-04:00</updated>
+<published>2021-08-29T11:50:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued August 29 at 11:50AM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34ADAB8.HurricaneLocalStatement.1261B357BF80FL.MOBHLSMOB.51411d545780c678dffd14086543b965"/>
+<summary>This product covers portions of southwest Alabama...northwest Florida...south central Alabama...and inland southeast Mississippi. **EYE OF EXTREMELY DANGEROUS CATEGORY 4 HURRICANE IDA NEARING THE SOUTHEASTERN COAST OF LOUISIANA** NEW INFORMATION ---------------</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-08-29T11:50:00-04:00</cap:effective>
+<cap:expires>2021-08-29T20:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Escambia Coastal; Escambia Inland; Okaloosa Coastal; Okaloosa Inland; Santa Rosa Coastal; Santa Rosa Inland</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>012033 012091 012113</value>
+<valueName>UGC</valueName>
+<value>FLZ201 FLZ202 FLZ203 FLZ204 FLZ205 FLZ206</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AD4DC.FloodAdvisory.1261B34BDE7CFL.MOBFLSMOB.ddc07f57f5d5a710f7470fc5e787a329</id>
 <updated>2021-08-29T11:35:00-04:00</updated>
 <published>2021-08-29T11:35:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Advisory issued August 29 at 11:35AM EDT until September 02 at 12:31AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AD4DC.FloodAdvisory.1261B7A309DCFL.MOBFLSMOB.ddc07f57f5d5a710f7470fc5e787a329"/>
+<title>Flood Advisory issued August 29 at 11:35AM EDT until August 29 at 6:15PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AD4DC.FloodAdvisory.1261B34BDE7CFL.MOBFLSMOB.ddc07f57f5d5a710f7470fc5e787a329"/>
 <summary>The National Weather Service in Mobile has issued a * Flood Advisory for... East Central Baldwin County in southwestern Alabama... Northwestern Escambia County in northwestern Florida... * Until 145 PM CDT. * At 1035 AM CDT, Doppler radar indicated heavy rain due to</summary>
 <cap:event>Flood Advisory</cap:event>
 <cap:effective>2021-08-29T11:35:00-04:00</cap:effective>
-<cap:expires>2021-09-02T00:31:00-04:00</cap:expires>
+<cap:expires>2021-08-29T18:15:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
@@ -2132,38 +2232,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <valueName>VTEC</valueName>
 <value>/O.NEW.KMOB.FA.Y.0195.210829T1535Z-210829T1845Z/
 /00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34ACFC8.SpecialWeatherStatement.1261B34AEE40FL.TAESPSTAE.a27d862af94ecdba39d6d4a9de15e222</id>
-<updated>2021-08-29T11:22:00-04:00</updated>
-<published>2021-08-29T11:22:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 11:22AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34ACFC8.SpecialWeatherStatement.1261B34AEE40FL.TAESPSTAE.a27d862af94ecdba39d6d4a9de15e222"/>
-<summary>...Strong thunderstorms will impact portions of southwestern Coffee and western Geneva Counties in southeastern Alabama, southwestern Jackson, northeastern Bay, western Calhoun, northeastern Walton, Holmes and Washington Counties in the Panhandle of Florida through 1100 AM CDT... At 1022 AM CDT, Doppler radar was tracking strong thunderstorms along</summary>
-<cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T11:22:00-04:00</cap:effective>
-<cap:expires>2021-08-29T12:00:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Calhoun; Central Walton; Holmes; Inland Bay; Jackson; North Walton; Washington</cap:areaDesc>
-<cap:polygon>31,-86.19 31.37,-86.2 30.92,-85.52 30.64,-85.3 30.24,-85.32 30.49,-85.7 30.7,-85.86 30.7,-85.87 30.78,-85.93 30.92,-86.34 30.99,-86.39 31,-86.19</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>012005 012013 012059 012063 012131 012133</value>
-<valueName>UGC</valueName>
-<value>FLZ007 FLZ008 FLZ009 FLZ010 FLZ011 FLZ012 FLZ013</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
 </cap:parameter>
 </entry>
 <entry>
@@ -2233,38 +2301,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AC85C.SpecialWeatherStatement.1261B34AF9F8FL.MOBSPSMOB.2660c78a634b77cb4eb285f36e5e22b3</id>
-<updated>2021-08-29T11:03:00-04:00</updated>
-<published>2021-08-29T11:03:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 11:03AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AC85C.SpecialWeatherStatement.1261B34AF9F8FL.MOBSPSMOB.2660c78a634b77cb4eb285f36e5e22b3"/>
-<summary>...Strong thunderstorms will impact portions of southern Escambia, southern Covington, Okaloosa, Santa Rosa and Escambia Counties through 1130 AM CDT... At 1001 AM CDT, Doppler radar was tracking strong thunderstorms along a band from Hurricane Ida. These bands will continue to move northwest through the morning and produce gusty winds of 30 to 40</summary>
-<cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T11:03:00-04:00</cap:effective>
-<cap:expires>2021-08-29T12:30:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Escambia Coastal; Escambia Inland; Okaloosa Coastal; Okaloosa Inland; Santa Rosa Coastal; Santa Rosa Inland</cap:areaDesc>
-<cap:polygon>30.33,-87.36 30.67,-87.41 30.87,-87.64 31.17,-87.62 31.1,-86.29 30.38,-86.4 30.32,-87.21 30.41,-86.66 30.37,-87.18 30.44,-86.88 30.6,-87.02 30.45,-87.07 30.44,-87.09 30.52,-87.1 30.55,-87.13 30.55,-87.12 30.58,-87.15 30.33,-87.21 30.33,-87.36</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>012033 012091 012113</value>
-<valueName>UGC</valueName>
-<value>FLZ201 FLZ202 FLZ203 FLZ204 FLZ205 FLZ206</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AA78C.FloodWarning.1261B368D680FL.TAEFLSTAE.156962010b04d7ee9c216dec53ae2133</id>
 <updated>2021-08-29T10:19:00-04:00</updated>
 <published>2021-08-29T10:19:00-04:00</published>
@@ -2295,39 +2331,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <valueName>VTEC</valueName>
 <value>/O.CON.KTAE.FL.W.0044.000000T0000Z-210831T1200Z/
 /RCKF1.1.ER.210810T2220Z.210818T1445Z.210831T0600Z.UU/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AA728.FloodAdvisory.1261B34BB76CFL.MOBFLSMOB.f31acb4d67cebd74a44ab2798e67f9eb</id>
-<updated>2021-08-29T10:18:00-04:00</updated>
-<published>2021-08-29T10:18:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flood Advisory issued August 29 at 10:18AM EDT until August 29 at 5:15PM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34AA728.FloodAdvisory.1261B34BB76CFL.MOBFLSMOB.f31acb4d67cebd74a44ab2798e67f9eb"/>
-<summary>The National Weather Service in Mobile has issued a * Flood Advisory for... East Central Baldwin County in southwestern Alabama... South Central Escambia County in northwestern Florida... * Until 1230 PM CDT. * At 918 AM CDT, Doppler radar indicated heavy rain due to</summary>
-<cap:event>Flood Advisory</cap:event>
-<cap:effective>2021-08-29T10:18:00-04:00</cap:effective>
-<cap:expires>2021-08-29T17:15:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Escambia</cap:areaDesc>
-<cap:polygon>30.63,-87.55 30.71,-87.37 30.44,-87.13 30.37,-87.29 30.63,-87.55</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>012033</value>
-<valueName>UGC</valueName>
-<value>FLC033</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KMOB.FA.Y.0193.210829T1418Z-210829T1730Z/
-/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -2593,104 +2596,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>/O.EXT.KMOB.SU.W.0003.000000T0000Z-210831T1200Z/
 /O.EXT.KMOB.RP.S.0024.000000T0000Z-210902T0900Z/
 /O.CON.KMOB.CF.Y.0005.000000T0000Z-210831T0000Z/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34A04A8.HurricaneLocalStatement.1261B34B423CFL.MOBHLSMOB.51411d545780c678dffd14086543b965</id>
-<updated>2021-08-29T06:02:00-04:00</updated>
-<published>2021-08-29T06:02:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Hurricane Local Statement issued August 29 at 6:02AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B34A04A8.HurricaneLocalStatement.1261B34B423CFL.MOBHLSMOB.51411d545780c678dffd14086543b965"/>
-<summary>This product covers portions of southwest Alabama...northwest Florida...south central Alabama...and inland southeast Mississippi. **DANGEROUS CATEGORY 4 HURRICANE IDA STRENGTHENS SOME MORE** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
-<cap:event>Hurricane Local Statement</cap:event>
-<cap:effective>2021-08-29T06:02:00-04:00</cap:effective>
-<cap:expires>2021-08-29T14:15:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Escambia Coastal; Escambia Inland; Okaloosa Coastal; Okaloosa Inland; Santa Rosa Coastal; Santa Rosa Inland</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>012033 012091 012113</value>
-<valueName>UGC</valueName>
-<value>FLZ201 FLZ202 FLZ203 FLZ204 FLZ205 FLZ206</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B349EE00.FlashFloodWatch.1261B368D680FL.MOBFFAMOB.4d66d6cfe3e14d63b6e945c343e4c2cd</id>
-<updated>2021-08-29T05:44:00-04:00</updated>
-<published>2021-08-29T05:44:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 5:44AM EDT until August 31 at 8:00AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B349EE00.FlashFloodWatch.1261B368D680FL.MOBFFAMOB.4d66d6cfe3e14d63b6e945c343e4c2cd"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of Alabama, including the following areas, Baldwin Central, Baldwin Coastal, Baldwin Inland, Choctaw, Clarke, Escambia, Mobile Central, Mobile Coastal, Mobile Inland and Washington. Portions of northwest Florida, including the following</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T05:44:00-04:00</cap:effective>
-<cap:expires>2021-08-31T08:00:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Escambia Coastal; Escambia Inland; Santa Rosa Coastal; Santa Rosa Inland</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>012033 012113</value>
-<valueName>UGC</valueName>
-<value>FLZ201 FLZ202 FLZ203 FLZ204</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KMOB.FF.A.0014.210829T1200Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B349EE00.FlashFloodWatch.1261B368D680FL.MOBFFAMOB.70ffc4fd7202083eb23cc106e8952b1e</id>
-<updated>2021-08-29T05:44:00-04:00</updated>
-<published>2021-08-29T05:44:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 5:44AM EDT until August 31 at 8:00AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B349EE00.FlashFloodWatch.1261B368D680FL.MOBFFAMOB.70ffc4fd7202083eb23cc106e8952b1e"/>
-<summary>...FLASH FLOOD WATCH IN EFFECT THROUGH TUESDAY MORNING... The National Weather Service in Mobile has expanded the * Flash Flood Watch to include A portion of northwest Florida, including the following areas, Okaloosa Coastal and Okaloosa Inland. * Through Tuesday morning.</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T05:44:00-04:00</cap:effective>
-<cap:expires>2021-08-31T08:00:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Okaloosa Coastal; Okaloosa Inland</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>012091</value>
-<valueName>UGC</valueName>
-<value>FLZ205 FLZ206</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.EXA.KMOB.FF.A.0014.210829T1200Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -3650,102 +3555,35 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=KS1261B34AA14C.FloodAdvisory.1261B34B3C60KS.DDCFLSDDC.4c9e1edc0015fad62ba31e0df0da2a89</id>
-<updated>2021-08-29T09:03:00-05:00</updated>
-<published>2021-08-29T09:03:00-05:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=KY1261B34B1DE8.SpecialWeatherStatement.1261B34B3C60KY.RLXSPSRLX.b41f299493116a8a0de37b8cc6b97d27</id>
+<updated>2021-08-29T13:22:00-04:00</updated>
+<published>2021-08-29T13:22:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Advisory issued August 29 at 9:03AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=KS1261B34AA14C.FloodAdvisory.1261B34B3C60KS.DDCFLSDDC.4c9e1edc0015fad62ba31e0df0da2a89"/>
-<summary>The National Weather Service in Dodge City has issued a * Flood Advisory for... Rush County in central Kansas... Southeastern Ellis County in central Kansas... * Until 100 PM CDT. * At 900 AM CDT, Doppler radar indicated heavy rain due to</summary>
-<cap:event>Flood Advisory</cap:event>
-<cap:effective>2021-08-29T09:03:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:00:00-05:00</cap:expires>
+<title>Special Weather Statement issued August 29 at 1:22PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=KY1261B34B1DE8.SpecialWeatherStatement.1261B34B3C60KY.RLXSPSRLX.b41f299493116a8a0de37b8cc6b97d27"/>
+<summary>...A strong thunderstorm will impact portions of southeastern Lawrence County through 200 PM EDT... At 122 PM EDT, Doppler radar was tracking a strong thunderstorm over Galen, or near Paintsville, moving northeast at 20 mph. HAZARD...Winds in excess of 30 mph. SOURCE...Radar indicated.</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-08-29T13:22:00-04:00</cap:effective>
+<cap:expires>2021-08-29T14:00:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
 <cap:urgency>Expected</cap:urgency>
 <cap:severity>Minor</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Ellis; Rush</cap:areaDesc>
-<cap:polygon>38.81,-99.05 38.37,-99.04 38.35,-99.57 38.52,-99.56 38.81,-99.05</cap:polygon>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Lawrence</cap:areaDesc>
+<cap:polygon>38.12,-82.68 37.99,-82.51 37.96,-82.55 37.95,-82.58 37.93,-82.58 37.92,-82.6 37.91,-82.6 37.88,-82.63 37.9,-82.7 37.98,-82.86 38.12,-82.68</cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>020051 020165</value>
+<value>021127</value>
 <valueName>UGC</valueName>
-<value>KSC051 KSC165</value>
+<value>KYZ105</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
-<value>/O.NEW.KDDC.FA.Y.0010.210829T1403Z-210829T1800Z/
-/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=KS1261B34A4008.FloodAdvisory.1261B34B3C60KS.GIDFLSGID.3b9deb8664de1b9d039a576acfbc6193</id>
-<updated>2021-08-29T06:54:00-05:00</updated>
-<published>2021-08-29T06:54:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flood Advisory issued August 29 at 6:54AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=KS1261B34A4008.FloodAdvisory.1261B34B3C60KS.GIDFLSGID.3b9deb8664de1b9d039a576acfbc6193"/>
-<summary>The National Weather Service in Hastings has issued a * Flood Advisory for... Jewell County in north central Kansas... Mitchell County in north central Kansas... Osborne County in north central Kansas... Southeastern Smith County in north central Kansas...</summary>
-<cap:event>Flood Advisory</cap:event>
-<cap:effective>2021-08-29T06:54:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Jewell; Mitchell; Osborne; Smith</cap:areaDesc>
-<cap:polygon>39.14,-98.97 39.47,-98.88 39.74,-98.77 39.92,-98.59 39.99,-97.93 39.22,-97.93 39.22,-98.49 39.13,-98.49 39.14,-98.97</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>020089 020123 020141 020183</value>
-<valueName>UGC</valueName>
-<value>KSC089 KSC123 KSC141 KSC183</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KGID.FA.Y.0036.210829T1154Z-210829T1600Z/
-/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=KS1261B34A3450.FloodWarning.1261B34B3C60KS.ICTFLWICT.004004e730b20eb8752a70d285fb21da</id>
-<updated>2021-08-29T06:24:00-05:00</updated>
-<published>2021-08-29T06:24:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flood Warning issued August 29 at 6:24AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=KS1261B34A3450.FloodWarning.1261B34B3C60KS.ICTFLWICT.004004e730b20eb8752a70d285fb21da"/>
-<summary>The National Weather Service in Wichita has issued a * Flood Warning for... Lincoln County in central Kansas... Russell County in central Kansas... * Until 1215 PM CDT. * At 624 AM CDT, Doppler radar indicated numerous slow-moving</summary>
-<cap:event>Flood Warning</cap:event>
-<cap:effective>2021-08-29T06:24:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Lincoln; Russell</cap:areaDesc>
-<cap:polygon>38.7,-99.04 39.13,-99.04 39.13,-98.49 39.22,-98.49 39.22,-97.93 38.87,-97.93 38.87,-98.48 38.7,-98.49 38.7,-99.04</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>020105 020167</value>
-<valueName>UGC</valueName>
-<value>KSC105 KSC167</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KICT.FA.W.0063.210829T1124Z-210829T1715Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+<value></value>
 </cap:parameter>
 </entry>
 <entry>
@@ -3774,38 +3612,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>021007 021033 021035 021039 021047 021055 021059 021075 021083 021101 021105 021107 021139 021143 021145 021149 021157 021177 021219 021221 021225 021233</value>
 <valueName>UGC</valueName>
 <value>KYZ001 KYZ002 KYZ003 KYZ004 KYZ005 KYZ006 KYZ007 KYZ008 KYZ009 KYZ010 KYZ011 KYZ012 KYZ013 KYZ014 KYZ015 KYZ016 KYZ017 KYZ018 KYZ019 KYZ020 KYZ021 KYZ022</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=KY1261B34A1448.SpecialWeatherStatement.1261B34AEE40KY.RLXSPSRLX.2a3653e261e683ab87e6655481e6a01c</id>
-<updated>2021-08-29T06:42:00-04:00</updated>
-<published>2021-08-29T06:42:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 6:42AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=KY1261B34A1448.SpecialWeatherStatement.1261B34AEE40KY.RLXSPSRLX.2a3653e261e683ab87e6655481e6a01c"/>
-<summary>...HOT AND HUMID CONDITIONS TODAY... The combination of hot temperatures and high humidity will result in heat index values in the 95 to 100 degree range this afternoon. This could cause heat related health problems. If you have to be outdoors, please take the necessary precautions to protect yourself from heat related illnesses. Limit strenuous</summary>
-<cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T06:42:00-04:00</cap:effective>
-<cap:expires>2021-08-29T12:00:00-04:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Minor</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Boyd; Carter; Greenup; Lawrence</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>021019 021043 021089 021127</value>
-<valueName>UGC</valueName>
-<value>KYZ101 KYZ102 KYZ103 KYZ105</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
@@ -3902,6 +3708,137 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>021001 021003 021005 021009 021017 021021 021027 021029 021031 021045 021049 021053 021057 021061 021067 021073 021079 021085 021087 021093 021097 021099 021103 021111 021113 021123 021137 021141 021151 021155 021163 021167 021169 021171 021179 021181 021183 021185 021207 021209 021211 021213 021215 021217 021227 021229 021239</value>
 <valueName>UGC</valueName>
 <value>KYZ024 KYZ025 KYZ026 KYZ027 KYZ028 KYZ029 KYZ030 KYZ031 KYZ033 KYZ034 KYZ035 KYZ036 KYZ037 KYZ038 KYZ039 KYZ040 KYZ041 KYZ042 KYZ043 KYZ045 KYZ046 KYZ047 KYZ048 KYZ049 KYZ053 KYZ054 KYZ055 KYZ056 KYZ057 KYZ061 KYZ062 KYZ063 KYZ064 KYZ065 KYZ066 KYZ067 KYZ070 KYZ071 KYZ072 KYZ073 KYZ074 KYZ075 KYZ076 KYZ077 KYZ078 KYZ081 KYZ082</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34B2360.FloodWarning.1261B3597EC4LA.LIXFLSLIX.b266e8f24bb3bfa340f585a62c0c3d41</id>
+<updated>2021-08-29T12:36:00-05:00</updated>
+<published>2021-08-29T12:36:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 12:36PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34B2360.FloodWarning.1261B3597EC4LA.LIXFLSLIX.b266e8f24bb3bfa340f585a62c0c3d41"/>
+<summary>...The Flood Warning is extended for the following rivers in Louisiana... Amite River At Maurepas affecting Livingston Parish. Amite River At French Settlement affecting Ascension and Livingston Parishes. .All river forecasts a based on current rainfall and take into</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T12:36:00-05:00</cap:effective>
+<cap:expires>2021-08-30T06:45:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Livingston</cap:areaDesc>
+<cap:polygon>30.34,-90.54 30.25,-90.56 30.26,-90.66 30.35,-90.64 30.34,-90.54</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022063</value>
+<valueName>UGC</valueName>
+<value>LAC063</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KLIX.FL.W.0218.210829T1836Z-000000T0000Z/
+/MAUL1.2.ER.210829T1836Z.210830T1300Z.000000T0000Z.NR/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34B2360.FloodWarning.1261B3597EC4LA.LIXFLSLIX.b3e606478d779e685e0f24d7032af6ae</id>
+<updated>2021-08-29T12:36:00-05:00</updated>
+<published>2021-08-29T12:36:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 12:36PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34B2360.FloodWarning.1261B3597EC4LA.LIXFLSLIX.b3e606478d779e685e0f24d7032af6ae"/>
+<summary>...The Flood Warning is extended for the following rivers in Louisiana... Amite River At Maurepas affecting Livingston Parish. Amite River At French Settlement affecting Ascension and Livingston Parishes. .All river forecasts a based on current rainfall and take into</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T12:36:00-05:00</cap:effective>
+<cap:expires>2021-08-30T06:45:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Ascension; Livingston</cap:areaDesc>
+<cap:polygon>30.35,-90.64 30.26,-90.66 30.26,-90.84 30.33,-90.78 30.35,-90.64</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022005 022063</value>
+<valueName>UGC</valueName>
+<value>LAC005 LAC063</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KLIX.FL.W.0219.210830T0548Z-000000T0000Z/
+/FSLL1.1.ER.210830T0548Z.210830T1300Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34AFEA8.FlashFloodWatch.1261B368D680LA.JANFFAJAN.79d294c279fac4e55fc1dfaae5fad3f4</id>
+<updated>2021-08-29T11:42:00-05:00</updated>
+<published>2021-08-29T11:42:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 11:42AM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34AFEA8.FlashFloodWatch.1261B368D680LA.JANFFAJAN.79d294c279fac4e55fc1dfaae5fad3f4"/>
+<summary>.Hurricane Ida is nearing landfall over southeast Louisiana by midday Sunday, and then eventually move north to northeastward across the ArkLaMiss region through Monday and Monday night. A heavy rain and flash flood threat is expected to accompany Ida during that time over the watch area. ...FLASH FLOOD WATCH REMAINS IN EFFECT FROM MONDAY MORNING THROUGH</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T11:42:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Catahoula; Concordia; East Carroll; Franklin; Madison; Morehouse; Richland; Tensas; West Carroll</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022025 022029 022035 022041 022065 022067 022083 022107 022123</value>
+<valueName>UGC</valueName>
+<value>LAZ007 LAZ008 LAZ009 LAZ015 LAZ016 LAZ023 LAZ024 LAZ025 LAZ026</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KJAN.FF.A.0014.210830T1200Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34ADA54.HurricaneLocalStatement.1261B357BF80LA.LIXHLSLIX.3ad4935722035f498916a83b1173399b</id>
+<updated>2021-08-29T10:49:00-05:00</updated>
+<published>2021-08-29T10:49:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued August 29 at 10:49AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34ADA54.HurricaneLocalStatement.1261B357BF80LA.LIXHLSLIX.3ad4935722035f498916a83b1173399b"/>
+<summary>This product covers Southeast Louisiana and South Mississippi **EYE OF EXTREMELY DANGEROUS CATEGORY 4 HURRICANE IDA NEARING THE SOUTHEASTERN COAST OF LOUISIANA** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-08-29T10:49:00-05:00</cap:effective>
+<cap:expires>2021-08-29T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Ascension; Assumption; East Baton Rouge; East Feliciana; Eastern Orleans; Iberville; Livingston; Lower Jefferson; Lower Lafourche; Lower Plaquemines; Lower St. Bernard; Lower Terrebonne; Northern Tangipahoa; Northwest St. Tammany; Pointe Coupee; Southeast St. Tammany; Southern Tangipahoa; St. Charles; St. Helena; St. James; St. John The Baptist; Upper Jefferson; Upper Lafourche; Upper Plaquemines; Upper St. Bernard; Upper Terrebonne; Washington; West Baton Rouge; West Feliciana; Western Orleans</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022005 022007 022033 022037 022047 022051 022057 022063 022071 022075 022077 022087 022089 022091 022093 022095 022103 022105 022109 022117 022121 022125</value>
+<valueName>UGC</valueName>
+<value>LAZ034 LAZ035 LAZ036 LAZ037 LAZ039 LAZ046 LAZ047 LAZ048 LAZ049 LAZ050 LAZ056 LAZ057 LAZ058 LAZ059 LAZ060 LAZ061 LAZ063 LAZ064 LAZ065 LAZ066 LAZ067 LAZ068 LAZ069 LAZ070 LAZ071 LAZ072 LAZ075 LAZ076 LAZ077 LAZ078</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
@@ -7215,70 +7152,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34A67E0.HurricaneLocalStatement.1261B34BB190LA.LIXHLSLIX.3ad4935722035f498916a83b1173399b</id>
-<updated>2021-08-29T07:56:00-05:00</updated>
-<published>2021-08-29T07:56:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Hurricane Local Statement issued August 29 at 7:56AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34A67E0.HurricaneLocalStatement.1261B34BB190LA.LIXHLSLIX.3ad4935722035f498916a83b1173399b"/>
-<summary>This product covers Southeast Louisiana and South Mississippi **CATASTROPHIC CATEGORY 4 HURRICANE IDA MOVING CLOSING IN ON THE LOUISIANA COAST** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
-<cap:event>Hurricane Local Statement</cap:event>
-<cap:effective>2021-08-29T07:56:00-05:00</cap:effective>
-<cap:expires>2021-08-29T16:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Ascension; Assumption; East Baton Rouge; East Feliciana; Eastern Orleans; Iberville; Livingston; Lower Jefferson; Lower Lafourche; Lower Plaquemines; Lower St. Bernard; Lower Terrebonne; Northern Tangipahoa; Northwest St. Tammany; Pointe Coupee; Southeast St. Tammany; Southern Tangipahoa; St. Charles; St. Helena; St. James; St. John The Baptist; Upper Jefferson; Upper Lafourche; Upper Plaquemines; Upper St. Bernard; Upper Terrebonne; Washington; West Baton Rouge; West Feliciana; Western Orleans</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>022005 022007 022033 022037 022047 022051 022057 022063 022071 022075 022077 022087 022089 022091 022093 022095 022103 022105 022109 022117 022121 022125</value>
-<valueName>UGC</valueName>
-<value>LAZ034 LAZ035 LAZ036 LAZ037 LAZ039 LAZ046 LAZ047 LAZ048 LAZ049 LAZ050 LAZ056 LAZ057 LAZ058 LAZ059 LAZ060 LAZ061 LAZ063 LAZ064 LAZ065 LAZ066 LAZ067 LAZ068 LAZ069 LAZ070 LAZ071 LAZ072 LAZ075 LAZ076 LAZ077 LAZ078</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34A6524.ExtremeWindWarning.1261B34AD8C4LA.LIXEWWLIX.f69f762406aec6ebe877bd1bed25f2e0</id>
-<updated>2021-08-29T07:49:00-05:00</updated>
-<published>2021-08-29T07:49:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Extreme Wind Warning issued August 29 at 7:49AM CDT until August 29 at 10:45AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34A6524.ExtremeWindWarning.1261B34AD8C4LA.LIXEWWLIX.f69f762406aec6ebe877bd1bed25f2e0"/>
-<summary>The National Weather Service in New Orleans has issued a * Extreme Wind Warning for... West central St. Bernard Parish in southeastern Louisiana... Southern St. Charles Parish in southeastern Louisiana... Terrebonne Parish in southeastern Louisiana... Lafourche Parish in southeastern Louisiana...</summary>
-<cap:event>Extreme Wind Warning</cap:event>
-<cap:effective>2021-08-29T07:49:00-05:00</cap:effective>
-<cap:expires>2021-08-29T10:45:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Immediate</cap:urgency>
-<cap:severity>Extreme</cap:severity>
-<cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Jefferson; Lafourche; Plaquemines; St. Bernard; St. Charles; Terrebonne</cap:areaDesc>
-<cap:polygon>29.25,-89.5 29.3,-89.9 29.41,-89.78 29.49,-89.9 29.1,-90.19 29.37,-90.49 29.21,-90.56 29.23,-90.53 29.21,-90.54 29.11,-90.83 29.48,-91.13 29.86,-90.51 29.87,-89.86 29.4,-89.52 29.41,-89.57 29.4,-89.57 29.13,-89.06 29.04,-89.31 29.19,-89.34 28.95,-89.4 29.25,-89.5</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>022051 022057 022075 022087 022089 022109</value>
-<valueName>UGC</valueName>
-<value>LAC051 LAC057 LAC075 LAC087 LAC089 LAC109</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KLIX.EW.W.0001.210829T1249Z-210829T1545Z/</value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B34A5A34.FlashFloodWatch.1261B36701C0LA.LCHFFALCH.7a51745b37f7488f864b49a5799bea84</id>
 <updated>2021-08-29T07:21:00-05:00</updated>
 <published>2021-08-29T07:21:00-05:00</published>
@@ -7377,71 +7250,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B349E504.FlashFloodWatch.1261B368D680LA.JANFFAJAN.79d294c279fac4e55fc1dfaae5fad3f4</id>
-<updated>2021-08-29T04:21:00-05:00</updated>
-<published>2021-08-29T04:21:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 4:21AM CDT until August 31 at 7:00AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B349E504.FlashFloodWatch.1261B368D680LA.JANFFAJAN.79d294c279fac4e55fc1dfaae5fad3f4"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT FROM MONDAY MORNING THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of southeast Arkansas, northeast Louisiana and Mississippi, including the following areas and parishes, in southeast Arkansas, Ashley and Chicot. In northeast Louisiana,</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T04:21:00-05:00</cap:effective>
-<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Catahoula; Concordia; East Carroll; Franklin; Madison; Morehouse; Richland; Tensas; West Carroll</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>022025 022029 022035 022041 022065 022067 022083 022107 022123</value>
-<valueName>UGC</valueName>
-<value>LAZ007 LAZ008 LAZ009 LAZ015 LAZ016 LAZ023 LAZ024 LAZ025 LAZ026</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KJAN.FF.A.0014.210830T1200Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B349DFF0.HurricaneLocalStatement.1261B34B1B2CLA.SHVHLSSHV.fe048a7c633bc33cb783b7c79407b97e</id>
-<updated>2021-08-29T04:08:00-05:00</updated>
-<published>2021-08-29T04:08:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Hurricane Local Statement issued August 29 at 4:08AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B349DFF0.HurricaneLocalStatement.1261B34B1B2CLA.SHVHLSSHV.fe048a7c633bc33cb783b7c79407b97e"/>
-<summary>This product covers the ArkLaTex **IDA IS A NOW A DANGEROUS CATEGORY 4 HURRICANE AND SHOULD MAKE LANDFALL THIS AFTERNOON** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
-<cap:event>Hurricane Local Statement</cap:event>
-<cap:effective>2021-08-29T04:08:00-05:00</cap:effective>
-<cap:expires>2021-08-29T12:15:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Natchitoches</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>022069</value>
-<valueName>UGC</valueName>
-<value>LAZ018</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B349C2A4.FlashFloodWatch.1261B36701C0LA.SHVFFASHV.55173ffeb5d895884e6f8dade1e6249e</id>
 <updated>2021-08-29T03:33:00-05:00</updated>
 <published>2021-08-29T03:33:00-05:00</published>
@@ -7475,102 +7283,131 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B3488AEC.FloodWarning.1261B34B4DF4LA.LIXFLSLIX.b266e8f24bb3bfa340f585a62c0c3d41</id>
-<updated>2021-08-28T19:35:00-05:00</updated>
-<published>2021-08-28T19:35:00-05:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B248C.SevereThunderstormWarning.1261B34B4818MI.APXSVRAPX.757f720baf8d4b94f47c722b5dbb62a9</id>
+<updated>2021-08-29T13:39:00-04:00</updated>
+<published>2021-08-29T13:39:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Warning issued August 28 at 7:35PM CDT until further notice by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B3488AEC.FloodWarning.1261B34B4DF4LA.LIXFLSLIX.b266e8f24bb3bfa340f585a62c0c3d41"/>
-<summary>...The Flood Warning continues for the following rivers in Louisiana... Amite River At Maurepas affecting Livingston Parish. Amite River At French Settlement affecting Ascension and Livingston Parishes. For the Amite And Comite Rivers...including Maurepas, French</summary>
-<cap:event>Flood Warning</cap:event>
-<cap:effective>2021-08-28T19:35:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:45:00-05:00</cap:expires>
+<title>Severe Thunderstorm Warning issued August 29 at 1:39PM EDT until August 29 at 2:30PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B248C.SevereThunderstormWarning.1261B34B4818MI.APXSVRAPX.757f720baf8d4b94f47c722b5dbb62a9"/>
+<summary>The National Weather Service in Gaylord has issued a * Severe Thunderstorm Warning for... South central Chippewa County in eastern Michigan... Eastern Mackinac County in eastern Michigan... * Until 230 PM EDT. * At 138 PM EDT, severe thunderstorms were located along a line</summary>
+<cap:event>Severe Thunderstorm Warning</cap:event>
+<cap:effective>2021-08-29T13:39:00-04:00</cap:effective>
+<cap:expires>2021-08-29T14:30:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Livingston</cap:areaDesc>
-<cap:polygon>30.34,-90.54 30.25,-90.56 30.26,-90.66 30.35,-90.64 30.34,-90.54</cap:polygon>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Chippewa; Mackinac</cap:areaDesc>
+<cap:polygon>46.2,-84.08 46.15,-84.01 46.06,-83.96 46.06,-83.9 46.08,-83.88 45.92,-83.87 45.91,-84.01 45.94,-84.14 45.88,-84.43 45.94,-84.49 45.91,-84.56 45.93,-84.66 45.92,-84.67 45.85,-84.52 45.81,-84.81 45.83,-84.83 45.82,-84.86 46.3,-84.4 46.42,-84.15 46.2,-84.08</cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>022063</value>
+<value>026033 026097</value>
 <valueName>UGC</valueName>
-<value>LAC063</value>
+<value>MIC033 MIC097</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
-<value>/O.CON.KLIX.FL.W.0218.210829T2210Z-000000T0000Z/
-/MAUL1.2.ER.210829T2210Z.210830T1400Z.000000T0000Z.NR/</value>
+<value>/O.NEW.KAPX.SV.W.0056.210829T1739Z-210829T1830Z/</value>
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B3488AEC.FloodWarning.1261B34B4DF4LA.LIXFLSLIX.b3e606478d779e685e0f24d7032af6ae</id>
-<updated>2021-08-28T19:35:00-05:00</updated>
-<published>2021-08-28T19:35:00-05:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B23C4.SevereThunderstormWarning.1261B34B423CMI.APXSVRAPX.e33dd4e01ef93cd1f817ab0313c335e4</id>
+<updated>2021-08-29T13:37:00-04:00</updated>
+<published>2021-08-29T13:37:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Warning issued August 28 at 7:35PM CDT until further notice by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B3488AEC.FloodWarning.1261B34B4DF4LA.LIXFLSLIX.b3e606478d779e685e0f24d7032af6ae"/>
-<summary>...The Flood Warning continues for the following rivers in Louisiana... Amite River At Maurepas affecting Livingston Parish. Amite River At French Settlement affecting Ascension and Livingston Parishes. For the Amite And Comite Rivers...including Maurepas, French</summary>
-<cap:event>Flood Warning</cap:event>
-<cap:effective>2021-08-28T19:35:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:45:00-05:00</cap:expires>
+<title>Severe Thunderstorm Warning issued August 29 at 1:37PM EDT until August 29 at 2:15PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B23C4.SevereThunderstormWarning.1261B34B423CMI.APXSVRAPX.e33dd4e01ef93cd1f817ab0313c335e4"/>
+<summary>The National Weather Service in Gaylord has issued a * Severe Thunderstorm Warning for... Southeastern Leelanau County in northern Michigan... Northeastern Grand Traverse County in northern Michigan... Western Antrim County in northern Michigan... Southern Emmet County in northern Michigan...</summary>
+<cap:event>Severe Thunderstorm Warning</cap:event>
+<cap:effective>2021-08-29T13:37:00-04:00</cap:effective>
+<cap:expires>2021-08-29T14:15:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Ascension; Livingston</cap:areaDesc>
-<cap:polygon>30.35,-90.64 30.26,-90.66 30.26,-90.84 30.33,-90.78 30.35,-90.64</cap:polygon>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Antrim; Charlevoix; Emmet; Grand Traverse; Leelanau</cap:areaDesc>
+<cap:polygon>45.14,-85.51 45.04,-85.52 45.01,-85.55 45.03,-85.48 45.01,-85.43 45.21,-85.44 45.38,-85.25 45.4,-85.05 45.42,-85.08 45.42,-85.07 45.44,-84.75 44.89,-85.15 44.83,-85.89 45.14,-85.51</cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>022005 022063</value>
+<value>026009 026029 026047 026055 026089</value>
 <valueName>UGC</valueName>
-<value>LAC005 LAC063</value>
+<value>MIC009 MIC029 MIC047 MIC055 MIC089</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
-<value>/O.CON.KLIX.FL.W.0219.210830T0600Z-000000T0000Z/
-/FSLL1.1.ER.210830T0600Z.210830T1300Z.000000T0000Z.NO/</value>
+<value>/O.NEW.KAPX.SV.W.0055.210829T1737Z-210829T1815Z/</value>
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B33CC8C4.FloodWarning.1261B3599FF8LA.LCHFLSLCH.f8c00bf3f2e0a45372a097e8fadd0435</id>
-<updated>2021-08-28T18:29:00-05:00</updated>
-<published>2021-08-28T18:29:00-05:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B20A4.SpecialWeatherStatement.1261B357BF80MI.GRRSPSGRR.47968ad45a7baa826de02cc84ec9535e</id>
+<updated>2021-08-29T13:29:00-04:00</updated>
+<published>2021-08-29T13:29:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Warning issued August 28 at 6:29PM CDT until August 30 at 7:30AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B33CC8C4.FloodWarning.1261B3599FF8LA.LCHFLSLCH.f8c00bf3f2e0a45372a097e8fadd0435"/>
-<summary>...The Flood Warning continues for the following rivers in Louisiana... Atchafalaya River At Morgan City ...The Flood Warning remains in effect... The Flood Warning continues for the Atchafalaya River At Morgan City.</summary>
-<cap:event>Flood Warning</cap:event>
-<cap:effective>2021-08-28T18:29:00-05:00</cap:effective>
-<cap:expires>2021-08-30T07:30:00-05:00</cap:expires>
+<title>Special Weather Statement issued August 29 at 1:29PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B20A4.SpecialWeatherStatement.1261B357BF80MI.GRRSPSGRR.47968ad45a7baa826de02cc84ec9535e"/>
+<summary>...Strong to severe thunderstorms to affect Lower Michigan this afternoon into this evening... At 125 pm EDT, a line of scattered to numerous showers and thunderstorms was developing from near Traverse City and to the southwest over Lake Michigan, to Southeast Wisconsin. This line is expected to fill in a bit as it moves over Lower</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-08-29T13:29:00-04:00</cap:effective>
+<cap:expires>2021-08-29T20:00:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
 <cap:urgency>Expected</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>St. Martin; St. Mary</cap:areaDesc>
-<cap:polygon>29.97,-91.24 29.8,-91.1 29.39,-91.13 29.51,-91.54 29.86,-91.39 29.95,-91.47 29.97,-91.24</cap:polygon>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Allegan; Barry; Calhoun; Clare; Clinton; Eaton; Gratiot; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lake; Mason; Mecosta; Montcalm; Muskegon; Newaygo; Oceana; Osceola; Ottawa; Van Buren</cap:areaDesc>
+<cap:polygon></cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>022099 022101</value>
+<value>026005 026015 026025 026035 026037 026045 026057 026065 026067 026073 026075 026077 026081 026085 026105 026107 026117 026121 026123 026127 026133 026139 026159</value>
 <valueName>UGC</valueName>
-<value>LAC099 LAC101</value>
+<value>MIZ037 MIZ038 MIZ039 MIZ040 MIZ043 MIZ044 MIZ045 MIZ046 MIZ050 MIZ051 MIZ052 MIZ056 MIZ057 MIZ058 MIZ059 MIZ064 MIZ065 MIZ066 MIZ067 MIZ071 MIZ072 MIZ073 MIZ074</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
-<value>/O.CON.KLCH.FL.W.0226.210829T2100Z-210830T1230Z/
-/MCGL1.1.FS.210829T2100Z.210830T0000Z.210830T0630Z.NO/</value>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B1F14.WindAdvisory.1261B34BFFB0MI.MQTNPWMQT.9e976c343185df0eb0d3d0d07c60ec84</id>
+<updated>2021-08-29T13:25:00-04:00</updated>
+<published>2021-08-29T13:25:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Wind Advisory issued August 29 at 1:25PM EDT until August 29 at 7:00PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B34B1F14.WindAdvisory.1261B34BFFB0MI.MQTNPWMQT.9e976c343185df0eb0d3d0d07c60ec84"/>
+<summary>...WIND ADVISORY IN EFFECT UNTIL 7 PM EDT THIS EVENING... * WHAT...West winds 20 to 30 mph with gusts up to 50 mph. * WHERE...Keweenaw and Northern Houghton Counties. * WHEN...Until 7 PM EDT this evening. * IMPACTS...Gusty winds could blow around unsecured objects. Tree limbs could be blown down and a few power outages may</summary>
+<cap:event>Wind Advisory</cap:event>
+<cap:effective>2021-08-29T13:25:00-04:00</cap:effective>
+<cap:expires>2021-08-29T19:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Houghton; Keweenaw</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>026061 026083</value>
+<valueName>UGC</valueName>
+<value>MIZ001 MIZ003</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KMQT.WI.Y.0006.210829T1725Z-210829T2300Z/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -7888,6 +7725,565 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>029017 029023 029031 029035 029133 029143 029157 029181 029201 029207 029223</value>
 <valueName>UGC</valueName>
 <value>MOZ076 MOZ086 MOZ087 MOZ100 MOZ107 MOZ108 MOZ109 MOZ110 MOZ111 MOZ112 MOZ114</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34B216C.FlashFloodWatch.1261B368D680MS.MOBFFAMOB.223fcbb09cc82050bd4a6d4668ecdb24</id>
+<updated>2021-08-29T12:31:00-05:00</updated>
+<published>2021-08-29T12:31:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 12:31PM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34B216C.FlashFloodWatch.1261B368D680MS.MOBFFAMOB.223fcbb09cc82050bd4a6d4668ecdb24"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of Alabama, including the following areas, Baldwin Central, Baldwin Coastal, Baldwin Inland, Choctaw, Clarke, Escambia, Mobile Central, Mobile Coastal, Mobile Inland and Washington. Portions of northwest Florida, including the following</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T12:31:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>George; Greene; Perry; Stone; Wayne</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028039 028041 028111 028131 028153</value>
+<valueName>UGC</valueName>
+<value>MSZ067 MSZ075 MSZ076 MSZ078 MSZ079</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KMOB.FF.A.0014.000000T0000Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AFEA8.FlashFloodWatch.1261B368D680MS.JANFFAJAN.aa4aa64d324d12f54a9a6af32e2448ca</id>
+<updated>2021-08-29T11:42:00-05:00</updated>
+<published>2021-08-29T11:42:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 11:42AM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AFEA8.FlashFloodWatch.1261B368D680MS.JANFFAJAN.aa4aa64d324d12f54a9a6af32e2448ca"/>
+<summary>.Hurricane Ida is nearing landfall over southeast Louisiana by midday Sunday, and then eventually move north to northeastward across the ArkLaMiss region through Monday and Monday night. A heavy rain and flash flood threat is expected to accompany Ida during that time over the watch area. ...FLASH FLOOD WATCH REMAINS IN EFFECT FROM 7 PM CDT THIS EVENING</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T11:42:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Adams; Covington; Forrest; Franklin; Jefferson Davis; Jones; Lamar; Lawrence; Lincoln; Marion</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028001 028031 028035 028037 028065 028067 028073 028077 028085 028091</value>
+<valueName>UGC</valueName>
+<value>MSZ060 MSZ061 MSZ062 MSZ063 MSZ064 MSZ065 MSZ066 MSZ072 MSZ073 MSZ074</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KJAN.FF.A.0014.210830T0000Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AFEA8.FlashFloodWatch.1261B368D680MS.JANFFAJAN.489a942637c149871a0b483c08551dc9</id>
+<updated>2021-08-29T11:42:00-05:00</updated>
+<published>2021-08-29T11:42:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 11:42AM CDT until August 31 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AFEA8.FlashFloodWatch.1261B368D680MS.JANFFAJAN.489a942637c149871a0b483c08551dc9"/>
+<summary>.Hurricane Ida is nearing landfall over southeast Louisiana by midday Sunday, and then eventually move north to northeastward across the ArkLaMiss region through Monday and Monday night. A heavy rain and flash flood threat is expected to accompany Ida during that time over the watch area. ...FLASH FLOOD WATCH REMAINS IN EFFECT FROM MONDAY MORNING THROUGH</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T11:42:00-05:00</cap:effective>
+<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Attala; Bolivar; Carroll; Choctaw; Claiborne; Clarke; Clay; Copiah; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jasper; Jefferson; Kemper; Lauderdale; Leake; Leflore; Lowndes; Madison; Montgomery; Neshoba; Newton; Noxubee; Oktibbeha; Rankin; Scott; Sharkey; Simpson; Smith; Sunflower; Warren; Washington; Webster; Winston; Yazoo</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028007 028011 028015 028019 028021 028023 028025 028029 028043 028049 028051 028053 028055 028061 028063 028069 028075 028079 028083 028087 028089 028097 028099 028101 028103 028105 028121 028123 028125 028127 028129 028133 028149 028151 028155 028159 028163</value>
+<valueName>UGC</valueName>
+<value>MSZ018 MSZ019 MSZ025 MSZ026 MSZ027 MSZ028 MSZ029 MSZ030 MSZ031 MSZ032 MSZ033 MSZ034 MSZ035 MSZ036 MSZ037 MSZ038 MSZ039 MSZ040 MSZ041 MSZ042 MSZ043 MSZ044 MSZ045 MSZ046 MSZ047 MSZ048 MSZ049 MSZ050 MSZ051 MSZ052 MSZ053 MSZ054 MSZ055 MSZ056 MSZ057 MSZ058 MSZ059</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KJAN.FF.A.0014.210830T1200Z-210831T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF354.FloodWarning.1261B358619CMS.JANFLWJAN.10ddb7a59e96379e54df0dee24887aaf</id>
+<updated>2021-08-29T11:13:00-05:00</updated>
+<published>2021-08-29T11:13:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 11:13AM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF354.FloodWarning.1261B358619CMS.JANFLWJAN.10ddb7a59e96379e54df0dee24887aaf"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Noxubee River At Macon affecting Noxubee County. Tibbee Creek Near Tibbee affecting Clay County. The National Weather Service in Jackson has issued a * Flood Warning for</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:13:00-05:00</cap:effective>
+<cap:expires>2021-08-29T23:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Noxubee</cap:areaDesc>
+<cap:polygon>33,-88.52 33.07,-88.62 33.14,-88.75 33.2,-88.67 33.13,-88.55 33.04,-88.45 33,-88.52</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028103</value>
+<valueName>UGC</valueName>
+<value>MSC103</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0128.210901T0141Z-000000T0000Z/
+/MCNM6.1.ER.210901T0141Z.210902T0000Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF354.FloodWarning.1261B358619CMS.JANFLWJAN.3706d2dd572d2b1c8282a4377eb58c65</id>
+<updated>2021-08-29T11:13:00-05:00</updated>
+<published>2021-08-29T11:13:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 11:13AM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF354.FloodWarning.1261B358619CMS.JANFLWJAN.3706d2dd572d2b1c8282a4377eb58c65"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Noxubee River At Macon affecting Noxubee County. Tibbee Creek Near Tibbee affecting Clay County. The National Weather Service in Jackson has issued a * Flood Warning for</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:13:00-05:00</cap:effective>
+<cap:expires>2021-08-29T23:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Clay</cap:areaDesc>
+<cap:polygon>33.52,-88.51 33.52,-88.63 33.56,-88.8 33.65,-88.71 33.59,-88.61 33.57,-88.53 33.52,-88.51</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028025</value>
+<valueName>UGC</valueName>
+<value>MSC025</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0129.210901T1130Z-000000T0000Z/
+/TBBM6.1.ER.210901T1130Z.210902T0600Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B358619CMS.JANFLWJAN.cf8e3548ac04492f5f70d77d88b1d6e3</id>
+<updated>2021-08-29T11:08:00-05:00</updated>
+<published>2021-08-29T11:08:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 11:08AM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B358619CMS.JANFLWJAN.cf8e3548ac04492f5f70d77d88b1d6e3"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Homochitto River At Rosetta affecting Franklin County. Big Black River At West affecting Holmes and Attala Counties. Big Black River Near Bentonia affecting Madison and Yazoo Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:08:00-05:00</cap:effective>
+<cap:expires>2021-08-29T23:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Attala; Holmes</cap:areaDesc>
+<cap:polygon>32.91,-90.06 33.14,-89.9 33.3,-89.81 33.22,-89.63 33.13,-89.69 32.85,-89.87 32.91,-90.06</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028007 028051</value>
+<valueName>UGC</valueName>
+<value>MSC007 MSC051</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0125.210831T0949Z-000000T0000Z/
+/WSTM6.2.ER.210831T0949Z.210901T1200Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B358619CMS.JANFLWJAN.84697b6dffd5dfe0e39f607db64af795</id>
+<updated>2021-08-29T11:08:00-05:00</updated>
+<published>2021-08-29T11:08:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 11:08AM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B358619CMS.JANFLWJAN.84697b6dffd5dfe0e39f607db64af795"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Homochitto River At Rosetta affecting Franklin County. Big Black River At West affecting Holmes and Attala Counties. Big Black River Near Bentonia affecting Madison and Yazoo Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:08:00-05:00</cap:effective>
+<cap:expires>2021-08-29T23:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Madison; Yazoo</cap:areaDesc>
+<cap:polygon>32.56,-90.64 32.81,-90.12 32.91,-90.06 32.85,-89.87 32.72,-89.96 32.45,-90.52 32.56,-90.64</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028089 028163</value>
+<valueName>UGC</valueName>
+<value>MSC089 MSC163</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0126.210831T1135Z-000000T0000Z/
+/BTAM6.2.ER.210831T1135Z.210901T0600Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B7935208MS.JANFLWJAN.25ae7dc665d7d8b57286e1daa9337a9a</id>
+<updated>2021-08-29T11:08:00-05:00</updated>
+<published>2021-08-29T11:08:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 11:08AM CDT until August 31 at 8:30PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B7935208MS.JANFLWJAN.25ae7dc665d7d8b57286e1daa9337a9a"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Homochitto River At Rosetta affecting Franklin County. Big Black River At West affecting Holmes and Attala Counties. Big Black River Near Bentonia affecting Madison and Yazoo Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:08:00-05:00</cap:effective>
+<cap:expires>2021-08-31T20:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Franklin</cap:areaDesc>
+<cap:polygon>31.4,-91.41 31.39,-91.09 31.48,-90.93 31.38,-90.84 31.28,-91.07 31.3,-91.47 31.4,-91.41</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028037</value>
+<valueName>UGC</valueName>
+<value>MSC037</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0124.210831T0414Z-210901T0130Z/
+/RSAM6.1.ER.210831T0414Z.210831T0600Z.210831T0730Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B79410A8MS.JANFLWJAN.8b0f56f55b11707f6894ff81dd4a3dc7</id>
+<updated>2021-08-29T11:08:00-05:00</updated>
+<published>2021-08-29T11:08:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 11:08AM CDT until September 01 at 1:18AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34AF160.FloodWarning.1261B79410A8MS.JANFLWJAN.8b0f56f55b11707f6894ff81dd4a3dc7"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Homochitto River At Rosetta affecting Franklin County. Big Black River At West affecting Holmes and Attala Counties. Big Black River Near Bentonia affecting Madison and Yazoo Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T11:08:00-05:00</cap:effective>
+<cap:expires>2021-09-01T01:18:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Hinds; Warren</cap:areaDesc>
+<cap:polygon>32.17,-90.93 32.24,-90.78 32.56,-90.64 32.45,-90.52 32.18,-90.65 32.04,-91.02 32.17,-90.93</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028049 028149</value>
+<valueName>UGC</valueName>
+<value>MSC049 MSC149</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0127.210831T1147Z-210901T0618Z/
+/BOVM6.1.ER.210831T1147Z.210831T1200Z.210831T1217Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B795DE60MS.JANFLWJAN.39666254ce7997bbb18ef4f92e2bf4c8</id>
+<updated>2021-08-29T10:54:00-05:00</updated>
+<published>2021-08-29T10:54:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 10:54AM CDT until September 01 at 1:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B795DE60MS.JANFLWJAN.39666254ce7997bbb18ef4f92e2bf4c8"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Tallahala Creek At Laurel affecting Jones County. Bouie Creek Near Near Hattiesburg affecting Covington and Forrest Counties. Leaf River Near Collins affecting Jones and Covington Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T10:54:00-05:00</cap:effective>
+<cap:expires>2021-09-01T13:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Forrest</cap:areaDesc>
+<cap:polygon>31,-89.15 31.03,-89.25 31.21,-89.51 31.27,-89.43 31.13,-89.24 31.1,-89.15 31,-89.15</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028035</value>
+<valueName>UGC</valueName>
+<value>MSC035</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0121.210901T0000Z-210901T1800Z/
+/BKNM6.1.ER.210901T0000Z.210901T0000Z.210901T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7A43640MS.JANFLWJAN.63f1b7dec9e911d1ca7c7e0d2a395c14</id>
+<updated>2021-08-29T10:54:00-05:00</updated>
+<published>2021-08-29T10:54:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 10:54AM CDT until September 02 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7A43640MS.JANFLWJAN.63f1b7dec9e911d1ca7c7e0d2a395c14"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Tallahala Creek At Laurel affecting Jones County. Bouie Creek Near Near Hattiesburg affecting Covington and Forrest Counties. Leaf River Near Collins affecting Jones and Covington Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T10:54:00-05:00</cap:effective>
+<cap:expires>2021-09-02T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Covington; Forrest</cap:areaDesc>
+<cap:polygon>31.33,-89.29 31.46,-89.53 31.53,-89.66 31.59,-89.6 31.51,-89.48 31.43,-89.32 31.33,-89.29</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028031 028035</value>
+<valueName>UGC</valueName>
+<value>MSC031 MSC035</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0119.210831T1736Z-210902T1200Z/
+/HBGM6.1.ER.210831T1736Z.210901T0600Z.210901T1800Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B28E20MS.JANFLWJAN.bc9506c1ef4a9ced42bc935cb6f8dc27</id>
+<updated>2021-08-29T10:54:00-05:00</updated>
+<published>2021-08-29T10:54:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 10:54AM CDT until September 03 at 1:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B28E20MS.JANFLWJAN.bc9506c1ef4a9ced42bc935cb6f8dc27"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Tallahala Creek At Laurel affecting Jones County. Bouie Creek Near Near Hattiesburg affecting Covington and Forrest Counties. Leaf River Near Collins affecting Jones and Covington Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T10:54:00-05:00</cap:effective>
+<cap:expires>2021-09-03T01:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Forrest</cap:areaDesc>
+<cap:polygon>31.19,-89.14 31.26,-89.27 31.61,-89.38 31.64,-89.29 31.3,-89.21 31.25,-89.14 31.19,-89.14</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028035</value>
+<valueName>UGC</valueName>
+<value>MSC035</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0123.210902T1200Z-210903T0600Z/
+/HATM6.1.ER.210902T1200Z.210902T1200Z.210902T1200Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B29C94MS.JANFLWJAN.5ca861ddecd8cadf29cee98c12ac6909</id>
+<updated>2021-08-29T10:54:00-05:00</updated>
+<published>2021-08-29T10:54:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 10:54AM CDT until September 03 at 1:37AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B29C94MS.JANFLWJAN.5ca861ddecd8cadf29cee98c12ac6909"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Tallahala Creek At Laurel affecting Jones County. Bouie Creek Near Near Hattiesburg affecting Covington and Forrest Counties. Leaf River Near Collins affecting Jones and Covington Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T10:54:00-05:00</cap:effective>
+<cap:expires>2021-09-03T01:37:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Covington; Jones</cap:areaDesc>
+<cap:polygon>31.61,-89.38 31.7,-89.46 31.79,-89.47 31.8,-89.36 31.72,-89.35 31.64,-89.29 31.61,-89.38</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028031 028067</value>
+<valueName>UGC</valueName>
+<value>MSC031 MSC067</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0120.210831T2100Z-210903T0637Z/
+/CLSM6.1.ER.210831T2100Z.210901T1800Z.210902T1236Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B462E0MS.JANFLWJAN.3e09c4e4df7c6bcb2581e757b0a02c9b</id>
+<updated>2021-08-29T10:54:00-05:00</updated>
+<published>2021-08-29T10:54:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 10:54AM CDT until September 03 at 1:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B462E0MS.JANFLWJAN.3e09c4e4df7c6bcb2581e757b0a02c9b"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Tallahala Creek At Laurel affecting Jones County. Bouie Creek Near Near Hattiesburg affecting Covington and Forrest Counties. Leaf River Near Collins affecting Jones and Covington Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T10:54:00-05:00</cap:effective>
+<cap:expires>2021-09-03T13:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Jones</cap:areaDesc>
+<cap:polygon>31.37,-89.15 31.56,-89.23 31.81,-89.13 31.82,-89.02 31.56,-89.11 31.4,-89.14 31.37,-89.15</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028067</value>
+<valueName>UGC</valueName>
+<value>MSC067</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0118.210830T2331Z-210903T1800Z/
+/LURM6.2.ER.210830T2331Z.210901T1200Z.210903T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B4E0A8MS.JANFLWJAN.4ca322bc06b21b9e8024da0e78c8f6c1</id>
+<updated>2021-08-29T10:54:00-05:00</updated>
+<published>2021-08-29T10:54:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued August 29 at 10:54AM CDT until September 03 at 4:22PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADC48.FloodWarning.1261B7B4E0A8MS.JANFLWJAN.4ca322bc06b21b9e8024da0e78c8f6c1"/>
+<summary>...The National Weather Service in Jackson MS has issued a Flood Warning for the following rivers in Mississippi... Tallahala Creek At Laurel affecting Jones County. Bouie Creek Near Near Hattiesburg affecting Covington and Forrest Counties. Leaf River Near Collins affecting Jones and Covington Counties.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-08-29T10:54:00-05:00</cap:effective>
+<cap:expires>2021-09-03T16:22:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Clarke</cap:areaDesc>
+<cap:polygon>32,-88.78 32.08,-88.83 32.16,-88.9 32.2,-88.79 32.11,-88.73 32.05,-88.68 32,-88.78</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028023</value>
+<valueName>UGC</valueName>
+<value>MSC023</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KJAN.FL.W.0122.210901T0415Z-210903T2122Z/
+/ENSM6.1.ER.210901T0415Z.210902T0600Z.210903T0321Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADAB8.HurricaneLocalStatement.1261B357BF80MS.MOBHLSMOB.ff8735351cb0b20230e91f7a56e42a93</id>
+<updated>2021-08-29T10:50:00-05:00</updated>
+<published>2021-08-29T10:50:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued August 29 at 10:50AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADAB8.HurricaneLocalStatement.1261B357BF80MS.MOBHLSMOB.ff8735351cb0b20230e91f7a56e42a93"/>
+<summary>This product covers portions of southwest Alabama...northwest Florida...south central Alabama...and inland southeast Mississippi. **EYE OF EXTREMELY DANGEROUS CATEGORY 4 HURRICANE IDA NEARING THE SOUTHEASTERN COAST OF LOUISIANA** NEW INFORMATION ---------------</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-08-29T10:50:00-05:00</cap:effective>
+<cap:expires>2021-08-29T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>George; Greene; Perry; Stone; Wayne</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028039 028041 028111 028131 028153</value>
+<valueName>UGC</valueName>
+<value>MSZ067 MSZ075 MSZ076 MSZ078 MSZ079</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADA54.HurricaneLocalStatement.1261B357BF80MS.LIXHLSLIX.8e6a5f9e7e7e1d23925e744ecd60ce22</id>
+<updated>2021-08-29T10:49:00-05:00</updated>
+<published>2021-08-29T10:49:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued August 29 at 10:49AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34ADA54.HurricaneLocalStatement.1261B357BF80MS.LIXHLSLIX.8e6a5f9e7e7e1d23925e744ecd60ce22"/>
+<summary>This product covers Southeast Louisiana and South Mississippi **EYE OF EXTREMELY DANGEROUS CATEGORY 4 HURRICANE IDA NEARING THE SOUTHEASTERN COAST OF LOUISIANA** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-08-29T10:49:00-05:00</cap:effective>
+<cap:expires>2021-08-29T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Amite; Hancock; Harrison; Jackson; Pearl River; Pike; Walthall; Wilkinson</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>028005 028045 028047 028059 028109 028113 028147 028157</value>
+<valueName>UGC</valueName>
+<value>MSZ068 MSZ069 MSZ070 MSZ071 MSZ077 MSZ080 MSZ081 MSZ082</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
@@ -10126,38 +10522,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34A67E0.HurricaneLocalStatement.1261B34BB190MS.LIXHLSLIX.8e6a5f9e7e7e1d23925e744ecd60ce22</id>
-<updated>2021-08-29T07:56:00-05:00</updated>
-<published>2021-08-29T07:56:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Hurricane Local Statement issued August 29 at 7:56AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34A67E0.HurricaneLocalStatement.1261B34BB190MS.LIXHLSLIX.8e6a5f9e7e7e1d23925e744ecd60ce22"/>
-<summary>This product covers Southeast Louisiana and South Mississippi **CATASTROPHIC CATEGORY 4 HURRICANE IDA MOVING CLOSING IN ON THE LOUISIANA COAST** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
-<cap:event>Hurricane Local Statement</cap:event>
-<cap:effective>2021-08-29T07:56:00-05:00</cap:effective>
-<cap:expires>2021-08-29T16:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Amite; Hancock; Harrison; Jackson; Pearl River; Pike; Walthall; Wilkinson</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>028005 028045 028047 028059 028109 028113 028147 028157</value>
-<valueName>UGC</valueName>
-<value>MSZ068 MSZ069 MSZ070 MSZ071 MSZ077 MSZ080 MSZ081 MSZ082</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34A2C80.TornadoWatch.1261B357BF80MS.WNSWOU2.a4d0f81f3a6f519dc5405087be6a8f46</id>
 <updated>2021-08-29T06:04:00-05:00</updated>
 <published>2021-08-29T06:04:00-05:00</published>
@@ -10190,38 +10554,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34A04A8.HurricaneLocalStatement.1261B34B423CMS.MOBHLSMOB.ff8735351cb0b20230e91f7a56e42a93</id>
-<updated>2021-08-29T05:02:00-05:00</updated>
-<published>2021-08-29T05:02:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Hurricane Local Statement issued August 29 at 5:02AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34A04A8.HurricaneLocalStatement.1261B34B423CMS.MOBHLSMOB.ff8735351cb0b20230e91f7a56e42a93"/>
-<summary>This product covers portions of southwest Alabama...northwest Florida...south central Alabama...and inland southeast Mississippi. **DANGEROUS CATEGORY 4 HURRICANE IDA STRENGTHENS SOME MORE** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
-<cap:event>Hurricane Local Statement</cap:event>
-<cap:effective>2021-08-29T05:02:00-05:00</cap:effective>
-<cap:expires>2021-08-29T13:15:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>George; Greene; Perry; Stone; Wayne</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>028039 028041 028111 028131 028153</value>
-<valueName>UGC</valueName>
-<value>MSZ067 MSZ075 MSZ076 MSZ078 MSZ079</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B34A03E0.FlashFloodWatch.1261B368D680MS.LIXFFALIX.fb93c878a3d9c9919dc8ac02da8903af</id>
 <updated>2021-08-29T05:00:00-05:00</updated>
 <published>2021-08-29T05:00:00-05:00</published>
@@ -10251,105 +10583,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value>/O.CON.KLIX.FF.A.0013.210829T1200Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B349EE00.FlashFloodWatch.1261B368D680MS.MOBFFAMOB.223fcbb09cc82050bd4a6d4668ecdb24</id>
-<updated>2021-08-29T04:44:00-05:00</updated>
-<published>2021-08-29T04:44:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 4:44AM CDT until August 31 at 7:00AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B349EE00.FlashFloodWatch.1261B368D680MS.MOBFFAMOB.223fcbb09cc82050bd4a6d4668ecdb24"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of Alabama, including the following areas, Baldwin Central, Baldwin Coastal, Baldwin Inland, Choctaw, Clarke, Escambia, Mobile Central, Mobile Coastal, Mobile Inland and Washington. Portions of northwest Florida, including the following</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T04:44:00-05:00</cap:effective>
-<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>George; Greene; Perry; Stone; Wayne</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>028039 028041 028111 028131 028153</value>
-<valueName>UGC</valueName>
-<value>MSZ067 MSZ075 MSZ076 MSZ078 MSZ079</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KMOB.FF.A.0014.210829T1200Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B349E504.FlashFloodWatch.1261B368D680MS.JANFFAJAN.aa4aa64d324d12f54a9a6af32e2448ca</id>
-<updated>2021-08-29T04:21:00-05:00</updated>
-<published>2021-08-29T04:21:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 4:21AM CDT until August 31 at 7:00AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B349E504.FlashFloodWatch.1261B368D680MS.JANFFAJAN.aa4aa64d324d12f54a9a6af32e2448ca"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT FROM THIS EVENING THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of south central Mississippi, southeast Mississippi and southwest Mississippi, including the following areas, in south central Mississippi, Jefferson Davis, Lawrence, Lincoln and</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T04:21:00-05:00</cap:effective>
-<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Adams; Covington; Forrest; Franklin; Jefferson Davis; Jones; Lamar; Lawrence; Lincoln; Marion</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>028001 028031 028035 028037 028065 028067 028073 028077 028085 028091</value>
-<valueName>UGC</valueName>
-<value>MSZ060 MSZ061 MSZ062 MSZ063 MSZ064 MSZ065 MSZ066 MSZ072 MSZ073 MSZ074</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KJAN.FF.A.0014.210830T0000Z-210831T1200Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B349E504.FlashFloodWatch.1261B368D680MS.JANFFAJAN.489a942637c149871a0b483c08551dc9</id>
-<updated>2021-08-29T04:21:00-05:00</updated>
-<published>2021-08-29T04:21:00-05:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 4:21AM CDT until August 31 at 7:00AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MS1261B349E504.FlashFloodWatch.1261B368D680MS.JANFFAJAN.489a942637c149871a0b483c08551dc9"/>
-<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT FROM MONDAY MORNING THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * Portions of southeast Arkansas, northeast Louisiana and Mississippi, including the following areas and parishes, in southeast Arkansas, Ashley and Chicot. In northeast Louisiana,</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T04:21:00-05:00</cap:effective>
-<cap:expires>2021-08-31T07:00:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Attala; Bolivar; Carroll; Choctaw; Claiborne; Clarke; Clay; Copiah; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jasper; Jefferson; Kemper; Lauderdale; Leake; Leflore; Lowndes; Madison; Montgomery; Neshoba; Newton; Noxubee; Oktibbeha; Rankin; Scott; Sharkey; Simpson; Smith; Sunflower; Warren; Washington; Webster; Winston; Yazoo</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>028007 028011 028015 028019 028021 028023 028025 028029 028043 028049 028051 028053 028055 028061 028063 028069 028075 028079 028083 028087 028089 028097 028099 028101 028103 028105 028121 028123 028125 028127 028129 028133 028149 028151 028155 028159 028163</value>
-<valueName>UGC</valueName>
-<value>MSZ018 MSZ019 MSZ025 MSZ026 MSZ027 MSZ028 MSZ029 MSZ030 MSZ031 MSZ032 MSZ033 MSZ034 MSZ035 MSZ036 MSZ037 MSZ038 MSZ039 MSZ040 MSZ041 MSZ042 MSZ043 MSZ044 MSZ045 MSZ046 MSZ047 MSZ048 MSZ049 MSZ050 MSZ051 MSZ052 MSZ053 MSZ054 MSZ055 MSZ056 MSZ057 MSZ058 MSZ059</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.CON.KJAN.FF.A.0014.210830T1200Z-210831T1200Z/
 /00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
@@ -10420,14 +10653,47 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34ACF00.FloodAdvisory.1261B34B4818NJ.PHIFLSPHI.972033c5ee8057caf4a57dad23ad49e8</id>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34AFCB4.FlashFloodWarning.1261B34B9C14NJ.PHIFFWPHI.a92875b120ee06ed7d25389a348c30e1</id>
+<updated>2021-08-29T12:37:00-04:00</updated>
+<published>2021-08-29T12:37:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Warning issued August 29 at 12:37PM EDT until August 29 at 4:45PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34AFCB4.FlashFloodWarning.1261B34B9C14NJ.PHIFFWPHI.a92875b120ee06ed7d25389a348c30e1"/>
+<summary>The National Weather Service in Mount Holly has issued a * Flash Flood Warning for... Southeastern Atlantic County in southern New Jersey... Northeastern Cape May County in southern New Jersey... * Until 445 PM EDT. * At 1237 PM EDT, trained weather spotters reported heavy rain in</summary>
+<cap:event>Flash Flood Warning</cap:event>
+<cap:effective>2021-08-29T12:37:00-04:00</cap:effective>
+<cap:expires>2021-08-29T16:45:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Atlantic; Cape May</cap:areaDesc>
+<cap:polygon>39.35,-74.61 39.35,-74.58 39.33,-74.52 39.32,-74.5 39.31,-74.47 39.21,-74.61 39.23,-74.64 39.24,-74.68 39.35,-74.61</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>034001 034009</value>
+<valueName>UGC</valueName>
+<value>NJC001 NJC009</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KPHI.FF.W.0063.210829T1637Z-210829T2045Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34ACF00.FloodAdvisory.1261B34B4818NJ.PHIFLSPHI.ab0819fc6238b868b3313bc407eea233</id>
 <updated>2021-08-29T11:20:00-04:00</updated>
 <published>2021-08-29T11:20:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
 <title>Flood Advisory issued August 29 at 11:20AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34ACF00.FloodAdvisory.1261B34B4818NJ.PHIFLSPHI.972033c5ee8057caf4a57dad23ad49e8"/>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34ACF00.FloodAdvisory.1261B34B4818NJ.PHIFLSPHI.ab0819fc6238b868b3313bc407eea233"/>
 <summary>The National Weather Service in Mount Holly has issued a * Flood Advisory for... Southeastern Atlantic County in southern New Jersey... Northeastern Cape May County in southern New Jersey... * Until 230 PM EDT. * At 1120 AM EDT, Doppler radar indicated heavy rain. Minor flooding</summary>
 <cap:event>Flood Advisory</cap:event>
 <cap:effective>2021-08-29T11:20:00-04:00</cap:effective>
@@ -10438,18 +10704,117 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:urgency>Expected</cap:urgency>
 <cap:severity>Minor</cap:severity>
 <cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Atlantic; Cape May</cap:areaDesc>
+<cap:areaDesc>Atlantic</cap:areaDesc>
 <cap:polygon>39.11,-74.81 39.3,-74.65 39.41,-74.57 39.38,-74.47 39.35,-74.39 39.05,-74.69 39.08,-74.75 39.11,-74.81</cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>034001 034009</value>
+<value>034001</value>
 <valueName>UGC</valueName>
-<value>NJC001 NJC009</value>
+<value>NJC001</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value>/O.NEW.KPHI.FA.Y.0166.210829T1520Z-210829T1830Z/
 /00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34ACF00.FloodAdvisory.1261B34B9C14NJ.PHIFLSPHI.e8047f31553f6a229468cfcad55a1589</id>
+<updated>2021-08-29T11:20:00-04:00</updated>
+<published>2021-08-29T11:20:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Advisory issued August 29 at 11:20AM EDT until August 29 at 4:45PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B34ACF00.FloodAdvisory.1261B34B9C14NJ.PHIFLSPHI.e8047f31553f6a229468cfcad55a1589"/>
+<summary>The National Weather Service in Mount Holly has issued a * Flood Advisory for... Southeastern Atlantic County in southern New Jersey... Northeastern Cape May County in southern New Jersey... * Until 230 PM EDT. * At 1120 AM EDT, Doppler radar indicated heavy rain. Minor flooding</summary>
+<cap:event>Flood Advisory</cap:event>
+<cap:effective>2021-08-29T11:20:00-04:00</cap:effective>
+<cap:expires>2021-08-29T16:45:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Cape May</cap:areaDesc>
+<cap:polygon>39.11,-74.81 39.3,-74.65 39.41,-74.57 39.38,-74.47 39.35,-74.39 39.05,-74.69 39.08,-74.75 39.11,-74.81</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>034009</value>
+<valueName>UGC</valueName>
+<value>NJC009</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KPHI.FA.Y.0166.210829T1520Z-210829T1830Z/
+/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NM1261B34ADD74.FlashFloodWatch.1261B3594620NM.ABQFFAABQ.dd992a68af54b29a43efb300b623d2ba</id>
+<updated>2021-08-29T09:57:00-06:00</updated>
+<published>2021-08-29T09:57:00-06:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 9:57AM MDT until August 30 at 4:00AM MDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NM1261B34ADD74.FlashFloodWatch.1261B3594620NM.ABQFFAABQ.dd992a68af54b29a43efb300b623d2ba"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH LATE TONIGHT... The Flash Flood Watch continues for * Portions of central, southeast, and west central New Mexico, including the following areas, in central New Mexico, Central Highlands, Eastern Lincoln County, Estancia Valley, San Agustin Plains and Adjacent Lowlands, Sandia and Manzano Mountains</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T09:57:00-06:00</cap:effective>
+<cap:expires>2021-08-30T04:00:00-06:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Central Highlands; Eastern Lincoln County; Estancia Valley; San Agustin Plains and Adjacent Lowlands; San Francisco River Valley; Sandia, Manzano Mountains Including Edgewood; South Central Highlands; South Central Mountains; Southwest Chaves County; Southwest Mountains; Upper Tularosa Valley</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>035001 035003 035005 035027 035047 035049 035053 035057</value>
+<valueName>UGC</valueName>
+<value>NMZ208 NMZ209 NMZ221 NMZ222 NMZ223 NMZ224 NMZ225 NMZ226 NMZ239 NMZ240 NMZ241</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KABQ.FF.A.0023.210829T1800Z-210830T1000Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NM1261B34ADD74.FlashFloodWatch.1261B3594620NM.ABQFFAABQ.5ae6d51ffec198b070545e56e04202a1</id>
+<updated>2021-08-29T09:57:00-06:00</updated>
+<published>2021-08-29T09:57:00-06:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued August 29 at 9:57AM MDT until August 30 at 4:00AM MDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NM1261B34ADD74.FlashFloodWatch.1261B3594620NM.ABQFFAABQ.5ae6d51ffec198b070545e56e04202a1"/>
+<summary>...FLASH FLOOD WATCH IN EFFECT THROUGH LATE TONIGHT... The National Weather Service in Albuquerque has expanded the * Flash Flood Watch to include portions of east central, north central, and northeast New Mexico, including the following areas, in east central New Mexico, Guadalupe County. In north central New Mexico, East Slopes Sangre de Cristo Mountains, Glorieta Mesa</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-08-29T09:57:00-06:00</cap:effective>
+<cap:expires>2021-08-30T04:00:00-06:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>East Slopes Sangre de Cristo Mountains; Eastern San Miguel County; Glorieta Mesa Including Glorieta Pass; Guadalupe County; Northeast Highlands; Southern Sangre de Cristo Mountains</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>035007 035019 035033 035047 035049 035055</value>
+<valueName>UGC</valueName>
+<value>NMZ212 NMZ214 NMZ215 NMZ229 NMZ232 NMZ233</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXA.KABQ.FF.A.0023.210829T1800Z-210830T1000Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -10482,39 +10847,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value>/O.NEW.KEPZ.FF.A.0009.210829T1800Z-210830T0600Z/
-/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=NM1261B349E504.FlashFloodWatch.1261B3594620NM.ABQFFAABQ.dd992a68af54b29a43efb300b623d2ba</id>
-<updated>2021-08-29T03:21:00-06:00</updated>
-<published>2021-08-29T03:21:00-06:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Flash Flood Watch issued August 29 at 3:21AM MDT until August 30 at 4:00AM MDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NM1261B349E504.FlashFloodWatch.1261B3594620NM.ABQFFAABQ.dd992a68af54b29a43efb300b623d2ba"/>
-<summary>...FLASH FLOOD WATCH IN EFFECT FROM NOON MDT TODAY THROUGH LATE TONIGHT... The National Weather Service in Albuquerque has issued a * Flash Flood Watch for portions of central, southeast, and west central New Mexico, including the following areas, in central New Mexico, Central Highlands, Eastern Lincoln County, Estancia</summary>
-<cap:event>Flash Flood Watch</cap:event>
-<cap:effective>2021-08-29T03:21:00-06:00</cap:effective>
-<cap:expires>2021-08-30T04:00:00-06:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Severe</cap:severity>
-<cap:certainty>Possible</cap:certainty>
-<cap:areaDesc>Central Highlands; Eastern Lincoln County; Estancia Valley; San Agustin Plains and Adjacent Lowlands; San Francisco River Valley; Sandia, Manzano Mountains Including Edgewood; South Central Highlands; South Central Mountains; Southwest Chaves County; Southwest Mountains; Upper Tularosa Valley</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>035001 035003 035005 035027 035047 035049 035053 035057</value>
-<valueName>UGC</valueName>
-<value>NMZ208 NMZ209 NMZ221 NMZ222 NMZ223 NMZ224 NMZ225 NMZ226 NMZ239 NMZ240 NMZ241</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.NEW.KABQ.FF.A.0023.210829T1800Z-210830T1000Z/
 /00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
@@ -10779,31 +11111,64 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=OH1261B34A1448.SpecialWeatherStatement.1261B34AEE40OH.RLXSPSRLX.84ef586f65ad5aa010726d7fd3de6aba</id>
-<updated>2021-08-29T06:42:00-04:00</updated>
-<published>2021-08-29T06:42:00-04:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NY1261B34B009C.FlashFloodWarning.1261B34B9C14NY.BUFFFWBUF.913689845ecd08b711e3de7cc4aff419</id>
+<updated>2021-08-29T12:47:00-04:00</updated>
+<published>2021-08-29T12:47:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Special Weather Statement issued August 29 at 6:42AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OH1261B34A1448.SpecialWeatherStatement.1261B34AEE40OH.RLXSPSRLX.84ef586f65ad5aa010726d7fd3de6aba"/>
-<summary>...HOT AND HUMID CONDITIONS TODAY... The combination of hot temperatures and high humidity will result in heat index values in the 95 to 100 degree range this afternoon. This could cause heat related health problems. If you have to be outdoors, please take the necessary precautions to protect yourself from heat related illnesses. Limit strenuous</summary>
+<title>Flash Flood Warning issued August 29 at 12:47PM EDT until August 29 at 4:45PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NY1261B34B009C.FlashFloodWarning.1261B34B9C14NY.BUFFFWBUF.913689845ecd08b711e3de7cc4aff419"/>
+<summary>The National Weather Service in Buffalo has issued a * Flash Flood Warning for... Northwestern Niagara County in western New York... * Until 445 PM EDT. * At 1247 PM EDT, Doppler radar indicated thunderstorms producing heavy rain across the warned area. Between 1 and 2 inches of rain</summary>
+<cap:event>Flash Flood Warning</cap:event>
+<cap:effective>2021-08-29T12:47:00-04:00</cap:effective>
+<cap:expires>2021-08-29T16:45:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Niagara</cap:areaDesc>
+<cap:polygon>43.1,-79.06 43.11,-79.06 43.12,-79.07 43.13,-79.06 43.14,-79.04 43.17,-79.05 43.2,-79.05 43.21,-79.06 43.22,-79.05 43.25,-79.06 43.26,-79.07 43.28,-79.08 43.36,-78.68 43.2,-78.61 43.1,-79.06</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>036063</value>
+<valueName>UGC</valueName>
+<value>NYC063</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KBUF.FF.W.0022.210829T1647Z-210829T2045Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=OH1261B34B1CBC.SpecialWeatherStatement.1261B34B3C60OH.CLESPSCLE.50c0553263d5f3ad10ed4e3ca704cded</id>
+<updated>2021-08-29T13:19:00-04:00</updated>
+<published>2021-08-29T13:19:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued August 29 at 1:19PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OH1261B34B1CBC.SpecialWeatherStatement.1261B34B3C60OH.CLESPSCLE.50c0553263d5f3ad10ed4e3ca704cded"/>
+<summary>...A strong thunderstorm will impact portions of southwestern Cuyahoga and northeastern Lorain Counties through 200 PM EDT... At 119 PM EDT, Doppler radar was tracking a strong thunderstorm over North Ridgeville, or near Elyria, moving east at 20 mph. HAZARD...Winds in excess of 30 mph and pea size hail. SOURCE...Radar indicated.</summary>
 <cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T06:42:00-04:00</cap:effective>
-<cap:expires>2021-08-29T12:00:00-04:00</cap:expires>
+<cap:effective>2021-08-29T13:19:00-04:00</cap:effective>
+<cap:expires>2021-08-29T14:00:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
 <cap:urgency>Expected</cap:urgency>
 <cap:severity>Minor</cap:severity>
 <cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Athens; Gallia; Jackson; Lawrence; Meigs; Morgan; Perry; Vinton; Washington</cap:areaDesc>
-<cap:polygon></cap:polygon>
+<cap:areaDesc>Cuyahoga; Lorain</cap:areaDesc>
+<cap:polygon>41.49,-81.95 41.48,-81.89 41.48,-81.86 41.5,-81.8 41.49,-81.76 41.5,-81.71 41.35,-81.66 41.28,-82.07 41.5,-82.07 41.51,-81.97 41.49,-81.95</cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>039009 039053 039079 039087 039105 039115 039127 039163 039167</value>
+<value>039035 039093</value>
 <valueName>UGC</valueName>
-<value>OHZ066 OHZ067 OHZ075 OHZ076 OHZ083 OHZ084 OHZ085 OHZ086 OHZ087</value>
+<value>OHZ010 OHZ011</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
@@ -10836,6 +11201,70 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>039003 039039 039051 039069 039125 039137 039161 039171</value>
 <valueName>UGC</valueName>
 <value>OHZ001 OHZ002 OHZ004 OHZ005 OHZ015 OHZ016 OHZ024 OHZ025</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=OK1261B34B2298.SpecialWeatherStatement.1261B34B3C60OK.TSASPSTSA.6e5df232dde94f8593aa82f007b892b7</id>
+<updated>2021-08-29T12:34:00-05:00</updated>
+<published>2021-08-29T12:34:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued August 29 at 12:34PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OK1261B34B2298.SpecialWeatherStatement.1261B34B3C60OK.TSASPSTSA.6e5df232dde94f8593aa82f007b892b7"/>
+<summary>...A strong thunderstorm will impact portions of south central Delaware, northwestern Adair and northeastern Cherokee Counties through 100 PM CDT... At 1233 PM CDT, Doppler radar indicated a strong thunderstorm 4 miles northeast of Scraper, moving west at 10 mph. HAZARD...Winds in excess of 40 mph.</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-08-29T12:34:00-05:00</cap:effective>
+<cap:expires>2021-08-29T13:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Adair; Cherokee; Delaware</cap:areaDesc>
+<cap:polygon>36.21,-94.63 36.01,-94.7 36.06,-94.95 36.26,-94.88 36.21,-94.63</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>040001 040021 040041</value>
+<valueName>UGC</valueName>
+<value>OKZ063 OKZ068 OKZ069</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B34B04E8.AirQualityAlert.1261B35AA5B0OR.PDTAQAPDT.a404a80345994b5895f4d9e98a80b0c9</id>
+<updated>2021-08-29T09:58:00-07:00</updated>
+<published>2021-08-29T09:58:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Air Quality Alert issued August 29 at 9:58AM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B34B04E8.AirQualityAlert.1261B35AA5B0OR.PDTAQAPDT.a404a80345994b5895f4d9e98a80b0c9"/>
+<summary>...AIR QUALITY ADVISORY REMAINS IN EFFECT UNTIL 11 AM PDT MONDAY... Oregon Department of Environmental Quality has issued an Air Quality Advisory...which remains in effect until 11 AM PDT Monday. A Smoke Air Quality Advisory remains in effect. Wildfires burning in the region combined with forecasted conditions will cause air quality to reach unhealthy levels.</summary>
+<cap:event>Air Quality Alert</cap:event>
+<cap:effective>2021-08-29T09:58:00-07:00</cap:effective>
+<cap:expires>2021-08-30T12:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Unknown</cap:urgency>
+<cap:severity>Unknown</cap:severity>
+<cap:certainty>Unknown</cap:certainty>
+<cap:areaDesc>Deschutes</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>041017</value>
+<valueName>UGC</valueName>
+<value>ORC017</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
@@ -10976,35 +11405,36 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B33C23EC.AirQualityAlert.1261B34B3C60OR.PDTAQAPDT.a404a80345994b5895f4d9e98a80b0c9</id>
-<updated>2021-08-28T12:07:00-07:00</updated>
-<published>2021-08-28T12:07:00-07:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=PA1261B34B199C.FloodAdvisory.1261B34B905CPA.CLEFLSCLE.407181e00329c499b00dbdac09d7c3c9</id>
+<updated>2021-08-29T13:11:00-04:00</updated>
+<published>2021-08-29T13:11:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Air Quality Alert issued August 28 at 12:07PM PDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B33C23EC.AirQualityAlert.1261B34B3C60OR.PDTAQAPDT.a404a80345994b5895f4d9e98a80b0c9"/>
-<summary>...AIR QUALITY ADVISORY REMAINS IN EFFECT UNTIL 11 AM PDT MONDAY... Oregon Department of Environmental Quality has issued an Air Quality Advisory...in effect until 11 AM PDT Monday. A Smoke Air Quality Advisory has been issued. Wildfires burning in the region combined with forecasted conditions will cause air quality to reach unhealthy levels.</summary>
-<cap:event>Air Quality Alert</cap:event>
-<cap:effective>2021-08-28T12:07:00-07:00</cap:effective>
-<cap:expires>2021-08-29T11:00:00-07:00</cap:expires>
+<title>Flood Advisory issued August 29 at 1:11PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=PA1261B34B199C.FloodAdvisory.1261B34B905CPA.CLEFLSCLE.407181e00329c499b00dbdac09d7c3c9"/>
+<summary>The National Weather Service in Cleveland has issued a * Flood Advisory for... Eastern Crawford County in northwestern Pennsylvania... Southeastern Erie County in northwestern Pennsylvania... * Until 415 PM EDT. * At 111 PM EDT, Doppler radar indicated heavy rain due to</summary>
+<cap:event>Flood Advisory</cap:event>
+<cap:effective>2021-08-29T13:11:00-04:00</cap:effective>
+<cap:expires>2021-08-29T16:15:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
-<cap:urgency>Unknown</cap:urgency>
-<cap:severity>Unknown</cap:severity>
-<cap:certainty>Unknown</cap:certainty>
-<cap:areaDesc>Deschutes</cap:areaDesc>
-<cap:polygon></cap:polygon>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Crawford; Erie</cap:areaDesc>
+<cap:polygon>42.01,-80.07 41.99,-79.61 41.62,-79.61 41.62,-79.83 41.6,-79.83 41.6,-79.85 41.59,-79.85 41.58,-79.87 41.57,-79.87 41.57,-79.89 41.55,-79.91 41.55,-79.93 41.54,-79.92 41.54,-79.94 41.53,-79.94 41.52,-79.96 41.51,-79.96 41.51,-79.98 41.5,-79.98 41.49,-80.07 42.01,-80.07</cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>041017</value>
+<value>042039 042049</value>
 <valueName>UGC</valueName>
-<value>ORC017</value>
+<value>PAC039 PAC049</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
-<value></value>
+<value>/O.NEW.KCLE.FA.Y.0102.210829T1711Z-210829T2015Z/
+/00000.N.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
 </cap:parameter>
 </entry>
 <entry>
@@ -11270,6 +11700,38 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B34B04E8.AirQualityAlert.1261B35AA5B0WA.PDTAQAPDT.7d6191a01d6bcd401cd10845f742da03</id>
+<updated>2021-08-29T09:58:00-07:00</updated>
+<published>2021-08-29T09:58:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Air Quality Alert issued August 29 at 9:58AM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B34B04E8.AirQualityAlert.1261B35AA5B0WA.PDTAQAPDT.7d6191a01d6bcd401cd10845f742da03"/>
+<summary>...AIR QUALITY ALERT REMAINS IN EFFECT UNTIL NOON PDT MONDAY... The Washington State Department of Ecology has issued an Air Quality Alert...which remains in effect until noon PDT Monday. A Smoke Air Quality Alert remains in effect. Wildfires burning in the region combined with forecasted conditions will cause air quality to reach unhealthy levels.</summary>
+<cap:event>Air Quality Alert</cap:event>
+<cap:effective>2021-08-29T09:58:00-07:00</cap:effective>
+<cap:expires>2021-08-30T12:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Unknown</cap:urgency>
+<cap:severity>Unknown</cap:severity>
+<cap:certainty>Unknown</cap:certainty>
+<cap:areaDesc>Yakima</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>053077</value>
+<valueName>UGC</valueName>
+<value>WAC077</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
 <id>https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B34A4008.FireWeatherWatch.1261B3679E00WA.OTXRFWOTX.2521d6545da885a235908f5b9adee84a</id>
 <updated>2021-08-29T04:54:00-07:00</updated>
 <published>2021-08-29T04:54:00-07:00</published>
@@ -11299,38 +11761,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <cap:parameter>
 <valueName>VTEC</valueName>
 <value>/O.CON.KOTX.FW.A.0009.210830T2000Z-210831T0400Z/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B33C23EC.AirQualityAlert.1261B34B3C60WA.PDTAQAPDT.7d6191a01d6bcd401cd10845f742da03</id>
-<updated>2021-08-28T12:07:00-07:00</updated>
-<published>2021-08-28T12:07:00-07:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Air Quality Alert issued August 28 at 12:07PM PDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B33C23EC.AirQualityAlert.1261B34B3C60WA.PDTAQAPDT.7d6191a01d6bcd401cd10845f742da03"/>
-<summary>...AIR QUALITY ALERT REMAINS IN EFFECT UNTIL NOON PDT MONDAY... The Washington State Department of Ecology has issued an Air Quality Alert...in effect until noon PDT Monday. A Smoke Air Quality Alert has been issued. Wildfires burning in the region combined with forecasted conditions will cause air quality to reach unhealthy levels.</summary>
-<cap:event>Air Quality Alert</cap:event>
-<cap:effective>2021-08-28T12:07:00-07:00</cap:effective>
-<cap:expires>2021-08-29T11:00:00-07:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Unknown</cap:urgency>
-<cap:severity>Unknown</cap:severity>
-<cap:certainty>Unknown</cap:certainty>
-<cap:areaDesc>Yakima</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>053077</value>
-<valueName>UGC</valueName>
-<value>WAC077</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
 </cap:parameter>
 </entry>
 <entry>
@@ -11630,64 +12060,63 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 </cap:parameter>
 </entry>
 <entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=WI1261B349C114.FloodWarning.1261B358E3B0WI.ARXFLSARX.a8733f64a58c1a243cb8829ad0a8b1af</id>
-<updated>2021-08-29T03:29:00-05:00</updated>
-<published>2021-08-29T03:29:00-05:00</published>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WV1261B34B216C.SpecialWeatherStatement.1261B34B3C60WV.RNKSPSRNK.1157d12870380e349ceec2881335393f</id>
+<updated>2021-08-29T13:31:00-04:00</updated>
+<published>2021-08-29T13:31:00-04:00</published>
 <author>
 <name>w-nws.webmaster@noaa.gov</name>
 </author>
-<title>Flood Warning issued August 29 at 3:29AM CDT until August 30 at 2:48AM CDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WI1261B349C114.FloodWarning.1261B358E3B0WI.ARXFLSARX.a8733f64a58c1a243cb8829ad0a8b1af"/>
-<summary>...The Flood Warning continues for the following rivers in Wisconsin... Kickapoo River at Readstown affecting Vernon County. Black River Near Galesville affecting Trempealeau and La Crosse Counties. Kickapoo River at Gays Mills affecting Crawford County.</summary>
-<cap:event>Flood Warning</cap:event>
-<cap:effective>2021-08-29T03:29:00-05:00</cap:effective>
-<cap:expires>2021-08-30T02:48:00-05:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Expected</cap:urgency>
-<cap:severity>Moderate</cap:severity>
-<cap:certainty>Likely</cap:certainty>
-<cap:areaDesc>Vernon</cap:areaDesc>
-<cap:polygon>43.46,-90.72 43.41,-90.77 43.41,-90.79 43.47,-90.78 43.48,-90.73 43.46,-90.72</cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>055123</value>
-<valueName>UGC</valueName>
-<value>WIC123</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value>/O.EXT.KARX.FL.W.0020.000000T0000Z-210830T0748Z/
-/REAW3.1.ER.000000T0000Z.210828T2230Z.210829T1348Z.NO/</value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=WV1261B34A1448.SpecialWeatherStatement.1261B34AEE40WV.RLXSPSRLX.497b5497e3e18fdf66a4ca9cf7c00ffa</id>
-<updated>2021-08-29T06:42:00-04:00</updated>
-<published>2021-08-29T06:42:00-04:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Special Weather Statement issued August 29 at 6:42AM EDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WV1261B34A1448.SpecialWeatherStatement.1261B34AEE40WV.RLXSPSRLX.497b5497e3e18fdf66a4ca9cf7c00ffa"/>
-<summary>...HOT AND HUMID CONDITIONS TODAY... The combination of hot temperatures and high humidity will result in heat index values in the 95 to 100 degree range this afternoon. This could cause heat related health problems. If you have to be outdoors, please take the necessary precautions to protect yourself from heat related illnesses. Limit strenuous</summary>
+<title>Special Weather Statement issued August 29 at 1:31PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WV1261B34B216C.SpecialWeatherStatement.1261B34B3C60WV.RNKSPSRNK.1157d12870380e349ceec2881335393f"/>
+<summary>...A strong thunderstorm will impact portions of southeastern Summers and southwestern Monroe Counties through 200 PM EDT... At 131 PM EDT, Doppler radar was tracking a strong thunderstorm over Lick Creek, or near Pipestem, moving southeast at 5 mph. HAZARD...Winds in excess of 30 mph. SOURCE...Radar indicated.</summary>
 <cap:event>Special Weather Statement</cap:event>
-<cap:effective>2021-08-29T06:42:00-04:00</cap:effective>
-<cap:expires>2021-08-29T12:00:00-04:00</cap:expires>
+<cap:effective>2021-08-29T13:31:00-04:00</cap:effective>
+<cap:expires>2021-08-29T14:00:00-04:00</cap:expires>
 <cap:status>Actual</cap:status>
 <cap:msgType>Alert</cap:msgType>
 <cap:category>Met</cap:category>
 <cap:urgency>Expected</cap:urgency>
 <cap:severity>Minor</cap:severity>
 <cap:certainty>Observed</cap:certainty>
-<cap:areaDesc>Boone; Braxton; Cabell; Calhoun; Clay; Gilmer; Jackson; Kanawha; Lincoln; Logan; Mason; Mingo; Pleasants; Putnam; Ritchie; Roane; Wayne; Wirt; Wood</cap:areaDesc>
+<cap:areaDesc>Monroe; Summers</cap:areaDesc>
+<cap:polygon>37.57,-80.68 37.42,-80.83 37.46,-80.9 37.49,-80.94 37.61,-80.82 37.57,-80.68</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>054063 054089</value>
+<valueName>UGC</valueName>
+<value>WVZ043 WVZ044</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B34AFAC0.AirQualityAlert.1261B35AA5B0WY.SLCAQASLC.14036d6cabffc22ff156c5e7bf67a8eb</id>
+<updated>2021-08-29T10:32:00-06:00</updated>
+<published>2021-08-29T10:32:00-06:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Air Quality Alert issued August 29 at 10:32AM MDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B34AFAC0.AirQualityAlert.1261B35AA5B0WY.SLCAQASLC.14036d6cabffc22ff156c5e7bf67a8eb"/>
+<summary>...AIR QUALITY ALERT IN EFFECT UNTIL 1 PM MDT MONDAY... The following is transmitted in collaboration with the Wyoming Department of Environmental Quality, Air Quality Division and the Wyoming Department of Health. * WHAT...Air Quality Alert for Wildfire Smoke. * WHERE...Uinta County in southwest Wyoming.</summary>
+<cap:event>Air Quality Alert</cap:event>
+<cap:effective>2021-08-29T10:32:00-06:00</cap:effective>
+<cap:expires>2021-08-30T13:00:00-06:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Unknown</cap:urgency>
+<cap:severity>Unknown</cap:severity>
+<cap:certainty>Unknown</cap:certainty>
+<cap:areaDesc>Southwest Wyoming</cap:areaDesc>
 <cap:polygon></cap:polygon>
 <cap:geocode>
 <valueName>FIPS6</valueName>
-<value>054005 054007 054011 054013 054015 054021 054035 054039 054043 054045 054053 054059 054073 054079 054085 054087 054099 054105 054107</value>
+<value>056041</value>
 <valueName>UGC</valueName>
-<value>WVZ005 WVZ006 WVZ007 WVZ008 WVZ009 WVZ010 WVZ013 WVZ014 WVZ015 WVZ016 WVZ017 WVZ018 WVZ019 WVZ024 WVZ025 WVZ026 WVZ027 WVZ028 WVZ029</value>
+<value>WYZ021</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>
@@ -11784,38 +12213,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 <value>056001 056007 056009 056021 056031</value>
 <valueName>UGC</valueName>
 <value>WYZ103 WYZ104 WYZ105 WYZ106 WYZ109 WYZ110 WYZ111 WYZ112 WYZ113 WYZ114 WYZ115 WYZ116 WYZ117</value>
-</cap:geocode>
-<cap:parameter>
-<valueName>VTEC</valueName>
-<value></value>
-</cap:parameter>
-</entry>
-<entry>
-<id>https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B33BB9AC.AirQualityAlert.1261B34B6370WY.SLCAQASLC.14036d6cabffc22ff156c5e7bf67a8eb</id>
-<updated>2021-08-28T10:35:00-06:00</updated>
-<published>2021-08-28T10:35:00-06:00</published>
-<author>
-<name>w-nws.webmaster@noaa.gov</name>
-</author>
-<title>Air Quality Alert issued August 28 at 10:35AM MDT by NWS</title>
-<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B33BB9AC.AirQualityAlert.1261B34B6370WY.SLCAQASLC.14036d6cabffc22ff156c5e7bf67a8eb"/>
-<summary>...AIR QUALITY ALERT IN EFFECT UNTIL 1 PM MDT SUNDAY... The following is transmitted in collaboration with the Wyoming Department of Environmental Quality, Air Quality Division and the Wyoming Department of Health. * WHAT...Air Quality Alert for Wildfire Smoke. * WHERE...Uinta County in southwest Wyoming.</summary>
-<cap:event>Air Quality Alert</cap:event>
-<cap:effective>2021-08-28T10:35:00-06:00</cap:effective>
-<cap:expires>2021-08-29T13:00:00-06:00</cap:expires>
-<cap:status>Actual</cap:status>
-<cap:msgType>Alert</cap:msgType>
-<cap:category>Met</cap:category>
-<cap:urgency>Unknown</cap:urgency>
-<cap:severity>Unknown</cap:severity>
-<cap:certainty>Unknown</cap:certainty>
-<cap:areaDesc>Southwest Wyoming</cap:areaDesc>
-<cap:polygon></cap:polygon>
-<cap:geocode>
-<valueName>FIPS6</valueName>
-<value>056041</value>
-<valueName>UGC</valueName>
-<value>WYZ021</value>
 </cap:geocode>
 <cap:parameter>
 <valueName>VTEC</valueName>

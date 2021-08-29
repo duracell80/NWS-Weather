@@ -54,6 +54,8 @@
       background-repeat: no-repeat;
       background-size: contain;
       filter: invert(1); }
+    .wx-feeds .container-theme .wx-icon-now.mi-warning {
+      background-image: url("../images/svg/mi-warning.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-cloud {
       background-image: url("../images/svg/wi-cloud.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-cloudy {
