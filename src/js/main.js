@@ -58,7 +58,7 @@ function init_alerts() {
 				data-toggle="collapse" 
 				role="tab" 
 			> 
-				<span class="panel-title">`+toTitleCase(wx_warn_lower)+` Warnings ( <span class="items_`+wx_warn_lower+`"></span> )</span> 
+				<span class="panel-title">`+toTitleCase(wx_warn_lower)+` ( <span class="items_`+wx_warn_lower+`"></span> )</span> 
 				
 			</button> 
 			<div 
@@ -109,6 +109,15 @@ function init_alerts() {
                     if(alertevent.indexOf("Flood") !== -1) {
                         feedout_icon = "flood";
                         items["flood"]++;
+					} else if(alertevent.indexOf("Tropical") !== -1) {
+                        feedout_icon = "hurricane";
+                        items["storm"]++;
+					} else if(alertevent.indexOf("Storm Surge") !== -1) {
+                        feedout_icon = "flood";
+                        items["storm_surge"]++;
+					} else if(alertevent.indexOf("Surf") !== -1) {
+                        feedout_icon = "surf";
+                        items["wind"]++;
                     } else if(alertevent.indexOf("Wind") !== -1) {
                         feedout_icon = "wind";
                         items["wind"]++;
@@ -118,12 +127,18 @@ function init_alerts() {
                     } else if(alertevent.indexOf("Tornado") !== -1) {
                         feedout_icon = "tornado";
                         items["tornado"]++;
-                    } else if(alertevent.indexOf("Red Flag") !== -1) {
+                    } else if(alertevent.indexOf("Heat") !== -1) {
+                        feedout_icon = "heat";
+                        items["heat"]++;
+					} else if(alertevent.indexOf("Red Flag") !== -1) {
                         feedout_icon = "fire";
                         items["fire"]++;
 					} else if(alertevent.indexOf("Fire Weather") !== -1) {
                         feedout_icon = "fire";
                         items["fire"]++;
+					} else if(alertevent.indexOf("Smoke") !== -1) {
+                        feedout_icon = "smoke";
+                        items["air_quality"]++;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
                         feedout_icon = "freeze";
                         items["winter"]++;
@@ -144,6 +159,24 @@ function init_alerts() {
                         if(alertsummary.indexOf("thunderstorm") !== -1) {
 							feedout_icon = "storm";
 							items["storm"]++;
+						} else if(alertsummary.indexOf("heat index") !== -1) {
+							feedout_icon = "heat";
+							items["heat"]++;
+						} else if(alertsummary.indexOf("heat") !== -1) {
+							feedout_icon = "heat";
+							items["heat"]++;
+						} else if(alertsummary.indexOf("air quality") !== -1) {
+							feedout_icon = "smoke";
+							items["air_quality"]++;	
+						} else if(alertsummary.indexOf("smoke") !== -1) {
+							feedout_icon = "smoke";
+							items["air_quality"]++;
+						} else if(alertsummary.indexOf("surf") !== -1) {
+							feedout_icon = "surf";
+							items["wind"]++;
+						} else if(alertsummary.indexOf("gusty winds") !== -1) {
+							feedout_icon = "wind";
+							items["wind"]++;
 						} else {
 							feedout_icon = "other";
 							items["other"]++;
@@ -161,7 +194,13 @@ function init_alerts() {
 					
                     if(alertevent.indexOf("Flood") !== -1) {
                         feedout["flood"] += feedthis;
-                    } else if(alertevent.indexOf("Wind") !== -1) {
+                    } else if(alertevent.indexOf("Tropical") !== -1) {
+                        feedout["storm"] += feedthis;
+					} else if(alertevent.indexOf("Storm Surge") !== -1) {
+                        feedout["storm_surge"] += feedthis;
+					} else if(alertevent.indexOf("Surf") !== -1) {
+                        feedout["wind"] += feedthis;
+					} else if(alertevent.indexOf("Wind") !== -1) {
                         feedout["wind"] += feedthis;
                     } else if(alertevent.indexOf("Thunderstorm") !== -1) {
                         feedout["storm"] += feedthis;
@@ -179,10 +218,14 @@ function init_alerts() {
 						   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
 						}
 						
-                    } else if(alertevent.indexOf("Red Flag") !== -1) {
+                    } else if(alertevent.indexOf("Heat") !== -1) {
+                        feedout["heat"] += feedthis;
+					} else if(alertevent.indexOf("Red Flag") !== -1) {
                         feedout["fire"] += feedthis;
 					} else if(alertevent.indexOf("Fire Weather") !== -1) {
                         feedout["fire"] += feedthis;
+					} else if(alertevent.indexOf("Smoke") !== -1) {
+                        feedout["air_quality"] += feedthis;
                     } else if(alertevent.indexOf("Freeze") !== -1) {
                         feedout["winter"] += feedthis;
 					} else if(alertevent.indexOf("Ice") !== -1) {
@@ -197,7 +240,16 @@ function init_alerts() {
 					} else {
 						if(alertsummary.indexOf("thunderstorm") !== -1) {
                         	feedout["storm"] += feedthis;
-							
+						} else if(alertsummary.indexOf("heat index") !== -1) {
+                        	feedout["heat"] += feedthis;
+						} else if(alertsummary.indexOf("heat") !== -1) {
+                        	feedout["heat"] += feedthis;
+						} else if(alertsummary.indexOf("air quality") !== -1) {
+                        	feedout["air_quality"] += feedthis;
+						} else if(alertsummary.indexOf("surf") !== -1) {
+                        	feedout["wind"] += feedthis;
+						} else if(alertsummary.indexOf("gusty winds") !== -1) {
+                        	feedout["wind"] += feedthis;
 						} else {
 							feedout["other"] += feedthis;
 							
@@ -936,7 +988,7 @@ function init_storage() {
 
 
 function toTitleCase(str) {
-	var lcStr = str.toLowerCase();
+	var lcStr = str.toLowerCase().replace('_', ' ');
 	return lcStr.replace(/(?:^|\s)\w/g, function(match) {
 		return match.toUpperCase();
 	});

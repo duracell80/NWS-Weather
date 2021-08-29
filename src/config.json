@@ -5,5 +5,5 @@
 	"wx_obs"				: "kbhm",
 	"wx_scope"				: "local",
 	"wx_watches"			: "wind, flood, fire, winter",
-	"wx_warnings"			: "tornado, storm, hurricane, wind, flood, fire, winter, other"
+	"wx_warnings"			: "tornado, storm, hurricane, tropical storm, wind, flood, fire, winter, other"
 }

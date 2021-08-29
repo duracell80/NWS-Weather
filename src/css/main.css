@@ -129,12 +129,18 @@
     background-image: url("../images/svg/wi-tornado.svg"); }
   .wx-feeds .wx-storm {
     background-image: url("../images/svg/wi-storm-showers.svg"); }
+  .wx-feeds .wx-surf {
+    background-image: url("../images/svg/wi-gale-warning.svg"); }
   .wx-feeds .wx-wind {
     background-image: url("../images/svg/wi-cloudy-gusts.svg"); }
   .wx-feeds .wx-flood {
     background-image: url("../images/svg/wi-raindrops.svg"); }
+  .wx-feeds .wx-heat {
+    background-image: url("../images/svg/wi-thermometer.svg"); }
   .wx-feeds .wx-fire {
     background-image: url("../images/svg/wi-fire.svg"); }
+  .wx-feeds .wx-smoke {
+    background-image: url("../images/svg/wi-dust.svg"); }
   .wx-feeds .wx-hurricane {
     background-image: url("../images/svg/wi-hurricane.svg"); }
   .wx-feeds .wx-winter {
