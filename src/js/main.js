@@ -12,442 +12,481 @@ function init_config() {
     
 }
 
-
-
 function init_alerts() {
-    var wx_scope 			   = get_scope();
-    var feedstate              = get_state().toLowerCase();
-    if (wx_scope == "county" || wx_scope == "state") {
-		var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
-	} else if (wx_scope == "nation") {
-		var feedin                 = "https://alerts.weather.gov/cap/us.php?x=0";
-	} else {
-		var feedin                 = "http://localhost:3000/alerts.xml";
-	}
-	// DEBUG ALERTS WITH LOCAL
-	//var feedin                 = "http://localhost:3000/alerts.xml";
-	var feedout          	   = [];
-	var items            	   = [];
-    var feedthis               = "";
-    var feedout_blank          = '<div class="card"><div class="card-body"><small>No alerts or advisories posted at the moment ...</div></div></small>';
+    var wx_alerts_checked	   = localStorage.getItem("wx_alerts_checked");
+	
+	var now = new Date();
+	var secondsSinceCheck 	= ((Math.round(now.getTime() / 1000)) - (wx_alerts_checked));
+	var secondsToWait 		= 300;
+	
+	// BACKOFF ALERTS FOR PERIOD OF TIME
+	if(secondsSinceCheck > secondsToWait) {
+	
+		var wx_scope 			   = get_scope();
+    	var feedstate              = get_state().toLowerCase();
     
-	var wx_warnings = get_warnings().split(",");
-	
-	$.each( wx_warnings, function( key, value ) {
-		var wx_type = value.toLowerCase().trim();
-		items[wx_type] 		= 0;
-		feedout[wx_type] 	= "";
-	});
-	
-	// WRITE THE HTML CONTAINERS FOR THE CONFIGURED WARNING ACCORDIONS
-	// EMPTY THE HTML FIRST
-	$("#wx_alerts").empty();
-		
-	$.each( wx_warnings, function( key, value ) {
-	  	
-		var wx_warn_upper = value.toUpperCase().trim();
-		var wx_warn_lower = value.toLowerCase().trim();
-		console.log( "Warning Set : " + wx_warn_upper);
-		
-		var wx_warn_html = `<div class="panel panel-`+wx_warn_lower+`" role="tablist"> 
-			<button 
-				aria-controls="collapsePanel`+wx_warn_lower+`" 
-				aria-expanded="false" 
-				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" 
-				data-target="#collapsePanel`+wx_warn_lower+`" 
-				data-toggle="collapse" 
-				role="tab" 
-			> 
-				<span class="panel-title">`+toTitleCase(wx_warn_lower)+` ( <span class="items_`+wx_warn_lower+`"></span> )</span> 
-				
-			</button> 
-			<div 
-				class="panel-collapse collapse" 
-				id="collapsePanel`+wx_warn_lower+`" 
-				role="tabpanel" 
-			> 
-				<div class="panel-body"> 
-					<div class="feedout_`+wx_warn_lower+`"></div> 
-				</div> 
-			</div> 
-		</div>`;
-		
-		// REBULD WARNINGS WITH NEW DATA
-		$("#wx_alerts").append(wx_warn_html);
-	});	
-	
-	$.ajax(feedin, {
-		accepts:{
-			xml:"application/rss+xml"
-		},
-		dataType:"xml",
-		success:function(data) {
-			$(data).find("entry").each(function () {
-				var el = $(this);
-                var alerttitle      = el.find("title").text();
-                var alertlink       = el.find("link").attr("href");
-                var alertsummary    = el.find("summary").text();
-                
-                var alertevent      = el.find("cap\\:event").text();
-                var alertstart      = el.find("cap\\:effective").text();
-                var alertend        = el.find("cap\\:expires").text();
-                var alerturgency    = el.find("cap\\:urgency").text();
-                var alertarea       = el.find("cap\\:areaDesc").text();
-				var alertarea_lower = alertarea.toLowerCase();
-                
-				function alertwrite() {
-					// https://www.weather.gov/lwx/WarningsDefined
-					
-					var wx_scope = get_scope();
-					
-					if(alerturgency.indexOf("Immediate") !== -1) {
-                        alertlevel = "alert-now";
-                    } else {
-                        alertlevel = "alert-plan";
-                    }
-                
-                    if(alertevent.indexOf("Flood") !== -1) {
-                        feedout_icon = "flood";
-                        items["flood"]++;
-					} else if(alertevent.indexOf("Tropical") !== -1) {
-                        feedout_icon = "hurricane";
-                        items["storm"]++;
-					} else if(alertevent.indexOf("Storm Surge") !== -1) {
-                        feedout_icon = "flood";
-                        items["storm_surge"]++;
-					} else if(alertevent.indexOf("Surf") !== -1) {
-                        feedout_icon = "surf";
-                        items["wind"]++;
-                    } else if(alertevent.indexOf("Wind") !== -1) {
-                        feedout_icon = "wind";
-                        items["wind"]++;
-                    } else if(alertevent.indexOf("Thunderstorm") !== -1) {
-                        feedout_icon = "storm";
-                        items["storm"]++;
-                    } else if(alertevent.indexOf("Tornado") !== -1) {
-                        feedout_icon = "tornado";
-                        items["tornado"]++;
-                    } else if(alertevent.indexOf("Heat") !== -1) {
-                        feedout_icon = "heat";
-                        items["heat"]++;
-					} else if(alertevent.indexOf("Red Flag") !== -1) {
-                        feedout_icon = "fire";
-                        items["fire"]++;
-					} else if(alertevent.indexOf("Fire Weather") !== -1) {
-                        feedout_icon = "fire";
-                        items["fire"]++;
-					} else if(alertevent.indexOf("Smoke") !== -1) {
-                        feedout_icon = "smoke";
-                        items["air_quality"]++;
-                    } else if(alertevent.indexOf("Freeze") !== -1) {
-                        feedout_icon = "freeze";
-                        items["winter"]++;
-					} else if(alertevent.indexOf("Ice") !== -1) {
-                        feedout_icon = "freeze";
-                        items["winter"]++;
-					} else if(alertevent.indexOf("Frost") !== -1) {
-                        feedout_icon = "freeze";
-                        items["winter"]++;
-                    } else if(alertevent.indexOf("Winter") !== -1) {
-                        feedout_icon = "winter";
-                        items["winter"]++;
-                    } else if(alertevent.indexOf("Hurricane") !== -1) {
-                        feedout_icon = "hurricane";
-                        items["hurricane"]++;
+		if (wx_scope == "county" || wx_scope == "state") {
+			var feedin                 = "https://alerts.weather.gov/cap/"+feedstate+".php?x=0";
+		} else if (wx_scope == "nation") {
+			var feedin                 = "https://alerts.weather.gov/cap/us.php?x=0";
+		} else {
+			var feedin                 = "http://localhost:3000/alerts.xml";
+		}
+		// DEBUG ALERTS WITH LOCAL
+		var feedin                 = "http://localhost:3000/alerts.xml";
+		var feedout          	   = [];
+		var items            	   = [];
+		var feedthis               = "";
+		var feedout_blank          = '<div class="card"><div class="card-body"><small>No alerts or advisories posted at the moment ...</div></div></small>';
 
-                    } else {
-                        if(alertsummary.indexOf("thunderstorm") !== -1) {
-							feedout_icon = "storm";
+		var wx_warnings = get_warnings().split(",");
+
+		$.each( wx_warnings, function( key, value ) {
+			var wx_type = value.toLowerCase().trim();
+			items[wx_type] 		= 0;
+			feedout[wx_type] 	= "";
+		});
+
+		// WRITE THE HTML CONTAINERS FOR THE CONFIGURED WARNING ACCORDIONS
+		// EMPTY THE HTML FIRST
+		$("#wx_alerts").empty();
+
+		$.each( wx_warnings, function( key, value ) {
+
+			var wx_warn_upper = value.toUpperCase().trim();
+			var wx_warn_lower = value.toLowerCase().trim();
+			console.log( "Warning Set : " + wx_warn_upper);
+
+			var wx_warn_html = `<div class="panel panel-`+wx_warn_lower+`" role="tablist"> 
+				<button 
+					aria-controls="collapsePanel`+wx_warn_lower+`" 
+					aria-expanded="false" 
+					class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" 
+					data-target="#collapsePanel`+wx_warn_lower+`" 
+					data-toggle="collapse" 
+					role="tab" 
+				> 
+					<span class="panel-title">`+toTitleCase(wx_warn_lower)+` ( <span class="items_`+wx_warn_lower+`"></span> )</span> 
+
+				</button> 
+				<div 
+					class="panel-collapse collapse" 
+					id="collapsePanel`+wx_warn_lower+`" 
+					role="tabpanel" 
+				> 
+					<div class="panel-body"> 
+						<div class="feedout_`+wx_warn_lower+`"></div> 
+					</div> 
+				</div> 
+			</div>`;
+
+			// REBULD WARNINGS WITH NEW DATA
+			$("#wx_alerts").append(wx_warn_html);
+		});	
+
+		$.ajax(feedin, {
+			accepts:{
+				xml:"application/rss+xml"
+			},
+			dataType:"xml",
+			success:function(data) {
+				$(data).find("entry").each(function () {
+					var el = $(this);
+					var alerttitle      = el.find("title").text();
+					var alertlink       = el.find("link").attr("href");
+					var alertsummary    = el.find("summary").text();
+
+					var alertevent      = el.find("cap\\:event").text();
+					var alertstart      = el.find("cap\\:effective").text();
+					var alertend        = el.find("cap\\:expires").text();
+					var alerturgency    = el.find("cap\\:urgency").text();
+					var alertarea       = el.find("cap\\:areaDesc").text();
+					var alertarea_lower = alertarea.toLowerCase();
+					 
+					
+					
+					function alertwrite() {
+						// https://www.weather.gov/lwx/WarningsDefined
+
+						var wx_scope 		= get_scope();
+						var tornadoactive	= "no";
+
+						if(alerturgency.indexOf("Immediate") !== -1) {
+							alertlevel = "alert-now";
+						} else {
+							alertlevel = "alert-plan";
+						}
+
+						if(alertevent.indexOf("Flood") !== -1) {
+							feedout_icon = "flood";
+							items["flood"]++;
+						} else if(alertevent.indexOf("Tropical") !== -1) {
+							feedout_icon = "hurricane";
 							items["storm"]++;
-						} else if(alertsummary.indexOf("heat index") !== -1) {
-							feedout_icon = "heat";
-							items["heat"]++;
-						} else if(alertsummary.indexOf("heat") !== -1) {
-							feedout_icon = "heat";
-							items["heat"]++;
-						} else if(alertsummary.indexOf("air quality") !== -1) {
-							feedout_icon = "smoke";
-							items["air_quality"]++;	
-						} else if(alertsummary.indexOf("smoke") !== -1) {
-							feedout_icon = "smoke";
-							items["air_quality"]++;
-						} else if(alertsummary.indexOf("surf") !== -1) {
+						} else if(alertevent.indexOf("Storm Surge") !== -1) {
+							feedout_icon = "flood";
+							items["storm_surge"]++;
+						} else if(alertevent.indexOf("Surf") !== -1) {
 							feedout_icon = "surf";
 							items["wind"]++;
-						} else if(alertsummary.indexOf("gusty winds") !== -1) {
+						} else if(alertevent.indexOf("Wind") !== -1) {
 							feedout_icon = "wind";
 							items["wind"]++;
+						} else if(alertevent.indexOf("Thunderstorm") !== -1) {
+							feedout_icon = "storm";
+							items["storm"]++;
+						} else if(alertevent.indexOf("Tornado") !== -1) {
+							feedout_icon = "tornado";
+							items["tornado"]++;
+						} else if(alertevent.indexOf("Heat") !== -1) {
+							feedout_icon = "heat";
+							items["heat"]++;
+						} else if(alertevent.indexOf("Red Flag") !== -1) {
+							feedout_icon = "fire";
+							items["fire"]++;
+						} else if(alertevent.indexOf("Fire Weather") !== -1) {
+							feedout_icon = "fire";
+							items["fire"]++;
+						} else if(alertevent.indexOf("Smoke") !== -1) {
+							feedout_icon = "smoke";
+							items["air_quality"]++;
+						} else if(alertevent.indexOf("Freeze") !== -1) {
+							feedout_icon = "freeze";
+							items["winter"]++;
+						} else if(alertevent.indexOf("Ice") !== -1) {
+							feedout_icon = "freeze";
+							items["winter"]++;
+						} else if(alertevent.indexOf("Frost") !== -1) {
+							feedout_icon = "freeze";
+							items["winter"]++;
+						} else if(alertevent.indexOf("Winter") !== -1) {
+							feedout_icon = "winter";
+							items["winter"]++;
+						} else if(alertevent.indexOf("Hurricane") !== -1) {
+							feedout_icon = "hurricane";
+							items["hurricane"]++;
+
 						} else {
-							feedout_icon = "other";
-							items["other"]++;
-						}
-                    }
-                    
-                    if(wx_scope == "nation") {
-						
-						
-						if(1 == 1){
-							if(alertsummary.indexOf('Alabama') !== -1) {
-								alerturgency = "State: Alabama";
-							} else if(alertsummary.indexOf('Alaska') !== -1) {
-								alerturgency = "State: Alaska";
-							} else if(alertsummary.indexOf('Arizona') !== -1) {
-								alerturgency = "State: Arizona";
-							} else if(alertsummary.indexOf('Arkansas') !== -1) {
-								alerturgency = "State: Arkansas";
-							} else if(alertsummary.indexOf('California') !== -1) {
-								alerturgency = "State: California";
-							} else if(alertsummary.indexOf('Colorado') !== -1) {
-								alerturgency = "State: Colorado";
-							} else if(alertsummary.indexOf('Connecticut') !== -1) {
-								alerturgency = "State: Connecticut";
-							} else if(alertsummary.indexOf('Delaware') !== -1) {
-								alerturgency = "State: Delaware";
-							} else if(alertsummary.indexOf('District Of Columbia') !== -1) {
-								alerturgency = "State: District Of Columbia";
-							} else if(alertsummary.indexOf('Florida') !== -1) {
-								alerturgency = "State: Florida";
-							} else if(alertsummary.indexOf('Georgia') !== -1) {
-								alerturgency = "State: Georgia";
-							} else if(alertsummary.indexOf('Hawaii') !== -1) {
-								alerturgency = "State: Hawaii";
-							} else if(alertsummary.indexOf('Idaho') !== -1) {
-								alerturgency = "State: Idaho";
-							} else if(alertsummary.indexOf('Illinois') !== -1) {
-								alerturgency = "State: Illinois";
-							} else if(alertsummary.indexOf('Indiana') !== -1) {
-								alerturgency = "State: Indiana";
-							} else if(alertsummary.indexOf('Iowa') !== -1) {
-								alerturgency = "State: Iowa";
-							} else if(alertsummary.indexOf('Kansas') !== -1) {
-								alerturgency = "State: Kansas";
-							} else if(alertsummary.indexOf('Kentucky') !== -1) {
-								alerturgency = "State: Kentucky";
-							} else if(alertsummary.indexOf('Louisiana') !== -1) {
-								alerturgency = "State: Louisiana";
-							} else if(alertsummary.indexOf('Maine') !== -1) {
-								alerturgency = "State: Maine";
-							} else if(alertsummary.indexOf('Maryland') !== -1) {
-								alerturgency = "State: Maryland";
-							} else if(alertsummary.indexOf('Massachusetts') !== -1) {
-								alerturgency = "State: Massachusetts";
-							} else if(alertsummary.indexOf('Michigan') !== -1) {
-								alerturgency = "State: Michigan";
-							} else if(alertsummary.indexOf('Minnesota') !== -1) {
-								alerturgency = "State: Minnesota";
-							} else if(alertsummary.indexOf('Mississippi') !== -1) {
-								alerturgency = "State: Mississippi";
-							} else if(alertsummary.indexOf('Missouri') !== -1) {
-								alerturgency = "State: Missouri";
-							} else if(alertsummary.indexOf('Montana') !== -1) {
-								alerturgency = "State: Montana";
-							} else if(alertsummary.indexOf('Nebraska') !== -1) {
-								alerturgency = "State: Nebraska";
-							} else if(alertsummary.indexOf('Nevada') !== -1) {
-								alerturgency = "State: Nevada";
-							} else if(alertsummary.indexOf('New Hampshire') !== -1) {
-								alerturgency = "State: New Hampshire";
-							} else if(alertsummary.indexOf('New Jersey') !== -1) {
-								alerturgency = "State: New Jersey";
-							} else if(alertsummary.indexOf('New Mexico') !== -1) {
-								alerturgency = "State: New Mexico";
-							} else if(alertsummary.indexOf('New York') !== -1) {
-								alerturgency = "State: New York";
-							} else if(alertsummary.indexOf('North Carolina') !== -1) {
-								alerturgency = "State: North Carolina";
-							} else if(alertsummary.indexOf('North Dakota') !== -1) {
-								alerturgency = "State: North Dakota";
-							} else if(alertsummary.indexOf('Ohio') !== -1) {
-								alerturgency = "State: Ohio";
-							} else if(alertsummary.indexOf('Oklahoma') !== -1) {
-								alerturgency = "State: Oklahoma";
-							} else if(alertsummary.indexOf('Oregon') !== -1) {
-								alerturgency = "State: Oregon";
-							} else if(alertsummary.indexOf('Pennsylvania') !== -1) {
-								alerturgency = "State: Pennsylvania";
-							} else if(alertsummary.indexOf('Rhode Island') !== -1) {
-								alerturgency = "State: Rhode Island";
-							} else if(alertsummary.indexOf('South Carolina') !== -1) {
-								alerturgency = "State: South Carolina";
-							} else if(alertsummary.indexOf('South Dakota') !== -1) {
-								alerturgency = "State: South Dakota";
-							} else if(alertsummary.indexOf('Tennessee') !== -1) {
-								alerturgency = "State: Tennessee";
-							} else if(alertsummary.indexOf('Texas') !== -1) {
-								alerturgency = "State: Texas";
-							} else if(alertsummary.indexOf('Utah') !== -1) {
-								alerturgency = "State: Utah";
-							} else if(alertsummary.indexOf('Vermont') !== -1) {
-								alerturgency = "State: Vermont";
-							} else if(alertsummary.indexOf('Virginia') !== -1) {
-								alerturgency = "State: Virginia";
-							} else if(alertsummary.indexOf('Washington') !== -1) {
-								alerturgency = "State: Washington";
-							} else if(alertsummary.indexOf('West Virginia') !== -1) {
-								alerturgency = "State: West Virginia";
-							} else if(alertsummary.indexOf('Wisconsin') !== -1) {
-								alerturgency = "State: Wisconsin";
-							} else if(alertsummary.indexOf('Wyoming') !== -1) {
-								alerturgency = "State: Wyoming";
+							if(alertsummary.indexOf("thunderstorm") !== -1) {
+								feedout_icon = "storm";
+								items["storm"]++;
+							} else if(alertsummary.indexOf("heat index") !== -1) {
+								feedout_icon = "heat";
+								items["heat"]++;
+							} else if(alertsummary.indexOf("heat") !== -1) {
+								feedout_icon = "heat";
+								items["heat"]++;
+							} else if(alertsummary.indexOf("air quality") !== -1) {
+								feedout_icon = "smoke";
+								items["air_quality"]++;	
+							} else if(alertsummary.indexOf("smoke") !== -1) {
+								feedout_icon = "smoke";
+								items["air_quality"]++;
+							} else if(alertsummary.indexOf("surf") !== -1) {
+								feedout_icon = "surf";
+								items["wind"]++;
+							} else if(alertsummary.indexOf("gusty winds") !== -1) {
+								feedout_icon = "wind";
+								items["wind"]++;
 							} else {
-								alerturgency = "Scope: All State";
+								feedout_icon = "other";
+								items["other"]++;
 							}
-						   
-						} else {
-							alerturgency = "Scope: National";
 						}
-					}
-					
-                    feedthis = '<div class="card '+ alertlevel +'"><div class="card-body"><span class="wx-icon wx-'+ feedout_icon +'"></span><h5 class="card-title">' + alertevent + '<br><small>' + alerturgency + '</small></h5><hr><p><strong>' + alerttitle + '</strong></p><p class="card-text">'+ alertarea +'<br><br><small>'+ alertsummary + '</small></p><p><a href="'+ alertlink +'" target="_blank">Read On Weather.gov</a></p></div></div>';
-                    
-					
-					console.log(alertsummary);
-					
-                    if(alertevent.indexOf("Flood") !== -1) {
-                        feedout["flood"] += feedthis;
-                    } else if(alertevent.indexOf("Tropical") !== -1) {
-                        feedout["storm"] += feedthis;
-					} else if(alertevent.indexOf("Storm Surge") !== -1) {
-                        feedout["storm_surge"] += feedthis;
-					} else if(alertevent.indexOf("Surf") !== -1) {
-                        feedout["wind"] += feedthis;
-					} else if(alertevent.indexOf("Wind") !== -1) {
-                        feedout["wind"] += feedthis;
-                    } else if(alertevent.indexOf("Thunderstorm") !== -1) {
-                        feedout["storm"] += feedthis;
-						
-						
-						
-                    } else if(alertevent.indexOf("Tornado Warning") !== -1) {
-                        feedout["tornado"] += feedthis;
-						
-						if(!$(".container-theme").hasClass("wx-danger")) {
-						   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
-						   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
-						   $(".container-theme").addClass("wx-danger");
-						   $(".wx-danger h4").html("TORNADO WARNING");
-						   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
-						   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
 
-						   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
-						   $(".wxout_now a").attr('href', alertlink);
-						   
-						   $(".wxout_now .wx-icon-now").attr('title', alertsummary);
-						   //$(".wxout_now .wx-temp").attr('title', 'Seek Shelter');	
+						if(wx_scope == "nation") {
+
+
+							if(1 == 1){
+								if(alertsummary.indexOf('Alabama') !== -1) {
+									alerturgency = "State: Alabama";
+								} else if(alertsummary.indexOf('Alaska') !== -1) {
+									alerturgency = "State: Alaska";
+								} else if(alertsummary.indexOf('Arizona') !== -1) {
+									alerturgency = "State: Arizona";
+								} else if(alertsummary.indexOf('Arkansas') !== -1) {
+									alerturgency = "State: Arkansas";
+								} else if(alertsummary.indexOf('California') !== -1) {
+									alerturgency = "State: California";
+								} else if(alertsummary.indexOf('Colorado') !== -1) {
+									alerturgency = "State: Colorado";
+								} else if(alertsummary.indexOf('Connecticut') !== -1) {
+									alerturgency = "State: Connecticut";
+								} else if(alertsummary.indexOf('Delaware') !== -1) {
+									alerturgency = "State: Delaware";
+								} else if(alertsummary.indexOf('District Of Columbia') !== -1) {
+									alerturgency = "State: District Of Columbia";
+								} else if(alertsummary.indexOf('Florida') !== -1) {
+									alerturgency = "State: Florida";
+								} else if(alertsummary.indexOf('Georgia') !== -1) {
+									alerturgency = "State: Georgia";
+								} else if(alertsummary.indexOf('Hawaii') !== -1) {
+									alerturgency = "State: Hawaii";
+								} else if(alertsummary.indexOf('Idaho') !== -1) {
+									alerturgency = "State: Idaho";
+								} else if(alertsummary.indexOf('Illinois') !== -1) {
+									alerturgency = "State: Illinois";
+								} else if(alertsummary.indexOf('Indiana') !== -1) {
+									alerturgency = "State: Indiana";
+								} else if(alertsummary.indexOf('Iowa') !== -1) {
+									alerturgency = "State: Iowa";
+								} else if(alertsummary.indexOf('Kansas') !== -1) {
+									alerturgency = "State: Kansas";
+								} else if(alertsummary.indexOf('Kentucky') !== -1) {
+									alerturgency = "State: Kentucky";
+								} else if(alertsummary.indexOf('Louisiana') !== -1) {
+									alerturgency = "State: Louisiana";
+								} else if(alertsummary.indexOf('Maine') !== -1) {
+									alerturgency = "State: Maine";
+								} else if(alertsummary.indexOf('Maryland') !== -1) {
+									alerturgency = "State: Maryland";
+								} else if(alertsummary.indexOf('Massachusetts') !== -1) {
+									alerturgency = "State: Massachusetts";
+								} else if(alertsummary.indexOf('Michigan') !== -1) {
+									alerturgency = "State: Michigan";
+								} else if(alertsummary.indexOf('Minnesota') !== -1) {
+									alerturgency = "State: Minnesota";
+								} else if(alertsummary.indexOf('Mississippi') !== -1) {
+									alerturgency = "State: Mississippi";
+								} else if(alertsummary.indexOf('Missouri') !== -1) {
+									alerturgency = "State: Missouri";
+								} else if(alertsummary.indexOf('Montana') !== -1) {
+									alerturgency = "State: Montana";
+								} else if(alertsummary.indexOf('Nebraska') !== -1) {
+									alerturgency = "State: Nebraska";
+								} else if(alertsummary.indexOf('Nevada') !== -1) {
+									alerturgency = "State: Nevada";
+								} else if(alertsummary.indexOf('New Hampshire') !== -1) {
+									alerturgency = "State: New Hampshire";
+								} else if(alertsummary.indexOf('New Jersey') !== -1) {
+									alerturgency = "State: New Jersey";
+								} else if(alertsummary.indexOf('New Mexico') !== -1) {
+									alerturgency = "State: New Mexico";
+								} else if(alertsummary.indexOf('New York') !== -1) {
+									alerturgency = "State: New York";
+								} else if(alertsummary.indexOf('North Carolina') !== -1) {
+									alerturgency = "State: North Carolina";
+								} else if(alertsummary.indexOf('North Dakota') !== -1) {
+									alerturgency = "State: North Dakota";
+								} else if(alertsummary.indexOf('Ohio') !== -1) {
+									alerturgency = "State: Ohio";
+								} else if(alertsummary.indexOf('Oklahoma') !== -1) {
+									alerturgency = "State: Oklahoma";
+								} else if(alertsummary.indexOf('Oregon') !== -1) {
+									alerturgency = "State: Oregon";
+								} else if(alertsummary.indexOf('Pennsylvania') !== -1) {
+									alerturgency = "State: Pennsylvania";
+								} else if(alertsummary.indexOf('Rhode Island') !== -1) {
+									alerturgency = "State: Rhode Island";
+								} else if(alertsummary.indexOf('South Carolina') !== -1) {
+									alerturgency = "State: South Carolina";
+								} else if(alertsummary.indexOf('South Dakota') !== -1) {
+									alerturgency = "State: South Dakota";
+								} else if(alertsummary.indexOf('Tennessee') !== -1) {
+									alerturgency = "State: Tennessee";
+								} else if(alertsummary.indexOf('Texas') !== -1) {
+									alerturgency = "State: Texas";
+								} else if(alertsummary.indexOf('Utah') !== -1) {
+									alerturgency = "State: Utah";
+								} else if(alertsummary.indexOf('Vermont') !== -1) {
+									alerturgency = "State: Vermont";
+								} else if(alertsummary.indexOf('Virginia') !== -1) {
+									alerturgency = "State: Virginia";
+								} else if(alertsummary.indexOf('Washington') !== -1) {
+									alerturgency = "State: Washington";
+								} else if(alertsummary.indexOf('West Virginia') !== -1) {
+									alerturgency = "State: West Virginia";
+								} else if(alertsummary.indexOf('Wisconsin') !== -1) {
+									alerturgency = "State: Wisconsin";
+								} else if(alertsummary.indexOf('Wyoming') !== -1) {
+									alerturgency = "State: Wyoming";
+								} else {
+									alerturgency = "Scope: All State";
+								}
+
+							} else {
+								alerturgency = "Scope: National";
+							}
 						}
-						
-					} else if(alertevent.indexOf("Tornado Watch") !== -1) {
-                        feedout["tornado"] += feedthis;
-						
-						
-                    } else if(alertevent.indexOf("Heat") !== -1) {
-                        feedout["heat"] += feedthis;
-					} else if(alertevent.indexOf("Red Flag") !== -1) {
-                        feedout["fire"] += feedthis;
-					} else if(alertevent.indexOf("Fire Weather") !== -1) {
-                        feedout["fire"] += feedthis;
-					} else if(alertevent.indexOf("Smoke") !== -1) {
-                        feedout["air_quality"] += feedthis;
-                    } else if(alertevent.indexOf("Freeze") !== -1) {
-                        feedout["winter"] += feedthis;
-					} else if(alertevent.indexOf("Ice") !== -1) {
-                        feedout["winter"] += feedthis;
-					} else if(alertevent.indexOf("Frost") !== -1) {
-                        feedout["winter"] += feedthis;
-                    } else if(alertevent.indexOf("Winter") !== -1) {
-                        feedout["winter"] += feedthis;
-                    } else if(alertevent.indexOf("Hurricane") !== -1) {
-                        feedout["hurricane"] += feedthis;
-                    
-					} else {
-						if(alertsummary.indexOf("thunderstorm") !== -1) {
-                        	feedout["storm"] += feedthis;
-						} else if(alertsummary.indexOf("heat index") !== -1) {
-                        	feedout["heat"] += feedthis;
-						} else if(alertsummary.indexOf("heat") !== -1) {
-                        	feedout["heat"] += feedthis;
-						} else if(alertsummary.indexOf("air quality") !== -1) {
-                        	feedout["air_quality"] += feedthis;
-						} else if(alertsummary.indexOf("surf") !== -1) {
-                        	feedout["wind"] += feedthis;
-						} else if(alertsummary.indexOf("gusty winds") !== -1) {
-                        	feedout["wind"] += feedthis;
-						} else {
-							feedout["other"] += feedthis;
+
+						feedthis = '<div class="card '+ alertlevel +'"><div class="card-body"><span class="wx-icon wx-'+ feedout_icon +'"></span><h5 class="card-title">' + alertevent + '<br><small>' + alerturgency + '</small></h5><hr><p><strong>' + alerttitle + '</strong></p><p class="card-text">'+ alertarea +'<br><br><small>'+ alertsummary + '</small></p><p><a href="'+ alertlink +'" target="_blank">Read On Weather.gov</a></p></div></div>';
+
+
+						console.log(alertsummary);
+
+						if(alertevent.indexOf("Flood") !== -1) {
+							feedout["flood"] += feedthis;
+						} else if(alertevent.indexOf("Tropical") !== -1) {
+							feedout["storm"] += feedthis;
+						} else if(alertevent.indexOf("Storm Surge") !== -1) {
+							feedout["storm_surge"] += feedthis;
+						} else if(alertevent.indexOf("Surf") !== -1) {
+							feedout["wind"] += feedthis;
+						} else if(alertevent.indexOf("Wind") !== -1) {
+							feedout["wind"] += feedthis;
+						} else if(alertevent.indexOf("Thunderstorm") !== -1) {
+							feedout["storm"] += feedthis;
+
+
+
+						} else if(alertevent.indexOf("Tornado Warning") !== -1) {
 							
+							feedout["tornado"] += feedthis;
+							tornadoactive = "yes";
+							localStorage.setItem("wx_tornado", "yes");
+							
+							if(!$(".container-theme").hasClass("wx-danger")) {
+							   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
+							   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
+							   $(".container-theme").addClass("wx-danger");
+							   $(".wx-danger h4").html("TORNADO WARNING");
+							   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
+							   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
+
+							   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
+							   $(".wxout_now a").attr('href', alertlink);
+
+							   $(".wxout_now .wx-icon-now").attr('title', alertsummary);
+							   //$(".wxout_now .wx-temp").attr('title', 'Seek Shelter');	
+							} else {
+								
+							}
+
+						} else if(alertevent.indexOf("Tornado Watch") !== -1) {
+							feedout["tornado"] += feedthis;
+
+
+						} else if(alertevent.indexOf("Heat") !== -1) {
+							feedout["heat"] += feedthis;
+						} else if(alertevent.indexOf("Red Flag") !== -1) {
+							feedout["fire"] += feedthis;
+						} else if(alertevent.indexOf("Fire Weather") !== -1) {
+							feedout["fire"] += feedthis;
+						} else if(alertevent.indexOf("Smoke") !== -1) {
+							feedout["air_quality"] += feedthis;
+						} else if(alertevent.indexOf("Freeze") !== -1) {
+							feedout["winter"] += feedthis;
+						} else if(alertevent.indexOf("Ice") !== -1) {
+							feedout["winter"] += feedthis;
+						} else if(alertevent.indexOf("Frost") !== -1) {
+							feedout["winter"] += feedthis;
+						} else if(alertevent.indexOf("Winter") !== -1) {
+							feedout["winter"] += feedthis;
+						} else if(alertevent.indexOf("Hurricane") !== -1) {
+							feedout["hurricane"] += feedthis;
+
+						} else {
+							if(alertsummary.indexOf("thunderstorm") !== -1) {
+								feedout["storm"] += feedthis;
+							} else if(alertsummary.indexOf("heat index") !== -1) {
+								feedout["heat"] += feedthis;
+							} else if(alertsummary.indexOf("heat") !== -1) {
+								feedout["heat"] += feedthis;
+							} else if(alertsummary.indexOf("air quality") !== -1) {
+								feedout["air_quality"] += feedthis;
+							} else if(alertsummary.indexOf("surf") !== -1) {
+								feedout["wind"] += feedthis;
+							} else if(alertsummary.indexOf("gusty winds") !== -1) {
+								feedout["wind"] += feedthis;
+							} else {
+								feedout["other"] += feedthis;
+
+							}
 						}
-                    }
-				}
-				
-				if (wx_scope == "nation") {
-					var alerttype = "broadest";
-					
-					if(alertevent.indexOf("Watch") !== -1 || alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1 ) {
-						alertwrite();
+						
+						// CANCEL THE TORNADO WARNING
+						if(tornadoactive == "no") {
+							localStorage.setItem("wx_tornado", "no");
+						}
 					}
-				
-				} else if (wx_scope == "state") {
-					var alerttype = "broad";
-					
-					if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1) {
-						alertwrite();
-					}	
-					
-				} else if (wx_scope == "county") {
-					var alerttype = "narrow";
-					
-					if((alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1) && alertarea_lower.indexOf(get_county()) !== -1 ) {
-						alertwrite();
+
+					if (wx_scope == "nation") {
+						var alerttype = "broadest";
+
+						if(alertevent.indexOf("Watch") !== -1 || alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1 ) {
+							alertwrite();
+						}
+
+					} else if (wx_scope == "state") {
+						var alerttype = "broad";
+
+						if(alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1) {
+							alertwrite();
+						}	
+
+					} else if (wx_scope == "county") {
+						var alerttype = "narrow";
+
+						if((alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1) && alertarea_lower.indexOf(get_county()) !== -1 ) {
+							alertwrite();
+						}
+
+					} else {
+						var alerttype = "cached";
+
+						if((alertevent.indexOf("Watch") !== -1 || alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1)) {
+							alertwrite();
+						}
+
 					}
+
+
+
 					
-				} else {
-					var alerttype = "cached";
-					
-					if((alertevent.indexOf("Watch") !== -1 || alertevent.indexOf("Warning") !== -1 || alertevent.indexOf("Special Weather Statement") !== -1 || alertevent.indexOf("Advisory") !== -1)) {
-						alertwrite();
+
+
+
+
+
+				});
+
+
+
+				$.each( get_warnings().split(","), function( index, value ) {
+					var wx_type = value.toLowerCase().trim();
+					if(items[wx_type] > 0) {
+
+						$(".feedout_"+wx_type).append(feedout[wx_type]);
+						$(".items_"+wx_type).text(items[wx_type]);
+						$(".panel-"+wx_type).show();
+
+						$("#wx_alerts .panel-tornado .panel-header").attr("aria-expanded", true).removeClass("collapsed");
+						$("#wx_alerts .panel-tornado .panel-collapse").removeClass("collapse");
 					}
-					
-				}
-				
-				
-                
-				
-				
-				
-                
-				    
-                     
-            });
-			
+				});
+
+
+
+
+
+
+
+
+
+
+			},
+			complete: function() {
+				log_time("WX - Alerts last checked: ");
+				localStorage.setItem("wx_alerts", $('#wx_alerts').html());
+				localStorage.setItem("wx_now_html", $('.container-theme').html());
+			}
+		});
+	} else {
+		var secondsRemaining = secondsSinceCheck - secondsToWait;
 		
-			
-			$.each( get_warnings().split(","), function( index, value ) {
-				var wx_type = value.toLowerCase().trim();
-				if(items[wx_type] > 0) {
-					
-					$(".feedout_"+wx_type).append(feedout[wx_type]);
-					$(".items_"+wx_type).text(items[wx_type]);
-					$(".panel-"+wx_type).show();
-					
-					$("#wx_alerts .panel-tornado .panel-header").attr("aria-expanded", true).removeClass("collapsed");
-					$("#wx_alerts .panel-tornado .panel-collapse").removeClass("collapse");
-				}
-			});
-			
-			
-			
-			
-			
-
-			
-
-			
-			
-		},
-        complete: function() {
-            log_time("WX - Alerts last checked: ");
-        }
-	});
+		
+		
+		if(localStorage.getItem("wx_tornado") == "no"){
+			//console.log("Tornado Alert Canceled");
+			//localStorage.setItem("wx_now_html", "");
+		} else {
+			$('.container-theme').html(localStorage.getItem("wx_now_html"));
+		}
+		$('#wx_alerts').html(localStorage.getItem("wx_alerts"));
+		
+		
+		console.log("Alert timeout active: Wait another " + secondsRemaining + " seconds");
+	}
 }
 
 function init_current() {
@@ -478,7 +517,7 @@ function init_current() {
 	console.log("Observation taken " + obs_difference + " minutes ago");
 	
 	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
-	if(obs_difference > obs_ttl) {
+	if(obs_difference > (obs_ttl + 8)) {
 		console.log("Dialing Up NWS Observation Server " + wx_obs + "  ...");
 		
 		$.ajax(wxin, {
@@ -611,8 +650,6 @@ function init_current() {
 
 					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' Observed: <span class="obs-diff">' + obs_difference + '</span> minutes ago</p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +' - Station: ' + wx_obs + '"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
 
-					/*wxtemps_time = log_time();
-					wxtemps = '<div class="carousel-item">' + wxtemp_f + ' ('+ wxtemp_c +') - <small>updated: '+ wxtemps_time +'</small></div>';*/
 				});
 
 			// UPDATE CURRENT WX DISPLAY
@@ -625,26 +662,6 @@ function init_current() {
 				
 			localStorage.setItem("wx_now", wxthis);
 			
-			/*var wxout_temps_count = $(".wxout_temps").children().length;	
-
-			if (wxout_temps_count > 4) {
-				$('.wxout_temps div').each(function() {
-					//if(!$(this).hasClass("active")) {
-						$(this).remove();
-					//}
-				});
-			}	
-
-			$(".wxout_temps").prepend(wxtemps);
-
-			$('.wxout_temps div').each(function() {
-				if($(this).hasClass("active")) {
-					$(this).removeClass("active");
-				}
-			});
-
-			$('.wxout_temps div:first').addClass('active');*/
-
 
 
 			},
@@ -664,8 +681,19 @@ function init_current() {
 		$(".wxout_now").empty();
 		$(".wxout_now").append(localStorage.getItem("wx_now"));
 		$(".wxout_now .obs-diff").text(obs_difference);
-		
 	}
+	// RESTORE ALERT WARNING TO NOW IF ANY
+	if(localStorage.getItem("wx_tornado") == "no"){
+		//console.log("Tornado Alert Canceled");
+		//localStorage.setItem("wx_now_html", "");
+	} else {
+		var wx_now_html = localStorage.getItem("wx_now_html");
+		if(wx_now_html.indexOf("WARNING") !== -1){
+			$('.container-theme').html(wx_now_html);
+			$('.container-theme').addClass("wx-danger");
+		}
+	}
+	
 }
 
 
@@ -677,6 +705,9 @@ function log_time(logmsg) {
     if(logmsg){
 		console.log(logmsg + time);
 	}
+	
+	localStorage.setItem("wx_alerts_checked", Math.round(currentDate.getTime() / 1000));
+	
 	return time;
 }
 
