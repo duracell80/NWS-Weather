@@ -22,7 +22,8 @@ $(document).ready(function() {
 	var obs_state 		= $("#ps-config #wx_state").val(); 
 	
 	lookup_obs(obs_state);
-	lookup_counties(obs_state);	
+	//lookup_counties(obs_state);
+	lookup_counties_new(obs_state);
 	
 	// BUTTON ACTIONS
     $( "#ps-config .set-location" ).click(function() {
@@ -210,8 +211,9 @@ $(document).ready(function() {
 	</div>
 		
 	<div class="form-group"> <!-- Scope -->
-		<label for="wx_scope" class="control-label">Alerting Scope (Broadest, Broad, Narrow)</label>
+		<label for="wx_scope" class="control-label">Alerting Scope (Inactive, Broadest, Broad, Narrow)</label>
 		<select class="form-control" id="wx_scope">
+			<option value="off">Alerts Off</option>
 			<option value="nation">All States</option>
 			<option value="state">State</option>
 			<option value="county">County</option>
