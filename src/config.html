@@ -22,8 +22,7 @@ $(document).ready(function() {
 	var obs_state 		= $("#ps-config #wx_state").val(); 
 	
 	lookup_obs(obs_state);
-	//lookup_counties(obs_state);
-	lookup_counties_new(obs_state);
+	lookup_counties_json(obs_state);
 	
 	// BUTTON ACTIONS
     $( "#ps-config .set-location" ).click(function() {
@@ -65,7 +64,7 @@ $(document).ready(function() {
 	$( "#wx_state" ).change(function() {	
 		var obs_state = $(this).val()
 		lookup_obs(obs_state);
-		lookup_counties(obs_state);
+		lookup_counties_json(obs_state);
 	});
 	
 	

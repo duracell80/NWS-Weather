@@ -857,57 +857,46 @@ function get_scope() {
 	return wx_scope;
 }
 
-function lookup_counties(obs_state) {
+
+
+function lookup_counties_json(obs_state) {
 	
-	$("#obs_counties").load('counties.html .jquery-tablesorter', function(responseTxt, statusTxt, jqXHR){
-			if(statusTxt == "success"){
-				
-				$('#wx_county')
-						.find('option')
-						.remove()
-						.end()
-				;
-				
-				var obs_state_upper = obs_state.toUpperCase();
-				var obs_state_name  = convertRegion(obs_state_upper, TO_NAME);
-				
-				$('tr').each(function() {
-					var t_row = $(this).find("a").attr("title");
-					
-					
-					if(t_row.indexOf(obs_state_name) !== -1){
-						var t_split 		= t_row.split(",");
-						var county_name 	= t_split[0].replace("County", "").trim();
-						var state_name 		= t_split[1];
+	$('#wx_county')
+			.find('option')
+			.remove()
+			.end()
+	;
+	
+	$.getJSON("counties.json", function(data){
+        //https://parseapi.back4app.com/classes/Area?limit=8000&order=countyName&keys=countyName,stateAbbreviation
+			
 
-						console.log(county_name);
-						
-						if(county_name.toLowerCase().trim() == localStorage.getItem("wx_county").toLowerCase().trim()){
-							var county_select	= '<option value="'+ county_name.toLowerCase() +'" selected>'+ county_name +'</option>';
-						} else {
-							var county_select	= '<option value="'+ county_name.toLowerCase() +'">'+ county_name +'</option>';
-						}
-						// BUILD DROP DOWN
-						$('#wx_county').append(county_select);
-					}
-				});
-
+		function coTitleCase(str) {
+		  return str.replace(
+			/\w\S*/g,
+			function(txt) {
+			  return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
 			}
-			if(statusTxt == "error"){
-				alert("Wikipedia Scrape Error (check for changed HTML): " + jqXHR.status + " " + jqXHR.statusText);
+		  );
+		}
+
+		$.each(data.results, function(index, element) {
+			var coNameLower = element.countyName.toLowerCase().replace("county", "").replace("city", "").replace("town", "").replace("unorganized", "").replace("purchase", "").replace("plantation", "").replace("academy grant", "").replace("bluff", "").replace("islands", "").replace("ponds", "").replace("parish", "").replace("reservation", "").replace("borough", "").replace("census area", "").replace("'", "").trim();
+
+			var coNameTitle = coTitleCase(coNameLower);
+			if(element.stateAbbreviation.toLowerCase() == obs_state.toLowerCase()){
+				
+				if(coNameLower == localStorage.getItem("wx_county").toLowerCase().trim()){
+					var county_select	= '<option value="'+ coNameLower +'" selected>'+ coNameTitle +'</option>';
+				} else {
+					var county_select	= '<option value="'+ coNameLower +'">'+ coNameTitle +'</option>';
+				}
+				// BUILD DROP DOWN
+				$('#wx_county').append(county_select);
 			}
 		});
-	
-	
-	
-}
 
-
-
-
-function lookup_counties_new(obs_state) {
-	
-	
+	});
 	
 	
 }

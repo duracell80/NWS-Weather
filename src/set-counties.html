@@ -5,13 +5,8 @@
   <body>
     <script type="text/javascript">
       	$.getJSON("counties.json", function(data){
-            //var wx_obs = data.wx_obs;
-            //localStorage.setItem("wx_obs", wx_obs);
-			//https://parseapi.back4app.com/classes/Area?limit=8000&order=countyName&keys=countyName,stateAbbreviation
+        	//https://parseapi.back4app.com/classes/Area?limit=8000&order=countyName&keys=countyName,stateAbbreviation
 			
-			
-		  	console.log(data);
-			var coCount = 0;
 			
 			function coTitleCase(str) {
 			  return str.replace(
@@ -27,12 +22,10 @@
 				
 				var coNameTitle = coTitleCase(coNameLower);
 				if(element.stateAbbreviation.toLowerCase() == "tn"){
-					coCount++;
 					console.log(coNameTitle + ' - ' + element.stateAbbreviation);
 				}
 			});
 			
-			console.log(coCount);
         });
 		
 		
