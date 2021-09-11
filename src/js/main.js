@@ -33,7 +33,7 @@ function init_alerts() {
 			var feedin                 = "http://localhost:3000/alerts.xml";
 		}
 		// DEBUG ALERTS WITH LOCAL
-		var feedin                 = "http://localhost:3000/alerts.xml";
+		//var feedin                 = "http://localhost:3000/alerts.xml";
 		var feedout          	   = [];
 		var items            	   = [];
 		var feedthis               = "";
