@@ -17,7 +17,7 @@ function init_alerts() {
 	
 	var now = new Date();
 	var secondsSinceCheck 	= ((Math.round(now.getTime() / 1000)) - (wx_alerts_checked));
-	var secondsToWait 		= 300;
+	var secondsToWait 		= 300; // 5mins - be kind to the National Weather Service
 	
 	// BACKOFF ALERTS FOR PERIOD OF TIME
 	if(secondsSinceCheck > secondsToWait) {
@@ -33,14 +33,17 @@ function init_alerts() {
 			var feedin                 = "http://localhost:3000/alerts.xml";
 		}
 		// DEBUG ALERTS WITH LOCAL
-		//var feedin                 = "http://localhost:3000/alerts.xml";
+		var feedin                 = "http://localhost:3000/alerts.xml";
 		var feedout          	   = [];
 		var items            	   = [];
 		var feedthis               = "";
 		var feedout_blank          = '<div class="card"><div class="card-body"><small>No alerts or advisories posted at the moment ...</div></div></small>';
 
 		var wx_warnings = get_warnings().split(",");
-
+		
+		console.log('Tornado Warnings Cleared');
+		localStorage.setItem("wx_tornado", "no");
+		
 		$.each( wx_warnings, function( key, value ) {
 			var wx_type = value.toLowerCase().trim();
 			items[wx_type] 		= 0;
@@ -109,8 +112,8 @@ function init_alerts() {
 						// https://www.weather.gov/lwx/WarningsDefined
 
 						var wx_scope 		= get_scope();
-						var tornadoactive	= "no";
-
+						
+						
 						if(alerturgency.indexOf("Immediate") !== -1) {
 							alertlevel = "alert-now";
 						} else {
@@ -327,34 +330,34 @@ function init_alerts() {
 						} else if(alertevent.indexOf("Thunderstorm") !== -1) {
 							feedout["storm"] += feedthis;
 
-
-
-						} else if(alertevent.indexOf("Tornado Warning") !== -1) {
+						} else if(alertevent.indexOf("Tornado") !== -1) {
 							
-							feedout["tornado"] += feedthis;
-							tornadoactive = "yes";
-							localStorage.setItem("wx_tornado", "yes");
+							if(alertevent.indexOf("Tornado Warning") !== -1) {
 							
-							if(!$(".container-theme").hasClass("wx-danger")) {
-							   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
-							   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
-							   $(".container-theme").addClass("wx-danger");
-							   $(".wx-danger h4").html("TORNADO WARNING");
-							   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
-							   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
+								feedout["tornado"] += feedthis;
+								localStorage.setItem("wx_tornado", "yes");
 
-							   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
-							   $(".wxout_now a").attr('href', alertlink);
+								if(!$(".container-theme").hasClass("wx-danger")) {
+								   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
+								   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
+								   $(".container-theme").addClass("wx-danger");
+								   $(".wx-danger h4").html("TORNADO WARNING");
+								   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
+								   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
 
-							   $(".wxout_now .wx-icon-now").attr('title', alertsummary);
-							   //$(".wxout_now .wx-temp").attr('title', 'Seek Shelter');	
+								   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
+								   $(".wxout_now a").attr('href', alertlink);
+
+								   $(".wxout_now .wx-icon-now").attr('title', alertsummary);
+								   //$(".wxout_now .wx-temp").attr('title', 'Seek Shelter');	
+								} else {
+
+								}
+							} else if(alertevent.indexOf("Tornado Watch") !== -1) {
+								feedout["tornado"] += feedthis;
 							} else {
 								
 							}
-
-						} else if(alertevent.indexOf("Tornado Watch") !== -1) {
-							feedout["tornado"] += feedthis;
-
 
 						} else if(alertevent.indexOf("Heat") !== -1) {
 							feedout["heat"] += feedthis;
@@ -394,10 +397,7 @@ function init_alerts() {
 							}
 						}
 						
-						// CANCEL THE TORNADO WARNING
-						if(tornadoactive == "no") {
-							localStorage.setItem("wx_tornado", "no");
-						}
+						
 					}
 
 					if (wx_scope == "nation") {
@@ -472,20 +472,11 @@ function init_alerts() {
 			}
 		});
 	} else {
-		var secondsRemaining = secondsSinceCheck - secondsToWait;
-		
-		
-		
-		if(localStorage.getItem("wx_tornado") == "no"){
-			//console.log("Tornado Alert Canceled");
-			//localStorage.setItem("wx_now_html", "");
-		} else {
-			$('.container-theme').html(localStorage.getItem("wx_now_html"));
-		}
+		var secondsRemaining = secondsToWait - secondsSinceCheck;
 		$('#wx_alerts').html(localStorage.getItem("wx_alerts"));
 		
 		
-		console.log("Alert timeout active: Wait another " + secondsRemaining + " seconds");
+		console.log("Alert backoff active, wait another " + secondsRemaining + " seconds");
 	}
 }
 
@@ -517,7 +508,7 @@ function init_current() {
 	console.log("Observation taken " + obs_difference + " minutes ago");
 	
 	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
-	if(obs_difference > (obs_ttl + 8)) {
+	if(obs_difference > obs_ttl) {
 		console.log("Dialing Up NWS Observation Server " + wx_obs + "  ...");
 		
 		$.ajax(wxin, {
@@ -676,22 +667,22 @@ function init_current() {
 	} else {
 		// UPDATE CURRENT OBS BASED ON STORED DATA NOT NWS LOOKUP
 		$(".wx-feeds .container-theme").addClass(localStorage.getItem("wx_theme"));
-		
-
 		$(".wxout_now").empty();
 		$(".wxout_now").append(localStorage.getItem("wx_now"));
 		$(".wxout_now .obs-diff").text(obs_difference);
 	}
+	
 	// RESTORE ALERT WARNING TO NOW IF ANY
-	if(localStorage.getItem("wx_tornado") == "no"){
-		//console.log("Tornado Alert Canceled");
-		//localStorage.setItem("wx_now_html", "");
-	} else {
+	if(localStorage.getItem("wx_tornado") == "yes"){
+		//alert('Tornado Active');
 		var wx_now_html = localStorage.getItem("wx_now_html");
 		if(wx_now_html.indexOf("WARNING") !== -1){
 			$('.container-theme').html(wx_now_html);
 			$('.container-theme').addClass("wx-danger");
 		}
+	} else {
+		//console.log("Tornado Alert Canceled");
+		//localStorage.setItem("wx_now_html", "");
 	}
 	
 }

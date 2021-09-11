@@ -24,8 +24,8 @@ $(document).ready(function() {
 	init_current();
 
 	
-	//setInterval(init_alerts, 1200000); // 	300000 		= 5 Minutes
-	//setInterval(init_current, 600000); // 	600000 		= 10 Minutes ... with TTL BACKOFF (TTL + 10 mins)
+	setInterval(init_alerts, 120000); // 	150000 		= 2.5 Minutes .. with FEED BACKOFF FOR 5 MINS
+	setInterval(init_current, 1800000); // 	1,800,000 	= 30 Minutes ... with FEED BACKOFF FOR 60 MINS
     
 });
 </script>
@@ -54,7 +54,7 @@ $(document).ready(function() {
 		
 	</div>
 	<div class="container pt-3 pl-4 pr-4">
-		<p><small>Warnings display below when issued and are checked every 30 minutes, hit refresh to check for new updates now, always have two ways to get warnings. <br><br>Source: U.S. National Weather Service</small></p>
+		<p><small>Warnings display below when issued and are checked every 10 minutes, always have two ways to get warnings. <br><br>Source: U.S. National Weather Service</small></p>
 	</div>
 	
 	<hr>
