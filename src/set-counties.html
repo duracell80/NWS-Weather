@@ -1,0 +1,34 @@
+<html>
+  <head>
+	<script src="js/jquery.min.js"></script>
+	</head>
+  <body>
+    <script type="text/javascript">
+      	$.getJSON("counties.json", function(data){
+            //var wx_obs = data.wx_obs;
+            //localStorage.setItem("wx_obs", wx_obs);
+		  	console.log(data);
+			
+			function coTitleCase(str) {
+			  return str.replace(
+				/\w\S*/g,
+				function(txt) {
+				  return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+				}
+			  );
+			}
+			
+			$.each(data.results, function(index, element) {
+				var coNameLower = element.countyName.toLowerCase().replace("county", "").replace("city", "").replace("town", "").replace("unorganized", "").replace("purchase", "").replace("plantation", "").replace("academy grant", "").replace("bluff", "").replace("islands", "").replace("ponds", "").replace("parish", "").replace("reservation", "").replace("borough", "").replace("census area", "").replace("'", "").trim();
+				
+				var coNameTitle = coTitleCase(coNameLower);
+				console.log(coNameTitle + ' - ' + element.stateAbbreviation); 
+			});
+        });
+		
+		
+		
+	
+    </script>
+  </body>
+</html>
