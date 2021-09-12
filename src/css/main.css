@@ -12,7 +12,7 @@
   display: none; }
 
 .wx-feeds {
-  width: 350px;
+  width: 415px;
   margin: 0 auto; }
   .wx-feeds button:focus:not(:focus-visible) {
     box-shadow: none; }
@@ -23,6 +23,9 @@
     text-decoration: underline; }
   .wx-feeds .panel-group .card {
     border-width: 0px; }
+  .wx-feeds .btn-theme .btn-link,
+  .wx-feeds .btn-theme .btn-link:hover {
+    text-decoration: none; }
   .wx-feeds .container-theme {
     background-color: #ffffff;
     color: #000000; }
@@ -36,6 +39,9 @@
     .wx-feeds .container-theme .carousel .carousel-control-prev,
     .wx-feeds .container-theme .carousel .carousel-control-next {
       opacity: 1; }
+    .wx-feeds .container-theme .wx-now {
+      background: transparent;
+      border: 0px solid transparent; }
     .wx-feeds .container-theme .wx-now:hover {
       cursor: default; }
     .wx-feeds .container-theme .wx-temp {
@@ -154,12 +160,20 @@
   .wx-feeds .container-theme.wx-neutral {
     background-color: #58595B;
     color: #ffffff; }
+  .wx-feeds .btn-theme.wx-neutral .btn-link {
+    color: #58595B; }
   .wx-feeds .container-theme.wx-dark {
     background-color: #03173E;
     color: #ffffff; }
+  .wx-feeds .btn-theme.wx-dark .btn-link {
+    color: #03173E; }
   .wx-feeds .container-theme.wx-light {
     background-color: #00558C;
     color: #ffffff; }
+  .wx-feeds .btn-theme.wx-light .btn-link {
+    color: #00558C; }
+  .wx-feeds .btn-theme.wx-bright .btn-link {
+    color: #58595B; }
   .wx-feeds .container-theme.wx-bright {
     background-color: #EEF2F9;
     color: #000000; }
@@ -173,6 +187,8 @@
       color: #000000; }
     .wx-feeds .container-theme.wx-bright .wx-temp {
       color: #000000; }
+  .wx-feeds .btn-theme.wx-brightest .btn-link {
+    color: #FFC845; }
   .wx-feeds .container-theme.wx-brightest .carousel .carousel-control-prev-icon,
   .wx-feeds .container-theme.wx-brightest .carousel .carousel-control-next-icon,
   .wx-feeds .container-theme.wx-bright .carousel .carousel-control-prev-icon,
@@ -191,6 +207,8 @@
       color: #000000; }
     .wx-feeds .container-theme.wx-brightest .wx-temp {
       color: #000000; }
+  .wx-feeds .btn-theme.wx-darkest .btn-link {
+    color: #1F2532; }
   .wx-feeds .container-theme.wx-darkest {
     background-color: #1F2532;
     color: #ffffff; }
@@ -202,6 +220,8 @@
     .wx-feeds .container-theme.wx-darkest p,
     .wx-feeds .container-theme.wx-darkest .wx-temp {
       color: #ffffff; }
+  .wx-feeds .btn-theme.wx-danger .btn-link {
+    color: #EA0707; }
   .wx-feeds .container-theme.wx-danger {
     background-color: #EA0707;
     color: #ffffff; }

@@ -12,6 +12,7 @@
 <body>
 
 <script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
     
@@ -25,18 +26,24 @@ $(document).ready(function() {
 	init_current();
 
 	
-	setInterval(init_alerts, 120000); // 	150000 		= 2.5 Minutes .. with FEED BACKOFF FOR 5 MINS
+	//setInterval(init_alerts, 120000); // 	150000 		= 2.5 Minutes .. with FEED BACKOFF FOR 5 MINS
 	setInterval(init_current, 1800000); // 	1,800,000 	= 30 Minutes ... with FEED BACKOFF FOR 60 MINS
 	
 	
 	
 	if(get_scope() == "off") {
 		$(".wx-feeds .btn-alert").show();
+		$(".wx-feeds .btn-alert .btn-status").text("Off");
+		$(".wx-feeds .wx_alerts").hide();
 		$(".wx-feeds .btn-alert").attr("title", "Enable State Wide Alerts");
 	} else {
 		//$(".wx-feeds .btn-alert").hide();
-		$(".wx-feeds .btn-alert").attr("title", "Alerts Are Enabled");
+		$(".wx-feeds .btn-alert .btn-status").text("On");
+		$(".wx-feeds .btn-alert").attr("title", "Alerts Are Enabled ( " + get_scope().toUpperCase() + " )");
+		$(".wx-feeds .wx_alerts").show();
 		init_alerts();
+		
+		//setInterval(init_alerts, 1000); // WITH BACKOFF FOR 5 MINS
 	}
 
 
@@ -57,22 +64,22 @@ $(document).ready(function() {
 	 $( ".wx-feeds .btn-alert" ).on('click', function() {
 
 		if(get_scope() == "off") {
-			$(this).find(".btn-status").text("Alerts On");
+			$(this).find(".btn-status").text("On");
 			$(".wx-feeds .btn-alert").attr("title", "Disable State Wide Alerts");
 			set_scope("state");
 			init_alerts();
 		} else {
-			$(this).find(".btn-status").text("Alerts Off");
+			$(this).find(".btn-status").text("Off");
 			$(".wx-feeds .btn-alert").attr("title", "Enable State Wide Alerts");
 			set_scope("off");
 			$(".wx-feeds #wx_alerts").empty();
 		}
 	});
+	
+	
     
 });
 </script>
-
-
 <div class="wx-feeds container-shadow">
 	<div class="container container-theme pt-5 pl-4 pr-4 pb-5">
 		<h4>Weather for <span class="wx-state">NOW</span></h4>
@@ -80,7 +87,7 @@ $(document).ready(function() {
 
 	</div>
 	<div class="container pt-3 pl-4 pr-4">
-		<div class="btn-group">
+		<div class="btn-group btn-theme">
 			<button class="btn btn-link btn-conf btn-alert pl-2">
 				<strong><i class="bi bi-exclamation-triangle"></i> <span class="btn-status"></span></strong>
 			</button>

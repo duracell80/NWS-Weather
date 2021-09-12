@@ -3,7 +3,7 @@ function init_config() {
     
 	get_state();
 	get_county();
-	get_scope();
+	get_scope_form();
 	get_warnings();
     get_obs_select();
     
@@ -141,7 +141,8 @@ function init_alerts() {
 
 			// REBULD WARNINGS WITH NEW DATA
 			$("#wx_alerts").append(wx_warn_html);
-		});	
+		});
+		
 
 		$.ajax(feedin, {
 			accepts:{
@@ -397,16 +398,18 @@ function init_alerts() {
 								   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
 								   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
 								   $(".container-theme").addClass("wx-danger");
+								   $(".btn-theme").addClass("wx-danger");
 								   $(".wx-danger h4").html("TORNADO WARNING");
 								   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
 								   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
-
+								   $(".wxout_now .wx-icon-now").removeClassStartingWith('wi');
 								   $(".wxout_now .wx-icon-now").addClass("wi-tornado");
 								   $(".wxout_now a").attr('href', alertlink);
 
-								   $(".wxout_now .wx-icon-now").attr('title', alertsummary);
+								   $(".wxout_now .wx-icon-now").attr('data-content', alertsummary);
 								   //$(".wxout_now .wx-temp").attr('title', 'Seek Shelter');	
 								} else {
+									$(".btn-theme").removeClass("wx-danger");
 
 								}
 							} else if(alertevent.indexOf("Tornado Watch") !== -1) {
@@ -529,10 +532,28 @@ function init_alerts() {
 		});
 	} else {
 		var secondsRemaining = secondsToWait - secondsSinceCheck;
+		var minutesRemaining = 5;
 		$('#wx_alerts').html(localStorage.getItem("wx_alerts"));
 		
-		
-		console.log("Alert backoff active, wait another " + secondsRemaining + " seconds");
+		if(get_scope() != "off"){
+			
+			if (secondsRemaining > 240) {
+				minutesRemaining = "5 mins";
+			} else if(secondsRemaining > 180) {
+				minutesRemaining = "4 mins";
+			} else if (secondsRemaining > 120) {
+				minutesRemaining = "3 mins";
+			} else if (secondsRemaining > 60) {
+				minutesRemaining = "2 mins";
+			} else {
+				minutesRemaining = "1 min";
+			}
+			
+			var alertbackoff = "Alert backoff active, wait another " + secondsRemaining + " seconds";
+			$('.btn-theme .btn-reload').attr('title', 'Check time remaining for alert reload');
+			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Reloading (' + minutesRemaining +')</strong>');
+			console.log(alertbackoff);
+		}
 	}
 }
 
@@ -561,6 +582,10 @@ function init_current() {
 	var sys_time		= Math.round(new Date().getTime());
 	var obs_difference	= Math.round(((sys_time - obs_updated) / 1000) / 60);
 	
+	if(get_scope() == "off"){
+		$('.btn-theme .btn-reload').attr('title', 'Click to update observation');
+		$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Observed ' + obs_difference + 'm ago</strong>');
+	}
 	console.log("Observation taken " + obs_difference + " minutes ago");
 	
 	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
@@ -695,12 +720,15 @@ function init_current() {
 
 					wxtheme = "wx-" + wxtheme;
 
-					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +' - Station: ' + wx_obs + '"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
+					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><button class="wx-now" data-container="body" data-toggle="popover" data-placement="right"  data-trigger="focus" title="Current Observation ' + wxtemp_c + '" data-content="'+ wxdescription +' - Station: ' + wx_obs + '"><span class="wx-icon-now '+wxicon+'"></span><span class="wx-temp">'+wxtemp_f+'</span></button>';
 
 				});
 
 			// UPDATE CURRENT WX DISPLAY
+			$(".wx-feeds .container-theme").removeClassStartingWith('wx');
 			$(".wx-feeds .container-theme").addClass(wxtheme);
+			$(".wx-feeds .btn-theme").removeClassStartingWith('wx');
+			$(".wx-feeds .btn-theme").addClass(wxtheme);
 			localStorage.setItem("wx_theme", wxtheme);
 				
 			$(".wxout_now").empty();
@@ -722,7 +750,12 @@ function init_current() {
 		});
 	} else {
 		// UPDATE CURRENT OBS BASED ON STORED DATA NOT NWS LOOKUP
+		$(".wx-feeds .container-theme").removeClassStartingWith('wx');
 		$(".wx-feeds .container-theme").addClass(localStorage.getItem("wx_theme"));
+		$(".wx-feeds .btn-theme").removeClassStartingWith('wx');
+		$(".wx-feeds .btn-theme").addClass(localStorage.getItem("wx_theme"));
+		
+		
 		$(".wxout_now").empty();
 		$(".wxout_now").append(localStorage.getItem("wx_now"));
 		$(".wxout_now .obs-diff").text(obs_difference);
@@ -735,10 +768,12 @@ function init_current() {
 		if(wx_now_html.indexOf("WARNING") !== -1){
 			$('.container-theme').html(wx_now_html);
 			$('.container-theme').addClass("wx-danger");
+			$(".btn-theme").addClass("wx-danger");
 		}
 	} else {
 		//console.log("Tornado Alert Canceled");
 		//localStorage.setItem("wx_now_html", "");
+		$(".btn-theme").removeClass("wx-danger");
 	}
 	
 }
@@ -798,12 +833,25 @@ function get_scope() {
         });
     } else {
         var wx_scope = localStorage.getItem("wx_scope");
-        $('#ps-config #wx_scope option').each(function() {
-            if($(this).val() == wx_scope) {
-                $(this).prop('selected', true);
-            }
-        }); 
+        //$('#ps-config #wx_scope option').each(function() {
+            //if($(this).val() == wx_scope) {
+                //$(this).prop('selected', true);
+            //}
+        //}); 
     }
+    
+	return wx_scope;
+}
+
+function get_scope_form() {
+
+	var wx_scope = localStorage.getItem("wx_scope");
+	$('#ps-config #wx_scope option').each(function() {
+		if($(this).val() == wx_scope) {
+			$(this).prop('selected', true);
+		}
+	}); 
+  
     
 	return wx_scope;
 }
@@ -1087,3 +1135,26 @@ function toTitleCase(str) {
 		return match.toUpperCase();
 	});
 }
+
+
+
+
+
+$(document).ready(function() {
+	
+	
+	$.fn.removeClassStartingWith = function (filter) {
+		$(this).removeClass(function (index, className) {
+			return (className.match(new RegExp("\\S*" + filter + "\\S*", 'g')) || []).join(' ')
+		});
+		return this;
+	};
+	
+	$(function () {
+	  $('[data-toggle="popover"]').popover()
+	})
+	
+	$('.popover-dismiss').popover({
+	  trigger: 'focus'
+	})
+});

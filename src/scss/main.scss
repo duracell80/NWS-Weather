@@ -16,7 +16,7 @@
 
 .wx-feeds {
   	
-	width 	: 350px;
+	width 	: 415px;
 	margin	: 0 auto;
 	
 	
@@ -37,6 +37,10 @@
 		}
 	}
 	
+	.btn-theme .btn-link,
+	.btn-theme .btn-link:hover {
+		text-decoration: none;
+	}
 	
 	.container-theme {
 		background-color    : #ffffff;
@@ -58,6 +62,11 @@
 			.carousel-control-next {
 				opacity : 1;
 			}
+		}
+		
+		.wx-now {
+			background	: transparent;
+    		border		: 0px solid transparent;
 		}
 		
 		.wx-now:hover {
@@ -248,19 +257,33 @@
 		background-color    : #58595B;
 		color               : #ffffff;
 	}
-
-
+	
+	.btn-theme.wx-neutral .btn-link { 
+		color    			: #58595B;
+	}
 
 	.container-theme.wx-dark { 
 		background-color    : #03173E;
 		color               : #ffffff;
+	}
+	
+	.btn-theme.wx-dark .btn-link { 
+		color    			: #03173E;
 	}
 
 	.container-theme.wx-light { 
 		background-color    : #00558C;
 		color               : #ffffff;
 	}
-
+	
+	.btn-theme.wx-light .btn-link { 
+		color    			: #00558C;
+	}
+	
+	.btn-theme.wx-bright .btn-link { 
+		color    			: #58595B;
+	}
+	
 	.container-theme.wx-bright { 
 		background-color    : #EEF2F9;
 		color               : #000000;
@@ -283,7 +306,10 @@
 			color       : #000000;
 		}
 	}
-
+	.btn-theme.wx-brightest .btn-link { 
+		color    			: #FFC845;
+	}
+	
 	.container-theme.wx-brightest,
 	.container-theme.wx-bright { 
 		.carousel {
@@ -317,7 +343,11 @@
 			color       : #000000;
 		}
 	}
-
+	
+	.btn-theme.wx-darkest .btn-link { 
+		color    			: #1F2532;
+	}
+	
 	.container-theme.wx-darkest { 
 		background-color    : #1F2532;
 		color               : #ffffff;
@@ -334,6 +364,10 @@
 			color : #ffffff;
 		}
 
+	}
+	
+	.btn-theme.wx-danger .btn-link { 
+		color    			: #EA0707;
 	}
 	
 	.container-theme.wx-danger { 
