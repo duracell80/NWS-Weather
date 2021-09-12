@@ -1,8 +1,8 @@
 {
   	"version"				: "1.0.0",
-	"wx_state"			    : "al",
-	"wx_county"			    : "jefferson",
-	"wx_obs"				: "kbhm",
+	"wx_state"			    : "tn",
+	"wx_county"			    : "davidson",
+	"wx_obs"				: "kbna",
 	"wx_scope"				: "local",
 	"wx_watches"			: "wind, flood, fire, winter",
 	"wx_warnings"			: "tornado, storm, hurricane, tropical storm, wind, flood, fire, winter, other"

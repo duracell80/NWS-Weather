@@ -1,6 +1,3 @@
-const TO_NAME = 1;
-const TO_ABBREVIATED = 2;
-
 
 function init_config() {
     
@@ -10,6 +7,65 @@ function init_config() {
 	get_warnings();
     get_obs_select();
     
+}
+
+function init_config_modal() {
+
+    var obs_state 		= $("#ps-config #wx_state").val(); 
+	
+	lookup_obs(obs_state);
+	lookup_counties_json(obs_state);	
+	
+	// BUTTON ACTIONS
+    $( "#ps-config .set-location" ).click(function() {
+		clear_storage("obs_updated");
+		
+        var wx_state = $("#ps-config #wx_state").val();
+        set_state(wx_state);
+		
+		var wx_county = $("#ps-config #wx_county").val();
+		set_county(wx_county);
+		get_county();
+		
+		var wx_obs = $("#ps-config #wx_obs").val();
+        set_obs(wx_obs);
+		
+		var wx_scope = $("#ps-config #wx_scope").val();
+        set_scope(wx_scope);
+        set_warnings();
+        
+        alert("Settings saved. Reload the page to see changes.");
+        $("#ps-config .btn-close").click();
+    });
+	
+	$( "#ps-config .set-defaults" ).click(function() {
+        clear_storage("wx_state");
+		clear_storage("wx_county");
+		clear_storage("wx_obs");
+		clear_storage("wx_scope");
+		clear_storage("wx_warnings");
+		clear_storage("wx_alerts_checked");
+		clear_storage("wx_now_html");
+		clear_storage("obs_updated");
+		set_scope("state");
+		
+		// CLEAR FOR ALL STATES AND TRIGGER SCREEN SCRAPE FROM NWS TO OBTAINS STATION ID's
+		//clear_states();
+		
+		init_storage();
+        
+        alert("Settings Reset. Reload the page to see changes.");
+        $("#ps-config .btn-close").click();
+    });
+	
+	
+	
+	// ON CHANGE OF STATE GET LIST FROM NOAA OF OBSERVATION STATIONS
+	$( "#wx_state" ).change(function() {	
+		var obs_state = $(this).val()
+		lookup_obs(obs_state);
+		lookup_counties_json(obs_state);
+	});
 }
 
 function init_alerts() {
@@ -639,7 +695,7 @@ function init_current() {
 
 					wxtheme = "wx-" + wxtheme;
 
-					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' Observed: <span class="obs-diff">' + obs_difference + '</span> minutes ago</p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +' - Station: ' + wx_obs + '"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
+					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><span class="wx-now"><span class="wx-icon-now '+wxicon+'" title="'+ wxdescription +' - Station: ' + wx_obs + '"></span><span class="wx-temp" title="'+wxtemp_c+'">'+wxtemp_f+'</span></span>';
 
 				});
 
@@ -706,111 +762,6 @@ function log_time(logmsg) {
 
 
 // DEAL WITH DATA GETTING AND STORAGE
-
-
-
-function convertRegion(input, to) {
-    var states = [
-        ['Alabama', 'AL'],
-        ['Alaska', 'AK'],
-        ['American Samoa', 'AS'],
-        ['Arizona', 'AZ'],
-        ['Arkansas', 'AR'],
-        ['Armed Forces Americas', 'AA'],
-        ['Armed Forces Europe', 'AE'],
-        ['Armed Forces Pacific', 'AP'],
-        ['California', 'CA'],
-        ['Colorado', 'CO'],
-        ['Connecticut', 'CT'],
-        ['Delaware', 'DE'],
-        ['District Of Columbia', 'DC'],
-        ['Florida', 'FL'],
-        ['Georgia', 'GA'],
-        ['Guam', 'GU'],
-        ['Hawaii', 'HI'],
-        ['Idaho', 'ID'],
-        ['Illinois', 'IL'],
-        ['Indiana', 'IN'],
-        ['Iowa', 'IA'],
-        ['Kansas', 'KS'],
-        ['Kentucky', 'KY'],
-        ['Louisiana', 'LA'],
-        ['Maine', 'ME'],
-        ['Marshall Islands', 'MH'],
-        ['Maryland', 'MD'],
-        ['Massachusetts', 'MA'],
-        ['Michigan', 'MI'],
-        ['Minnesota', 'MN'],
-        ['Mississippi', 'MS'],
-        ['Missouri', 'MO'],
-        ['Montana', 'MT'],
-        ['Nebraska', 'NE'],
-        ['Nevada', 'NV'],
-        ['New Hampshire', 'NH'],
-        ['New Jersey', 'NJ'],
-        ['New Mexico', 'NM'],
-        ['New York', 'NY'],
-        ['North Carolina', 'NC'],
-        ['North Dakota', 'ND'],
-        ['Northern Mariana Islands', 'NP'],
-        ['Ohio', 'OH'],
-        ['Oklahoma', 'OK'],
-        ['Oregon', 'OR'],
-        ['Pennsylvania', 'PA'],
-        ['Puerto Rico', 'PR'],
-        ['Rhode Island', 'RI'],
-        ['South Carolina', 'SC'],
-        ['South Dakota', 'SD'],
-        ['Tennessee', 'TN'],
-        ['Texas', 'TX'],
-        ['US Virgin Islands', 'VI'],
-        ['Utah', 'UT'],
-        ['Vermont', 'VT'],
-        ['Virginia', 'VA'],
-        ['Washington', 'WA'],
-        ['West Virginia', 'WV'],
-        ['Wisconsin', 'WI'],
-        ['Wyoming', 'WY'],
-    ];
-	
-	var provinces = [
-        ['Alberta', 'AB'],
-        ['British Columbia', 'BC'],
-        ['Manitoba', 'MB'],
-        ['New Brunswick', 'NB'],
-        ['Newfoundland', 'NF'],
-        ['Northwest Territory', 'NT'],
-        ['Nova Scotia', 'NS'],
-        ['Nunavut', 'NU'],
-        ['Ontario', 'ON'],
-        ['Prince Edward Island', 'PE'],
-        ['Quebec', 'QC'],
-        ['Saskatchewan', 'SK'],
-        ['Yukon', 'YT'],
-    ];
-	
-    var regions = states.concat(provinces);
-	
-	
-    var i;
-    if (to == TO_ABBREVIATED) {
-        input = input.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
-        for (i = 0; i < regions.length; i++) {
-            if (regions[i][0] == input) {
-                return (regions[i][1]);
-            }
-        }
-    } else if (to == TO_NAME) {
-        input = input.toUpperCase();
-        for (i = 0; i < regions.length; i++) {
-            if (regions[i][1] == input) {
-                return (regions[i][0]);
-            }
-        }
-    }
-}
-
-
 function get_state() {
     
     if(localStorage.getItem("wx_state") == null){
