@@ -33,7 +33,7 @@ function init_config_modal() {
 		var wx_scope = $("#ps-config #wx_scope").val();
         set_scope(wx_scope);
         set_warnings();
-        
+		
         alert("Settings saved. Reload the page to see changes.");
         $("#ps-config .btn-close").click();
     });
@@ -56,6 +56,7 @@ function init_config_modal() {
         
         alert("Settings Reset. Reload the page to see changes.");
         $("#ps-config .btn-close").click();
+//		//init_current("force");
     });
 	
 	
@@ -538,20 +539,20 @@ function init_alerts() {
 		if(get_scope() != "off"){
 			
 			if (secondsRemaining > 240) {
-				minutesRemaining = "5 mins";
+				minutesRemaining = "5m";
 			} else if(secondsRemaining > 180) {
-				minutesRemaining = "4 mins";
+				minutesRemaining = "4m";
 			} else if (secondsRemaining > 120) {
-				minutesRemaining = "3 mins";
+				minutesRemaining = "3m";
 			} else if (secondsRemaining > 60) {
-				minutesRemaining = "2 mins";
+				minutesRemaining = "2m";
 			} else {
-				minutesRemaining = "1 min";
+				minutesRemaining = "1m";
 			}
 			
 			var alertbackoff = "Alert backoff active, wait another " + secondsRemaining + " seconds";
 			$('.btn-theme .btn-reload').attr('title', 'Check time remaining for alert reload');
-			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Reloading (' + minutesRemaining +')</strong>');
+			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Next Reload (' + minutesRemaining +')</strong>');
 			console.log(alertbackoff);
 		}
 	}
@@ -559,13 +560,62 @@ function init_alerts() {
 
 function init_current() {
     
+	
+	// DO THE MOON
+	var moon_icon 	= "wi-moon-new";
+	var moon_phase 	= "New Moon";
+	
+	
+	let nowdate = new Date(Date.now());
+	var year = nowdate.getYear(),
+		month = nowdate.getMonth(),
+		day = nowdate.getDay();
+
+	if (month < 3) {
+		year--;
+		month += 12;
+	}
+
+	++month;
+
+	jd = 365.25 * year + 30.6 * month + day - 694039.09; // jd is total days elapsed
+	jd /= 29.53; // divide by the moon cycle (29.53 days)
+	phase = parseInt(jd, 10); // int(jd) -> phase, take integer part of jd
+	jd -= phase; // subtract integer part to leave fractional part of original jd
+	phase = Math.ceil(jd * 8); // scale fraction from 0-8 and round by adding 0.5
+	phase = phase & 7; // 0 and 8 are the same so turn 8 into 0
+	
+	
+	
+	switch (phase) {
+		case 0: moonpc = 0; "New Moon"; phase = "New Moon"; 		moon_icon 	= "wi-moon-new"; break;
+		case 1: moonpc = 12.5; phase = "Waxing Crescent Moon"; 		moon_icon 	= "wi-moon-waxing-crescent"; break;
+		case 2: moonpc = 25; phase = "Quarter Moon"; 				moon_icon 	= "wi-moon-first-quarter"; break;
+		case 3: moonpc = 37.5; phase = "Waxing Gibbous Moon"; 		moon_icon 	= "wi-moon-waxing-gibbous"; break;
+		case 4: moonpc = 50; phase = "Full Moon"; 					moon_icon 	= "wi-moon-full"; phase = "Full Moon"; break;
+		case 5: moonpc = 62.5; phase = "Waning Gibbous Moon"; 		moon_icon 	= "wi-moon-waning-gibbous"; break;
+		case 6: moonpc = 75; phase = "Last Quarter Moon";			moon_icon 	= "wi-moon-last-quarter"; break;
+		case 7: moonpc = 87.5; phase = "Waning Crescent Moon"; 		moon_icon 	= "wi-moon-waning-crescent"; break;
+	}
+	
+	console.log("Moon Phase: " + phase);
+	
+	localStorage.setItem("wx_moon_icon", moon_icon);
+	localStorage.setItem("wx_moon_phase", phase);
+
+	$('.moon_now .moon-icon-now').removeClassStartingWith('wi');
+	$('.moon_now .moon-icon-now').addClass(moon_icon);
+	$('.moon_now .moon-phase').text(phase);
+	// END MOON
+	
+	
     var wx_state        = get_state().toUpperCase();
 	var wx_obs          = get_obs_select().toUpperCase();
     var wxin            = "https://w1.weather.gov/xml/current_obs/"+wx_obs+".rss";
     //var wxin            = "http://localhost:3000/current.xml";
 	var wxthis          = "";
     var wxtheme         = "";
-    
+	
     $('.wx-state').text(wx_state);
     //localStorage.setItem("wx_state", wx_state);
 	
@@ -578,17 +628,19 @@ function init_current() {
 	} else {
 		var obs_updated 	= localStorage.getItem("obs_updated");
 	}
-	var obs_ttl 		= localStorage.getItem("obs_ttl");
+	var obs_ttl 		= parseInt(localStorage.getItem("obs_ttl"));
 	var sys_time		= Math.round(new Date().getTime());
 	var obs_difference	= Math.round(((sys_time - obs_updated) / 1000) / 60);
+	var obs_wait		= obs_ttl - obs_difference;
 	
 	if(get_scope() == "off"){
-		$('.btn-theme .btn-reload').attr('title', 'Click to update observation');
+		$('.btn-theme .btn-reload').attr('title', 'Next Observation in ' + obs_wait + 'm');
 		$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Observed ' + obs_difference + 'm ago</strong>');
 	}
-	console.log("Observation taken " + obs_difference + " minutes ago");
+	//console.log("Observation taken " + obs_difference + " minutes ago");
 	
 	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
+	console.log(obs_difference + ' - ' + obs_ttl);
 	if(obs_difference > obs_ttl) {
 		console.log("Dialing Up NWS Observation Server " + wx_obs + "  ...");
 		
@@ -720,7 +772,7 @@ function init_current() {
 
 					wxtheme = "wx-" + wxtheme;
 
-					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><button class="wx-now" data-container="body" data-toggle="popover" data-placement="right"  data-trigger="focus" title="Current Observation ' + wxtemp_c + '" data-content="'+ wxdescription +' - Station: ' + wx_obs + '"><span class="wx-icon-now '+wxicon+'"></span><span class="wx-temp">'+wxtemp_f+'</span></button>';
+					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><button class="wx-now" data-container="body" data-toggle="popover" data-placement="right"  data-trigger="focus" title="Observation" data-content="'+ wxdescription.trim() +' - Station: ' + wx_obs + '"><span class="wx-icon-now '+wxicon+'"></span><span class="wx-temp">'+wxtemp_f+'</span></button>';
 
 				});
 
@@ -741,7 +793,7 @@ function init_current() {
 
 			},
 			complete: function() {
-				var wxdescription       = $(".wx-icon-now").attr("title");
+				var wxdescription       = $(".wx-now").attr("data-content");
 				log_time("WX - Conditions last checked: ");
 				console.log(wxdescription);
 				
@@ -776,6 +828,10 @@ function init_current() {
 		$(".btn-theme").removeClass("wx-danger");
 	}
 	
+
+	
+	
+	
 }
 
 
@@ -796,9 +852,14 @@ function log_time(logmsg) {
 
 
 
+
+
+
 // DEAL WITH DATA GETTING AND STORAGE
 function get_state() {
     
+	var wx_state = "tn";
+	
     if(localStorage.getItem("wx_state") == null){
         $.getJSON("config.json", function(data){
             var wx_state = data.wx_state;
@@ -825,6 +886,8 @@ function set_scope(wx_scope) {
 }
 
 function get_scope() {
+	
+	var wx_scope = "local";
 	
 	if(localStorage.getItem("wx_scope") == null){
         $.getJSON("config.json", function(data){
@@ -1060,6 +1123,8 @@ function get_county() {
 
 function get_warnings() {
     
+	var wx_warnings = "tornado, storm, wind, flood, winter, other";
+	
     if(localStorage.getItem("wx_warnings") == null){
         $.getJSON("config.json", function(data){
             var wx_warnings = data.wx_warnings;
@@ -1150,11 +1215,5 @@ $(document).ready(function() {
 		return this;
 	};
 	
-	$(function () {
-	  $('[data-toggle="popover"]').popover()
-	})
 	
-	$('.popover-dismiss').popover({
-	  trigger: 'focus'
-	})
 });

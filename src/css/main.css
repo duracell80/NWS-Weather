@@ -51,7 +51,8 @@
       color: #ffffff; }
       .wx-feeds .container-theme .wx-temp:hover {
         cursor: default; }
-    .wx-feeds .container-theme .wx-icon-now {
+    .wx-feeds .container-theme .wx-icon-now,
+    .wx-feeds .container-theme .moon-icon-now {
       display: inline-block;
       margin-right: 15px;
       float: left;
@@ -60,6 +61,8 @@
       background-repeat: no-repeat;
       background-size: contain;
       filter: invert(1); }
+    .wx-feeds .container-theme .wx-icon-now.wi-thermometer {
+      background-image: url("../images/svg/wi-thermometer.svg"); }
     .wx-feeds .container-theme .wx-icon-now.mi-warning {
       background-image: url("../images/svg/mi-warning.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-cloud {
@@ -111,8 +114,35 @@
       background-image: url("../images/svg/wi-fog.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-stars {
       background-image: url("../images/svg/wi-stars.svg"); }
-    .wx-feeds .container-theme .wx-icon-now.wi-thermometer {
-      background-image: url("../images/svg/wi-thermometer.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-new {
+      background-image: url("../images/svg/wi-moon-alt-full.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-waxing-crescent {
+      background-image: url("../images/svg/wi-moon-alt-waxing-crescent-3.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-first-quarter {
+      background-image: url("../images/svg/wi-moon-alt-first-quarter.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-waxing-gibbous {
+      background-image: url("../images/svg/wi-moon-alt-waxing-gibbous-3.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-full {
+      background-image: url("../images/svg/wi-moon-alt-new.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-waning-gibbous {
+      background-image: url("../images/svg/wi-moon-alt-waning-gibbous-3.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-last-quarter {
+      background-image: url("../images/svg/wi-moon-alt-third-quarter.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-waning-crescent {
+      background-image: url("../images/svg/wi-moon-alt-waning-crescent-3.svg"); }
+    .wx-feeds .container-theme .moon_now {
+      position: relative;
+      height: 75px;
+      width: 100px;
+      top: -75px;
+      margin-bottom: -75px;
+      left: 265px;
+      text-align: center; }
+    .wx-feeds .container-theme .moon-icon-now {
+      width: 100px;
+      background-position: center center; }
+    .wx-feeds .container-theme .moon-phase {
+      font-size: 0.75rem; }
   .wx-feeds .wxout_temps {
     text-align: center;
     /*small {

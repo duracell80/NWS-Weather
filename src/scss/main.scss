@@ -64,6 +64,8 @@
 			}
 		}
 		
+		
+		
 		.wx-now {
 			background	: transparent;
     		border		: 0px solid transparent;
@@ -84,7 +86,8 @@
 			}
 		}
 
-		.wx-icon-now {
+		.wx-icon-now,
+		.moon-icon-now{
 			display             : inline-block;
 			margin-right        : 15px;
 			float               : left;
@@ -94,6 +97,10 @@
 			background-size     : contain;
 
 			filter              : invert(1);
+		}
+		
+		.wx-icon-now.wi-thermometer {
+			background-image : url('../images/svg/wi-thermometer.svg');
 		}
 		
 		.wx-icon-now.mi-warning { 
@@ -193,13 +200,62 @@
 		.wx-icon-now.wi-stars {
 			background-image : url('../images/svg/wi-stars.svg');
 		}
-
-
-
-
-		.wx-icon-now.wi-thermometer {
-			background-image : url('../images/svg/wi-thermometer.svg');
+		
+		.moon-icon-now.wi-moon-new {
+			background-image : url('../images/svg/wi-moon-alt-full.svg');
 		}
+		
+		.moon-icon-now.wi-moon-waxing-crescent {
+			background-image : url('../images/svg/wi-moon-alt-waxing-crescent-3.svg');
+		}
+		
+		.moon-icon-now.wi-moon-first-quarter {
+			background-image : url('../images/svg/wi-moon-alt-first-quarter.svg');
+		}
+		
+		.moon-icon-now.wi-moon-waxing-gibbous {
+			background-image : url('../images/svg/wi-moon-alt-waxing-gibbous-3.svg');
+		}
+		
+		.moon-icon-now.wi-moon-full {
+			background-image : url('../images/svg/wi-moon-alt-new.svg');
+		}
+		
+		.moon-icon-now.wi-moon-waning-gibbous {
+			background-image : url('../images/svg/wi-moon-alt-waning-gibbous-3.svg');
+		}
+		.moon-icon-now.wi-moon-last-quarter {
+			background-image : url('../images/svg/wi-moon-alt-third-quarter.svg');
+		}
+		.moon-icon-now.wi-moon-waning-crescent {
+			background-image : url('../images/svg/wi-moon-alt-waning-crescent-3.svg');
+		}
+		
+		
+		
+
+		.moon_now {
+			position		: relative;
+			height			: 75px;
+			width			: 100px;
+			top				: -75px;
+			margin-bottom	: -75px;
+			left			: 265px;
+			
+			text-align 		: center;
+		}
+		
+		.moon-icon-now{
+			width 				: 100px;
+			background-position	: center center;
+		}
+		
+		.moon-phase {
+			font-size 		: 0.75rem;
+		}
+
+
+		
 
 	}
 
