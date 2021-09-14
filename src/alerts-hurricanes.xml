@@ -1,0 +1,3486 @@
+<?xml version = '1.0' encoding = 'UTF-8' standalone = 'yes'?>
+
+<!--
+This atom/xml feed is an index to active advisories, watches and warnings 
+issued by the National Weather Service.  This index file is not the complete 
+Common Alerting Protocol (CAP) alert message.  To obtain the complete CAP 
+alert, please follow the links for each entry in this index.  Also note the 
+CAP message uses a style sheet to convey the information in a human readable 
+format.  Please view the source of the CAP message to see the complete data 
+set.  Not all information in the CAP message is contained in this index of 
+active alerts.
+-->
+
+<feed
+xmlns = 'http://www.w3.org/2005/Atom'
+xmlns:cap = 'urn:oasis:names:tc:emergency:cap:1.1'
+xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
+>
+<!-- http-date = Tue, 14 Sep 2021 04:02:00 GMT -->
+<id>https://alerts.weather.gov/cap/us.php?x=0</id>
+<logo>http://alerts.weather.gov/images/xml_logo.gif</logo>
+<generator>NWS CAP Server</generator>
+<updated>2021-09-13T23:02:00-05:00</updated>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Current Watches, Warnings and Advisories for the United States Issued by the National Weather Service</title>
+<link href="https://alerts.weather.gov/cap/us.php?x=0"/>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=AS1261B84D7A48.HighSurfAdvisory.1261B85B08FCAS.STUCFWPPG.b673bfeec0acffde87780c37d97b9b46</id>
+<updated>2021-09-13T10:30:00-11:00</updated>
+<published>2021-09-13T10:30:00-11:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>High Surf Advisory issued September 13 at 10:30AM SST by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=AS1261B84D7A48.HighSurfAdvisory.1261B85B08FCAS.STUCFWPPG.b673bfeec0acffde87780c37d97b9b46"/>
+<summary>... A High Surf Advisory is in effect... * SURF...Surfs of 8 to 10 feet will impact south facing shores of all islands. * TIMING...through Thursday. * IMPACTS...Strong rip currents and localized beach erosion. Fautuaga mo galu maualuluga</summary>
+<cap:event>High Surf Advisory</cap:event>
+<cap:effective>2021-09-13T10:30:00-11:00</cap:effective>
+<cap:expires>2021-09-13T23:15:00-11:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Manua; Swains Island; Tutuila and Aunuu</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>060010 060020 060040 060050</value>
+<valueName>UGC</valueName>
+<value>ASZ001 ASZ002 ASZ003</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B859DA40.RedFlagWarning.1261B85C1490CA.EKARFWEKA.ad5991e5c8f0a1a4c8019f8b2bf23c47</id>
+<updated>2021-09-13T19:40:00-07:00</updated>
+<published>2021-09-13T19:40:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Red Flag Warning issued September 13 at 7:40PM PDT until September 14 at 10:00AM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B859DA40.RedFlagWarning.1261B85C1490CA.EKARFWEKA.ad5991e5c8f0a1a4c8019f8b2bf23c47"/>
+<summary>...VERY DRY AND LOCALLY GUSTY CONDITIONS FOR ELEVATIONS ABOVE 2000 FEET IN FIRE WEATHER ZONES 203 AND 204 TONIGHT THROUGH TUESDAY MORNING... .A building ridge of high pressure and offshore winds will result in critical fire weather conditions around interior Del Norte, northeast Humboldt, and western Siskiyou County. Gusty northeast</summary>
+<cap:event>Red Flag Warning</cap:event>
+<cap:effective>2021-09-13T19:40:00-07:00</cap:effective>
+<cap:expires>2021-09-14T10:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Lower Middle Klamath; Upper Smith</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006015 006023 006093</value>
+<valueName>UGC</valueName>
+<value>CAZ203 CAZ204</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KEKA.FW.W.0005.000000T0000Z-210914T1700Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84D6FBC.BeachHazardsStatement.1261B8789D40CA.LOXCFWLOX.5bf49a04ee2fb3a68fbab3b8d0eb54d7</id>
+<updated>2021-09-13T14:03:00-07:00</updated>
+<published>2021-09-13T14:03:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Beach Hazards Statement issued September 13 at 2:03PM PDT until September 15 at 9:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84D6FBC.BeachHazardsStatement.1261B8789D40CA.LOXCFWLOX.5bf49a04ee2fb3a68fbab3b8d0eb54d7"/>
+<summary>...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH WEDNESDAY EVENING... * WHAT...A moderately large and long period south swell will caused elevated surf of 6 to 9 feet. Occasionally larger and suddenly more powerful sets are possible along with sneaker waves. Surf will be highest on exposed south and southwest</summary>
+<cap:event>Beach Hazards Statement</cap:event>
+<cap:effective>2021-09-13T14:03:00-07:00</cap:effective>
+<cap:expires>2021-09-15T21:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>San Luis Obispo County Central Coast; Santa Barbara County Central Coast</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006079 006083</value>
+<valueName>UGC</valueName>
+<value>CAZ034 CAZ035</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLOX.BH.S.0013.000000T0000Z-210916T0400Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84D6FBC.BeachHazardsStatement.1261B8789D40CA.LOXCFWLOX.20192e70adb34b899112041aff09edd0</id>
+<updated>2021-09-13T14:03:00-07:00</updated>
+<published>2021-09-13T14:03:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Beach Hazards Statement issued September 13 at 2:03PM PDT until September 15 at 9:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84D6FBC.BeachHazardsStatement.1261B8789D40CA.LOXCFWLOX.20192e70adb34b899112041aff09edd0"/>
+<summary>...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH WEDNESDAY EVENING... * WHAT...A moderately large and long period south swell will result in elevated surf of 4 to 6 feet with local sets to 7 feet. Occasionally larger and suddenly more powerful sets are possible along with sneaker waves. Surf will be highest on</summary>
+<cap:event>Beach Hazards Statement</cap:event>
+<cap:effective>2021-09-13T14:03:00-07:00</cap:effective>
+<cap:expires>2021-09-15T21:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Catalina and Santa Barbara Islands; Los Angeles County Coast including Downtown Los Angeles; Ventura County Coast</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006037 006059 006083 006111</value>
+<valueName>UGC</valueName>
+<value>CAZ040 CAZ041 CAZ087</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLOX.BH.S.0013.000000T0000Z-210916T0400Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84D55F4.RedFlagWarning.1261B85BED80CA.MFRRFWMFR.efeaeb9bd6da343dc16aa4af8ad5e1b8</id>
+<updated>2021-09-13T13:37:00-07:00</updated>
+<published>2021-09-13T13:37:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Red Flag Warning issued September 13 at 1:37PM PDT until September 14 at 9:00AM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84D55F4.RedFlagWarning.1261B85BED80CA.MFRRFWMFR.efeaeb9bd6da343dc16aa4af8ad5e1b8"/>
+<summary>...RED FLAG WARNING NOW IN EFFECT UNTIL 9 AM PDT TUESDAY FOR EAST WIND WITH POOR OVERNIGHT RH RECOVERY TONIGHT ABOVE 2500 FT MSL AND STRONG GUSTY WIND WITH LOW RH FOR FIRE WEATHER ZONE 280 THROUGH THIS EVENING... * Impacts: East winds, poor relative humidity recovery, and critically dry vegetation will likely contribute to a significant</summary>
+<cap:event>Red Flag Warning</cap:event>
+<cap:effective>2021-09-13T13:37:00-07:00</cap:effective>
+<cap:expires>2021-09-14T09:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Western Klamath National Forest</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006015 006093</value>
+<valueName>UGC</valueName>
+<value>CAZ280</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KMFR.FW.W.0050.000000T0000Z-210914T1600Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84CC1E8.BeachHazardsStatement.1261B8789D40CA.SGXCFWSGX.aed7ee9f38cb83506f0fa7992dea67d8</id>
+<updated>2021-09-13T09:58:00-07:00</updated>
+<published>2021-09-13T09:58:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Beach Hazards Statement issued September 13 at 9:58AM PDT until September 15 at 9:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84CC1E8.BeachHazardsStatement.1261B8789D40CA.SGXCFWSGX.aed7ee9f38cb83506f0fa7992dea67d8"/>
+<summary>...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH WEDNESDAY EVENING... * WHAT...Surf of 3 to 6 feet. Strong rip currents expected. * WHERE...San Diego County beaches. * WHEN...Today through Wednesday. * IMPACTS...Elevated surf and strong rip currents will create</summary>
+<cap:event>Beach Hazards Statement</cap:event>
+<cap:effective>2021-09-13T09:58:00-07:00</cap:effective>
+<cap:expires>2021-09-15T21:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>San Diego County Coastal Areas</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006073</value>
+<valueName>UGC</valueName>
+<value>CAZ043</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KSGX.BH.S.0013.000000T0000Z-210916T0400Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84CC1E8.HighSurfAdvisory.1261B8789D40CA.SGXCFWSGX.aaffb58911c512e94b4346e377d81f61</id>
+<updated>2021-09-13T09:58:00-07:00</updated>
+<published>2021-09-13T09:58:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>High Surf Advisory issued September 13 at 9:58AM PDT until September 15 at 9:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=CA1261B84CC1E8.HighSurfAdvisory.1261B8789D40CA.SGXCFWSGX.aaffb58911c512e94b4346e377d81f61"/>
+<summary>...HIGH SURF ADVISORY REMAINS IN EFFECT THROUGH WEDNESDAY EVENING... * WHAT...Surf of 4 to 7 feet with sets to 8 feet. Strong rip currents expected. * WHERE...Orange County beaches. * WHEN...Today through Wednesday.</summary>
+<cap:event>High Surf Advisory</cap:event>
+<cap:effective>2021-09-13T09:58:00-07:00</cap:effective>
+<cap:expires>2021-09-15T21:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Orange County Coastal</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>006037 006059</value>
+<valueName>UGC</valueName>
+<value>CAZ552</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KSGX.SU.Y.0005.000000T0000Z-210916T0400Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B859A908.FloodWarning.1261B868EBACFL.JAXFLSJAX.62f295aba8ff54be33b8c8c616318bd6</id>
+<updated>2021-09-13T21:14:00-04:00</updated>
+<published>2021-09-13T21:14:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 9:14PM EDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B859A908.FloodWarning.1261B868EBACFL.JAXFLSJAX.62f295aba8ff54be33b8c8c616318bd6"/>
+<summary>...The Flood Warning continues for the following rivers in Florida... Santa Fe River At Three Rivers Estates affecting Gilchrist, Columbia and Suwannee Counties. Additional information is available at https://water.weather.gov/ahps2/forecasts.php?wfo=jax. &amp;&amp;</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T21:14:00-04:00</cap:effective>
+<cap:expires>2021-09-14T21:15:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Columbia; Gilchrist; Suwannee</cap:areaDesc>
+<cap:polygon>29.9,-82.78 29.92,-82.8 29.9,-82.83 29.93,-82.83 29.96,-82.79 29.93,-82.76 29.9,-82.78</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>012023 012041 012121</value>
+<valueName>UGC</valueName>
+<value>FLC023 FLC041 FLC121</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KJAX.FL.W.0036.000000T0000Z-000000T0000Z/
+/TREF1.2.ER.000000T0000Z.210902T1400Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B84CABA4.RipCurrentStatement.1261B85A66E0FL.TAECFWTAE.af7027577576f446df97bf5f320ef36a</id>
+<updated>2021-09-13T12:01:00-04:00</updated>
+<published>2021-09-13T12:01:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Rip Current Statement issued September 13 at 12:01PM EDT until September 14 at 2:00AM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B84CABA4.RipCurrentStatement.1261B85A66E0FL.TAECFWTAE.af7027577576f446df97bf5f320ef36a"/>
+<summary>...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH LATE TONIGHT... * WHAT...Dangerous rip currents. * WHERE...Walton County Beaches. * WHEN...Through late tonight. * IMPACTS...Rip currents can sweep even the best swimmers away from shore into deeper water.</summary>
+<cap:event>Rip Current Statement</cap:event>
+<cap:effective>2021-09-13T12:01:00-04:00</cap:effective>
+<cap:expires>2021-09-14T02:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>South Walton</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>012131</value>
+<valueName>UGC</valueName>
+<value>FLZ108</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KTAE.RP.S.0084.000000T0000Z-210914T0600Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B84CABA4.RipCurrentStatement.1261B85A66E0FL.TAECFWTAE.2c3d104235eec5dd75fb90ff0f9662ba</id>
+<updated>2021-09-13T12:01:00-04:00</updated>
+<published>2021-09-13T12:01:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Rip Current Statement issued September 13 at 12:01PM EDT until September 14 at 2:00AM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=FL1261B84CABA4.RipCurrentStatement.1261B85A66E0FL.TAECFWTAE.2c3d104235eec5dd75fb90ff0f9662ba"/>
+<summary>...HIGH RIP CURRENT RISK IN EFFECT THROUGH LATE TONIGHT... * WHAT...Dangerous rip currents. * WHERE...Gulf County Beaches. * WHEN...Through late tonight. * IMPACTS...Rip currents can sweep even the best swimmers away from shore into deeper water.</summary>
+<cap:event>Rip Current Statement</cap:event>
+<cap:effective>2021-09-13T12:01:00-04:00</cap:effective>
+<cap:expires>2021-09-14T02:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Gulf</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>012045</value>
+<valueName>UGC</valueName>
+<value>FLZ114</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXA.KTAE.RP.S.0084.000000T0000Z-210914T0600Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859FD68.HurricaneLocalStatement.1261B85B0320LA.LCHHLSLCH.3141fe2fdbd2b4c9cbe6fc559f8f7e85</id>
+<updated>2021-09-13T22:30:00-05:00</updated>
+<published>2021-09-13T22:30:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued September 13 at 10:30PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859FD68.HurricaneLocalStatement.1261B85B0320LA.LCHHLSLCH.3141fe2fdbd2b4c9cbe6fc559f8f7e85"/>
+<summary>This product covers Southwest Louisiana and Southeast Texas **NICHOLAS NOW A HURRICANE - HEAVY RAINS STILL MAIN CONCERN** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS: - None</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-09-13T22:30:00-05:00</cap:effective>
+<cap:expires>2021-09-14T05:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>East Cameron; West Cameron</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022023</value>
+<valueName>UGC</valueName>
+<value>LAZ073 LAZ074</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859FAAC.FlashFloodWatch.1261B879D5C0LA.LIXFFALIX.86e159a7bca62abaa2f20138dafcf5ed</id>
+<updated>2021-09-13T22:23:00-05:00</updated>
+<published>2021-09-13T22:23:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued September 13 at 10:23PM CDT until September 16 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859FAAC.FlashFloodWatch.1261B879D5C0LA.LIXFFALIX.86e159a7bca62abaa2f20138dafcf5ed"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT FROM 7 AM CDT TUESDAY THROUGH THURSDAY MORNING... The Flash Flood Watch continues for * A portion of southeast Louisiana, including the following parishes, Ascension, Assumption, East Baton Rouge, East Feliciana, Eastern Orleans, Iberville, Livingston, Lower Jefferson, Lower</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-09-13T22:23:00-05:00</cap:effective>
+<cap:expires>2021-09-16T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Ascension; Assumption; East Baton Rouge; East Feliciana; Eastern Orleans; Iberville; Livingston; Lower Jefferson; Lower Lafourche; Lower Plaquemines; Lower St. Bernard; Lower Terrebonne; Northern Tangipahoa; Northwest St. Tammany; Pointe Coupee; Southeast St. Tammany; Southern Tangipahoa; St. Charles; St. Helena; St. James; St. John The Baptist; Upper Jefferson; Upper Lafourche; Upper Plaquemines; Upper St. Bernard; Upper Terrebonne; Washington; West Baton Rouge; West Feliciana; Western Orleans</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022005 022007 022033 022037 022047 022051 022057 022063 022071 022075 022077 022087 022089 022091 022093 022095 022103 022105 022109 022117 022121 022125</value>
+<valueName>UGC</valueName>
+<value>LAZ034 LAZ035 LAZ036 LAZ037 LAZ039 LAZ046 LAZ047 LAZ048 LAZ049 LAZ050 LAZ056 LAZ057 LAZ058 LAZ059 LAZ060 LAZ061 LAZ063 LAZ064 LAZ065 LAZ066 LAZ067 LAZ068 LAZ069 LAZ070 LAZ071 LAZ072 LAZ075 LAZ076 LAZ077 LAZ078</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLIX.FF.A.0015.210914T1200Z-210916T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859F598.StormSurgeWatch.1261B85AE7C8LA.LCHTCVLCH.ab332b1190c8e44d2fff2713712d714e</id>
+<updated>2021-09-13T22:10:00-05:00</updated>
+<published>2021-09-13T22:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Watch issued September 13 at 10:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859F598.StormSurgeWatch.1261B85AE7C8LA.LCHTCVLCH.ab332b1190c8e44d2fff2713712d714e"/>
+<summary>...STORM SURGE WATCH REMAINS IN EFFECT... * LOCATIONS AFFECTED - Johnson Bayou - Holly Beach - Hackberry * WIND</summary>
+<cap:event>Storm Surge Watch</cap:event>
+<cap:effective>2021-09-13T22:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T04:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>West Cameron</cap:areaDesc>
+<cap:polygon>30.05,-93.33 30.05,-93.32 30.05,-93.31 29.84,-93.33 29.82,-93.33 29.82,-93.35 29.76,-93.35 29.77,-93.48 29.75,-93.68 29.73,-93.77 29.69,-93.83 29.72,-93.85 29.73,-93.86 29.74,-93.87 29.74,-93.88 29.75,-93.88 29.75,-93.89 29.76,-93.89 29.77,-93.89 29.77,-93.89 29.8,-93.91 29.81,-93.88 29.82,-93.86 29.82,-93.85 29.82,-93.84 29.83,-93.82 29.83,-93.81 29.83,-93.81 29.94,-93.77 29.95,-93.76 29.97,-93.76 29.98,-93.77 29.97,-93.79 29.99,-93.79 30,-93.77 30.01,-93.76 30.02,-93.74 30.04,-93.74 30.05,-93.72 30.05,-93.71 30.05,-93.71 30.05,-93.71 30.05,-93.33 30.05,-93.33</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022023</value>
+<valueName>UGC</valueName>
+<value>LAZ073</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.SS.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A840.FloodWatch.1261B85AE1ECLA.LCHFFALCH.65b5a133626134f7f34462fe667cf38a</id>
+<updated>2021-09-13T20:12:00-05:00</updated>
+<published>2021-09-13T20:12:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Watch issued September 13 at 8:12PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A840.FloodWatch.1261B85AE1ECLA.LCHFFALCH.65b5a133626134f7f34462fe667cf38a"/>
+<summary>...The Flood Watch is replaced with a River Flood Warning for the following rivers in Louisiana...Texas... Calcasieu River Near Glenmora Pine Island Bayou Near Sour Lake ...The Flood Watch continues for the following rivers in Louisiana... Calcasieu River Near Kinder</summary>
+<cap:event>Flood Watch</cap:event>
+<cap:effective>2021-09-13T20:12:00-05:00</cap:effective>
+<cap:expires>2021-09-14T04:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Future</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Acadia; Jefferson Davis; Vermilion</cap:areaDesc>
+<cap:polygon>30.24,-92.55 30.19,-92.54 30.04,-92.6 30.04,-92.76 30.25,-92.66 30.24,-92.55</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022001 022053 022113</value>
+<valueName>UGC</valueName>
+<value>LAZ042 LAZ043 LAZ052</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.A.0006.210918T0000Z-000000T0000Z/
+/MRML1.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A840.FloodWatch.1261B899F404LA.LCHFFALCH.30b9a4541cf96d522360ac25b63f9d4b</id>
+<updated>2021-09-13T20:12:00-05:00</updated>
+<published>2021-09-13T20:12:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Watch issued September 13 at 8:12PM CDT until September 18 at 5:49PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A840.FloodWatch.1261B899F404LA.LCHFFALCH.30b9a4541cf96d522360ac25b63f9d4b"/>
+<summary>...The Flood Watch is replaced with a River Flood Warning for the following rivers in Louisiana...Texas... Calcasieu River Near Glenmora Pine Island Bayou Near Sour Lake ...The Flood Watch continues for the following rivers in Louisiana... Calcasieu River Near Kinder</summary>
+<cap:event>Flood Watch</cap:event>
+<cap:effective>2021-09-13T20:12:00-05:00</cap:effective>
+<cap:expires>2021-09-18T17:49:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Future</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Allen; Beauregard</cap:areaDesc>
+<cap:polygon>30.74,-92.84 30.59,-92.87 30.49,-92.85 30.47,-92.94 30.61,-92.99 30.75,-92.94 30.74,-92.84</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022003 022011</value>
+<valueName>UGC</valueName>
+<value>LAZ030 LAZ031</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.A.0005.210917T0000Z-210918T2249Z/
+/MTTL1.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A840.FloodWatch.1261B8A5C7C0LA.LCHFFALCH.790ac6fea01639ada49b4d930280cf49</id>
+<updated>2021-09-13T20:12:00-05:00</updated>
+<published>2021-09-13T20:12:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Watch issued September 13 at 8:12PM CDT until September 18 at 7:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A840.FloodWatch.1261B8A5C7C0LA.LCHFFALCH.790ac6fea01639ada49b4d930280cf49"/>
+<summary>...The Flood Watch is replaced with a River Flood Warning for the following rivers in Louisiana...Texas... Calcasieu River Near Glenmora Pine Island Bayou Near Sour Lake ...The Flood Watch continues for the following rivers in Louisiana... Calcasieu River Near Kinder</summary>
+<cap:event>Flood Watch</cap:event>
+<cap:effective>2021-09-13T20:12:00-05:00</cap:effective>
+<cap:expires>2021-09-18T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Future</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Allen; Calcasieu; Jefferson Davis</cap:areaDesc>
+<cap:polygon>30.59,-92.77 30.45,-92.93 30.33,-93.09 30.35,-93.18 30.58,-92.9 30.59,-92.77</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022003 022019 022053</value>
+<valueName>UGC</valueName>
+<value>LAZ031 LAZ041 LAZ042</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KLCH.FL.A.0004.210918T1200Z-210919T0000Z/
+/KDRL1.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B85B7E2CLA.LCHFLSLCH.efd3b52f587b68eae3470efc635c7f4e</id>
+<updated>2021-09-13T20:10:00-05:00</updated>
+<published>2021-09-13T20:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 8:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B85B7E2CLA.LCHFLSLCH.efd3b52f587b68eae3470efc635c7f4e"/>
+<summary>...The Flood Warning continues for the following rivers in Louisiana... Bayou Des Cannes Near Eunice West Fork of The Calcasieu River At Sam Houston Jones SP Calcasieu River Near Salt Water Barrier Calcasieu River NEAR White Oak Park</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T20:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T08:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Calcasieu</cap:areaDesc>
+<cap:polygon>30.36,-93.09 30.29,-93.03 30.14,-93.28 30.17,-93.35 30.35,-93.32 30.36,-93.09</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022019</value>
+<valueName>UGC</valueName>
+<value>LAC019</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.W.0228.000000T0000Z-000000T0000Z/
+/LCHL1.1.ER.210909T0000Z.210916T1800Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B85B7E2CLA.LCHFLSLCH.ecdc8305a32138e91e43d1a2aec8582b</id>
+<updated>2021-09-13T20:10:00-05:00</updated>
+<published>2021-09-13T20:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 8:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B85B7E2CLA.LCHFLSLCH.ecdc8305a32138e91e43d1a2aec8582b"/>
+<summary>...The Flood Warning continues for the following rivers in Louisiana... Bayou Des Cannes Near Eunice West Fork of The Calcasieu River At Sam Houston Jones SP Calcasieu River Near Salt Water Barrier Calcasieu River NEAR White Oak Park</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T20:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T08:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Calcasieu</cap:areaDesc>
+<cap:polygon>30.38,-93.14 30.31,-93.03 30.25,-93.08 30.19,-93.21 30.3,-93.29 30.38,-93.14</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022019</value>
+<valueName>UGC</valueName>
+<value>LAC019</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.W.0231.210914T1700Z-000000T0000Z/
+/CWOL1.1.ER.210914T1700Z.210916T1200Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B878EB60LA.LCHFLSLCH.f5ef4c6544781f114783f7ca3eda4d5a</id>
+<updated>2021-09-13T20:10:00-05:00</updated>
+<published>2021-09-13T20:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 8:10PM CDT until September 16 at 1:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B878EB60LA.LCHFLSLCH.f5ef4c6544781f114783f7ca3eda4d5a"/>
+<summary>...The Flood Warning continues for the following rivers in Louisiana... Bayou Des Cannes Near Eunice West Fork of The Calcasieu River At Sam Houston Jones SP Calcasieu River Near Salt Water Barrier Calcasieu River NEAR White Oak Park</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T20:10:00-05:00</cap:effective>
+<cap:expires>2021-09-16T01:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Lafayette; St. Martin; Vermilion</cap:areaDesc>
+<cap:polygon>30.31,-91.91 30.22,-91.9 29.88,-92.06 29.87,-92.19 30,-92.27 30.31,-92.04 30.31,-91.91</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022055 022099 022113</value>
+<valueName>UGC</valueName>
+<value>LAC055 LAC099 LAC113</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.W.0229.210915T1800Z-210916T0600Z/
+/VLSL1.1.ER.210915T1800Z.210915T1800Z.210915T1800Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B879D5C0LA.LCHFLSLCH.3873ed0359a7817f599158c5c7a1af99</id>
+<updated>2021-09-13T20:10:00-05:00</updated>
+<published>2021-09-13T20:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 8:10PM CDT until September 16 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B879D5C0LA.LCHFLSLCH.3873ed0359a7817f599158c5c7a1af99"/>
+<summary>...The Flood Warning continues for the following rivers in Louisiana... Bayou Des Cannes Near Eunice West Fork of The Calcasieu River At Sam Houston Jones SP Calcasieu River Near Salt Water Barrier Calcasieu River NEAR White Oak Park</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T20:10:00-05:00</cap:effective>
+<cap:expires>2021-09-16T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Lafayette; St. Landry; St. Martin</cap:areaDesc>
+<cap:polygon>30.46,-92.01 30.46,-91.98 30.32,-91.89 30.31,-91.94 30.28,-91.93 30.26,-92 30.46,-92.01</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022055 022097 022099</value>
+<valueName>UGC</valueName>
+<value>LAC055 LAC097 LAC099</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.W.0230.210916T0000Z-210916T1200Z/
+/BVCL1.1.ER.210916T0000Z.210916T0000Z.210916T0000Z.UU/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B8886518LA.LCHFLSLCH.61a10a21561875bc9bfb147338b31d5d</id>
+<updated>2021-09-13T20:10:00-05:00</updated>
+<published>2021-09-13T20:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 8:10PM CDT until September 17 at 2:42AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B8886518LA.LCHFLSLCH.61a10a21561875bc9bfb147338b31d5d"/>
+<summary>...The Flood Warning continues for the following rivers in Louisiana... Bayou Des Cannes Near Eunice West Fork of The Calcasieu River At Sam Houston Jones SP Calcasieu River Near Salt Water Barrier Calcasieu River NEAR White Oak Park</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T20:10:00-05:00</cap:effective>
+<cap:expires>2021-09-17T02:42:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Acadia; Evangeline; St. Landry</cap:areaDesc>
+<cap:polygon>30.57,-92.4 30.56,-92.35 30.19,-92.56 30.22,-92.6 30.45,-92.57 30.57,-92.4</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022001 022039 022097</value>
+<valueName>UGC</valueName>
+<value>LAC001 LAC039 LAC097</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KLCH.FL.W.0233.210916T0040Z-210917T0742Z/
+/BDCL1.1.ER.210916T0040Z.210916T1200Z.210917T0142Z.UU/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B8891800LA.LCHFLSLCH.33937292481f469837644e786611b815</id>
+<updated>2021-09-13T20:10:00-05:00</updated>
+<published>2021-09-13T20:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 8:10PM CDT until September 17 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B859A778.FloodWarning.1261B8891800LA.LCHFLSLCH.33937292481f469837644e786611b815"/>
+<summary>...The Flood Warning continues for the following rivers in Louisiana... Bayou Des Cannes Near Eunice West Fork of The Calcasieu River At Sam Houston Jones SP Calcasieu River Near Salt Water Barrier Calcasieu River NEAR White Oak Park</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T20:10:00-05:00</cap:effective>
+<cap:expires>2021-09-17T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Calcasieu</cap:areaDesc>
+<cap:polygon>30.32,-93.23 30.28,-93.23 30.28,-93.31 30.3,-93.32 30.32,-93.29 30.32,-93.23</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022019</value>
+<valueName>UGC</valueName>
+<value>LAC019</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FL.W.0232.210916T1200Z-210917T1200Z/
+/LCRL1.1.ER.210916T1200Z.210916T1200Z.210916T1200Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B84C9AD8.FlashFloodWatch.1261B86C4130LA.LCHFFALCH.68ef6907b604218e9a37d84b76decc46</id>
+<updated>2021-09-13T10:58:00-05:00</updated>
+<published>2021-09-13T10:58:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued September 13 at 10:58AM CDT until September 15 at 6:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B84C9AD8.FlashFloodWatch.1261B86C4130LA.LCHFFALCH.68ef6907b604218e9a37d84b76decc46"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH WEDNESDAY AFTERNOON... The Flash Flood Watch continues for * Portions of Louisiana and southeast Texas, including the following areas and parishes, in Louisiana, Acadia, Allen, Avoyelles, Beauregard, Calcasieu, East Cameron, Evangeline, Iberia, Jefferson Davis, Lafayette, Lower St. Martin, Rapides, St. Landry, St. Mary,</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-09-13T10:58:00-05:00</cap:effective>
+<cap:expires>2021-09-15T18:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Acadia; Allen; Avoyelles; Beauregard; Calcasieu; East Cameron; Evangeline; Iberia; Jefferson Davis; Lafayette; Lower St. Martin; Rapides; St. Landry; St. Mary; Upper St. Martin; Vermilion; Vernon; West Cameron</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022001 022003 022009 022011 022019 022023 022039 022045 022053 022055 022079 022097 022099 022101 022113 022115</value>
+<valueName>UGC</valueName>
+<value>LAZ027 LAZ028 LAZ029 LAZ030 LAZ031 LAZ032 LAZ033 LAZ041 LAZ042 LAZ043 LAZ044 LAZ045 LAZ052 LAZ053 LAZ054 LAZ055 LAZ073 LAZ074</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FF.A.0008.000000T0000Z-210915T2300Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B84C8944.CoastalFloodAdvisory.1261B868BEC0LA.LCHCFWLCH.4c02339d6afd11293596c0b2a4cf5e76</id>
+<updated>2021-09-13T10:13:00-05:00</updated>
+<published>2021-09-13T10:13:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Coastal Flood Advisory issued September 13 at 10:13AM CDT until September 14 at 7:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=LA1261B84C8944.CoastalFloodAdvisory.1261B868BEC0LA.LCHCFWLCH.4c02339d6afd11293596c0b2a4cf5e76"/>
+<summary>...COASTAL FLOOD ADVISORY IN EFFECT UNTIL 7 PM CDT TUESDAY... * WHAT...Minor coastal flooding. * WHERE...Vermilion, Iberia and St. Mary Parishes. * WHEN...Until 7 PM CDT Tuesday. * IMPACTS...Flooding of lots, parks, and roads with only isolated road closures expected.</summary>
+<cap:event>Coastal Flood Advisory</cap:event>
+<cap:effective>2021-09-13T10:13:00-05:00</cap:effective>
+<cap:expires>2021-09-14T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Iberia; St. Mary; Vermilion</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>022045 022101 022113</value>
+<valueName>UGC</valueName>
+<value>LAZ052 LAZ053 LAZ054</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KLCH.CF.Y.0012.210913T1513Z-210915T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B84D3394.BeachHazardsStatement.1261B86933F0MI.GRRCFWGRR.42440465438db17c1ba04a83fe56f76e</id>
+<updated>2021-09-13T15:49:00-04:00</updated>
+<published>2021-09-13T15:49:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Beach Hazards Statement issued September 13 at 3:49PM EDT until September 14 at 11:00PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MI1261B84D3394.BeachHazardsStatement.1261B86933F0MI.GRRCFWGRR.42440465438db17c1ba04a83fe56f76e"/>
+<summary>...BEACH HAZARDS STATEMENT NOW IN EFFECT FROM 2 AM EDT TUESDAY THROUGH TUESDAY EVENING... * WHAT...High wave action, strong currents, and dangerous swimming conditions expected. Piers may be heavily swamped by waves. * WHERE...Mason, Oceana, Ottawa, Allegan, Van Buren and Muskegon</summary>
+<cap:event>Beach Hazards Statement</cap:event>
+<cap:effective>2021-09-13T15:49:00-04:00</cap:effective>
+<cap:expires>2021-09-14T23:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Allegan; Mason; Muskegon; Oceana; Ottawa; Van Buren</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>026005 026105 026121 026127 026139 026159</value>
+<valueName>UGC</valueName>
+<value>MIZ037 MIZ043 MIZ050 MIZ056 MIZ064 MIZ071</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KGRR.BH.S.0025.210914T0600Z-210915T0300Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MN1261B85A0538.SpecialWeatherStatement.1261B85A1E9CMN.MPXSPSMPX.a8839d6f1b1e6400eef9da6d02494b8a</id>
+<updated>2021-09-13T22:50:00-05:00</updated>
+<published>2021-09-13T22:50:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued September 13 at 10:50PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MN1261B85A0538.SpecialWeatherStatement.1261B85A1E9CMN.MPXSPSMPX.a8839d6f1b1e6400eef9da6d02494b8a"/>
+<summary>...Strong thunderstorms will impact portions of Le Sueur, eastern Sibley, western Scott and Carver Counties through 1115 PM CDT... At 1050 PM CDT, Doppler radar was tracking strong thunderstorms along a line extending from near Glencoe to near Green Isle to near Kasota. Movement was northeast at 55 mph. HAZARD...Winds in excess of 40 mph.</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-09-13T22:50:00-05:00</cap:effective>
+<cap:expires>2021-09-13T23:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Carver; Le Sueur; Scott; Sibley</cap:areaDesc>
+<cap:polygon>44.51,-93.91 44.72,-94.01 44.87,-94.01 44.93,-93.77 44.89,-93.76 44.89,-93.52 44.55,-93.49 44.53,-93.53 44.34,-93.52 44.24,-93.95 44.51,-93.91</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>027019 027079 027139 027143</value>
+<valueName>UGC</valueName>
+<value>MNZ067 MNZ068 MNZ069 MNZ076</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=MT1261B84D4C94.FireWeatherWatch.1261B8784F20MT.GGWRFWGGW.da63323b8702198165c21f57b38139c6</id>
+<updated>2021-09-13T14:13:00-06:00</updated>
+<published>2021-09-13T14:13:00-06:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Fire Weather Watch issued September 13 at 2:13PM MDT until September 15 at 8:00PM MDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=MT1261B84D4C94.FireWeatherWatch.1261B8784F20MT.GGWRFWGGW.da63323b8702198165c21f57b38139c6"/>
+<summary>...FIRE WEATHER WATCH IN EFFECT FROM WEDNESDAY AFTERNOON THROUGH WEDNESDAY EVENING FOR STRONG WINDS AND LOW RH FOR FIRE WEATHER ZONES 122, 136, AND 137... The National Weather Service in Glasgow has issued a Fire Weather Watch for strong winds and low relative humidity, which is in effect from Wednesday afternoon through Wednesday evening.</summary>
+<cap:event>Fire Weather Watch</cap:event>
+<cap:effective>2021-09-13T14:13:00-06:00</cap:effective>
+<cap:expires>2021-09-15T20:00:00-06:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Future</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Dawson, McCone, Prairie, Richland, Wibaux Counties; Southern Petroleum and Southern Garfield Counties; The Lower Missouri River Breaks including the Charles M Russell National Wildlife Refuge</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>030021 030027 030033 030055 030069 030071 030079 030083 030109</value>
+<valueName>UGC</valueName>
+<value>MTZ122 MTZ136 MTZ137</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KGGW.FW.A.0022.210915T1800Z-210916T0200Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B859B6B4.SevereThunderstormWatch.1261B85A3FD0NJ.PHIWCNPHI.10e46d743de4940be55d0267c0a88c4e</id>
+<updated>2021-09-13T21:49:00-04:00</updated>
+<published>2021-09-13T21:49:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Severe Thunderstorm Watch issued September 13 at 9:49PM EDT until September 14 at 1:00AM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NJ1261B859B6B4.SevereThunderstormWatch.1261B85A3FD0NJ.PHIWCNPHI.10e46d743de4940be55d0267c0a88c4e"/>
+<summary>SEVERE THUNDERSTORM WATCH 497 REMAINS VALID UNTIL 1 AM EDT TUESDAY FOR THE FOLLOWING AREAS IN NEW JERSEY THIS WATCH INCLUDES 3 COUNTIES IN CENTRAL NEW JERSEY MERCER IN NORTHERN NEW JERSEY</summary>
+<cap:event>Severe Thunderstorm Watch</cap:event>
+<cap:effective>2021-09-13T21:49:00-04:00</cap:effective>
+<cap:expires>2021-09-14T01:00:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Mercer; Middlesex; Somerset</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>034021 034023 034035</value>
+<valueName>UGC</valueName>
+<value>NJC021 NJC023 NJC035</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KPHI.SV.A.0497.000000T0000Z-210914T0500Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NY1261B859FE30.SpecialWeatherStatement.1261B85A1E9CNY.BGMSPSBGM.401f71442958ed64c66febaca6c80f97</id>
+<updated>2021-09-13T23:32:00-04:00</updated>
+<published>2021-09-13T23:32:00-04:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued September 13 at 11:32PM EDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NY1261B859FE30.SpecialWeatherStatement.1261B85A1E9CNY.BGMSPSBGM.401f71442958ed64c66febaca6c80f97"/>
+<summary>...A strong thunderstorm will impact portions of southern Steuben County through 1215 AM EDT... At 1132 PM EDT, Doppler radar was tracking a strong thunderstorm over Greenwood, or 12 miles south of Hornell, moving east at 45 mph. HAZARD...Winds in excess of 30 mph and half inch hail. SOURCE...Radar indicated.</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-09-13T23:32:00-04:00</cap:effective>
+<cap:expires>2021-09-14T00:15:00-04:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Steuben</cap:areaDesc>
+<cap:polygon>42.32,-77.73 42.2,-76.96 42,-76.97 42,-77.75 42.32,-77.73</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>036101</value>
+<valueName>UGC</valueName>
+<value>NYZ022</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B84D55F4.RedFlagWarning.1261B85A66E0OR.MFRRFWMFR.fbcba9a537a7486b487dcdadf05a86c3</id>
+<updated>2021-09-13T13:37:00-07:00</updated>
+<published>2021-09-13T13:37:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Red Flag Warning issued September 13 at 1:37PM PDT until September 13 at 11:00PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B84D55F4.RedFlagWarning.1261B85A66E0OR.MFRRFWMFR.fbcba9a537a7486b487dcdadf05a86c3"/>
+<summary>...RED FLAG WARNING REMAINS IN EFFECT UNTIL 11 PM PDT THIS EVENING FOR STRONG GUSTY WIND WITH LOW RH FOR FIRE WEATHER ZONES 620 AND 621... * Impacts: East winds, poor relative humidity recovery, and critically dry vegetation will likely contribute to a significant spread of new and existing fires and Strong, gusty wind with low</summary>
+<cap:event>Red Flag Warning</cap:event>
+<cap:effective>2021-09-13T13:37:00-07:00</cap:effective>
+<cap:expires>2021-09-13T23:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Siskiyou Mountains; Western Rogue Basin including the Illinois Valley</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>041029 041033</value>
+<valueName>UGC</valueName>
+<value>ORZ620 ORZ621</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KMFR.FW.W.0050.000000T0000Z-210914T0600Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B84D2C8C.AirQualityAlert.1261B8968580OR.MFRAQAMFR.ddf6805e16dbfe95469f3118796c13b0</id>
+<updated>2021-09-13T12:31:00-07:00</updated>
+<published>2021-09-13T12:31:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Air Quality Alert issued September 13 at 12:31PM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B84D2C8C.AirQualityAlert.1261B8968580OR.MFRAQAMFR.ddf6805e16dbfe95469f3118796c13b0"/>
+<summary>...AIR QUALITY ALERT IN EFFECT UNTIL 5 PM PDT FRIDAY... Oregon Department of Environmental Quality has issued an Air Quality Advisory for eastern Douglas and southern Lake counties, which is in effect until Friday afternoon. Wildfires burning in the region combined with forecast conditions will cause air quality levels to fluctuate and could be at unhealthy</summary>
+<cap:event>Air Quality Alert</cap:event>
+<cap:effective>2021-09-13T12:31:00-07:00</cap:effective>
+<cap:expires>2021-09-17T17:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Unknown</cap:urgency>
+<cap:severity>Unknown</cap:severity>
+<cap:certainty>Unknown</cap:certainty>
+<cap:areaDesc>Douglas; Lake</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>041019 041037</value>
+<valueName>UGC</valueName>
+<value>ORC019 ORC037</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B84D1008.SpecialWeatherStatement.1261B869D030OR.PQRSPSPQR.1554b4dca7337298fa2af9e8d96ba68b</id>
+<updated>2021-09-13T11:58:00-07:00</updated>
+<published>2021-09-13T11:58:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued September 13 at 11:58AM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=OR1261B84D1008.SpecialWeatherStatement.1261B869D030OR.PQRSPSPQR.1554b4dca7337298fa2af9e8d96ba68b"/>
+<summary>...COOL AND WET FALL-LIKE WEATHER WILL ARRIVE LATER THIS WEEK... The weather pattern will change later this week as a series of strong, wet cold fronts will bring an end to this long dry and hot summer. Overnight temperatures will cool into the lower to middle 40s Wednesday night, with some of our more exposed and traditionally</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-09-13T11:58:00-07:00</cap:effective>
+<cap:expires>2021-09-15T00:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Cascade Foothills in Lane County; Cascades in Lane County; Central Coast Range of Western Oregon; Central Columbia River Gorge; Central Oregon Coast; Central Willamette Valley; Coast Range of Northwest Oregon; Greater Portland Metro Area; Lower Columbia; North Oregon Coast; Northern Oregon Cascade Foothills; Northern Oregon Cascades; South Willamette Valley; Upper Hood River Valley; Western Columbia River Gorge</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>041003 041005 041007 041009 041027 041039 041041 041043 041047 041051 041053 041057 041067 041071</value>
+<valueName>UGC</valueName>
+<value>ORZ001 ORZ002 ORZ003 ORZ004 ORZ005 ORZ006 ORZ007 ORZ008 ORZ010 ORZ011 ORZ012 ORZ013 ORZ014 ORZ015 ORZ016</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B85A1988.HurricaneLocalStatement.1261B85B571CTX.CRPHLSCRP.6bfd075217294d2e39d0d5e15031a47c</id>
+<updated>2021-09-13T23:02:00-05:00</updated>
+<published>2021-09-13T23:02:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued September 13 at 11:02PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B85A1988.HurricaneLocalStatement.1261B85B571CTX.CRPHLSCRP.6bfd075217294d2e39d0d5e15031a47c"/>
+<summary>This product covers South Texas **NICHOLAS STRENGTHENS TO A HURRICANE AS IT APPROACHES THE UPPER TEXAS COAST** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-09-13T23:02:00-05:00</cap:effective>
+<cap:expires>2021-09-14T07:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Aransas Islands; Bee; Calhoun Islands; Coastal Aransas; Coastal Calhoun; Coastal Kleberg; Coastal Nueces; Coastal Refugio; Coastal San Patricio; Goliad; Inland Calhoun; Inland Kleberg; Inland Nueces; Inland Refugio; Inland San Patricio; Kleberg Islands; Nueces Islands; Victoria</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007 048025 048057 048175 048273 048355 048391 048409 048469</value>
+<valueName>UGC</valueName>
+<value>TXZ232 TXZ233 TXZ234 TXZ242 TXZ243 TXZ244 TXZ245 TXZ246 TXZ247 TXZ342 TXZ343 TXZ344 TXZ345 TXZ346 TXZ347 TXZ442 TXZ443 TXZ447</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FEF8.HurricaneLocalStatement.1261B85B3BC4TX.HGXHLSHGX.6d6448ba87ba296be8a6c405455d56dd</id>
+<updated>2021-09-13T22:34:00-05:00</updated>
+<published>2021-09-13T22:34:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued September 13 at 10:34PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FEF8.HurricaneLocalStatement.1261B85B3BC4TX.HGXHLSHGX.6d6448ba87ba296be8a6c405455d56dd"/>
+<summary>This product covers Southeast Texas **NICHOLAS BECOMES A HURRICANE SHORTLY BEFORE MAKING LANDFALL ON THE TEXAS GULF COAST** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-09-13T22:34:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:45:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Austin; Brazoria Islands; Brazos; Burleson; Chambers; Coastal Brazoria; Coastal Galveston; Coastal Harris; Coastal Jackson; Coastal Matagorda; Colorado; Fort Bend; Galveston Island; Grimes; Houston; Inland Brazoria; Inland Galveston; Inland Harris; Inland Jackson; Inland Matagorda; Madison; Matagorda Islands; Montgomery; Northern Liberty; Polk; San Jacinto; Southern Liberty; Trinity; Walker; Waller; Washington; Wharton</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048015 048039 048041 048051 048071 048089 048157 048167 048185 048201 048225 048239 048287 048291 048313 048321 048339 048373 048407 048455 048471 048473 048477 048481</value>
+<valueName>UGC</valueName>
+<value>TXZ163 TXZ164 TXZ176 TXZ177 TXZ178 TXZ179 TXZ195 TXZ196 TXZ197 TXZ198 TXZ199 TXZ200 TXZ210 TXZ211 TXZ212 TXZ213 TXZ214 TXZ226 TXZ227 TXZ235 TXZ236 TXZ237 TXZ238 TXZ300 TXZ313 TXZ335 TXZ336 TXZ337 TXZ338 TXZ436 TXZ437 TXZ438</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FDCC.FlashFloodWarning.1261B85A7298TX.HGXFFWHGX.45c4e1931f5a9c94fe26130fae25a7ed</id>
+<updated>2021-09-13T22:31:00-05:00</updated>
+<published>2021-09-13T22:31:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Warning issued September 13 at 10:31PM CDT until September 14 at 1:30AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FDCC.FlashFloodWarning.1261B85A7298TX.HGXFFWHGX.45c4e1931f5a9c94fe26130fae25a7ed"/>
+<summary>The National Weather Service in League City has issued a * Flash Flood Warning for... Central Matagorda County in southeastern Texas... * Until 130 AM CDT. * At 1031 PM CDT, Doppler radar indicated thunderstorms producing heavy rain across the warned area. Flash flooding is ongoing and</summary>
+<cap:event>Flash Flood Warning</cap:event>
+<cap:effective>2021-09-13T22:31:00-05:00</cap:effective>
+<cap:expires>2021-09-14T01:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Matagorda</cap:areaDesc>
+<cap:polygon>28.76,-96.05 28.93,-95.68 28.76,-95.62 28.68,-95.75 28.58,-95.99 28.58,-96.03 28.76,-96.05</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048321</value>
+<valueName>UGC</valueName>
+<value>TXC321</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KHGX.FF.W.0033.210914T0331Z-210914T0630Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FD68.HurricaneLocalStatement.1261B85B0320TX.LCHHLSLCH.f9bb8a35d20bef47f7b50bde6a01cb1c</id>
+<updated>2021-09-13T22:30:00-05:00</updated>
+<published>2021-09-13T22:30:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued September 13 at 10:30PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FD68.HurricaneLocalStatement.1261B85B0320TX.LCHHLSLCH.f9bb8a35d20bef47f7b50bde6a01cb1c"/>
+<summary>This product covers Southwest Louisiana and Southeast Texas **NICHOLAS NOW A HURRICANE - HEAVY RAINS STILL MAIN CONCERN** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS: - None</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-09-13T22:30:00-05:00</cap:effective>
+<cap:expires>2021-09-14T05:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Hardin; Jefferson; Orange</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048199 048245 048361</value>
+<valueName>UGC</valueName>
+<value>TXZ201 TXZ215 TXZ216</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.CoastalFloodAdvisory.1261B85C89C0TX.CRPCFWCRP.ed8da66159313d6cee57f58f399fdaac</id>
+<updated>2021-09-13T22:27:00-05:00</updated>
+<published>2021-09-13T22:27:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Coastal Flood Advisory issued September 13 at 10:27PM CDT until September 14 at 3:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.CoastalFloodAdvisory.1261B85C89C0TX.CRPCFWCRP.ed8da66159313d6cee57f58f399fdaac"/>
+<summary>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 3 PM CDT TUESDAY... * WHAT...Minor coastal flooding. * WHERE...Coastal Nueces, Coastal Kleberg and Coastal San Patricio Counties. * WHEN...Until 3 PM CDT Tuesday.</summary>
+<cap:event>Coastal Flood Advisory</cap:event>
+<cap:effective>2021-09-13T22:27:00-05:00</cap:effective>
+<cap:expires>2021-09-14T15:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Kleberg; Coastal Nueces; Coastal San Patricio</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048273 048355 048409</value>
+<valueName>UGC</valueName>
+<value>TXZ342 TXZ343 TXZ344</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.CF.Y.0035.000000T0000Z-210914T2000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.CoastalFloodAdvisory.1261B85C89C0TX.CRPCFWCRP.683d8eefb292fa32e6266dc6588a5dcd</id>
+<updated>2021-09-13T22:27:00-05:00</updated>
+<published>2021-09-13T22:27:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Coastal Flood Advisory issued September 13 at 10:27PM CDT until September 14 at 3:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.CoastalFloodAdvisory.1261B85C89C0TX.CRPCFWCRP.683d8eefb292fa32e6266dc6588a5dcd"/>
+<summary>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 3 PM CDT TUESDAY... ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH TUESDAY EVENING... * WHAT...For the Coastal Flood Advisory, minor coastal flooding. For the High Rip Current Risk, dangerous rip currents.</summary>
+<cap:event>Coastal Flood Advisory</cap:event>
+<cap:effective>2021-09-13T22:27:00-05:00</cap:effective>
+<cap:expires>2021-09-14T15:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Kleberg Islands; Nueces Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048273 048355</value>
+<valueName>UGC</valueName>
+<value>TXZ442 TXZ443</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.CF.Y.0035.000000T0000Z-210914T2000Z/
+/O.CON.KCRP.RP.S.0015.000000T0000Z-210915T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.RipCurrentStatement.1261B868BEC0TX.CRPCFWCRP.e7d94b9a69856d96e36e0cb86ed9001d</id>
+<updated>2021-09-13T22:27:00-05:00</updated>
+<published>2021-09-13T22:27:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Rip Current Statement issued September 13 at 10:27PM CDT until September 14 at 7:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.RipCurrentStatement.1261B868BEC0TX.CRPCFWCRP.e7d94b9a69856d96e36e0cb86ed9001d"/>
+<summary>...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH TUESDAY EVENING... * WHAT...Dangerous rip currents. * WHERE...Aransas Islands and Calhoun Islands Counties. * WHEN...Through Tuesday evening. * IMPACTS...Rip currents can sweep even the most experienced</summary>
+<cap:event>Rip Current Statement</cap:event>
+<cap:effective>2021-09-13T22:27:00-05:00</cap:effective>
+<cap:expires>2021-09-14T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Aransas Islands; Calhoun Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007 048057</value>
+<valueName>UGC</valueName>
+<value>TXZ345 TXZ447</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.RP.S.0015.000000T0000Z-210915T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.RipCurrentStatement.1261B868BEC0TX.CRPCFWCRP.211d3fcc2b46eb0afa485f8dca1b2030</id>
+<updated>2021-09-13T22:27:00-05:00</updated>
+<published>2021-09-13T22:27:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Rip Current Statement issued September 13 at 10:27PM CDT until September 14 at 7:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FC3C.RipCurrentStatement.1261B868BEC0TX.CRPCFWCRP.211d3fcc2b46eb0afa485f8dca1b2030"/>
+<summary>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 3 PM CDT TUESDAY... ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH TUESDAY EVENING... * WHAT...For the Coastal Flood Advisory, minor coastal flooding. For the High Rip Current Risk, dangerous rip currents.</summary>
+<cap:event>Rip Current Statement</cap:event>
+<cap:effective>2021-09-13T22:27:00-05:00</cap:effective>
+<cap:expires>2021-09-14T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Kleberg Islands; Nueces Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048273 048355</value>
+<valueName>UGC</valueName>
+<value>TXZ442 TXZ443</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.CF.Y.0035.000000T0000Z-210914T2000Z/
+/O.CON.KCRP.RP.S.0015.000000T0000Z-210915T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.fc97359e59b31729df7783155b74ff7e</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.fc97359e59b31729df7783155b74ff7e"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * WIND - LATEST LOCAL FORECAST: Tropical storm force winds remain</summary>
+<cap:event>Hurricane Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Jackson</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048239</value>
+<valueName>UGC</valueName>
+<value>TXZ335</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.NEW.KHGX.HU.W.1014.210914T0324Z-000000T0000Z/
+/O.UPG.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/
+/O.UPG.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.be8ab238aba62b8b79c5a8fa80fc3257</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.be8ab238aba62b8b79c5a8fa80fc3257"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Matagorda</summary>
+<cap:event>Hurricane Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Matagorda</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048321</value>
+<valueName>UGC</valueName>
+<value>TXZ336</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.NEW.KHGX.HU.W.1014.210914T0324Z-000000T0000Z/
+/O.UPG.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/
+/O.UPG.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.66ec19c9a0f58e68661dafa633bd9c07</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.66ec19c9a0f58e68661dafa633bd9c07"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Freeport</summary>
+<cap:event>Hurricane Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Brazoria</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048321</value>
+<valueName>UGC</valueName>
+<value>TXZ337</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.NEW.KHGX.HU.W.1014.210914T0324Z-000000T0000Z/
+/O.UPG.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/
+/O.UPG.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.a9590f6bce404ee763e0dbbaa27ae67c</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.a9590f6bce404ee763e0dbbaa27ae67c"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Matagorda Jetty</summary>
+<cap:event>Hurricane Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Matagorda Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048321</value>
+<valueName>UGC</valueName>
+<value>TXZ436</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.NEW.KHGX.HU.W.1014.210914T0324Z-000000T0000Z/
+/O.UPG.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/
+/O.UPG.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.c804fcfdbd72340220ea80b7c1162ee7</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.HurricaneWarning.1261B85B35E8TX.HGXTCVHGX.c804fcfdbd72340220ea80b7c1162ee7"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Surfside Beach</summary>
+<cap:event>Hurricane Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Brazoria Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039</value>
+<valueName>UGC</valueName>
+<value>TXZ437</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.NEW.KHGX.HU.W.1014.210914T0324Z-000000T0000Z/
+/O.UPG.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/
+/O.UPG.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.e58c0260b6d6d8517e1f2074ee9c514f</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.e58c0260b6d6d8517e1f2074ee9c514f"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Anahuac - Beach City - Mont Belview</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Chambers</cap:areaDesc>
+<cap:polygon>29.89,-94.36 29.56,-94.35 29.55,-94.37 29.6,-94.37 29.6,-94.41 29.59,-94.42 29.59,-94.41 29.58,-94.42 29.57,-94.41 29.57,-94.42 29.56,-94.46 29.56,-94.47 29.55,-94.49 29.54,-94.5 29.54,-94.52 29.55,-94.53 29.57,-94.54 29.57,-94.56 29.56,-94.62 29.53,-94.74 29.52,-94.76 29.53,-94.78 29.55,-94.79 29.56,-94.78 29.58,-94.75 29.64,-94.72 29.69,-94.72 29.78,-94.73 29.79,-94.74 29.77,-94.79 29.76,-94.82 29.72,-94.85 29.67,-94.87 29.66,-94.9 29.65,-94.92 29.66,-94.93 29.67,-94.93 29.67,-94.92 29.68,-94.93 29.69,-94.92 29.7,-94.93 29.71,-94.93 29.72,-94.94 29.74,-94.93 29.75,-94.93 29.76,-94.92 29.77,-94.92 29.77,-94.91 29.8,-94.92 29.81,-94.91 29.83,-94.91 29.83,-94.92 29.83,-94.94 29.86,-94.95 29.87,-94.97 29.88,-94.98 29.88,-94.88 29.89,-94.44 29.89,-94.36 29.89,-94.36</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048071</value>
+<valueName>UGC</valueName>
+<value>TXZ214</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.9d2dc4e0beee851070beca395a697c28</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.9d2dc4e0beee851070beca395a697c28"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Baytown - La Porte - Pasadena</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Harris</cap:areaDesc>
+<cap:polygon>29.88,-94.98 29.87,-94.97 29.86,-94.95 29.83,-94.94 29.83,-94.92 29.83,-94.91 29.81,-94.91 29.8,-94.92 29.77,-94.91 29.77,-94.92 29.76,-94.92 29.75,-94.93 29.74,-94.93 29.72,-94.94 29.71,-94.93 29.7,-94.93 29.69,-94.92 29.68,-94.93 29.67,-94.93 29.68,-94.94 29.68,-94.96 29.64,-94.94 29.64,-94.96 29.67,-94.98 29.66,-95.01 29.64,-95.02 29.62,-95.01 29.6,-94.98 29.57,-95.01 29.55,-95.02 29.56,-95.07 29.55,-95.08 29.54,-95.08 29.52,-95.09 29.52,-95.1 29.51,-95.1 29.51,-95.12 29.51,-95.12 29.61,-95.21 29.64,-95.16 29.76,-95.15 29.78,-95.16 29.83,-95.18 29.88,-95.06 29.85,-95.04 29.85,-94.99 29.89,-94.98 29.88,-94.98 29.88,-94.98</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048201</value>
+<valueName>UGC</valueName>
+<value>TXZ313</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.3d94cbde2a2fb40e495a2fb7acbe6916</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.3d94cbde2a2fb40e495a2fb7acbe6916"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * WIND - LATEST LOCAL FORECAST: Tropical storm force winds remain</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Jackson</cap:areaDesc>
+<cap:polygon>28.79,-96.32 28.68,-96.32 28.68,-96.39 28.68,-96.4 28.69,-96.39 28.7,-96.39 28.71,-96.38 28.71,-96.39 28.72,-96.39 28.73,-96.39 28.74,-96.41 28.72,-96.42 28.72,-96.43 28.74,-96.43 28.74,-96.44 28.75,-96.44 28.76,-96.45 28.74,-96.45 28.74,-96.44 28.72,-96.44 28.71,-96.43 28.7,-96.43 28.7,-96.47 28.7,-96.48 28.71,-96.48 28.71,-96.53 28.71,-96.55 28.71,-96.56 28.71,-96.57 28.7,-96.58 28.71,-96.58 28.73,-96.59 28.71,-96.65 28.72,-96.65 28.72,-96.66 28.74,-96.67 28.75,-96.66 28.75,-96.67 28.76,-96.67 28.76,-96.69 28.77,-96.69 28.78,-96.7 28.78,-96.7 28.82,-96.54 28.82,-96.52 28.84,-96.46 28.84,-96.42 28.86,-96.38 28.79,-96.32 28.79,-96.32</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048239</value>
+<valueName>UGC</valueName>
+<value>TXZ335</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.c4b5cd2e17017d2760e5e7be83abb493</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.c4b5cd2e17017d2760e5e7be83abb493"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Matagorda</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Matagorda</cap:areaDesc>
+<cap:polygon>28.96,-95.68 28.94,-95.65 28.92,-95.65 28.91,-95.64 28.86,-95.58 28.83,-95.57 28.83,-95.53 28.81,-95.54 28.76,-95.64 28.77,-95.67 28.74,-95.73 28.75,-95.75 28.75,-95.78 28.72,-95.88 28.68,-95.99 28.66,-96.05 28.64,-96.08 28.61,-96.16 28.59,-96.18 28.54,-96.35 28.64,-96.32 28.68,-96.32 28.79,-96.32 28.79,-96.08 28.81,-96.05 28.79,-96.03 28.79,-96 28.84,-95.86 28.92,-95.74 28.97,-95.69 28.96,-95.68 28.96,-95.68</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048321</value>
+<valueName>UGC</valueName>
+<value>TXZ336</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.efde3cfad7890303e8cfdd23aadee529</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.efde3cfad7890303e8cfdd23aadee529"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Freeport</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Brazoria</cap:areaDesc>
+<cap:polygon>29.32,-95.17 29.31,-95.13 29.2,-95.06 29.18,-95.08 29.18,-95.1 29.17,-95.11 29.17,-95.12 29.18,-95.11 29.2,-95.11 29.19,-95.14 29.18,-95.15 29.15,-95.15 29.14,-95.16 29.14,-95.16 29.11,-95.2 29.08,-95.21 29.04,-95.23 29.02,-95.23 28.99,-95.26 28.97,-95.28 28.94,-95.31 28.93,-95.32 28.9,-95.39 28.9,-95.4 28.87,-95.45 28.86,-95.49 28.83,-95.53 28.83,-95.53 28.83,-95.57 28.86,-95.58 28.91,-95.64 28.92,-95.65 28.94,-95.65 28.96,-95.68 28.97,-95.69 28.99,-95.65 29.01,-95.63 29.01,-95.55 29.21,-95.32 29.29,-95.29 29.32,-95.26 29.32,-95.17 29.32,-95.17</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048321</value>
+<valueName>UGC</valueName>
+<value>TXZ337</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.0b8ef1e03dcf26c7f4be2373b7181eaf</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.0b8ef1e03dcf26c7f4be2373b7181eaf"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Dickinson - Eastern League City - Texas City</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Galveston</cap:areaDesc>
+<cap:polygon>29.55,-95.02 29.52,-95 29.51,-94.99 29.5,-94.96 29.5,-94.91 29.43,-94.89 29.37,-94.89 29.31,-94.89 29.31,-94.94 29.26,-95 29.2,-95.06 29.31,-95.13 29.31,-95.1 29.31,-95.08 29.34,-95.05 29.37,-95.03 29.42,-95.05 29.46,-95.09 29.51,-95.12 29.51,-95.1 29.52,-95.1 29.52,-95.09 29.54,-95.08 29.55,-95.08 29.56,-95.07 29.55,-95.02 29.55,-95.02</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ338</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.578f23020f248d6a1965401c5b742521</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.578f23020f248d6a1965401c5b742521"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Matagorda Jetty</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Matagorda Islands</cap:areaDesc>
+<cap:polygon>28.83,-95.51 28.81,-95.52 28.37,-96.38 28.4,-96.39 28.54,-96.35 28.59,-96.18 28.61,-96.16 28.64,-96.08 28.66,-96.05 28.68,-95.99 28.72,-95.88 28.75,-95.78 28.75,-95.75 28.74,-95.73 28.77,-95.67 28.76,-95.64 28.81,-95.54 28.83,-95.53 28.84,-95.51 28.83,-95.51 28.83,-95.51</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048321</value>
+<valueName>UGC</valueName>
+<value>TXZ436</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.218642508f01ca56373ed37d5865ad4c</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.218642508f01ca56373ed37d5865ad4c"/>
+<summary>...HURRICANE WARNING IN EFFECT... ...STORM SURGE WARNING REMAINS IN EFFECT... A Hurricane Warning means hurricane-force winds are expected somewhere within this area within the next 36 hours * LOCATIONS AFFECTED - Surfside Beach</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Brazoria Islands</cap:areaDesc>
+<cap:polygon>29.07,-95.12 28.97,-95.26 28.94,-95.3 28.92,-95.33 28.88,-95.38 28.87,-95.38 28.86,-95.4 28.86,-95.43 28.86,-95.44 28.83,-95.51 28.84,-95.51 28.83,-95.53 28.83,-95.53 28.86,-95.49 28.87,-95.45 28.9,-95.4 28.9,-95.39 28.93,-95.32 28.94,-95.31 28.97,-95.28 28.99,-95.26 29.02,-95.23 29.04,-95.23 29.08,-95.21 29.11,-95.2 29.14,-95.16 29.07,-95.12 29.07,-95.12</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039</value>
+<valueName>UGC</valueName>
+<value>TXZ437</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.c1288fa3194378b35b1bb0a749ceb961</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.c1288fa3194378b35b1bb0a749ceb961"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Galveston - Jamaica Beach - West End Galveston Island</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Galveston Island</cap:areaDesc>
+<cap:polygon>29.34,-94.71 29.08,-95.11 29.09,-95.12 29.09,-95.12 29.19,-95.05 29.2,-95.06 29.26,-95 29.31,-94.94 29.31,-94.89 29.37,-94.89 29.43,-94.89 29.36,-94.81 29.34,-94.71 29.34,-94.71</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ438</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.25926f31a2ff2e8f826f9aa70206911d</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.StormSurgeWarning.1261B85B35E8TX.HGXTCVHGX.25926f31a2ff2e8f826f9aa70206911d"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Bolivar - Crystal Beach - High Island</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Bolivar Peninsula</cap:areaDesc>
+<cap:polygon>29.55,-94.37 29.51,-94.5 29.46,-94.61 29.43,-94.68 29.4,-94.72 29.37,-94.73 29.37,-94.74 29.36,-94.75 29.36,-94.78 29.36,-94.78 29.38,-94.78 29.39,-94.77 29.44,-94.73 29.44,-94.71 29.46,-94.69 29.47,-94.69 29.48,-94.67 29.49,-94.64 29.5,-94.6 29.52,-94.6 29.54,-94.55 29.52,-94.53 29.52,-94.51 29.52,-94.51 29.56,-94.47 29.56,-94.46 29.57,-94.42 29.57,-94.41 29.58,-94.42 29.59,-94.41 29.59,-94.42 29.6,-94.41 29.6,-94.37 29.55,-94.37 29.55,-94.37</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ439</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.27f7045d1d5572cf5413c66ba8fcd3b3</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.27f7045d1d5572cf5413c66ba8fcd3b3"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Cleveland - Dayton - Liberty * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Northern Liberty</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048291</value>
+<valueName>UGC</valueName>
+<value>TXZ200</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.9854bc9f3bf0f60e8915d9a556ec0257</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.9854bc9f3bf0f60e8915d9a556ec0257"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Houston - Kingwood - Spring * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Harris</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048201</value>
+<valueName>UGC</valueName>
+<value>TXZ213</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.5e93bcbd9581dd83616e24205ecdfb4a</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.5e93bcbd9581dd83616e24205ecdfb4a"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Anahuac - Beach City - Mont Belview</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Chambers</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048071</value>
+<valueName>UGC</valueName>
+<value>TXZ214</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.76227da5fdca5b30e3dac59898b86698</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.76227da5fdca5b30e3dac59898b86698"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Boling-Iago - El Campo - Wharton * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Wharton</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048157 048481</value>
+<valueName>UGC</valueName>
+<value>TXZ226</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.c5f514803fb2e4ccf4d5385fb8ce187a</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.c5f514803fb2e4ccf4d5385fb8ce187a"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Cinco Ranch - Rosenberg - Sugar Land * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Fort Bend</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048157</value>
+<valueName>UGC</valueName>
+<value>TXZ227</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.e0bf8b1a4dab6296b11f235089305719</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.e0bf8b1a4dab6296b11f235089305719"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Edna - Ganado * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Jackson</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048239</value>
+<valueName>UGC</valueName>
+<value>TXZ235</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.317ba07f4732cc33dcf8e32b8ca94d43</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.317ba07f4732cc33dcf8e32b8ca94d43"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Bay City - Blessing - Van Vleck</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Matagorda</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048321</value>
+<valueName>UGC</valueName>
+<value>TXZ236</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KHGX.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.726f97bac4471e5896dcd7bab8c72d28</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.726f97bac4471e5896dcd7bab8c72d28"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Alvin - Pearland - West Columbia * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Brazoria</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039</value>
+<valueName>UGC</valueName>
+<value>TXZ237</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.3c79243ee1a9e650e247753fdbfe4866</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.3c79243ee1a9e650e247753fdbfe4866"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Friendswood - Western League City - Santa Fe * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Galveston</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ238</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.30e29a5a3bb92677beaf23694e4a9b59</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.30e29a5a3bb92677beaf23694e4a9b59"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Ames - Devers - Liberty * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Southern Liberty</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048291</value>
+<valueName>UGC</valueName>
+<value>TXZ300</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.07bfc2168218f1535579198235b6766c</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.07bfc2168218f1535579198235b6766c"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Baytown - La Porte - Pasadena</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Harris</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048201</value>
+<valueName>UGC</valueName>
+<value>TXZ313</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.58fde580c0226dfe2c0fa2c742027f0b</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.58fde580c0226dfe2c0fa2c742027f0b"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Dickinson - Eastern League City - Texas City</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Galveston</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ338</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.b6ee58ee2e01032c6e8dc0df43027cc9</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.b6ee58ee2e01032c6e8dc0df43027cc9"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Galveston - Jamaica Beach - West End Galveston Island</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Galveston Island</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ438</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.0b1b1e347a8b94d4f821b8f66480380f</id>
+<updated>2021-09-13T22:24:00-05:00</updated>
+<published>2021-09-13T22:24:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:24PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859FB10.TropicalStormWarning.1261B85B35E8TX.HGXTCVHGX.0b1b1e347a8b94d4f821b8f66480380f"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Bolivar - Crystal Beach - High Island</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:24:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Bolivar Peninsula</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048167</value>
+<valueName>UGC</valueName>
+<value>TXZ439</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KHGX.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F8B8.HurricaneLocalStatement.1261B85B35E8TX.EWXHLSEWX.ef4b4e251c80f9734fbcc3e52dbc4d25</id>
+<updated>2021-09-13T22:18:00-05:00</updated>
+<published>2021-09-13T22:18:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued September 13 at 10:18PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F8B8.HurricaneLocalStatement.1261B85B35E8TX.EWXHLSEWX.ef4b4e251c80f9734fbcc3e52dbc4d25"/>
+<summary>This product covers South Central Texas **NICHOLAS BECOMES A HURRICANE...WIND AND FLOODING RAIN IMPACTS EXPECTED TO REMAIN EAST OF AREA** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS:</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-09-13T22:18:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>De Witt; Fayette; Lavaca</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048123 048149 048285</value>
+<valueName>UGC</valueName>
+<value>TXZ209 TXZ224 TXZ225</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.f6f3f1bc14c249201c1fc1fe0bc6be0b</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.f6f3f1bc14c249201c1fc1fe0bc6be0b"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Rockport - Fulton</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Aransas</cap:areaDesc>
+<cap:polygon>28.08,-97.04 28.03,-97.02 28.02,-97.05 28.03,-97.05 27.96,-97.06 27.95,-97.07 27.89,-97.12 27.89,-97.14 27.89,-97.15 27.9,-97.14 27.96,-97.18 27.98,-97.19 28.06,-97.25 28.07,-97.26 28.06,-97.24 28.06,-97.22 28.07,-97.22 28.07,-97.21 28.05,-97.15 28.07,-97.11 28.08,-97.1 28.09,-97.06 28.12,-97.05 28.11,-97.03 28.1,-97.02 28.1,-97.03 28.08,-97.04 28.08,-97.04</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007</value>
+<valueName>UGC</valueName>
+<value>TXZ245</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.811df6b81a7ebd90e02cd6296514d289</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.811df6b81a7ebd90e02cd6296514d289"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Kamay - Long Mott</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Inland Calhoun</cap:areaDesc>
+<cap:polygon>28.55,-96.7 28.45,-96.78 28.47,-96.79 28.46,-96.8 28.45,-96.79 28.43,-96.81 28.45,-96.83 28.46,-96.84 28.48,-96.85 28.48,-96.86 28.49,-96.87 28.51,-96.89 28.53,-96.91 28.55,-96.9 28.56,-96.9 28.56,-96.9 28.59,-96.93 28.64,-96.85 28.56,-96.83 28.57,-96.78 28.65,-96.78 28.66,-96.78 28.67,-96.72 28.7,-96.67 28.55,-96.7 28.55,-96.7</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048057</value>
+<valueName>UGC</valueName>
+<value>TXZ247</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.3aed829be8407f19e3cb0c532e41305b</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.3aed829be8407f19e3cb0c532e41305b"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * WIND - LATEST LOCAL FORECAST: Below tropical storm force wind - Peak Wind Forecast: 20-30 mph with gusts to 35 mph</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Aransas Islands</cap:areaDesc>
+<cap:polygon>28.12,-96.83 28.11,-96.83 28.07,-96.85 28.06,-96.85 28.06,-96.86 27.98,-96.94 27.91,-97 27.83,-97.05 27.84,-97.05 27.84,-97.07 27.84,-97.08 27.87,-97.12 27.89,-97.12 27.95,-97.07 27.98,-96.99 28.04,-96.96 28.06,-96.97 28.07,-96.96 28.08,-96.94 28.11,-96.9 28.14,-96.88 28.12,-96.83 28.12,-96.83</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007</value>
+<valueName>UGC</valueName>
+<value>TXZ345</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.e7355e0c4320a408551afa8291e821cd</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.e7355e0c4320a408551afa8291e821cd"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Bayside - Austwell</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Refugio</cap:areaDesc>
+<cap:polygon>28.27,-97.12 28.26,-97.12 28.25,-97.13 28.23,-97.1 28.23,-97.1 28.22,-97.08 28.2,-97.06 28.21,-97.04 28.2,-97.04 28.2,-97.02 28.19,-97.03 28.16,-97.1 28.16,-97.11 28.15,-97.13 28.1,-97.21 28.08,-97.22 28.06,-97.24 28.07,-97.25 28.08,-97.26 28.09,-97.26 28.09,-97.28 28.27,-97.12 28.27,-97.12</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048391</value>
+<valueName>UGC</valueName>
+<value>TXZ346</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.c105a947ff7e02e798683469c30b979f</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.c105a947ff7e02e798683469c30b979f"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Port Lavaca - Port OConnor</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Coastal Calhoun</cap:areaDesc>
+<cap:polygon>28.22,-96.8 28.22,-96.81 28.26,-96.8 28.27,-96.8 28.26,-96.79 28.25,-96.78 28.23,-96.79 28.22,-96.8 28.22,-96.8</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048057</value>
+<valueName>UGC</valueName>
+<value>TXZ347</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.37c1fd95737a46193ca4da753fbfee81</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.StormSurgeWarning.1261B85B300CTX.CRPTCVCRP.37c1fd95737a46193ca4da753fbfee81"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * WIND - LATEST LOCAL FORECAST: Below tropical storm force wind - Peak Wind Forecast: 25-35 mph with gusts to 45 mph</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Calhoun Islands</cap:areaDesc>
+<cap:polygon>28.37,-96.38 28.34,-96.4 28.33,-96.41 28.26,-96.55 28.16,-96.72 28.07,-96.85 28.11,-96.83 28.17,-96.82 28.18,-96.82 28.2,-96.79 28.32,-96.62 28.33,-96.6 28.42,-96.41 28.37,-96.38 28.37,-96.38</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048057</value>
+<valueName>UGC</valueName>
+<value>TXZ447</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.b089e385cf7e66c44c991c79fb380bf7</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.b089e385cf7e66c44c991c79fb380bf7"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Victoria - Bloomington * WIND - LATEST LOCAL FORECAST: Below tropical storm force wind</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Victoria</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048175 048469</value>
+<valueName>UGC</valueName>
+<value>TXZ234</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.c65a4e1dca5019819285502d3153fcc6</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.c65a4e1dca5019819285502d3153fcc6"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Rockport - Fulton</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Aransas</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007</value>
+<valueName>UGC</valueName>
+<value>TXZ245</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.aefc274a81a3241a719fcde2e5feb0b7</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.aefc274a81a3241a719fcde2e5feb0b7"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Refugio - Woodsboro * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Refugio</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048391</value>
+<valueName>UGC</valueName>
+<value>TXZ246</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.ec9f6c9d78d18b12573d4fc3393f7930</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.ec9f6c9d78d18b12573d4fc3393f7930"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Kamay - Long Mott</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Inland Calhoun</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048057</value>
+<valueName>UGC</valueName>
+<value>TXZ247</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.459057b45054d984f1cf8a1f83e320d6</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.459057b45054d984f1cf8a1f83e320d6"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * WIND - LATEST LOCAL FORECAST: Below tropical storm force wind - Peak Wind Forecast: 20-30 mph with gusts to 35 mph</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Aransas Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007</value>
+<valueName>UGC</valueName>
+<value>TXZ345</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.a4336cd751020bb6e9055bf3b641f710</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.a4336cd751020bb6e9055bf3b641f710"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Bayside - Austwell</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Refugio</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048391</value>
+<valueName>UGC</valueName>
+<value>TXZ346</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.2678a15c6f6e109640101d5ae38d3752</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.2678a15c6f6e109640101d5ae38d3752"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * LOCATIONS AFFECTED - Port Lavaca - Port OConnor</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Calhoun</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048057</value>
+<valueName>UGC</valueName>
+<value>TXZ347</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.52ee279436a32e4f69843deb2d4d438b</id>
+<updated>2021-09-13T22:15:00-05:00</updated>
+<published>2021-09-13T22:15:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:15PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F78C.TropicalStormWarning.1261B85B300CTX.CRPTCVCRP.52ee279436a32e4f69843deb2d4d438b"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... ...HURRICANE WATCH IS CANCELLED... * WIND - LATEST LOCAL FORECAST: Below tropical storm force wind - Peak Wind Forecast: 25-35 mph with gusts to 45 mph</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:15:00-05:00</cap:effective>
+<cap:expires>2021-09-14T06:15:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Calhoun Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048057</value>
+<valueName>UGC</valueName>
+<value>TXZ447</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KCRP.TR.W.1014.000000T0000Z-000000T0000Z/
+/O.CAN.KCRP.HU.A.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.StormSurgeWarning.1261B85AE7C8TX.LCHTCVLCH.6352723dbc97a658968762d8a8e58c9e</id>
+<updated>2021-09-13T22:10:00-05:00</updated>
+<published>2021-09-13T22:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Storm Surge Warning issued September 13 at 10:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.StormSurgeWarning.1261B85AE7C8TX.LCHTCVLCH.6352723dbc97a658968762d8a8e58c9e"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Beaumont - Nederland - Port Arthur</summary>
+<cap:event>Storm Surge Warning</cap:event>
+<cap:effective>2021-09-13T22:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T04:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency></cap:urgency>
+<cap:severity></cap:severity>
+<cap:certainty></cap:certainty>
+<cap:areaDesc>Jefferson</cap:areaDesc>
+<cap:polygon>30.18,-94.17 30.17,-94.17 30.16,-94.12 30.15,-94.11 30.14,-94.1 30.14,-94.11 30.13,-94.08 30.12,-94.07 30.11,-94.08 30.11,-94.09 30.09,-94.09 30.09,-94.09 30.08,-94.09 30.08,-94.08 30.08,-94.05 30.06,-94.04 30.07,-94.03 30.05,-94.03 30.04,-94.04 30.03,-94.03 30.03,-94 30.01,-94 30.02,-93.98 30.01,-93.98 30.01,-93.96 30,-93.95 29.99,-93.93 30,-93.91 29.99,-93.9 29.98,-93.87 29.98,-93.86 29.96,-93.86 29.94,-93.85 29.88,-93.86 29.84,-93.92 29.78,-93.94 29.76,-93.9 29.76,-93.9 29.74,-93.89 29.73,-93.87 29.71,-93.85 29.7,-93.85 29.69,-93.84 29.68,-93.84 29.67,-93.87 29.68,-94 29.67,-94.06 29.56,-94.35 29.89,-94.36 29.89,-94.44 30.11,-94.44 30.12,-94.43 30.1,-94.42 30.1,-94.4 30.11,-94.38 30.1,-94.37 30.11,-94.35 30.1,-94.34 30.11,-94.33 30.12,-94.3 30.13,-94.28 30.17,-94.28 30.17,-94.25 30.17,-94.24 30.17,-94.23 30.17,-94.22 30.19,-94.21 30.19,-94.19 30.18,-94.19 30.19,-94.18 30.18,-94.17 30.18,-94.17</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048245</value>
+<valueName>UGC</valueName>
+<value>TXZ215</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.SS.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.TropicalStormWarning.1261B85AE7C8TX.LCHTCVLCH.5df65b55514f7ab7d214c324f7bb7106</id>
+<updated>2021-09-13T22:10:00-05:00</updated>
+<published>2021-09-13T22:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.TropicalStormWarning.1261B85AE7C8TX.LCHTCVLCH.5df65b55514f7ab7d214c324f7bb7106"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Kountze - Lumberton - Silsbee * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T04:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Hardin</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048199</value>
+<valueName>UGC</valueName>
+<value>TXZ201</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.TropicalStormWarning.1261B85AE7C8TX.LCHTCVLCH.f48d49991f646173768061121569813d</id>
+<updated>2021-09-13T22:10:00-05:00</updated>
+<published>2021-09-13T22:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.TropicalStormWarning.1261B85AE7C8TX.LCHTCVLCH.f48d49991f646173768061121569813d"/>
+<summary>...STORM SURGE WARNING REMAINS IN EFFECT... ...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Beaumont - Nederland - Port Arthur</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T04:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Jefferson</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048245</value>
+<valueName>UGC</valueName>
+<value>TXZ215</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.SS.W.1014.000000T0000Z-000000T0000Z/
+/O.CON.KLCH.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.TropicalStormWarning.1261B85AE7C8TX.LCHTCVLCH.dd22af2ca73be855eb70fab7490dd0d9</id>
+<updated>2021-09-13T22:10:00-05:00</updated>
+<published>2021-09-13T22:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Tropical Storm Warning issued September 13 at 10:10PM CDT until further notice by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859F598.TropicalStormWarning.1261B85AE7C8TX.LCHTCVLCH.dd22af2ca73be855eb70fab7490dd0d9"/>
+<summary>...TROPICAL STORM WARNING REMAINS IN EFFECT... * LOCATIONS AFFECTED - Bridge City - Orange - Vidor * WIND</summary>
+<cap:event>Tropical Storm Warning</cap:event>
+<cap:effective>2021-09-13T22:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T04:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Orange</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048361</value>
+<valueName>UGC</valueName>
+<value>TXZ216</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.TR.W.1014.000000T0000Z-000000T0000Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859DC98.FlashFloodWarning.1261B85A7874TX.HGXFFWHGX.b7a6651a29a4204169b33b81eb9a906c</id>
+<updated>2021-09-13T21:46:00-05:00</updated>
+<published>2021-09-13T21:46:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Warning issued September 13 at 9:46PM CDT until September 14 at 1:45AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B859DC98.FlashFloodWarning.1261B85A7874TX.HGXFFWHGX.b7a6651a29a4204169b33b81eb9a906c"/>
+<summary>The National Weather Service in League City has issued a * Flash Flood Warning for... Southeastern Brazoria County in southeastern Texas... Galveston County in southeastern Texas... East Central Matagorda County in southeastern Texas... * Until 145 AM CDT.</summary>
+<cap:event>Flash Flood Warning</cap:event>
+<cap:effective>2021-09-13T21:46:00-05:00</cap:effective>
+<cap:expires>2021-09-14T01:45:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Immediate</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Brazoria; Galveston; Matagorda</cap:areaDesc>
+<cap:polygon>29.21,-95.43 29.34,-95.34 29.4,-95.19 29.49,-95.01 29.5,-94.9 29.44,-94.84 29.42,-94.84 29.41,-94.81 29.42,-94.81 29.32,-94.7 29.02,-95.16 28.83,-95.42 28.77,-95.57 28.75,-95.61 28.76,-95.63 28.93,-95.68 29.21,-95.43</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048167 048321</value>
+<valueName>UGC</valueName>
+<value>TXC039 TXC167 TXC321</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KHGX.FF.W.0032.210914T0246Z-210914T0645Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84DA3B0.CoastalFloodAdvisory.1261B85B5140TX.BROCFWBRO.ed4513421329b991f873f4f0093ed5c3</id>
+<updated>2021-09-13T17:36:00-05:00</updated>
+<published>2021-09-13T17:36:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Coastal Flood Advisory issued September 13 at 5:36PM CDT until September 14 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84DA3B0.CoastalFloodAdvisory.1261B85B5140TX.BROCFWBRO.ed4513421329b991f873f4f0093ed5c3"/>
+<summary>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 7 AM CDT TUESDAY... ...HIGH SURF ADVISORY REMAINS IN EFFECT UNTIL 7 AM CDT TUESDAY... ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH TUESDAY MORNING... * WHAT...Large breaking waves of 3 to 6 feet in the surf zone</summary>
+<cap:event>Coastal Flood Advisory</cap:event>
+<cap:effective>2021-09-13T17:36:00-05:00</cap:effective>
+<cap:expires>2021-09-14T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Cameron; Coastal Kenedy; Coastal Willacy</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048061 048261 048489</value>
+<valueName>UGC</valueName>
+<value>TXZ256 TXZ257 TXZ351</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KBRO.CF.Y.0004.000000T0000Z-210914T1200Z/
+/O.CON.KBRO.SU.Y.0003.000000T0000Z-210914T1200Z/
+/O.CON.KBRO.RP.S.0049.000000T0000Z-210914T1200Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84DA3B0.HighSurfAdvisory.1261B85B5140TX.BROCFWBRO.c29bc55ab38a026d2e8398ce42c855b6</id>
+<updated>2021-09-13T17:36:00-05:00</updated>
+<published>2021-09-13T17:36:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>High Surf Advisory issued September 13 at 5:36PM CDT until September 14 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84DA3B0.HighSurfAdvisory.1261B85B5140TX.BROCFWBRO.c29bc55ab38a026d2e8398ce42c855b6"/>
+<summary>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 7 AM CDT TUESDAY... ...HIGH SURF ADVISORY REMAINS IN EFFECT UNTIL 7 AM CDT TUESDAY... ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH TUESDAY MORNING... * WHAT...Large breaking waves of 3 to 6 feet in the surf zone</summary>
+<cap:event>High Surf Advisory</cap:event>
+<cap:effective>2021-09-13T17:36:00-05:00</cap:effective>
+<cap:expires>2021-09-14T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Cameron; Coastal Kenedy; Coastal Willacy</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048061 048261 048489</value>
+<valueName>UGC</valueName>
+<value>TXZ256 TXZ257 TXZ351</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KBRO.CF.Y.0004.000000T0000Z-210914T1200Z/
+/O.CON.KBRO.SU.Y.0003.000000T0000Z-210914T1200Z/
+/O.CON.KBRO.RP.S.0049.000000T0000Z-210914T1200Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84DA3B0.RipCurrentStatement.1261B85B5140TX.BROCFWBRO.f070af7b14dafd15c7db21e9c23fba00</id>
+<updated>2021-09-13T17:36:00-05:00</updated>
+<published>2021-09-13T17:36:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Rip Current Statement issued September 13 at 5:36PM CDT until September 14 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84DA3B0.RipCurrentStatement.1261B85B5140TX.BROCFWBRO.f070af7b14dafd15c7db21e9c23fba00"/>
+<summary>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 7 AM CDT TUESDAY... ...HIGH SURF ADVISORY REMAINS IN EFFECT UNTIL 7 AM CDT TUESDAY... ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH TUESDAY MORNING... * WHAT...Large breaking waves of 3 to 6 feet in the surf zone</summary>
+<cap:event>Rip Current Statement</cap:event>
+<cap:effective>2021-09-13T17:36:00-05:00</cap:effective>
+<cap:expires>2021-09-14T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Coastal Cameron; Coastal Kenedy; Coastal Willacy</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048061 048261 048489</value>
+<valueName>UGC</valueName>
+<value>TXZ256 TXZ257 TXZ351</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KBRO.CF.Y.0004.000000T0000Z-210914T1200Z/
+/O.CON.KBRO.SU.Y.0003.000000T0000Z-210914T1200Z/
+/O.CON.KBRO.RP.S.0049.000000T0000Z-210914T1200Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D95A0.FlashFloodWatch.1261B868BEC0TX.HGXFFAHGX.e3e99453042c3d3cf141acfc50412804</id>
+<updated>2021-09-13T17:00:00-05:00</updated>
+<published>2021-09-13T17:00:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued September 13 at 5:00PM CDT until September 14 at 7:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D95A0.FlashFloodWatch.1261B868BEC0TX.HGXFFAHGX.e3e99453042c3d3cf141acfc50412804"/>
+<summary>.Tropical Storm Nicholas will move north and make landfall near Matagorda Bay. Periods of showers and thunderstorms will increase in coverage this evening with periods of heavy overnight into early Tuesday. ...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY EVENING... The Flash Flood Watch continues for</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-09-13T17:00:00-05:00</cap:effective>
+<cap:expires>2021-09-14T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Bolivar Peninsula; Brazoria Islands; Chambers; Coastal Brazoria; Coastal Galveston; Coastal Harris; Coastal Jackson; Coastal Matagorda; Fort Bend; Galveston Island; Inland Brazoria; Inland Galveston; Inland Harris; Inland Jackson; Inland Matagorda; Matagorda Islands; Northern Liberty; Southern Liberty; Wharton</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048071 048157 048167 048201 048239 048291 048321 048481</value>
+<valueName>UGC</valueName>
+<value>TXZ200 TXZ213 TXZ214 TXZ226 TXZ227 TXZ235 TXZ236 TXZ237 TXZ238 TXZ300 TXZ313 TXZ335 TXZ336 TXZ337 TXZ338 TXZ436 TXZ437 TXZ438 TXZ439</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.FF.A.0008.000000T0000Z-210915T0000Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D95A0.FlashFloodWatch.1261B868BEC0TX.HGXFFAHGX.62f0f05bb95de211ac2a3c8794454e4c</id>
+<updated>2021-09-13T17:00:00-05:00</updated>
+<published>2021-09-13T17:00:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued September 13 at 5:00PM CDT until September 14 at 7:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D95A0.FlashFloodWatch.1261B868BEC0TX.HGXFFAHGX.62f0f05bb95de211ac2a3c8794454e4c"/>
+<summary>.Tropical Storm Nicholas will move north and make landfall near Matagorda Bay. Periods of showers and thunderstorms will increase in coverage this evening with periods of heavy overnight into early Tuesday. ...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY EVENING... The Flash Flood Watch continues for</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-09-13T17:00:00-05:00</cap:effective>
+<cap:expires>2021-09-14T19:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Austin; Colorado; Waller</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048015 048089 048473</value>
+<valueName>UGC</valueName>
+<value>TXZ210 TXZ211 TXZ212</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KHGX.FF.A.0008.000000T0000Z-210915T0000Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D5D60.FlashFloodWatch.1261B85B5140TX.CRPFFACRP.6e40d986948c13fc30cad193a91d14cd</id>
+<updated>2021-09-13T15:56:00-05:00</updated>
+<published>2021-09-13T15:56:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued September 13 at 3:56PM CDT until September 14 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D5D60.FlashFloodWatch.1261B85B5140TX.CRPFFACRP.6e40d986948c13fc30cad193a91d14cd"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH TUESDAY MORNING... The Flash Flood Watch continues for * A portion of south Texas, including the following areas, Aransas Islands, Calhoun Islands, Coastal Aransas, Coastal Calhoun, Coastal Refugio, Inland Calhoun, Inland Refugio and Victoria. * Through Tuesday morning.</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-09-13T15:56:00-05:00</cap:effective>
+<cap:expires>2021-09-14T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Aransas Islands; Calhoun Islands; Coastal Aransas; Coastal Calhoun; Coastal Refugio; Inland Calhoun; Inland Refugio; Victoria</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048007 048057 048175 048391 048469</value>
+<valueName>UGC</valueName>
+<value>TXZ234 TXZ245 TXZ246 TXZ247 TXZ345 TXZ346 TXZ347 TXZ447</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KCRP.FF.A.0006.000000T0000Z-210914T1200Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D5BD0.HurricaneLocalStatement.1261B85A3FD0TX.BROHLSBRO.2fc9e1316de3f2b26749d1255d70c312</id>
+<updated>2021-09-13T15:52:00-05:00</updated>
+<published>2021-09-13T15:52:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Hurricane Local Statement issued September 13 at 3:52PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D5BD0.HurricaneLocalStatement.1261B85A3FD0TX.BROHLSBRO.2fc9e1316de3f2b26749d1255d70c312"/>
+<summary>This product covers The Rio Grande Valley and Deep South Texas **NICHOLAS MOVING TOWARD THE CENTRAL TEXAS COAST** NEW INFORMATION --------------- * CHANGES TO WATCHES AND WARNINGS: - All watches and warnings have been canceled</summary>
+<cap:event>Hurricane Local Statement</cap:event>
+<cap:effective>2021-09-13T15:52:00-05:00</cap:effective>
+<cap:expires>2021-09-14T00:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Brooks; Coastal Cameron; Coastal Kenedy; Coastal Willacy; Inland Cameron; Inland Kenedy; Inland Willacy; Jim Hogg; Northern Hidalgo; Southern Hidalgo; Starr; Zapata</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048047 048061 048215 048247 048261 048427 048489 048505</value>
+<valueName>UGC</valueName>
+<value>TXZ248 TXZ249 TXZ250 TXZ251 TXZ252 TXZ253 TXZ254 TXZ255 TXZ256 TXZ257 TXZ351 TXZ353</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D2D54.AirQualityAlert.1261B8690CE0TX.EPZAQAEPZ.f3ff98c215b83fd79cc22542499b810f</id>
+<updated>2021-09-13T14:33:00-05:00</updated>
+<published>2021-09-13T14:33:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Air Quality Alert issued September 13 at 2:33PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D2D54.AirQualityAlert.1261B8690CE0TX.EPZAQAEPZ.f3ff98c215b83fd79cc22542499b810f"/>
+<summary>...AIR QUALITY ALERT IN EFFECT FROM 8 AM TO 8 PM MDT TUESDAY... The Texas Department of Environmental Quality (TCEQ) has issued an Ozone Action Day for the El Paso Area, in effect from 8 AM to 8 PM MDT Tuesday. Atmospheric conditions are expected to be favorable for producing high levels of ozone pollution in the El Paso area. You can help</summary>
+<cap:event>Air Quality Alert</cap:event>
+<cap:effective>2021-09-13T14:33:00-05:00</cap:effective>
+<cap:expires>2021-09-14T21:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Unknown</cap:urgency>
+<cap:severity>Unknown</cap:severity>
+<cap:certainty>Unknown</cap:certainty>
+<cap:areaDesc>Eastern, Central El Paso County; Western El Paso County</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048141</value>
+<valueName>UGC</valueName>
+<value>TXZ418 TXZ419</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D23F4.FloodWarning.1261B87A0888TX.HGXFLWHGX.476834bd76edf323c4c8817ea882ce75</id>
+<updated>2021-09-13T14:09:00-05:00</updated>
+<published>2021-09-13T14:09:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 2:09PM CDT until September 16 at 8:30AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D23F4.FloodWarning.1261B87A0888TX.HGXFLWHGX.476834bd76edf323c4c8817ea882ce75"/>
+<summary>...The National Weather Service in Houston/Galveston TX has issued a Flood Warning for the following rivers in Texas... Tres Palacios River near Midfield affecting Wharton and Matagorda Counties. .Tropical Storm Nicholas will bring periods of showers and thunderstorms to the region tonight and early Tuesday.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T14:09:00-05:00</cap:effective>
+<cap:expires>2021-09-16T08:30:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Matagorda; Wharton</cap:areaDesc>
+<cap:polygon>29.05,-96.09 28.92,-96.12 28.84,-96.1 28.84,-96.2 28.92,-96.22 29.05,-96.2 29.05,-96.09</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048321 048481</value>
+<valueName>UGC</valueName>
+<value>TXC321 TXC481</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KHGX.FL.W.0090.210914T1255Z-210916T1330Z/
+/MTPT2.2.ER.210914T1255Z.210915T0600Z.210916T0130Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D232C.FloodWarning.1261B88806F4TX.HGXFLWHGX.59b6b6419f1eb32649376a9bb0b43b27</id>
+<updated>2021-09-13T14:07:00-05:00</updated>
+<published>2021-09-13T14:07:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 2:07PM CDT until September 17 at 12:01AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D232C.FloodWarning.1261B88806F4TX.HGXFLWHGX.59b6b6419f1eb32649376a9bb0b43b27"/>
+<summary>...The National Weather Service in Houston/Galveston TX has issued a Flood Warning for the following rivers in Texas... San Bernard River near Boling affecting Wharton, Fort Bend and Brazoria Counties. .Tropical Storm Nicholas will bring periods of showers and thunderstorms to the region tonight and early Tuesday.</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T14:07:00-05:00</cap:effective>
+<cap:expires>2021-09-17T00:01:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Brazoria; Fort Bend; Wharton</cap:areaDesc>
+<cap:polygon>29.4,-95.92 29.3,-95.84 29.13,-95.66 29.13,-95.77 29.3,-95.95 29.4,-96.05 29.4,-95.92</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048157 048481</value>
+<valueName>UGC</valueName>
+<value>TXC039 TXC157 TXC481</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KHGX.FL.W.0089.210914T2221Z-210917T0501Z/
+/BOLT2.1.ER.000000T0000Z.000000T0000Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D2200.FloodWarning.1261B8880EC4TX.HGXFLWHGX.924c509eb4cb87f832f02e2cf17391e8</id>
+<updated>2021-09-13T14:04:00-05:00</updated>
+<published>2021-09-13T14:04:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flood Warning issued September 13 at 2:04PM CDT until September 17 at 12:21AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84D2200.FloodWarning.1261B8880EC4TX.HGXFLWHGX.924c509eb4cb87f832f02e2cf17391e8"/>
+<summary>...The National Weather Service in Houston/Galveston TX has issued a Flood Warning for the following rivers in Texas... San Bernard River near Sweeny affecting Brazoria County. For the San Bernard River...including Sweeny, East Bernard, Boling... Minor flooding is forecast. The National Weather Service in League City has issued a</summary>
+<cap:event>Flood Warning</cap:event>
+<cap:effective>2021-09-13T14:04:00-05:00</cap:effective>
+<cap:expires>2021-09-17T00:21:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Brazoria</cap:areaDesc>
+<cap:polygon>29.13,-95.66 29.02,-95.54 28.88,-95.43 28.88,-95.53 29.02,-95.65 29.13,-95.77 29.13,-95.66</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039</value>
+<valueName>UGC</valueName>
+<value>TXC039</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KHGX.FL.W.0088.210914T1905Z-210917T0521Z/
+/OCNT2.1.ER.000000T0000Z.000000T0000Z.000000T0000Z.NO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84C9AD8.FlashFloodWatch.1261B86C4130TX.LCHFFALCH.133d07d85dfd7ce7d1bbdc327f46369c</id>
+<updated>2021-09-13T10:58:00-05:00</updated>
+<published>2021-09-13T10:58:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Flash Flood Watch issued September 13 at 10:58AM CDT until September 15 at 6:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B84C9AD8.FlashFloodWatch.1261B86C4130TX.LCHFFALCH.133d07d85dfd7ce7d1bbdc327f46369c"/>
+<summary>...FLASH FLOOD WATCH REMAINS IN EFFECT THROUGH WEDNESDAY AFTERNOON... The Flash Flood Watch continues for * Portions of Louisiana and southeast Texas, including the following areas and parishes, in Louisiana, Acadia, Allen, Avoyelles, Beauregard, Calcasieu, East Cameron, Evangeline, Iberia, Jefferson Davis, Lafayette, Lower St. Martin, Rapides, St. Landry, St. Mary,</summary>
+<cap:event>Flash Flood Watch</cap:event>
+<cap:effective>2021-09-13T10:58:00-05:00</cap:effective>
+<cap:expires>2021-09-15T18:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Severe</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:areaDesc>Hardin; Jefferson; Northern Jasper; Northern Newton; Orange; Southern Jasper; Southern Newton; Tyler</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048199 048241 048245 048351 048361 048457</value>
+<valueName>UGC</valueName>
+<value>TXZ180 TXZ201 TXZ215 TXZ216 TXZ259 TXZ260 TXZ261 TXZ262</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KLCH.FF.A.0008.000000T0000Z-210915T2300Z/
+/00000.0.ER.000000T0000Z.000000T0000Z.000000T0000Z.OO/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B83C89F4.RipCurrentStatement.1261B86A9380TX.HGXCFWHGX.13f77923d41e4ce0bcf24c423e1111a4</id>
+<updated>2021-09-12T05:29:00-05:00</updated>
+<published>2021-09-12T05:29:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Rip Current Statement issued September 12 at 5:29AM CDT until September 15 at 7:00AM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=TX1261B83C89F4.RipCurrentStatement.1261B86A9380TX.HGXCFWHGX.13f77923d41e4ce0bcf24c423e1111a4"/>
+<summary>...HIGH RIP CURRENT RISK NOW IN EFFECT THROUGH WEDNESDAY MORNING... * WHAT...Dangerous rip currents. * WHERE...Brazoria Islands, Matagorda Islands, Bolivar Peninsula and Galveston Island Counties. * WHEN...Through Wednesday morning.</summary>
+<cap:event>Rip Current Statement</cap:event>
+<cap:effective>2021-09-12T05:29:00-05:00</cap:effective>
+<cap:expires>2021-09-15T07:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Bolivar Peninsula; Brazoria Islands; Galveston Island; Matagorda Islands</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>048039 048167 048321</value>
+<valueName>UGC</valueName>
+<value>TXZ436 TXZ437 TXZ438 TXZ439</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.EXT.KHGX.RP.S.0050.000000T0000Z-210915T1200Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B84D1008.SpecialWeatherStatement.1261B869D030WA.PQRSPSPQR.227e8f4a69a1e3914aa8a08e523cf5f2</id>
+<updated>2021-09-13T11:58:00-07:00</updated>
+<published>2021-09-13T11:58:00-07:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued September 13 at 11:58AM PDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WA1261B84D1008.SpecialWeatherStatement.1261B869D030WA.PQRSPSPQR.227e8f4a69a1e3914aa8a08e523cf5f2"/>
+<summary>...COOL AND WET FALL-LIKE WEATHER WILL ARRIVE LATER THIS WEEK... The weather pattern will change later this week as a series of strong, wet cold fronts will bring an end to this long dry and hot summer. Overnight temperatures will cool into the lower to middle 40s Wednesday night, with some of our more exposed and traditionally</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-09-13T11:58:00-07:00</cap:effective>
+<cap:expires>2021-09-15T00:00:00-07:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Central Columbia River Gorge; Greater Vancouver Area; Lower Columbia and I - 5 Corridor in Cowlitz County; South Washington Cascade Foothills; South Washington Cascades; South Washington Coast; Western Columbia River Gorge; Willapa Hills</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>053011 053015 053039 053049 053059 053069</value>
+<valueName>UGC</valueName>
+<value>WAZ019 WAZ020 WAZ021 WAZ022 WAZ039 WAZ040 WAZ045 WAZ046</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WI1261B859CE88.BeachHazardsStatement.1261B85C3BA0WI.GRBCFWGRB.b32f558f2ad620f0b1be9121cf482b88</id>
+<updated>2021-09-13T21:10:00-05:00</updated>
+<published>2021-09-13T21:10:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Beach Hazards Statement issued September 13 at 9:10PM CDT until September 14 at 1:00PM CDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WI1261B859CE88.BeachHazardsStatement.1261B85C3BA0WI.GRBCFWGRB.b32f558f2ad620f0b1be9121cf482b88"/>
+<summary>...BEACH HAZARDS STATEMENT REMAINS IN EFFECT FROM 4 AM CDT TUESDAY THROUGH TUESDAY AFTERNOON... * WHAT...Waves resulting in strong currents and dangerous swimming conditions. * WHERE...Beaches along Lake Michigan in Door, Kewaunee and Manitowoc Counties.</summary>
+<cap:event>Beach Hazards Statement</cap:event>
+<cap:effective>2021-09-13T21:10:00-05:00</cap:effective>
+<cap:expires>2021-09-14T13:00:00-05:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:areaDesc>Door; Kewaunee; Manitowoc</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>055029 055061 055071</value>
+<valueName>UGC</valueName>
+<value>WIZ022 WIZ040 WIZ050</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value>/O.CON.KGRB.BH.S.0011.210914T0900Z-210914T1800Z/</value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B85A0470.SpecialWeatherStatement.1261B85A1E9CWY.UNRSPSUNR.99d7c21beb90d16627a8feb13b2fb6bb</id>
+<updated>2021-09-13T21:48:00-06:00</updated>
+<published>2021-09-13T21:48:00-06:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Special Weather Statement issued September 13 at 9:48PM MDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B85A0470.SpecialWeatherStatement.1261B85A1E9CWY.UNRSPSUNR.99d7c21beb90d16627a8feb13b2fb6bb"/>
+<summary>...A strong thunderstorm will impact portions of southwestern Crook County through 1015 PM MDT... At 947 PM MDT, Doppler radar was tracking a strong thunderstorm 11 miles northeast of Rozet, or 22 miles northeast of Gillette, moving east at 45 mph. HAZARD...Winds in excess of 40 mph and nickel size hail.</summary>
+<cap:event>Special Weather Statement</cap:event>
+<cap:effective>2021-09-13T21:48:00-06:00</cap:effective>
+<cap:expires>2021-09-13T22:15:00-06:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Minor</cap:severity>
+<cap:certainty>Observed</cap:certainty>
+<cap:areaDesc>Western Crook</cap:areaDesc>
+<cap:polygon>44.39,-105.08 44.53,-105.08 44.49,-104.65 44.26,-104.74 44.34,-105.09 44.39,-105.08</cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>056011</value>
+<valueName>UGC</valueName>
+<value>WYZ056</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B85980CC.AirQualityAlert.1261B85C62B0WY.RIWAQARIW.a416d8c7a16df7bfcca1ec08db2f86f1</id>
+<updated>2021-09-13T18:11:00-06:00</updated>
+<published>2021-09-13T18:11:00-06:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Air Quality Alert issued September 13 at 6:11PM MDT by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=WY1261B85980CC.AirQualityAlert.1261B85C62B0WY.RIWAQARIW.a416d8c7a16df7bfcca1ec08db2f86f1"/>
+<summary>...AIR QUALITY ALERT IN EFFECT UNTIL 1 PM MDT TUESDAY... The following message is transmitted on behalf of the Wyoming Department of Environmental Quality, Air Quality Division, and the Wyoming Department of Health. * WHAT...Air Quality Alert for Wildfire Smoke. * WHERE...Lander Foothills.</summary>
+<cap:event>Air Quality Alert</cap:event>
+<cap:effective>2021-09-13T18:11:00-06:00</cap:effective>
+<cap:expires>2021-09-14T13:00:00-06:00</cap:expires>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:category>Met</cap:category>
+<cap:urgency>Unknown</cap:urgency>
+<cap:severity>Unknown</cap:severity>
+<cap:certainty>Unknown</cap:certainty>
+<cap:areaDesc>Lander Foothills</cap:areaDesc>
+<cap:polygon></cap:polygon>
+<cap:geocode>
+<valueName>FIPS6</valueName>
+<value>056013</value>
+<valueName>UGC</valueName>
+<value>WYZ018</value>
+</cap:geocode>
+<cap:parameter>
+<valueName>VTEC</valueName>
+<value></value>
+</cap:parameter>
+</entry>
+</feed>
