@@ -96,6 +96,8 @@
       background-image: url("../images/svg/wi-tornado.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-lightning {
       background-image: url("../images/svg/wi-lightning.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-lightning {
+      background-image: url("../images/svg/wi-day-lightning.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-hail {
       background-image: url("../images/svg/wi-hail.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-smoke {
@@ -112,9 +114,31 @@
       background-image: url("../images/svg/wi-sleet.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-fog {
       background-image: url("../images/svg/wi-fog.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-day-fog {
+      background-image: url("../images/svg/wi-day-fog.svg"); }
     .wx-feeds .container-theme .wx-icon-now.wi-stars {
       background-image: url("../images/svg/wi-stars.svg"); }
-    .wx-feeds .container-theme .moon-icon-now.wi-moon-new {
+    .wx-feeds .container-theme .wx-icon-now.wi-night-cloudy-windy {
+      background-image: url("../images/svg/wi-night-cloudy-windy.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-cloudy {
+      background-image: url("../images/svg/wi-night-alt-cloudy.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-lightning {
+      background-image: url("../images/svg/wi-night-alt-lightning.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-showers {
+      background-image: url("../images/svg/wi-night-alt-showers.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-rain {
+      background-image: url("../images/svg/wi-night-alt-rain.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-showers {
+      background-image: url("../images/svg/wi-night-alt-showers.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-fog {
+      background-image: url("../images/svg/wi-night-fog.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-sleet {
+      background-image: url("../images/svg/wi-night-alt-sleet.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-snow {
+      background-image: url("../images/svg/wi-night-alt-snow.svg"); }
+    .wx-feeds .container-theme .wx-icon-now.wi-night-alt-hail {
+      background-image: url("../images/svg/wi-night-alt-hail.svg"); }
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-full {
       background-image: url("../images/svg/wi-moon-alt-full.svg"); }
     .wx-feeds .container-theme .moon-icon-now.wi-moon-waxing-crescent {
       background-image: url("../images/svg/wi-moon-alt-waxing-crescent-3.svg"); }
@@ -122,7 +146,7 @@
       background-image: url("../images/svg/wi-moon-alt-first-quarter.svg"); }
     .wx-feeds .container-theme .moon-icon-now.wi-moon-waxing-gibbous {
       background-image: url("../images/svg/wi-moon-alt-waxing-gibbous-3.svg"); }
-    .wx-feeds .container-theme .moon-icon-now.wi-moon-full {
+    .wx-feeds .container-theme .moon-icon-now.wi-moon-new {
       background-image: url("../images/svg/wi-moon-alt-new.svg"); }
     .wx-feeds .container-theme .moon-icon-now.wi-moon-waning-gibbous {
       background-image: url("../images/svg/wi-moon-alt-waning-gibbous-3.svg"); }
@@ -134,13 +158,15 @@
       position: relative;
       height: 75px;
       width: 100px;
-      top: -75px;
+      top: -40px;
       margin-bottom: -75px;
       left: 265px;
       text-align: center; }
     .wx-feeds .container-theme .moon-icon-now {
+      height: 48px;
       width: 100px;
-      background-position: center center; }
+      background-position: center center;
+      transform: rotate(-180deg) scaleX(1); }
     .wx-feeds .container-theme .moon-phase {
       font-size: 0.75rem; }
   .wx-feeds .wxout_temps {
@@ -187,6 +213,21 @@
     background-image: url("../images/svg/wi-stars.svg"); }
   .wx-feeds .wx-other {
     background-image: url("../images/svg/wi-day-cloudy.svg"); }
+  .wx-feeds .container-theme.wx-night {
+    background-color: #000000;
+    color: #ffffff; }
+    .wx-feeds .container-theme.wx-night .wx-icon-now {
+      filter: invert(1); }
+    .wx-feeds .container-theme.wx-night a,
+    .wx-feeds .container-theme.wx-night a:hover,
+    .wx-feeds .container-theme.wx-night a:focus {
+      color: #ffffff; }
+    .wx-feeds .container-theme.wx-night p {
+      color: #ffffff; }
+    .wx-feeds .container-theme.wx-night .wx-temp {
+      color: #ffffff; }
+  .wx-feeds .btn-theme.wx-night .btn-link {
+    color: #000000; }
   .wx-feeds .container-theme.wx-neutral {
     background-color: #58595B;
     color: #ffffff; }

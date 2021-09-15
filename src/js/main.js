@@ -585,6 +585,7 @@ function init_current() {
 	phase = Math.ceil(jd * 8); // scale fraction from 0-8 and round by adding 0.5
 	phase = phase & 7; // 0 and 8 are the same so turn 8 into 0
 	
+	console.log(phase);
 	
 	
 	switch (phase) {
@@ -674,38 +675,70 @@ function init_current() {
 					  wxicon    = "wi-cloud";
 					  wxtheme   = "neutral";
 					} else if (wxtitle.indexOf('Fair and Windy') !== -1) {
-					  if(isDayTime) {
-						wxicon    = "wi-day-windy";
-						wxtheme   = "bright";
-					  } else {
-						wxicon    = "wi-cloudy-windy";
-						wxtheme   = "dark";
-					  }
+						if(isDayTime) {
+							wxicon    = "wi-day-windy";
+							wxtheme   = "bright";
+						} else {
+							wxicon    = "wi-cloudy-windy";
+							wxtheme   = "dark";
+						}
 
 					} else if (wxtitle.indexOf('Fair') !== -1) {
-					  if(isDayTime) {
-						wxicon    = "wi-day-sunny";
-						wxtheme   = "bright";
-					  } else {
-						wxicon    = "wi-stars";
-						wxtheme   = "dark";
-					  }
+						if(isDayTime) {
+							wxicon    = "wi-day-sunny";
+							wxtheme   = "bright";
+						} else {
+							wxicon    = "wi-stars";
+							wxtheme   = "dark";
+						}
 
 					} else if (wxtitle.indexOf('Mostly Cloudy') !== -1) {
-					  wxicon    = "wi-cloudy";
-					  wxtheme   = "dark";
+					  
+						if(isDayTime) {
+							wxicon    = "wi-cloudy";
+					  		wxtheme   = "dark";
+						} else {
+							wxicon    = "wi-night-alt-cloudy";
+							wxtheme   = "night";
+						}	
+						
 					} else if (wxtitle.indexOf('Partly Cloudy') !== -1) {
-					  wxicon    = "wi-day-cloudy";
-					  wxtheme   = "light";
+						if(isDayTime) {
+							wxicon    = "wi-day-cloudy";
+							wxtheme   = "light";
+						} else {
+							wxicon    = "wi-night-alt-cloudy";
+							wxtheme   = "night";
+						}
+						
 					} else if (wxtitle.indexOf('Cloudy') !== -1) {
-					  wxicon    = "wi-cloudy";
-					  wxtheme   = "neutral";
+
+						if(isDayTime) {
+							wxicon    = "wi-cloudy";
+							wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-cloudy";
+							wxtheme   = "night";
+						}	
+						
 					} else if (wxtitle.indexOf('A Few Clouds') !== -1) {
-					  wxicon    = "wi-day-cloudy";
-					  wxtheme   = "light";
+					 
+						if(isDayTime) {
+ 							wxicon    = "wi-day-cloudy";
+					  		wxtheme   = "light";
+						} else {
+							wxicon    = "wi-stars";
+							wxtheme   = "night";
+						}
 					} else if (wxtitle.indexOf('Clouds') !== -1) {
-					  wxicon    = "wi-day-cloudy";
-					  wxtheme   = "dark";
+					  
+						if(isDayTime) {
+ 							wxicon    = "wi-day-cloudy";
+					  		wxtheme   = "dark";
+						} else {
+							wxicon    = "wi-cloudy";
+							wxtheme   = "night";
+						}
 					} else if (wxtitle.indexOf('Mostly Sunny') !== -1) {
 					  if(isDayTime) {
 						wxicon    = "wi-day-cloudy";
@@ -724,50 +757,146 @@ function init_current() {
 					  }
 
 					} else if (wxtitle.indexOf('Hail') !== -1) {
-					  wxicon    = "wi-hail";
-					  wxtheme   = "neutral";
+					  
+						if(isDayTime) {
+							wxicon    = "wi-hail";
+					  		wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-night-alt-hail";
+							wxtheme   = "dark";
+						}
+						
 					} else if (wxtitle.indexOf('Smoke') !== -1) {
-					  wxicon    = "wi-smog";
-					  wxtheme   = "neutral";
+					  
+						
+						if(isDayTime) {
+							wxicon    = "wi-day-fog";
+					  		wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-smog";
+							wxtheme   = "dark";
+						}
+						
 					} else if (wxtitle.indexOf('Light Thunderstorm') !== -1) {
-					  wxicon    = "wi-storm-showers";
-					  wxtheme   = "neutral";
+						if(isDayTime) {
+							wxicon    = "wi-storm-showers";
+					  		wxtheme   = "darkest";
+						} else {
+							wxicon    = "wi-night-alt-lightning";
+							wxtheme   = "dark";
+						}	
+						
 					} else if (wxtitle.indexOf('Heavy Thunderstorm') !== -1) {
-					  wxicon    = "wi-thunderstorm";
-					  wxtheme   = "darkest";
+					  
+						if(isDayTime) {
+							wxicon    = "wi-storm-showers";
+					  		wxtheme   = "darkest";
+						} else {
+							wxicon    = "wi-night-alt-lightning";
+							wxtheme   = "dark";
+						}
 					} else if (wxtitle.indexOf('Thunderstorm') !== -1) {
-					  wxicon    = "wi-lightning";
-					  wxtheme   = "neutral";
+
+						if(isDayTime) {
+							wxicon    = "wi-lightning";
+							wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-night-alt-lightning";
+							wxtheme   = "dark";
+						}
 					} else if (wxtitle.indexOf('Light Rain Fog/Mist') !== -1) {
-					  wxicon    = "wi-sprinkle";
-					  wxtheme   = "light";
+					  
+						if(isDayTime) {
+							wxicon    = "wi-day-sprinkle";
+					  		wxtheme   = "light";
+						} else {
+							wxicon    = "wi-sprinkle";
+							wxtheme   = "dark";
+						}
 					} else if (wxtitle.indexOf('Fog') !== -1) {
-					  wxicon    = "wi-fog";
-					  wxtheme   = "neutral";
+
+						if(isDayTime) {
+							wxicon    = "wi-fog";
+							wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-night-fog";
+							wxtheme   = "dark";
+						}
+						
 					} else if (wxtitle.indexOf('Light Rain') !== -1) {
-					  wxicon    = "wi-day-showers";
-					  wxtheme   = "light";
+
+						if(isDayTime) {
+							wxicon    = "wi-day-showers";
+					  		wxtheme   = "light";
+						} else {
+							wxicon    = "wi-night-alt-showers";
+							wxtheme   = "dark";
+						}
+						
 					} else if (wxtitle.indexOf('Heavy Rain') !== -1) {
-					  wxicon    = "wi-rain";
-					  wxtheme   = "dark";
+					 
+						if(isDayTime) {
+							wxicon    = "wi-rain";
+					  		wxtheme   = "dark";
+						} else {
+							wxicon    = "wi-night-alt-rain";
+							wxtheme   = "dark";
+						}
 					} else if (wxtitle.indexOf('Freezing Rain') !== -1) {
-					  wxicon    = "wi-day-sprinkle";
-					  wxtheme   = "neutral";
+
+						if(isDayTime) {
+							wxicon    = "wi-day-sprinkle";
+					  		wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-night-alt-sprinkle";
+							wxtheme   = "dark";
+						}
+						
 					} else if (wxtitle.indexOf('Rain') !== -1) {
-					  wxicon    = "wi-day-rain";
-					  wxtheme   = "neutral";
+					  
+						if(isDayTime) {
+							wxicon    = "wi-day-rain";
+					  		wxtheme   = "neutral";
+						} else {
+							wxicon    = "wi-night-alt-showers";
+							wxtheme   = "dark";
+						}
+						
 					} else if (wxtitle.indexOf('Snow Showers') !== -1) {
-					  wxicon    = "wi-day-snow";
-					  wxtheme   = "light";
+					  	
+						if(isDayTime) {
+							wxicon    = "wi-snow";
+					  		wxtheme   = "light";
+						} else {
+							wxicon    = "wi-night-alt-snow";
+							wxtheme   = "dark";
+						}	
 					} else if (wxtitle.indexOf('Snow') !== -1) {
-					  wxicon    = "wi-snow";
-					  wxtheme   = "light";
+					  
+						if(isDayTime) {
+							wxicon    = "wi-snow";
+					  		wxtheme   = "light";
+						} else {
+							wxicon    = "wi-night-alt-snow";
+							wxtheme   = "dark";
+						}	
+						
 					} else if (wxtitle.indexOf('Sleet') !== -1) {
-					  wxicon    = "wi-sleet";
-					  wxtheme   = "light";
+
+						if(isDayTime) {
+							wxicon    = "wi-sleet";
+					  		wxtheme   = "light";
+						} else {
+							wxicon    = "wi-night-alt-sleet";
+							wxtheme   = "dark";
+						}
 					} else {
 					  wxicon    = "wi-thermometer";
 					  wxtheme   = "dark";
+					}
+					
+					if(!isDayTime) {
+						wxtheme   = "night";
 					}
 
 					wxtheme = "wx-" + wxtheme;

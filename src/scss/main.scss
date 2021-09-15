@@ -166,6 +166,13 @@
 		.wx-icon-now.wi-lightning {
 			background-image : url('../images/svg/wi-lightning.svg');
 		}
+		
+		.wx-icon-now.wi-day-lightning {
+			background-image : url('../images/svg/wi-day-lightning.svg');
+		}
+		
+		
+		
 		.wx-icon-now.wi-hail {
 			background-image : url('../images/svg/wi-hail.svg');
 		}
@@ -196,12 +203,68 @@
 		.wx-icon-now.wi-fog {
 			background-image : url('../images/svg/wi-fog.svg');
 		}
+		
+		.wx-icon-now.wi-day-fog {
+			background-image : url('../images/svg/wi-day-fog.svg');
+		}
 
 		.wx-icon-now.wi-stars {
 			background-image : url('../images/svg/wi-stars.svg');
 		}
 		
-		.moon-icon-now.wi-moon-new {
+		.wx-icon-now.wi-night-cloudy-windy {
+			background-image : url('../images/svg/wi-night-cloudy-windy.svg');
+		}
+		
+		.wx-icon-now.wi-night-cloudy {
+			background-image : url('../images/svg/wi-night-alt-cloudy.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-lightning {
+			background-image : url('../images/svg/wi-night-alt-lightning.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-showers {
+			background-image : url('../images/svg/wi-night-alt-showers.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-rain {
+			background-image : url('../images/svg/wi-night-alt-rain.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-showers {
+			background-image : url('../images/svg/wi-night-alt-showers.svg');
+		}
+		
+		.wx-icon-now.wi-night-fog {
+			background-image : url('../images/svg/wi-night-fog.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-sleet {
+			background-image : url('../images/svg/wi-night-alt-sleet.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-snow {
+			background-image : url('../images/svg/wi-night-alt-snow.svg');
+		}
+		
+		.wx-icon-now.wi-night-alt-hail {
+			background-image : url('../images/svg/wi-night-alt-hail.svg');
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		.moon-icon-now.wi-moon-full {
 			background-image : url('../images/svg/wi-moon-alt-full.svg');
 		}
 		
@@ -217,7 +280,7 @@
 			background-image : url('../images/svg/wi-moon-alt-waxing-gibbous-3.svg');
 		}
 		
-		.moon-icon-now.wi-moon-full {
+		.moon-icon-now.wi-moon-new {
 			background-image : url('../images/svg/wi-moon-alt-new.svg');
 		}
 		
@@ -238,7 +301,7 @@
 			position		: relative;
 			height			: 75px;
 			width			: 100px;
-			top				: -75px;
+			top				: -40px;
 			margin-bottom	: -75px;
 			left			: 265px;
 			
@@ -246,8 +309,10 @@
 		}
 		
 		.moon-icon-now{
+			height				: 48px;
 			width 				: 100px;
 			background-position	: center center;
+			transform			:  rotate(-180deg) scaleX(1);
 		}
 		
 		.moon-phase {
@@ -309,6 +374,38 @@
 	.wx-other       { background-image : url('../images/svg/wi-day-cloudy.svg');}
 
 
+	.container-theme.wx-night { 
+		background-color    : #000000;
+		color               : #ffffff;
+		
+		.wx-icon-now {
+			filter              : invert(1);
+		}
+
+		a,
+		a:hover,
+		a:focus {
+			color : #ffffff;
+		}
+
+		p {
+			color : #ffffff;
+		}
+
+		.wx-temp {
+			color       : #ffffff;
+		}
+	}
+	
+	.btn-theme.wx-night .btn-link { 
+		color    			: #000000;
+	}
+	
+	
+	
+	
+	
+	
 	.container-theme.wx-neutral { 
 		background-color    : #58595B;
 		color               : #ffffff;
