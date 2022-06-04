@@ -12,7 +12,7 @@
   display: none; }
 
 .wx-feeds {
-  width: 415px;
+  width: 440px;
   margin: 0 auto; }
   .wx-feeds button:focus:not(:focus-visible) {
     box-shadow: none; }
@@ -48,7 +48,10 @@
       font-weight: 100;
       font-family: 'Spartan', sans-serif;
       font-size: 3rem;
-      color: #ffffff; }
+      color: #ffffff; 
+            top: -12px;
+    position: relative;
+    }
       .wx-feeds .container-theme .wx-temp:hover {
         cursor: default; }
     .wx-feeds .container-theme .wx-icon-now,
@@ -61,6 +64,9 @@
       background-repeat: no-repeat;
       background-size: contain;
       filter: invert(1); }
+    .wx-feeds .container-theme .moon-icon-now {
+      filter: invert(1); 
+    opacity: 1;}
     .wx-feeds .container-theme .wx-icon-now.wi-thermometer {
       background-image: url("../images/svg/wi-thermometer.svg"); }
     .wx-feeds .container-theme .wx-icon-now.mi-warning {
@@ -156,19 +162,26 @@
       background-image: url("../images/svg/wi-moon-alt-waning-crescent-3.svg"); }
     .wx-feeds .container-theme .moon_now {
       position: relative;
-      height: 75px;
-      width: 100px;
+      height: 100px;
+        width: 130px;
       top: -40px;
-      margin-bottom: -75px;
+      margin-bottom: -100px;
       left: 265px;
-      text-align: center; }
+      text-align: center;
+        /*background : #ffffff;
+border-radius : 7%;
+        color : #1F2532;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/}
     .wx-feeds .container-theme .moon-icon-now {
-      height: 48px;
-      width: 100px;
+      height: 36px;
+      width: 130px;
       background-position: center center;
-      transform: rotate(-180deg) scaleX(1); }
+      transform: rotate(-180deg) scaleX(1); 
+    
+        
+}
     .wx-feeds .container-theme .moon-phase {
-      font-size: 0.75rem; }
+      font-size: 0.65rem; }
   .wx-feeds .wxout_temps {
     text-align: center;
     /*small {

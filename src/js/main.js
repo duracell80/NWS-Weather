@@ -552,7 +552,7 @@ function init_alerts() {
 			
 			var alertbackoff = "Alert backoff active, wait another " + secondsRemaining + " seconds";
 			$('.btn-theme .btn-reload').attr('title', 'Check time remaining for alert reload');
-			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Next Reload (' + minutesRemaining +')</strong>');
+			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Reload (' + minutesRemaining +')</strong>');
 			console.log(alertbackoff);
 		}
 	}
