@@ -629,7 +629,13 @@ function init_current() {
 	} else {
 		var obs_updated 	= localStorage.getItem("obs_updated");
 	}
+    
+    if(localStorage.getItem("obs_updated") === "null") {
+        var obs_updated     = 0
+    }
+    
 	var obs_ttl 		= parseInt(localStorage.getItem("obs_ttl"));
+
 	var sys_time		= Math.round(new Date().getTime());
 	var obs_difference	= Math.round(((sys_time - obs_updated) / 1000) / 60);
 	var obs_wait		= obs_ttl - obs_difference;
@@ -641,13 +647,11 @@ function init_current() {
 	//console.log("Observation taken " + obs_difference + " minutes ago");
 	
 	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
-    if(obs_ttl === "null") {
+    if(isNaN(obs_ttl)) {
         obs_ttl = 0;
-        obs_difference = 180;
+        localStorage.setItem("obs_updated", 180);
     }
-    if (isNaN(obs_difference)) {
-        obs_difference = 180;
-    }
+   
 	console.log(obs_difference + ' - ' + obs_ttl);
 	if(obs_difference > obs_ttl) {
 		console.log("Dialing Up NWS Observation Server " + wx_obs + "  ...");
@@ -997,7 +1001,7 @@ function get_state() {
 	var wx_state = "tn";
 	
     if(localStorage.getItem("wx_state") == null){
-        $.getJSON("config.json", function(data){
+        $.getJSON("http://localhost:3000/config.json", function(data){
             var wx_state = data.wx_state;
             localStorage.setItem("wx_state", wx_state);
         });
@@ -1026,7 +1030,7 @@ function get_scope() {
 	var wx_scope = "local";
 	
 	if(localStorage.getItem("wx_scope") == null){
-        $.getJSON("config.json", function(data){
+        $.getJSON("http://localhost:3000/config.json", function(data){
             var wx_state = data.wx_scope;
             localStorage.setItem("wx_scope", wx_scope);
         });
@@ -1195,7 +1199,7 @@ function lookup_obs(obs_state) {
 function get_obs_select() {
     
     if(localStorage.getItem("wx_obs") == null){
-        $.getJSON("config.json", function(data){
+        $.getJSON("http://localhost:3000/config.json", function(data){
             var wx_obs = data.wx_obs;
             localStorage.setItem("wx_obs", wx_obs);
         });
@@ -1218,7 +1222,7 @@ function get_obs_select() {
 function get_obs() {
     
     if(localStorage.getItem("wx_obs") == null){
-        $.getJSON("config.json", function(data){
+        $.getJSON("http://localhost:3000/config.json", function(data){
             var wx_obs = data.wx_obs;
             localStorage.setItem("wx_obs", wx_obs);
         });
@@ -1241,7 +1245,7 @@ function set_county(wx_county) {
 function get_county() {
     
     if(localStorage.getItem("wx_county") == null){
-		$.getJSON("config.json", function(data){
+		$.getJSON("http://localhost:3000/config.json", function(data){
             var wx_county = data.wx_county;
             localStorage.setItem("wx_county", wx_county);
         });
@@ -1263,7 +1267,7 @@ function get_warnings() {
 	var wx_warnings = "tornado, storm, wind, flood, winter, other";
 	
     if(localStorage.getItem("wx_warnings") == null){
-        $.getJSON("config.json", function(data){
+        $.getJSON("http://localhost:3000/config.json", function(data){
             var wx_warnings = data.wx_warnings;
             localStorage.setItem("wx_warnings", wx_warnings);
             get_warnings();
@@ -1313,7 +1317,7 @@ function clear_storage(item) {
 
 function init_storage() {
 	
-	$.getJSON("config.json", function(data){
+	$.getJSON("http://localhost:3000/config.json", function(data){
 		if(localStorage.getItem("wx_state") == null){
 			localStorage.setItem("wx_state", data.wx_state);
 		}
@@ -1324,7 +1328,7 @@ function init_storage() {
 	
 	
 	}).fail(function(){
-		console.log("Cannot read config.json");
+		console.log("Cannot read http://localhost:3000/config.json");
 	});
 	
 }
