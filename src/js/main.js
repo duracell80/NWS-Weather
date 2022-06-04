@@ -641,6 +641,13 @@ function init_current() {
 	//console.log("Observation taken " + obs_difference + " minutes ago");
 	
 	// BACK OFF FROM CALLING ON OBS STATION UNTIL TTL HAS ELAPSED USUALLY 60min + 10
+    if(obs_ttl === "null") {
+        obs_ttl = 0;
+        obs_difference = 180;
+    }
+    if (isNaN(obs_difference)) {
+        obs_difference = 180;
+    }
 	console.log(obs_difference + ' - ' + obs_ttl);
 	if(obs_difference > obs_ttl) {
 		console.log("Dialing Up NWS Observation Server " + wx_obs + "  ...");
@@ -1061,6 +1068,7 @@ function lookup_counties_json(obs_state) {
 	$.getJSON("counties.json", function(data){
         //https://parseapi.back4app.com/classes/Area?limit=8000&order=countyName&keys=countyName,stateAbbreviation
 			
+        
 
 		function coTitleCase(str) {
 		  return str.replace(
