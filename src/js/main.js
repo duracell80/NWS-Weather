@@ -69,7 +69,7 @@ function init_config_modal() {
 	});
 }
 
-function init_alerts() {
+function init_alerts(atype) {
     var wx_alerts_checked	   = localStorage.getItem("wx_alerts_checked");
 	
 	var now = new Date();
@@ -77,7 +77,7 @@ function init_alerts() {
 	var secondsToWait 		= 300; // 5mins - be kind to the National Weather Service
 	
 	// BACKOFF ALERTS FOR PERIOD OF TIME
-	if(secondsSinceCheck > secondsToWait) {
+	if((secondsSinceCheck > secondsToWait) || atype == "force")  {
 	
 		var wx_scope 			   = get_scope();
     	var feedstate              = get_state().toLowerCase();
@@ -551,8 +551,8 @@ function init_alerts() {
 			}
 			
 			var alertbackoff = "Alert backoff active, wait another " + secondsRemaining + " seconds";
-			$('.btn-theme .btn-reload').attr('title', 'Check time remaining for alert reload');
-			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Reload (' + minutesRemaining +')</strong>');
+			$('.btn-theme .btn-reload').attr('title', 'Click to force an alert reload');
+			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Alerts (' + minutesRemaining +')</strong>');
 			console.log(alertbackoff);
 		}
 	}
@@ -642,7 +642,7 @@ function init_current() {
 	
 	if(get_scope() == "off"){
 		$('.btn-theme .btn-reload').attr('title', 'Next Observation in ' + obs_wait + 'm');
-		$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Observed ' + obs_difference + 'm ago</strong>');
+		$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Age (' + obs_difference + 'm)</strong>');
 	}
 	//console.log("Observation taken " + obs_difference + " minutes ago");
 	

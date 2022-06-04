@@ -22,7 +22,7 @@ $(document).ready(function() {
     
     init_config();
     
-	init_alerts();
+	init_alerts("default");
 	init_current();
 
 	
@@ -41,9 +41,7 @@ $(document).ready(function() {
 		$(".wx-feeds .btn-alert .btn-status").text("On");
 		$(".wx-feeds .btn-alert").attr("title", "Alerts Are Enabled ( " + get_scope().toUpperCase() + " )");
 		$(".wx-feeds .wx_alerts").show();
-		init_alerts();
-		
-		//setInterval(init_alerts, 1000); // WITH BACKOFF FOR 5 MINS
+		init_alerts("default");
 	}
 
 
@@ -57,7 +55,7 @@ $(document).ready(function() {
 	$( ".wx-feeds .btn-reload" ).on('click', function() {
 		init_current();
 		if(get_scope() != "off") {
-			init_alerts();
+			init_alerts("force");
 		}
 		$(function () {
 			$('[data-toggle="popover"]').popover()
@@ -74,7 +72,7 @@ $(document).ready(function() {
 			$(this).find(".btn-status").text("On");
 			$(".wx-feeds .btn-alert").attr("title", "Disable State Wide Alerts");
 			set_scope("state");
-			init_alerts();
+			init_alerts("default");
 		} else {
 			$(this).find(".btn-status").text("Off");
 			$(".wx-feeds .btn-alert").attr("title", "Enable State Wide Alerts");
