@@ -70,9 +70,9 @@ $(document).ready(function() {
 
 		if(get_scope() == "off") {
 			$(this).find(".btn-status").text("On");
-			$(".wx-feeds .btn-alert").attr("title", "Disable State Wide Alerts");
+			$(".wx-feeds .btn-alert").attr("title", "Disable Alerts");
 			set_scope("state");
-			init_alerts("default");
+			init_alerts("force");
 		} else {
 			$(this).find(".btn-status").text("Off");
 			$(".wx-feeds .btn-alert").attr("title", "Enable State Wide Alerts");

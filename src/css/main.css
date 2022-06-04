@@ -317,3 +317,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/}
     .wx-feeds .container-theme.wx-danger p,
     .wx-feeds .container-theme.wx-danger .wx-temp {
       color: #ffffff; }
+
+body .popover {
+    margin-left : -150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
