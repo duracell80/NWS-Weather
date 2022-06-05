@@ -48,10 +48,7 @@
       font-weight: 100;
       font-family: 'Spartan', sans-serif;
       font-size: 3rem;
-      color: #ffffff; 
-            top: -12px;
-    position: relative;
-    }
+      color: #ffffff; }
       .wx-feeds .container-theme .wx-temp:hover {
         cursor: default; }
     .wx-feeds .container-theme .wx-icon-now,
@@ -64,9 +61,6 @@
       background-repeat: no-repeat;
       background-size: contain;
       filter: invert(1); }
-    .wx-feeds .container-theme .moon-icon-now {
-      filter: invert(1); 
-    opacity: 1;}
     .wx-feeds .container-theme .wx-icon-now.wi-thermometer {
       background-image: url("../images/svg/wi-thermometer.svg"); }
     .wx-feeds .container-theme .wx-icon-now.mi-warning {
@@ -163,25 +157,18 @@
     .wx-feeds .container-theme .moon_now {
       position: relative;
       height: 100px;
-        width: 130px;
+      width: 100px;
       top: -40px;
-      margin-bottom: -100px;
+      margin-bottom: -85px;
       left: 265px;
-      text-align: center;
-        /*background : #ffffff;
-border-radius : 7%;
-        color : #1F2532;
-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/}
+      text-align: center; }
     .wx-feeds .container-theme .moon-icon-now {
-      height: 36px;
-      width: 130px;
+      height: 48px;
+      width: 100px;
       background-position: center center;
-      transform: rotate(-180deg) scaleX(1); 
-    
-        
-}
+      transform: rotate(-180deg) scaleX(1); }
     .wx-feeds .container-theme .moon-phase {
-      font-size: 0.65rem; }
+      font-size: 0.75rem; }
   .wx-feeds .wxout_temps {
     text-align: center;
     /*small {
@@ -317,8 +304,3 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/}
     .wx-feeds .container-theme.wx-danger p,
     .wx-feeds .container-theme.wx-danger .wx-temp {
       color: #ffffff; }
-
-body .popover {
-    margin-left : -150px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}

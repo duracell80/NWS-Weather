@@ -609,7 +609,6 @@ function init_current() {
 	$('.moon_now .moon-phase').text(phase);
 	// END MOON
 	
-	
     var wx_state        = get_state().toUpperCase();
 	var wx_obs          = get_obs_select().toUpperCase();
     var wxin            = "https://w1.weather.gov/xml/current_obs/"+wx_obs+".rss";
@@ -1197,6 +1196,8 @@ function lookup_obs(obs_state) {
 
 
 function get_obs_select() {
+    
+    var wx_obs = "KBNA";
     
     if(localStorage.getItem("wx_obs") == null){
         $.getJSON("http://localhost:3000/config.json", function(data){
