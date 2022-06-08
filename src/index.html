@@ -26,7 +26,7 @@ $(document).ready(function() {
 	init_current();
 
 	
-	setInterval(init_alerts, 60000); // 	150000 		= 2.5 Minutes .. with FEED BACKOFF FOR 5 MINS
+	setInterval(init_alerts, 150000); // 	150000 		= 2.5 Minutes .. with FEED BACKOFF FOR 5 MINS
 	setInterval(init_current, 1800000); // 	1,800,000 	= 30 Minutes ... with FEED BACKOFF FOR 60 MINS
 	
 	
@@ -36,11 +36,12 @@ $(document).ready(function() {
 		$(".wx-feeds .btn-alert .btn-status").text("Off");
 		$(".wx-feeds .wx_alerts").hide();
 		$(".wx-feeds .btn-alert").attr("title", "Enable State Wide Alerts");
+        $(".wx-feeds #wx_alerts").hide();
 	} else {
 		//$(".wx-feeds .btn-alert").hide();
 		$(".wx-feeds .btn-alert .btn-status").text("On");
 		$(".wx-feeds .btn-alert").attr("title", "Alerts Are Enabled ( " + get_scope().toUpperCase() + " )");
-		$(".wx-feeds .wx_alerts").show();
+		$(".wx-feeds #wx_alerts").show();
 		init_alerts("default");
 	}
 
@@ -70,19 +71,31 @@ $(document).ready(function() {
 
 		if(get_scope() == "off") {
 			$(this).find(".btn-status").text("On");
-			$(".wx-feeds .btn-alert").attr("title", "Disable Alerts");
+            if(get_scope() == "nation") {
+                $(".wx-feeds .btn-alert").attr("title", "Disable Nationwide Alerts");
+            } else {
+                $(".wx-feeds .btn-alert").attr("title", "Disable State Wide Alerts");
+            }
+            $(".wx-feeds .container-theme h4").text("Weather for " + get_state().toUpperCase());
 			set_scope("state");
 			init_alerts("force");
+            $(".wx-feeds .btn-reload").show();
+            $('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Alert Reload</strong>');
+            $('.btn-theme .btn-reload').attr("title", "Force Alert Reload");
+            $(".wx-feeds #wx_alerts").show();
+            
 		} else {
 			$(this).find(".btn-status").text("Off");
 			$(".wx-feeds .btn-alert").attr("title", "Enable State Wide Alerts");
 			set_scope("off");
+            $(".wx-feeds .btn-reload").hide();
 			$(".wx-feeds #wx_alerts").empty();
+            
 		}
 	});
 	
 	$(function () {
-		$('[data-toggle="popover"]').popover()
+		$('[data-toggle="popover"]').popover({container: ".pophere"})
 	});
 
 	$('.popover-dismiss').popover({
@@ -96,7 +109,7 @@ $(document).ready(function() {
 	
 	
 </script>
-<div class="wx-feeds container-shadow">
+<div class="wx-feeds container-shadow pophere">
 	<div class="container container-theme pt-5 pl-4 pr-4 pb-5">
 		<h4>Weather for <span class="wx-state">NOW</span></h4>
 		<div class="wxout_now"></div>

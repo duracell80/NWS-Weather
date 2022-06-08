@@ -14,11 +14,15 @@
 }
 
 
+
 .wx-feeds {
   	
-	width 	: 415px;
+	width 	: 445px;
 	margin	: 0 auto;
 	
+    .popover {
+        left: -150px !important;
+    }
 	
 	button:focus:not(:focus-visible) {
 		box-shadow: none;
@@ -85,7 +89,9 @@
 				cursor: default;
 			}
 		}
-
+        .wx-icon-now { 
+            margin-top  : 10px;
+        }
 		.wx-icon-now,
 		.moon-icon-now{
 			display             : inline-block;
@@ -98,6 +104,9 @@
 
 			filter              : invert(1);
 		}
+        .moon_now {
+            display: none;            
+        }
 		
 		.wx-icon-now.wi-thermometer {
 			background-image : url('../images/svg/wi-thermometer.svg');
@@ -265,7 +274,7 @@
 		
 		
 		.moon-icon-now.wi-moon-full {
-			background-image : url('../images/svg/wi-moon-alt-full.svg');
+			background-image : url('../images/svg/wi-moon-full.svg');
 		}
 		
 		.moon-icon-now.wi-moon-waxing-crescent {
@@ -281,7 +290,7 @@
 		}
 		
 		.moon-icon-now.wi-moon-new {
-			background-image : url('../images/svg/wi-moon-alt-new.svg');
+			background-image : url('../images/svg/wi-moon-new.svg');
 		}
 		
 		.moon-icon-now.wi-moon-waning-gibbous {
@@ -354,7 +363,8 @@
 	}
 	
 	#wx_alerts {
-		.panel {
+		padding-bottom : 1rem;
+        .panel {
 			display : none;
 		}
 	}

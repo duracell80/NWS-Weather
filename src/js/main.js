@@ -74,7 +74,7 @@ function init_alerts(atype) {
 	
 	var now = new Date();
 	var secondsSinceCheck 	= ((Math.round(now.getTime() / 1000)) - (wx_alerts_checked));
-	var secondsToWait 		= 300; // 5mins - be kind to the National Weather Service
+	var secondsToWait 		= 600; // 10mins - be kind to the National Weather Service
 	
 	// BACKOFF ALERTS FOR PERIOD OF TIME
 	if((secondsSinceCheck > secondsToWait) || atype == "force")  {
@@ -396,11 +396,12 @@ function init_alerts(atype) {
 								localStorage.setItem("wx_tornado", "yes");
 
 								if(!$(".container-theme").hasClass("wx-danger")) {
+                                   
 								   var wxtimefind = alertsummary.toLowerCase().indexOf('until');
 								   var wxtime = alertsummary.substring(wxtimefind, wxtimefind + 16);
 								   $(".container-theme").addClass("wx-danger");
 								   $(".btn-theme").addClass("wx-danger");
-								   $(".wx-danger h4").html("TORNADO WARNING");
+								   $(".wx-danger h4").html("TORNADO'S POSSIBLE");
 								   //$(".wx-danger p").text(alertarea + ' - ' + alerttitle);
 								   $(".wx-danger p").text(alertarea + ' - ' + wxtime);
 								   $(".wxout_now .wx-icon-now").removeClassStartingWith('wi');
@@ -538,21 +539,35 @@ function init_alerts(atype) {
 		
 		if(get_scope() != "off"){
 			
-			if (secondsRemaining > 240) {
-				minutesRemaining = "5m";
-			} else if(secondsRemaining > 180) {
-				minutesRemaining = "4m";
+			if (secondsRemaining > 540) {
+				minutesRemaining = "10";
+			} else if (secondsRemaining > 480) {
+				minutesRemaining = "9";
+			} else if (secondsRemaining > 420) {
+				minutesRemaining = "8";
+			} else if (secondsRemaining > 360) {
+				minutesRemaining = "7";
+			} else if (secondsRemaining > 300) {
+				minutesRemaining = "6";
+            } else if (secondsRemaining > 240) {
+				minutesRemaining = "5";
+			} else if (secondsRemaining > 180) {
+				minutesRemaining = "4";
 			} else if (secondsRemaining > 120) {
-				minutesRemaining = "3m";
+				minutesRemaining = "3";
 			} else if (secondsRemaining > 60) {
-				minutesRemaining = "2m";
+				minutesRemaining = "2";
 			} else {
-				minutesRemaining = "1m";
+				minutesRemaining = "1";
 			}
 			
 			var alertbackoff = "Alert backoff active, wait another " + secondsRemaining + " seconds";
-			$('.btn-theme .btn-reload').attr('title', 'Click to force an alert reload');
-			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Alerts (' + minutesRemaining +')</strong>');
+			if (minutesRemaining > 1) {
+                $('.btn-theme .btn-reload').attr('title', 'Click to force an alert reload, auto reload in ' + minutesRemaining + ' minutes');
+            } else {
+                $('.btn-theme .btn-reload').attr('title', 'Click to force an alert reload, auto reload in ' + minutesRemaining + ' minute');
+            }
+			$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Alerts (' + minutesRemaining +'m)</strong>');
 			console.log(alertbackoff);
 		}
 	}
@@ -640,8 +655,12 @@ function init_current() {
 	var obs_wait		= obs_ttl - obs_difference;
 	
 	if(get_scope() == "off"){
-		$('.btn-theme .btn-reload').attr('title', 'Next Observation in ' + obs_wait + 'm');
-		$('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Age (' + obs_difference + 'm)</strong>');
+		if (obs_wait < 2){
+            $('.btn-theme .btn-reload').attr('title', 'Next observation soon');
+        } else {
+            $('.btn-theme .btn-reload').attr('title', 'Next observation in ' + obs_wait + 'm ... give the Weather Service a break');
+        }
+        $('.btn-theme .btn-reload').html('<strong><i class="bi bi-arrow-clockwise"></i> Age (' + obs_difference + 'm)</strong>');
 	}
 	//console.log("Observation taken " + obs_difference + " minutes ago");
 	
@@ -911,7 +930,7 @@ function init_current() {
 
 					wxtheme = "wx-" + wxtheme;
 
-					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><button class="wx-now" data-container="body" data-toggle="popover" data-placement="right"  data-trigger="focus" title="Observation" data-content="'+ wxdescription.trim() +' - Station: ' + wx_obs + '"><span class="wx-icon-now '+wxicon+'"></span><span class="wx-temp">'+wxtemp_f+'</span></button>';
+					wxthis = '<a href="' + wxlink + '" target="_blank"><p>' + wxtitle + ' </p></a><button class="wx-now" data-toggle="popover" data-placement="right"  data-trigger="focus" title="Observation" data-content="'+ wxdescription.trim() +' - Station: ' + wx_obs + '"><span class="wx-icon-now '+wxicon+'"></span><span class="wx-temp">'+wxtemp_f+'</span></button>';
 
 				});
 
